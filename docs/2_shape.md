@@ -1,6 +1,9 @@
 
 ## EaselJSの様々な図形
 
+[サンプルを開く](../samples/2_color.html)
+![](../imgs/2_shape.html.png)
+
 ### 円を描く
 書式
 ```js

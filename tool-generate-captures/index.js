@@ -1,3 +1,5 @@
+///<reference path="libs/node/node.d.ts" />
+///<reference path="libs/phantom/phantom.d.ts" />
 // gazo_fileがあるかないかの確認
 var fs = require('fs');
 var path = require('path');
@@ -5,29 +7,21 @@ var childProcess = require('child_process');
 var phantomjs = require('phantomjs');
 var binPath = phantomjs.path;
 var render = "render.js";
-
 // この辺が引数みたいな感じで渡したい
-var gazo_name = "www.google.co.jp";
-var gazo_file = gazo_name + ".png";
 var width = "120";
 var height = "80";
-
-// あるかないかの確認
-fs.exists(gazo_file, function (exists) {
-    if (exists) {
-        console.log(gazo_file, "is exists!");
-
-        // gazo_fileがなかったらつくる
-    } else {
-        var url = "samples/0_quickstart.html";
+fs.readdir("../samples", function (err, files) {
+    console.log(files);
+    for (var i = 0; i < files.length; i++) {
+        var outputFilePath = "../imgs/" + files[i] + ".png";
+        var url = "../samples/" + files[i];
         var options = [
             render,
             url,
-            gazo_file,
+            outputFilePath,
             width,
             height
         ];
-
         // ここでrender.jsをphantomjsで呼び出して実行する
         childProcess.execFile(binPath, options, function (error, stdout, stderr) {
             console.log(stdout);
@@ -36,6 +30,7 @@ fs.exists(gazo_file, function (exists) {
                 console.error('error: ' + error);
             }
         });
-        console.log(gazo_file, "nothing. create this file!");
+        console.log(outputFilePath, "nothing. create this file!");
     }
 });
+//# sourceMappingURL=index.js.map

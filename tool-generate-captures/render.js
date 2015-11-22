@@ -12,21 +12,25 @@ console.log(width);
 console.log(height);
 
 page.viewportSize = {
-    width: width,
-    height: height,
-    margin: '0px'
+	width: width,
+	height: height,
+	margin: '0px'
 };
 
 page.open(address,
-    function (status) {
-        console.log(status);
-        if (status !== 'success') {
-            console.log('error');
-        } else {
-            // 出力
-            page.render(output);
-            // 終了
-            phantom.exit();
-        }
-    }
+	function (status) {
+		console.log(status);
+		if (status !== 'success') {
+			console.log('error');
+		} else {
+
+			setTimeout(function () {
+				// 出力
+				page.render(output);
+				// 終了
+				phantom.exit();
+			}, 1000);
+
+		}
+	}
 );
