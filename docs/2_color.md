@@ -24,7 +24,7 @@ shape.graphics.drawCircle(200, 100, 50);
 shape.graphics.beginFill("blue");
 shape.graphics.drawCircle(300, 100, 50);
 ```
-
+![](../imgs/2_color_name.html.png)
 
 ## 16進数表記で指定
 
@@ -41,8 +41,17 @@ shape.graphics.beginFill("#0000ff");
 shape.graphics.drawCircle(300, 100, 50);
 ```
 
+![](../imgs/2_color_hex.html.png)
+
 
 ## HSLで指定
+
+`createjs.Graphics.getHSL(h, s, l)`を使って色を指定することができます。引数は順番に
+色相, 彩度, 明度を示し、それぞれは次の範囲のパラメーターを指定します。
+
+- 色相 (0〜360)
+- 彩度 (0〜100)
+- 明度 (0〜100)
 
 ```js
 var shape = new createjs.Shape();
@@ -57,7 +66,7 @@ shape.graphics.beginFill(createjs.Graphics.getHSL(240, 0, 255));
 shape.graphics.drawCircle(300, 100, 50);
 ```
 
-
+![](../imgs/2_color_hsl.html.png)
 
 ## RGBで指定
 
@@ -73,3 +82,5 @@ shape.graphics.drawCircle(200, 100, 50);
 shape.graphics.beginFill(createjs.Graphics.getRGB(0, 0, 255));
 shape.graphics.drawCircle(300, 100, 50);
 ```
+
+![](../imgs/2_color_rgb.html.png)
