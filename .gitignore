@@ -1,2 +1,3 @@
 .DS_Store
-tool-generate-captures/node_modules/
+.idea
+tool-generate-captures/node_modules/*
