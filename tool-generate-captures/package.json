@@ -1,0 +1,23 @@
+{
+  "name": "tutorial-createjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ics-ikeda@github.com/ics-creative/tutorial-createjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ics-creative/tutorial-createjs/issues"
+  },
+  "homepage": "https://github.com/ics-creative/tutorial-createjs#readme",
+  "devDependencies": {
+    "node-phantom": "^0.2.5",
+    "phantomjs": "^1.9.18"
+  }
+}
