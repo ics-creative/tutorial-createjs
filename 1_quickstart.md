@@ -36,6 +36,7 @@
 
 ```
 
+[サンプルを開く](samples/0_quickstart.html)
 <iframe src="samples/0_quickstart.html" width="960" height="540"></iframe>
 
 
