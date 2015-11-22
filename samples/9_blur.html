@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+	<script src="easeljs/filters/BoxBlurFilter.js"></script>
+	<script>
+		var img;
+		window.addEventListener("load", init);
+		function init() {
+			img = new Image();
+			img.onload = handleImageLoad;
+			img.src = "imgs/sample.jpg";
+		}
+
+		function handleImageLoad() {
+			// Stageの作成
+			var stage = new createjs.Stage("myCanvas");
+
+			// ぼかしフィルター
+			var blurFilter = new createjs.BoxBlurFilter(4, 4, 3);
+
+			var bmp = new createjs.Bitmap(img);
+			bmp.filters = [blurFilter]; // フィルターの適用
+			var margins = blurFilter.getBounds(); // フィルターの余白を取得
+			// フィルターの余白も含めて画像をキャッシュさせる
+			bmp.cache(margins.x, margins.y, img.width + margins.width, img.height + margins.height);
+			stage.addChild(bmp); // ステージに追加
+			bmp.x = bmp.y = 100;
+
+			stage.update();
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" width="980" height="540"></canvas>
+</body>
+</html>

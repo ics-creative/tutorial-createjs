@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+	<script src="easeljs/filters/ColorFilter.js"></script>
+	<script>
+		var img;
+		window.addEventListener("load", init);
+		function init() {
+			img = new Image();
+			img.onload = handleImageLoad;
+			img.src = "imgs/sample.jpg";
+		}
+
+		function handleImageLoad() {
+			// Stageの作成
+			var stage = new createjs.Stage("myCanvas");
+
+			// カラーフィルター
+			var colorFilter = new createjs.ColorFilter(0, 0, 1, 1); //赤、緑、青、アルファ
+
+			var bmp = new createjs.Bitmap(img);
+			bmp.filters = [colorFilter]; // フィルターの適用
+			// 画像をキャッシュさせる(ColorFilterでは余白は発生しない)
+			bmp.cache(0, 0, img.width, img.height);
+			stage.addChild(bmp); // ステージに追加
+			bmp.x = bmp.y = 100;
+
+			stage.update();
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" width="980" height="540"></canvas>
+</body>
+</html>

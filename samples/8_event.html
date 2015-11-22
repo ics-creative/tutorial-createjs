@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+	<script>
+		window.addEventListener("load", init);
+		function init() {
+			stage = new createjs.Stage("myCanvas");
+
+			// オブジェクトの作成
+			shape = new createjs.Shape();
+			shape.x = 100;
+			shape.y = 100;
+			shape.graphics.beginFill("red");
+			shape.graphics.drawCircle(0, 0, 100);
+			stage.addChild(shape);
+
+			// マウスオーバーを有効にする
+			stage.enableMouseOver();
+
+			shape.on("mouseover", function (event) {
+				shape.graphics.clear()
+						.beginFill("green")
+						.drawCircle(0, 0, 100);
+			});
+			shape.on("mouseout", function (event) {
+				shape.graphics.clear()
+						.beginFill("red")
+						.drawCircle(0, 0, 100);
+			});
+			shape.on("click", function (event) {
+				alert("クリックされました");
+			});
+
+			createjs.Ticker.on("tick", stage);
+		}
+	</script>
+</head>
+
+<body>
+	<canvas id="myCanvas" width="980" height="540"></canvas>
+</body>
+</html>
