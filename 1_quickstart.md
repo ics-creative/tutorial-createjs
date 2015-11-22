@@ -36,6 +36,8 @@
 
 ```
 
+<iframe src="samples/0_quickstart.html"></iframe>
+
 
 CreateJSはHTML5のcanvas要素を利用します。canvas要素はコンテンツを表示する描画エリアとなります。canvas要素には3つの属性として`id`(ID値)と`width`(幅)と`height`(高さ)を最低限設定しておきましょう。
 
