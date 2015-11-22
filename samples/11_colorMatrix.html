@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+	<script src="easeljs/filters/ColorMatrixFilter.js"></script>
+	<script>
+		var img;
+		window.addEventListener("load", init);
+		function init() {
+			img = new Image();
+			img.onload = handleImageLoad;
+			img.src = "imgs/sample.jpg";
+		}
+
+		function handleImageLoad() {
+			// Stageの作成
+			var canvas = document.getElementById("myCanvas");
+			var stage = new Stage(canvas);
+
+			// カラーフィルター
+			var colorMatrixFilter = new ColorMatrixFilter([
+				0.33, 0.33, 0.33, 0, 0, // 赤
+				0.33, 0.33, 0.33, 0, 0, // 緑
+				0.33, 0.33, 0.33, 0, 0, // 青
+				0, 0, 0, 1, 0  // アルファ
+			]);
+
+			var bmp = new Bitmap(img);
+			bmp.filters = [colorMatrixFilter]; // フィルターの適用
+			// 画像をキャッシュさせる(ColorMatrixFilter)
+			bmp.cache(0, 0, img.width, img.height);
+			stage.addChild(bmp); // ステージに追加
+			bmp.x = bmp.y = 100;
+
+			stage.update();
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" width="980" height="540"></canvas>
+</body>
+</html>

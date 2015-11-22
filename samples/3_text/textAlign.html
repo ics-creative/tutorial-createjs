@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>EaselJS Sample: Text</title>
+
+	<script>var createjs = window;</script> <!-- 名前空間をグローバルに変更 -->
+	<script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
+	<script>
+		function init() {
+			var canvas = document.getElementById("myCanvas");
+			stage = new Stage(canvas);
+
+			var arr = ["start", "end", "left", "right", "center"];
+
+			for (var i = 0; i < arr.length; i++) {
+				var t = new Text("Hello World!", "24px serif", "#000000");
+				t.textAlign = arr[i];
+				stage.addChild(t);
+
+				var shape = new Shape();
+				shape.graphics
+						.setStrokeStyle(1)
+						.beginStroke("#FF0000")
+						.moveTo(-50, 0)
+						.lineTo(+50, 0)
+						.moveTo(0, -50)
+						.lineTo(0, +50);
+				stage.addChild(shape);
+
+				t.x = shape.x = (i % 2) * 300 + 100;
+				t.y = shape.y = Math.floor(i / 2) * 200 + 50;
+			}
+
+			stage.update();
+		}
+	</script>
+</head>
+
+<body onLoad="init();">
+<canvas id="myCanvas" width="980" height="580"></canvas>
+</body>
+</html>

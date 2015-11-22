@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>TweenJS Sample</title>
+	<script>var createjs = window;</script> <!-- 名前空間をグローバルに変更 -->
+	<script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
+	<script src="http://code.createjs.com/tweenjs-0.4.0.min.js"></script>
+	<script>
+		function init() {
+			canvas = document.getElementById("myCanvas");
+			stage = new Stage(canvas);
+
+			// 円のシェイプを作成
+			var circle = new Shape();
+			circle.graphics.beginFill("#FF0000").drawCircle(0, 0, 50);
+			stage.addChild(circle);
+
+			Ticker.setFPS(60);
+			Ticker.addListener(stage);
+
+			Tween.get(circle) // ターゲットを指定
+					.to({alpha:0.5}) // 透明度の変化
+					.wait(1000)// 1秒停止
+					.to({x:500, y:200, alpha:0.1}, 2000, Ease.get(1))// x/y/alphaのトゥイーン, イーズアウトで
+					.wait(1000)// 1秒停止
+					.to({x:0}, 2000, Ease.get(-1))//  xのトゥイーン, イーズインで
+					.wait(1000)// 1秒停止
+					.to({x:0, y:0, alpha:1}, 600) // x/y/alphaのトゥイーン
+		}
+
+	</script>
+</head>
+
+<body onload="init();">
+	<canvas id="myCanvas" width="960" height="540"></canvas>
+</body>
+</html>
