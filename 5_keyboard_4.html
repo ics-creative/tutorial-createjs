@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script>
+        window.addEventListener("load", init);
+
+        function init() {
+            // ステージを作成
+            var stage = new createjs.Stage("myCanvas");
+
+            // シェイプ(船)を作成
+            var ship = new createjs.Shape();
+            ship.graphics.beginFill("red");
+            ship.graphics.moveTo(-10, +5);
+            ship.graphics.lineTo(-10, -5);
+            ship.graphics.lineTo(5, 0);
+            stage.addChild(ship);
+            // 画面中央に配置
+            ship.x = stage.canvas.width / 2;
+            ship.y = stage.canvas.height / 2;
+
+            var angle = 0;
+            var speed = 0;
+
+            // キーボードを押したタイミングを検知
+            window.addEventListener("keydown", onKeyDown);
+
+            function onKeyDown(event) {
+                // キーコード(どのキーが押されたか)を取得
+                var keyCode = event.keyCode;
+                // 条件文で船の位置を変更する
+                if (keyCode == 39) { // 右
+                    angle += 5;
+                } else if (keyCode == 37) { // 左  
+                    angle -= 5;
+                }
+
+                if (keyCode == 40) { // 下 
+                    speed -= 1;
+                } else if (keyCode == 38) { // 上 
+                    speed += 1;
+                }
+            }
+
+            // 画面更新
+            createjs.Ticker.on("tick", stage);
+
+            createjs.Ticker.on("tick", onTick);
+
+            function onTick() {
+                // 角度をラジアンに変換
+                var radian = angle * Math.PI / 180;
+                // スピード(スカラ)と方向からxとyの成分に分解
+                var vx = speed * Math.cos(radian);
+                var vy = speed * Math.sin(radian);
+                // 船の位置を更新する
+                ship.x += vx;
+                ship.y += vy;
+
+                // 船の角度を設定する
+                ship.rotation = angle;
+
+                // 摩擦
+                speed *= 0.90;
+
+                // 画面端の処理を入れる
+                if (ship.x < 0) ship.x = 0;
+                if (ship.x > stage.canvas.width) ship.x = stage.canvas.width;
+                if (ship.y < 0) ship.y = 0;
+                if (ship.y > stage.canvas.height) ship.y = stage.canvas.height;
+
+            }
+
+            // リサイズイベントを検知
+            window.addEventListener("resize", onResize);
+            onResize(); // 起動時にも実行しておく
+            function onResize(event) {
+                // cavas要素の大きさを画面に揃える
+                stage.canvas.width = window.innerWidth;
+                stage.canvas.height = window.innerHeight;
+            }
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="960" height="540"></canvas>
+</body>
+
+</html>

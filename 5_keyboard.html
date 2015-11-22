@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script>
+        window.addEventListener("load", init);
+
+        function init() {
+            // ステージを作成
+            var stage = new createjs.Stage("myCanvas");
+
+            // シェイプ(船)を作成
+            var ship = new createjs.Shape();
+            ship.graphics.beginFill("red");
+            ship.graphics.moveTo(-10, +5);
+            ship.graphics.lineTo(-10, -5);
+            ship.graphics.lineTo(5, 0);
+            stage.addChild(ship);
+            // 画面中央に配置
+            ship.x = stage.canvas.width / 2;
+            ship.y = stage.canvas.height / 2;
+
+            // キーボードを押したタイミングを検知
+            window.addEventListener("keydown", onKeyDown);
+
+            function onKeyDown(event) {
+                // キーコード(どのキーが押されたか)を取得
+                var keyCode = event.keyCode;
+                console.log(event.keyCode);
+                // 条件文で船の位置を変更する
+                if (keyCode == 39) { // 右
+                    ship.x += 1;
+                    ship.rotation = 0;
+                } else if (keyCode == 37) { // 左  
+                    ship.x -= 1;
+                    ship.rotation = 180;
+                } else if (keyCode == 40) { // 下 
+                    ship.y += 1;
+                    ship.rotation = 90;
+                } else if (keyCode == 38) { // 上 
+                    ship.y -= 1;
+                    ship.rotation = -90;
+                }
+            }
+
+            // 画面更新
+            createjs.Ticker.on("tick", stage);
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="960" height="540"></canvas>
+</body>
+
+</html>
