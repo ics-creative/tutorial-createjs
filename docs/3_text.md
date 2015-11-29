@@ -1,7 +1,4 @@
-
-
-
-## EaselJSでテキストを表示する
+## テキストを表示する
 
 文字を表示するには`createjs.Text`クラスを利用します。
 
@@ -18,6 +15,11 @@ var t = new createjs.Text("Hello World!", "24px serif", "red");
 stage.addChild(t);
 ```
 
+![](../imgs/3_text.html.png)
+
+[サンプルを開く](../samples/3_text.html)
+
+
 EaselJSのテキストは`textBaseline`プロパティーを使うことで、垂直方向の基準点をどこに合わせるかを指定できます。
 
 ▼サンプル
@@ -27,17 +29,26 @@ t.textBaseline = “top”;
 stage.addChild(t);
 ```
 
+![](../imgs/textBaseline.html.png)
+
+[サンプルを開く](../samples/textBaseline.html)
+
+
 
 ▲左上から順に、"top", "hanging", "middle",
 "alphabetic", "ideographic", "bottom" の結果となります。赤色線は基準点。
 
-テキストの水平方向の揃え方についてもtextAlignプロパティーを使うことで設定ができます。
+テキストの水平方向の揃え方についても`textAlign`プロパティーを使うことで設定ができます。
 
 ```js
 var t = new Text("Hello World!", "24px serif", "red");
-t.textAlign = "start";
+t.textAlign = "center";
 stage.addChild(t);
 ```
+
+![](../imgs/textAlign.html.png)
+
+[サンプルを開く](../samples/textAlign.html)
 
 
 ▲左上から順に、"start", "end",
@@ -45,6 +56,7 @@ stage.addChild(t);
  "center" の結果となります。赤色線は基準点。
 
 テキストの整列については、WHATWGのcanvasの仕様と同じになっていますので、詳しい情報はこちらを参考ください。
+
 http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#text-0
 
 
@@ -58,14 +70,14 @@ stage.addChild(t);
 
 ### ゴシック体を表示する
 ```js
-var t = new Text("Hello World!", "24px sans", "red");
+var t = new Text("Hello World!", "24px sans-serif", "red");
 stage.addChild(t);
 ```
 
 ## テキストの文言を変更する
 
 ```js
-var t = new Text("", "24px sans", "red");
+var t = new Text("", "24px sans-serif", "red");
 t.text = "test";
 stage.addChild(t);
 ```

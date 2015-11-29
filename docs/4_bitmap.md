@@ -1,20 +1,25 @@
 # EaselJSで画像を表示する
 
-画像を表示するには`createjs.Bitmap`クラスを利用します。`createjs.Bitmap`クラスのインスタンスはステージに追加可能な表示オブジェクトです。
+画像を表示するには`createjs.Bitmap`クラスを利用します。コンストラクターの引数には画像のURLを設定します。
 
 ▼書式
 ```js
-new createjs.Bitmap(画像のURLもしくはImageオブジェクト);
+new createjs.Bitmap(画像のURL);
 ```
 
 ▼サンプル
 ```js
-var bmp = new Bitmap("sample.png");
+var bmp = new createjs.Bitmap("sample.png");
 stage.addChild(bmp);
 ```
 
-もしくは第1引数にImageオブジェクトをセットすることも可能です。引数にImageオブジェクトを使った場合は即座に画像を表示することができるので、制作するコンテンツによってはこちらのほうが良いこともあるでしょう。
+画像の基準点を調整したい場合は、`regX`と`regY`プロパティーを使うと便利です。
 
-▼サンプル
-```html
+```js
+var bmp = new createjs.Bitmap("sample.png");
+stage.addChild(bmp);
+
+// 基準点を調整する
+bmp.regX = 100;
+bmp.regY = 100;
 ```

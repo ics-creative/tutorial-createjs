@@ -2,7 +2,6 @@
 
 CreatJSでの色の指定方法を覚えましょう。CreateJSでは色を指定する方法がいくつかあります。
 
-
 - 色の名前で指定 (例：green, red, blue)
 - 16進数表記で指定 (例: #00ff00, #ff0000, #0000FF)
 - RGB指定 (例: createjs.Graphics.getRGB(255, 0, 0))
@@ -26,7 +25,14 @@ shape.graphics.drawCircle(300, 100, 50);
 ```
 ![](../imgs/2_color_name.html.png)
 
+使える色の名前はCSSの記法と同じです。次の記事を参考にするといいでしょう。
+
+[CSS Color Names](http://memopad.bitter.jp/w3c/css/css_colornames.html)
+
+
 ## 16進数表記で指定
+
+Web制作の色指定でもっとも使われる方法です。`#`につづけて色の16進数を指定します。色の16進数はPhotoshop等のソフトウェアで調べて使うといいでしょう。
 
 ```js
 var shape = new createjs.Shape();
@@ -43,15 +49,34 @@ shape.graphics.drawCircle(300, 100, 50);
 
 ![](../imgs/2_color_hex.html.png)
 
+[CSS Color Names](http://memopad.bitter.jp/w3c/css/css_colornames.html)
 
 ## HSLで指定
 
-`createjs.Graphics.getHSL(h, s, l)`を使って色を指定することができます。引数は順番に
-色相, 彩度, 明度を示し、それぞれは次の範囲のパラメーターを指定します。
+HSLでの色の指定もできます。色相, 彩度, 明度を示し、それぞれは次の範囲のパラメーターを指定します。プログラミングで色相だけ変化させるときに役立ちます。
 
 - 色相 (0〜360)
-- 彩度 (0〜100)
-- 明度 (0〜100)
+- 彩度 (0%〜100%)
+- 明度 (0%〜100%)
+
+
+
+```js
+var shape = new createjs.Shape();
+// 赤い円
+shape.graphics.beginFill("hsl(0, 100%, 100%)");
+shape.graphics.drawCircle(100, 100, 50);
+// 緑の円
+shape.graphics.beginFill("hsl(120, 100%, 100%)");
+shape.graphics.drawCircle(200, 100, 50);
+// 青い円
+shape.graphics.beginFill("hsl(240, 100%, 100%)");
+shape.graphics.drawCircle(300, 100, 50);
+```
+
+
+この他にCreateJSでは色相を設定できる命令として `createjs.Graphics.getHSL(h, s, l)` メソッドが用意されています。どちらの方法を使っても結果に差はありませんので、好みで選択するといいでしょう。
+
 
 ```js
 var shape = new createjs.Shape();
@@ -67,20 +92,3 @@ shape.graphics.drawCircle(300, 100, 50);
 ```
 
 ![](../imgs/2_color_hsl.html.png)
-
-## RGBで指定
-
-```js
-var shape = new createjs.Shape();
-// 赤い円
-shape.graphics.beginFill(createjs.Graphics.getRGB(255, 0, 0));
-shape.graphics.drawCircle(100, 100, 50);
-// 緑の円
-shape.graphics.beginFill(createjs.Graphics.getRGB(0, 255, 0));
-shape.graphics.drawCircle(200, 100, 50);
-// 青い円
-shape.graphics.beginFill(createjs.Graphics.getRGB(0, 0, 255));
-shape.graphics.drawCircle(300, 100, 50);
-```
-
-![](../imgs/2_color_rgb.html.png)

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+	<script>
+		window.addEventListener("load", init);
+		function init() {
+			// Stageオブジェクトを作成。表示リストのルートになります。
+			var stage = new createjs.Stage("myCanvas");
+
+			// シェイプを作成
+			var shape = new createjs.Shape();
+			// 塗りの色を指定
+			shape.graphics.beginFill("red");
+			// 円を描く
+			shape.graphics.drawCircle(0, 0, 80);
+			stage.addChild(shape); // 表示リストに追加
+
+			// 配置座標を設定
+			shape.x = 200;
+			shape.y = 100;
+
+			// Stageの描画を更新
+			stage.update();
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas"
+	        width="400"
+	        height="200"
+	        style="background:lightgray;">
+	</canvas>
+</body>
+</html>

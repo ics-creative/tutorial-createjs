@@ -1,9 +1,6 @@
 
 ## EaselJSの様々な図形
 
-[サンプルを開く](../samples/2_color.html)
-![](../imgs/2_shape.html.png)
-
 ### 円を描く
 書式
 ```js
@@ -18,8 +15,12 @@ shape.graphics.drawCircle(0, 0, 100); //半径100pxの円を描画
 stage.addChild(shape); // 表示リストに追加
 ```
 
-### 四角形を描く
+![](../imgs/2_shape_circle.html.png)
 
+[サンプルを開く](../samples/2_shape_circle.html)
+
+
+### 四角形を描く
 
 書式
 ```js
@@ -28,11 +29,17 @@ Graphicsオブジェクト.drawRect(X座標, Y座標, 横幅, 高さ);
 
 サンプル
 ```js
-var rect = new Shape();
-rect.graphics.beginFill("red"); // 赤色で描画するように設定
-rect.graphics.drawRect(0, 0, 100, 100); //100pxの正方形を描画
-stage.addChild(rect); // 表示リストに追加
+// 四角形を作成します
+var shape = new createjs.Shape();
+shape.graphics.beginFill("red"); // 赤色で描画するように設定
+shape.graphics.drawRect(0, 0, 200, 100); //100pxの正方形を描画
+stage.addChild(shape); // 表示リストに追加
 ```
+
+![](../imgs/2_shape_rect.html.png)
+
+[サンプルを開く](../samples/2_shape_rect.html)
+
 
 ### 角丸四角形を描く
 書式
@@ -42,11 +49,17 @@ Graphicsオブジェクト.drawRect(X座標, Y座標, 横幅, 高さ, 角丸の�
 
 サンプル
 ```js
-var roundR = new createjs.Shape();
-roundR.graphics.beginFill("red"); // 赤色で描画するように設定
-roundR.graphics.drawRoundRect(0, 0, 100, 100, 20, 20); //100pxの正方形を描画。20pxの角丸を設定。
-stage.addChild(roundR); // 表示リストに追加
+// 角丸四角形を作成します
+var shape = new createjs.Shape();
+shape.graphics.beginFill("red"); // 赤色で描画するように設定
+shape.graphics.drawRoundRect(0, 0, 100, 100, 20, 20); //100pxの正方形を描画。20pxの角丸を設定。
+stage.addChild(shape); // 表示リストに追加
 ```
+
+![](../imgs/2_shape_roundrect.html.png)
+
+[サンプルを開く](../samples/2_shape_roundrect.html)
+
 
 
 ### 多角形の描画
@@ -64,6 +77,10 @@ poly.graphics.beginFill("red"); // 赤色で描画するように設定
 poly.graphics.drawPolyStar(0, 0, 75, 5, 0.6, -90); //75pxの星を記述
 stage.addChild(poly); // 表示リストに追加
 ```
+
+![](../imgs/2_shape_polystar.html.png)
+
+[サンプルを開く](../samples/2_shape_polystar.html)
 
 
 ### 任意の図形の描画
@@ -87,6 +104,12 @@ obj.graphics.lineTo(0,0); // (0,0)座標まで辺を描く
 stage.addChild(obj); // 表示リストに追加
 ```
 
+![](../imgs/2_shape_other.html.png)
+
+[サンプルを開く](../samples/2_shape_other.html)
+
+
+## コラム : ドットシンタックス
 
 またEaselJSの特徴として、ドット`.`をつなげて記述するチェーンメソッドで記述することも可能です。チェーンメソッドで記述するかしないかはプログラマーの好みですので、好きな方で記述ください。
 
