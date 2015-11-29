@@ -14,14 +14,14 @@
 			shape.y = 150; // Y座標300の位置に配置
 			stage.addChild(shape); // 表示リストに追加
 
+			// 自動的に画面更新させます。
+			createjs.Ticker.addEventListener("tick", stage);
+
 			// tick イベントを監視します
 			createjs.Ticker.addEventListener("tick", handleTick);
 			function handleTick(){
 				// アニメーション
 				shape.x += 2;
-
-				// Stageの描画を更新します
-				stage.update();
 			}
 		}
 	</script>

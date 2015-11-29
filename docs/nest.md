@@ -58,4 +58,9 @@ stage.addChild(container);
 </html>
 ```
 
+![](../imgs/container_nest.html.png)
+
+[サンプルを開く](../samples/container_nest.html)
+
+
 ▲複数のShapeオブジェクトが円周上を移動している

@@ -4,36 +4,39 @@
 	<meta charset="UTF-8">
 	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
 	<script>
-		var container;
-		var stage;
 		window.addEventListener("load", init);
 		function init() {
 			// Stageの作成
-			stage = new createjs.Stage("myCanvas");
+			var stage = new createjs.Stage("myCanvas");
 
 			// コンテナー(グループの親)を作成
-			container = new createjs.Container();
+			var container = new createjs.Container();
 			container.x = 300;
 			container.y = 300;
 			stage.addChild(container); // 画面に追加
 
-			// 10個、円を作成しcontainerに追加
+			// ループ分で10回
 			for (var i = 0; i < 10; i++) {
+				// 円を作成し
 				var ball = new createjs.Shape();
 				ball.graphics
 						.beginFill("red")
 						.drawCircle(0, 0, 50);
+				// 円周上に配置
 				ball.x = 200 * Math.sin(i * 360 / 10 * Math.PI / 180);
 				ball.y = 200 * Math.cos(i * 360 / 10 * Math.PI / 180);
-				container.addChild(ball); // グループに追加
+				// グループに追加
+				container.addChild(ball);
 			}
 
-			createjs.Ticker.on("tick", handleTick);
+			createjs.Ticker.addEventListener("tick", handleTick);
+			function handleTick() {
+				// 親だけを回転
+				container.rotation += 1;
+				stage.update();
+			}
 		}
-		function handleTick() {
-			container.rotation += 1; // 親だけを回転
-			stage.update();
-		}
+
 	</script>
 </head>
 <body>

@@ -10,17 +10,13 @@
 
 			// 円のシェイプを作成
 			var circle = new createjs.Shape();
-			circle.graphics.beginFill("red").drawCircle(0, 0, 50).endFill();
+			circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+			circle.x = 0;
+			circle.y = 200;
 			stage.addChild(circle);
 
 			createjs.Tween.get(circle) // ターゲットを指定
-					.to({alpha: 0.5}) // 透明度の変化
-					.wait(1000)// 1秒停止
-					.to({x: 500, y: 200, alpha: 0.1}, 2000, createjs.Ease.get(1))// x/y/alphaのトゥイーン, イーズアウトで
-					.wait(1000)// 1秒停止
-					.to({x: 0}, 2000, createjs.Ease.get(-1))//  xのトゥイーン, イーズインで
-					.wait(1000)// 1秒停止
-					.to({x: 0, y: 0, alpha: 1}, 600) // x/y/alphaのトゥイーン
+					.to({x: 940}, 2000);
 
 			// ステージを更新する
 			createjs.Ticker.addEventListener("tick", handleTick);

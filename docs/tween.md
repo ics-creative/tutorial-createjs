@@ -1,75 +1,99 @@
+# モーションの実装〜トゥイーン効果
 
-## トゥイーン効果
+
 
 トゥイーンとは、始点と終点を設定してアニメーションさせるテクニックです。「間」を示すBetweenという単語から作られていれた用語です。TweenJSでは次の記述でトゥイーンを実装します。
 
-▼書式
+```js
+createjs.Tween.get(対象)
+     .to(パラメーター, ミリ秒);
+```
+
+## モーションを設定する
+
+具体的な例を見て理解を深めて行きましょう。2000ミリ秒かけて円がx座標が0から940pxまで移動します。
+
+```js
+// 円のシェイプを作成
+var circle = new createjs.Shape();
+circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.y = 200;
+stage.addChild(circle);
+
+createjs.Tween.get(circle) // ターゲットを指定
+		.to({x: 940}, 2000);
+```
+
+## 複数のモーションを設定する
+
+`to()`メソッドには複数のパラメーターを設定し、同時にモーションさせることもできます。次のコードは、`x`座標にくわえて`y`座標と透明度の`alpha`を変化させています。
+
+```js
+// 円のシェイプを作成
+var circle = new createjs.Shape();
+circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.x = 0;
+circle.y = 0;
+stage.addChild(circle);
+
+createjs.Tween.get(circle) // ターゲットを指定
+		.to({x: 940, y:500, alpha:0.1}, 2000);
+```
+
+## 連続のモーションを設定する
+
+TweenJSはメソッドチェーンと呼ばれる書き方で、複数のモーションを設定することができます。`.`と`;`の記述する場所に気をつけましょう。
+
+```js
+// 円のシェイプを作成
+var circle = new createjs.Shape();
+circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+stage.addChild(circle);
+
+createjs.Tween.get(circle) // ターゲットを指定
+		// 画面右下へ移動
+		.to({x: 940, y: 500, alpha: 0.1}, 2000)
+		// 画面中央上へ移動
+		.to({x: 500, y: 0, alpha: 1.0}, 3000)
+		// 画面中央へ移動
+		.to({x: 500, y: 300}, 3000)
+		// 300%の大きさに変形
+		.to({scaleX: 3, scaleY: 3}, 5000);
+```
+
+## モーションに緩急を瀬底する
+
+モーションに緩急をつけることで表現のバリエーションを増やし、「心地よさ」や「わかりやすさ」を高めることができます。モーションの緩急は「イージング」という用語として呼ばれます。CreateJSでは、`to()`メソッドの三番目の引数にイージングの種類を設定します。
+
+書式
 
 ```js
 createjs.Tween.get(対象)
      .to(パラメーター, ミリ秒, イージングの種類);
 ```
 
-パラメーターには、Object型でトゥイーン終了時のパラメータを指定します。イージングの種類にはEaseクラスに定義されている各メソッドを利用することができます。具体的な例を見て理解を深めて行きましょう。
+イージングの種類は主に以下があります。
+
+- `ease.Ease.cubicIn` 始まりがゆっくりで、加速していく
+- `ease.Ease.cubicOut` 始まりが最高速で、減速していく
+- `ease.Ease.cubicInOut` 始まりがゆっくりで加速し、最後は減速する
+- `ease.Ease.bounceOut` ボールが跳ね返るような動き
+- `ease.Ease.backOut` 目標を行き過ぎてから戻ってくる動き
+
+他にもイージングの種類が存在するので、次のドキュメントを参考ください。
+
+[Ease Class | TweenJS 日本語リファレンス](http://createjs.sub.jp/ja/TweenJS/reference/classes/Ease.html#methods)
+
+サンプル
 
 ```js
-cratejs.Tween.get(bmp)
-     .to({ alpha : 1, x : centerX + i, y : centerY},
-         1500, Ease.elasticOut);
-```
+// 円のシェイプを作成
+var circle = new createjs.Shape();
+circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.x = 400;
+circle.y = 0;
+stage.addChild(circle);
 
-TweenJSはメソッドチェーンで処理を書く仕様です。ここでは`createjs.Bitmap`インスタンスに対して、透明度とXY座標を1.5秒でトゥイーンするようにしています。
-
-これにディレイを適用したい場合は、wait()メソッドを使います。
-
-```js
-createjs.Tween.get(bmp)
-     .wait(1400)
-     .to({ alpha : 1,
-         x : centerX + i,
-         y : centerY}, 1500, Ease.elasticOut);
-```
-
-他にも様々なメソッドが用意されているので、それを活用してみるとよいでしょう。
-
-▼サンプル(4_1_CreateJS/3_TweenJS/index.html)
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-	<title>TweenJS Sample</title>
-	<script>var createjs = window;</script> <!-- 名前空間をグローバルに変更 -->
-	<script src="http://code.createjs.com/easeljs-0.5.0.min.js"></script>
-	<script src="http://code.createjs.com/tweenjs-0.3.0.min.js"></script>
-	<script>
-		function init() {
-			canvas = document.getElementById("myCanvas");
-			stage = new Stage(canvas);
-
-			// 円のシェイプを作成
-			var circle = new Shape();
-			circle.graphics.beginFill("#FF0000").drawCircle(0, 0, 50);
-			stage.addChild(circle);
-
-			Ticker.setFPS(60);
-			Ticker.addListener(stage);
-
-			Tween.get(circle) // ターゲットを指定
-					.to({alpha:0.5}) // 透明度の変化
-					.wait(1000)// 1秒停止
-					.to({x:500, y:200, alpha:0.1}, 2000, Ease.get(1))// x/y/alphaのトゥイーン, イーズアウトで
-					.wait(1000)// 1秒停止
-					.to({x:0}, 2000, Ease.get(-1))//  xのトゥイーン, イーズインで
-					.wait(1000)// 1秒停止
-					.to({x:0, y:0, alpha:1}, 600) // x/y/alphaのトゥイーン
-		}
-
-	</script>
-</head>
-
-<body onload="init();">
-	<canvas id="myCanvas" width="960" height="540"></canvas>
-</body>
-</html>
+createjs.Tween.get(circle) // ターゲットを指定
+		.to({y: 490}, 2000, createjs.Ease.bounceOut);
 ```
