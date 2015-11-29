@@ -15,9 +15,14 @@ var t = new createjs.Text("Hello World!", "24px serif", "red");
 stage.addChild(t);
 ```
 
+
+
 ![](../imgs/text.html.png)
 
-[サンプルを開く](../samples/3_text.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/text.html)
+- [サンプルのソースコードを確認する](../samples/text.html)
+
+
 
 
 EaselJSのテキストは`textBaseline`プロパティーを使うことで、垂直方向の基準点をどこに合わせるかを指定できます。
@@ -29,9 +34,12 @@ t.textBaseline = “top”;
 stage.addChild(t);
 ```
 
+
 ![](../imgs/textBaseline.html.png)
 
-[サンプルを開く](../samples/textBaseline.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/textBaseline.html)
+- [サンプルのソースコードを確認する](../samples/textBaseline.html)
+
 
 
 
@@ -46,9 +54,13 @@ t.textAlign = "center";
 stage.addChild(t);
 ```
 
+
+
 ![](../imgs/textAlign.html.png)
 
-[サンプルを開く](../samples/textAlign.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/textAlign.html)
+- [サンプルのソースコードを確認する](../samples/textAlign.html)
+
 
 
 ▲左上から順に、"start", "end",

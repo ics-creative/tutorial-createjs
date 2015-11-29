@@ -45,6 +45,10 @@ function handleTick(){
 }
 ```
 
+![](../imgs/ticker.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/ticker.html)
+- [サンプルのソースコードを確認する](../samples/ticker.html)
 
 
 ## コラム : createjs.Stage の自動更新
@@ -77,5 +81,12 @@ function handleTick(){
 	shape.x += 2;
 }
 ```
+
+
+![](../imgs/ticker_autoupdate.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/ticker_autoupdate.html)
+- [サンプルのソースコードを確認する](../samples/ticker_autoupdate.html)
+
 
 [目次に戻る](../ReadMe.md)

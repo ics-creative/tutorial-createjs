@@ -35,9 +35,13 @@
 
 ```
 
-[サンプルを開く](../samples/quickstart.html)
 
-![](../imgs/0_quickstart.html.png)
+![](../imgs/quickstart.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/quickstart.html)
+- [サンプルのソースコードを確認する](../samples/quickstart.html)
+
+
 
 
 CreateJSはHTML5の`canvas`要素を利用します。`canvas`要素はコンテンツを表示する描画エリアとなります。`canvas`要素には3つの属性として`id`(ID値)と`width`(幅)と`height`(高さ)を最低限設定しておきましょう。

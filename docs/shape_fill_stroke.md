@@ -25,7 +25,12 @@ shape.graphics.drawCircle(0, 0, 80);
 
 ![](../imgs/shape_begin_fill.html.png)
 
-[サンプルを開く](../samples/shape_begin_fill.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_begin_fill.html)
+- [サンプルのソースコードを確認する](../samples/shape_begin_fill.html)
+
+
+
+
 
 
 ### コラム
@@ -59,11 +64,13 @@ shape.graphics.drawCircle(0, 0, 80);
 ```
 
 
-
-
 ![](../imgs/shape_begin_stroke.html.png)
 
-[サンプルを開く](../samples/shape_begin_stroke.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_begin_stroke.html)
+- [サンプルのソースコードを確認する](../samples/shape_begin_stroke.html)
+
+
+
 
 ### コラム
 

@@ -1,5 +1,4 @@
-
-## EaselJSの様々な図形
+# 様々な図形
 
 ### 円を描く
 書式
@@ -15,9 +14,11 @@ shape.graphics.drawCircle(0, 0, 100); //半径100pxの円を描画
 stage.addChild(shape); // 表示リストに追加
 ```
 
+
 ![](../imgs/shape_circle.html.png)
 
-[サンプルを開く](../samples/2_shape_circle.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_circle.html)
+- [サンプルのソースコードを確認する](../samples/shape_circle.html)
 
 
 ### 四角形を描く
@@ -38,7 +39,9 @@ stage.addChild(shape); // 表示リストに追加
 
 ![](../imgs/shape_rect.html.png)
 
-[サンプルを開く](../samples/2_shape_rect.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_rect.html)
+- [サンプルのソースコードを確認する](../samples/shape_rect.html)
+
 
 
 ### 角丸四角形を描く
@@ -56,11 +59,11 @@ shape.graphics.drawRoundRect(0, 0, 100, 100, 20, 20); //100pxの正方形を描�
 stage.addChild(shape); // 表示リストに追加
 ```
 
+
 ![](../imgs/shape_roundrect.html.png)
 
-[サンプルを開く](../samples/2_shape_roundrect.html)
-
-
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_roundrect.html)
+- [サンプルのソースコードを確認する](../samples/shape_roundrect.html)
 
 ### 多角形の描画
 
@@ -80,8 +83,8 @@ stage.addChild(poly); // 表示リストに追加
 
 ![](../imgs/shape_polystar.html.png)
 
-[サンプルを開く](../samples/2_shape_polystar.html)
-
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_polystar.html)
+- [サンプルのソースコードを確認する](../samples/shape_polystar.html)
 
 ### 任意の図形の描画
 
@@ -104,9 +107,11 @@ obj.graphics.lineTo(0,0); // (0,0)座標まで辺を描く
 stage.addChild(obj); // 表示リストに追加
 ```
 
-![](../imgs/shape_other.html.png)
 
-[サンプルを開く](../samples/2_shape_other.html)
+![](../imgs/2_shape_other.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_other.html)
+- [サンプルのソースコードを確認する](../samples/shape_other.html)
 
 
 ## コラム : ドットシンタックス

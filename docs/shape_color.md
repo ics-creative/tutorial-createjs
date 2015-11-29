@@ -23,7 +23,14 @@ shape.graphics.drawCircle(200, 100, 50);
 shape.graphics.beginFill("blue");
 shape.graphics.drawCircle(300, 100, 50);
 ```
+
 ![](../imgs/color_name.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/color_name.html)
+- [サンプルのソースコードを確認する](../samples/color_name.html)
+
+
+
 
 使える色の名前はCSSの記法と同じです。次の記事を参考にするといいでしょう。
 
@@ -48,6 +55,10 @@ shape.graphics.drawCircle(300, 100, 50);
 ```
 
 ![](../imgs/color_hex.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/color_hex.html)
+- [サンプルのソースコードを確認する](../samples/color_hex.html)
+
 
 [CSS Color Names](http://memopad.bitter.jp/w3c/css/css_colornames.html)
 
@@ -92,6 +103,10 @@ shape.graphics.drawCircle(300, 100, 50);
 ```
 
 ![](../imgs/color_hsl.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/color_hsl.html)
+- [サンプルのソースコードを確認する](../samples/color_hsl.html)
+
 
 
 [目次に戻る](../ReadMe.md)

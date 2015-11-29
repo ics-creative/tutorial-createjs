@@ -24,6 +24,13 @@ createjs.Tween.get(circle) // ターゲットを指定
 		.to({x: 940}, 2000);
 ```
 
+
+![](../imgs/tween_basic.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/tween_basic.html)
+- [サンプルのソースコードを確認する](../samples/tween_basic.html)
+
+
 ## 複数のモーションを設定する
 
 `to()`メソッドには複数のパラメーターを設定し、同時にモーションさせることもできます。次のコードは、`x`座標にくわえて`y`座標と透明度の`alpha`を変化させています。
@@ -39,6 +46,12 @@ stage.addChild(circle);
 createjs.Tween.get(circle) // ターゲットを指定
 		.to({x: 940, y:500, alpha:0.1}, 2000);
 ```
+
+![](../imgs/tween_multi.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/tween_multi.html)
+- [サンプルのソースコードを確認する](../samples/tween_multi.html)
+
 
 ## 連続のモーションを設定する
 
@@ -60,6 +73,12 @@ createjs.Tween.get(circle) // ターゲットを指定
 		// 300%の大きさに変形
 		.to({scaleX: 3, scaleY: 3}, 5000);
 ```
+
+![](../imgs/tween_chain.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/tween_chain.html)
+- [サンプルのソースコードを確認する](../samples/tween_chain.html)
+
 
 ## モーションに緩急を瀬底する
 
@@ -97,6 +116,11 @@ stage.addChild(circle);
 createjs.Tween.get(circle) // ターゲットを指定
 		.to({y: 490}, 2000, createjs.Ease.bounceOut);
 ```
+
+![](../imgs/tween_ease.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/tween_ease.html)
+- [サンプルのソースコードを確認する](../samples/tween_ease.html)
 
 
 [目次に戻る](../ReadMe.md)

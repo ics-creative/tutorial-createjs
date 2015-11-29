@@ -13,6 +13,12 @@ var bmp = new createjs.Bitmap("sample.png");
 stage.addChild(bmp);
 ```
 
+![](../imgs/bitmap.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/bitmap.html)
+- [サンプルのソースコードを確認する](../samples/bitmap.html)
+
+
 画像の基準点を調整したい場合は、`regX`と`regY`プロパティーを使うと便利です。
 
 ```js
@@ -23,6 +29,7 @@ stage.addChild(bmp);
 bmp.regX = 100;
 bmp.regY = 100;
 ```
+
 
 
 [目次に戻る](../ReadMe.md)

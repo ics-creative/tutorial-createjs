@@ -17,9 +17,13 @@
 - [表示オブジェクトのグループ化](docs/nest.md)
 
 ## モーション
-  - [Ticker の使い方](docs/ticker.md)
-  - [Tween の使い方](docs/tween.md)
+
+- [Ticker の使い方](docs/ticker.md)
+- [Tween の使い方](docs/tween.md)
 
 ## インタラクション
-  - [マウス操作](docs/mouse.md)
-  - キーボード操作
+
+- [マウス操作](docs/mouse.md)
+- キーボード操作
+
+## 時計を作ろう

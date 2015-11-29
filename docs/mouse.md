@@ -42,7 +42,9 @@ function handleTick(event) {
 
 ![](../imgs/mouse_xy.html.png)
 
-[サンプルを開く](../samples/mouse_xy.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/mouse_xy.html)
+- [サンプルのソースコードを確認する](../samples/mouse_xy.html)
+
 
 ## クリック
 
@@ -88,7 +90,8 @@ function handleRectClick(event) {
 
 ![](../imgs/mouse_click.html.png)
 
-[サンプルを開く](../samples/mouse_click.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/mouse_click.html)
+- [サンプルのソースコードを確認する](../samples/mouse_click.html)
 
 
 
@@ -156,9 +159,12 @@ function handleMouseOut(event) {
 }
 ```
 
-![](../imgs/mouse_over.html.png)
 
-[サンプルを開く](../samples/mouse_over.html)
+![](../imgs/mouse_touch.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/mouse_over.html)
+- [サンプルのソースコードを確認する](../samples/mouse_over.html)
+
 
 
 ## タッチデバイス対応
@@ -176,9 +182,11 @@ if(createjs.Touch.isSupported() == true){
 }
 ```
 
+
 ![](../imgs/mouse_touch.html.png)
 
-[サンプルを開く](../samples/mouse_touch.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/mouse_touch.html)
+- [サンプルのソースコードを確認する](../samples/mouse_touch.html)
 
 
 
