@@ -42,7 +42,7 @@ function handleTick(event) {
 
 ![](../imgs/mouse_xy.html.png)
 
-[サンプルを開く](samples/mouse_xy.html)
+[サンプルを開く](../samples/mouse_xy.html)
 
 ## クリック
 
@@ -88,7 +88,7 @@ function handleRectClick(event) {
 
 ![](../imgs/mouse_click.html.png)
 
-[サンプルを開く](samples/mouse_click.html)
+[サンプルを開く](../samples/mouse_click.html)
 
 
 
@@ -158,7 +158,7 @@ function handleMouseOut(event) {
 
 ![](../imgs/mouse_over.html.png)
 
-[サンプルを開く](samples/mouse_over.html)
+[サンプルを開く](../samples/mouse_over.html)
 
 
 ## タッチデバイス対応
@@ -178,4 +178,8 @@ if(createjs.Touch.isSupported() == true){
 
 ![](../imgs/mouse_touch.html.png)
 
-[サンプルを開く](samples/mouse_touch.html)
+[サンプルを開く](../samples/mouse_touch.html)
+
+
+
+[目次に戻る](../ReadMe.md)

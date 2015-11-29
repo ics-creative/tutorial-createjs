@@ -97,3 +97,6 @@ stage.addChild(circle);
 createjs.Tween.get(circle) // ターゲットを指定
 		.to({y: 490}, 2000, createjs.Ease.bounceOut);
 ```
+
+
+[目次に戻る](../ReadMe.md)

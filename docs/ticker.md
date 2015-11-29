@@ -77,3 +77,5 @@ function handleTick(){
 	shape.x += 2;
 }
 ```
+
+[目次に戻る](../ReadMe.md)

@@ -23,3 +23,6 @@ stage.addChild(bmp);
 bmp.regX = 100;
 bmp.regY = 100;
 ```
+
+
+[目次に戻る](../ReadMe.md)
