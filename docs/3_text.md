@@ -15,7 +15,7 @@ var t = new createjs.Text("Hello World!", "24px serif", "red");
 stage.addChild(t);
 ```
 
-![](../imgs/3_text.html.png)
+![](../imgs/text.html.png)
 
 [サンプルを開く](../samples/3_text.html)
 
@@ -82,5 +82,3 @@ t.text = "test";
 stage.addChild(t);
 ```
 
-
-## Webフォント

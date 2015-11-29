@@ -15,7 +15,7 @@ shape.graphics.drawCircle(0, 0, 100); //半径100pxの円を描画
 stage.addChild(shape); // 表示リストに追加
 ```
 
-![](../imgs/2_shape_circle.html.png)
+![](../imgs/shape_circle.html.png)
 
 [サンプルを開く](../samples/2_shape_circle.html)
 
@@ -36,7 +36,7 @@ shape.graphics.drawRect(0, 0, 200, 100); //100pxの正方形を描画
 stage.addChild(shape); // 表示リストに追加
 ```
 
-![](../imgs/2_shape_rect.html.png)
+![](../imgs/shape_rect.html.png)
 
 [サンプルを開く](../samples/2_shape_rect.html)
 
@@ -56,7 +56,7 @@ shape.graphics.drawRoundRect(0, 0, 100, 100, 20, 20); //100pxの正方形を描�
 stage.addChild(shape); // 表示リストに追加
 ```
 
-![](../imgs/2_shape_roundrect.html.png)
+![](../imgs/shape_roundrect.html.png)
 
 [サンプルを開く](../samples/2_shape_roundrect.html)
 
@@ -78,7 +78,7 @@ poly.graphics.drawPolyStar(0, 0, 75, 5, 0.6, -90); //75pxの星を記述
 stage.addChild(poly); // 表示リストに追加
 ```
 
-![](../imgs/2_shape_polystar.html.png)
+![](../imgs/shape_polystar.html.png)
 
 [サンプルを開く](../samples/2_shape_polystar.html)
 
@@ -104,7 +104,7 @@ obj.graphics.lineTo(0,0); // (0,0)座標まで辺を描く
 stage.addChild(obj); // 表示リストに追加
 ```
 
-![](../imgs/2_shape_other.html.png)
+![](../imgs/shape_other.html.png)
 
 [サンプルを開く](../samples/2_shape_other.html)
 
