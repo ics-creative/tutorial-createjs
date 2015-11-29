@@ -23,7 +23,11 @@
 
 ## インタラクション
 
-- [マウス操作](docs/mouse.md)
+- マウス操作
+	- [マウス座標](docs/mouse_xy.md)
+	- [クリックイベント](docs/mouse_click.md)
+	- [マウスオーバー](docs/mouse_over.md)
+	- [タッチデバイス対応](docs/mouse_touch.md)
 - キーボード操作
 
 ## 時計を作ろう
