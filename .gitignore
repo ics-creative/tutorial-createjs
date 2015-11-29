@@ -1,3 +1,4 @@
 .DS_Store
 .idea
 tool-generate-captures/node_modules/*
+tool-generate-captures/.idea/workspace.xml
