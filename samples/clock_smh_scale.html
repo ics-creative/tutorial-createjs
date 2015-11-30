@@ -24,14 +24,15 @@
                 clock.addChild(bg);
 
                 // 目盛りを描画
-                var memoriNum = 60; // 目盛りの個数
-                for (var i = 0; i < memoriNum; i++) {
-                    var angle = i * (360 / memoriNum); //角度を計算
+                var steps = 60; // 目盛りの個数
+                // (1周=360度=2πはstepsの値で分割)
+                for (var i = 0; i < steps; i++) {
+                    var angle = i * (360 / steps) - 90; //角度を計算
                     var radian = angle * Math.PI / 180; // ラジアンに変換
-                    // 始点
+                    // 始点 (直交座標に変換)
                     var startX = 190 * Math.cos(radian);
                     var startY = 190 * Math.sin(radian);
-                    // 終点
+                    // 終点 (直交座標に変換)
                     var endX = 200 * Math.cos(radian);
                     var endY = 200 * Math.sin(radian);
 
@@ -44,12 +45,12 @@
                 }
 
                 // 数字を配置
-                var memoriNum = 12; // 目盛りの個数
-                for (var i = 0; i < memoriNum; i++) {
+                var steps = 12; // 目盛りの個数
+                for (var i = 0; i < steps; i++) {
                     // 角度を計算
-                    var angle = i * (360 / memoriNum) - 90; // 開始座標を90度ずらす
+                    var angle = i * (360 / steps) - 90; // 開始座標を90度ずらす
                     var radian = angle * Math.PI / 180; // ラジアンに変換
-                    // 配置座標
+                    // 配置座標 (直交座標に変換)
                     var xx = 160 * Math.cos(radian);
                     var yy = 160 * Math.sin(radian);
 
