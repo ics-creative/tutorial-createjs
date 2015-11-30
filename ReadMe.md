@@ -27,6 +27,7 @@
 	- [マウス座標](docs/mouse_xy.md)
 	- [クリックイベント](docs/mouse_click.md)
 	- [マウスオーバー](docs/mouse_over.md)
+  - [ドラッグ&ドロップ](docs/mouse_drag.md)
 	- [タッチデバイス対応](docs/mouse_touch.md)
 - キーボード操作
   - [キーボードイベントの基本](docs/keyboard_basic.md)
