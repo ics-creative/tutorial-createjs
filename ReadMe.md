@@ -29,6 +29,8 @@
 	- [マウスオーバー](docs/mouse_over.md)
 	- [タッチデバイス対応](docs/mouse_touch.md)
 - キーボード操作
+  - [キーボードイベントの基本](docs/keyboard_basic.md)
+  - [キーボードで自機を操作](docs/keyboard_ship.md)
 - [当たり判定](docs/hittest.md)
 
 ## 時計を作ろう
