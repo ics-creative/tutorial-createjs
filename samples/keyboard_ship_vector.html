@@ -3,11 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
     <script>
         window.addEventListener("load", init);
-
         function init() {
             // ステージを作成
             var stage = new createjs.Stage("myCanvas");
@@ -46,12 +44,12 @@
                 }
             }
 
-            // 画面更新
-            createjs.Ticker.on("tick", stage);
+            // 時間経過
+            createjs.Ticker.addEventListener("tick", handleTick);
+            function handleTick() {
+                // 船の角度を設定する
+                ship.rotation = angle;
 
-            createjs.Ticker.on("tick", onTick);
-
-            function onTick() {
                 // 角度をラジアンに変換
                 var radian = angle * Math.PI / 180;
                 // スピード(スカラ)と方向からxとyの成分に分解
@@ -60,9 +58,6 @@
                 // 船の位置を更新する
                 ship.x += vx;
                 ship.y += vy;
-
-                // 船の角度を設定する
-                ship.rotation = angle;
 
                 // 摩擦
                 speed *= 0.90;
@@ -73,29 +68,19 @@
                 if (ship.y < 0) ship.y = 0;
                 if (ship.y > stage.canvas.height) ship.y = stage.canvas.height;
 
-            }
-
-            // リサイズイベントを検知
-            window.addEventListener("resize", onResize);
-            onResize(); // 起動時にも実行しておく
-            function onResize(event) {
-                // cavas要素の大きさを画面に揃える
-                stage.canvas.width = window.innerWidth;
-                stage.canvas.height = window.innerHeight;
+                // 画面更新
+                stage.update();
             }
         }
     </script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-    </style>
 </head>
 
 <body>
-    <canvas id="myCanvas" width="960" height="540"></canvas>
+    <canvas id="myCanvas"
+            width="960"
+            height="540"
+            style="background:lightgray;">
+    </canvas>
 </body>
 
 </html>
