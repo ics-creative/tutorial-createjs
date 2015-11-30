@@ -29,5 +29,6 @@
 	- [マウスオーバー](docs/mouse_over.md)
 	- [タッチデバイス対応](docs/mouse_touch.md)
 - キーボード操作
+- [当たり判定](docs/hittest.md)
 
 ## 時計を作ろう
