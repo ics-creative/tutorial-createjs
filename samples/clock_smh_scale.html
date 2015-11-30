@@ -1,134 +1,134 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
-        <script>
-            window.addEventListener("load", init);
-            function init() {
-                // Stageオブジェクトを作成。表示リストのルートになります。
-                var stage = new createjs.Stage("myCanvas");
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script>
+        window.addEventListener("load", init);
+        function init() {
+            // Stageオブジェクトを作成。表示リストのルートになります。
+            var stage = new createjs.Stage("myCanvas");
 
-                // コンテナーを作成します。
-                var clock = new createjs.Container();
-                clock.x = 960 / 2; // 画面中央に配置
-                clock.y = 540 / 2;
-                stage.addChild(clock);
+            // コンテナーを作成します。
+            var clock = new createjs.Container();
+            clock.x = 960 / 2; // 画面中央に配置
+            clock.y = 540 / 2;
+            stage.addChild(clock);
 
-                // 座布団を配置
-                var bg = new createjs.Shape();
+            // 座布団を配置
+            var bg = new createjs.Shape();
+            bg.graphics
+                    .setStrokeStyle(1) // 線幅
+                    .beginStroke("gray")// 線の色
+                    .drawCircle(0, 0, 200); // 円を描く
+            clock.addChild(bg);
+
+            // 目盛りを描画
+            var steps = 60; // 目盛りの個数
+            // (1周=360度=2πはstepsの値で分割)
+            for (var i = 0; i < steps; i++) {
+                var angle = i * (360 / steps) - 90; //角度を計算
+                var radian = angle * Math.PI / 180; // ラジアンに変換
+                // 始点 (直交座標に変換)
+                var startX = 190 * Math.cos(radian);
+                var startY = 190 * Math.sin(radian);
+                // 終点 (直交座標に変換)
+                var endX = 200 * Math.cos(radian);
+                var endY = 200 * Math.sin(radian);
+
+                // 目盛りを描く
                 bg.graphics
                         .setStrokeStyle(1) // 線幅
                         .beginStroke("gray")// 線の色
-                        .drawCircle(0, 0, 200); // 円を描く
-                clock.addChild(bg);
-
-                // 目盛りを描画
-                var steps = 60; // 目盛りの個数
-                // (1周=360度=2πはstepsの値で分割)
-                for (var i = 0; i < steps; i++) {
-                    var angle = i * (360 / steps) - 90; //角度を計算
-                    var radian = angle * Math.PI / 180; // ラジアンに変換
-                    // 始点 (直交座標に変換)
-                    var startX = 190 * Math.cos(radian);
-                    var startY = 190 * Math.sin(radian);
-                    // 終点 (直交座標に変換)
-                    var endX = 200 * Math.cos(radian);
-                    var endY = 200 * Math.sin(radian);
-
-                    // 目盛りを描く
-                    bg.graphics
-                            .setStrokeStyle(1) // 線幅
-                            .beginStroke("gray")// 線の色
-                            .moveTo(startX, startY)
-                            .lineTo(endX, endY);
-                }
-
-                // 数字を配置
-                var steps = 12; // 目盛りの個数
-                for (var i = 0; i < steps; i++) {
-                    // 角度を計算
-                    var angle = i * (360 / steps) - 90; // 開始座標を90度ずらす
-                    var radian = angle * Math.PI / 180; // ラジアンに変換
-                    // 配置座標 (直交座標に変換)
-                    var xx = 160 * Math.cos(radian);
-                    var yy = 160 * Math.sin(radian);
-
-                    // 表示する文字
-                    var moji = i;
-                    // アナログ時計は「0」時と表示しないので、「12」時に設定する
-                    if(i == 0){
-                        moji = 12;
-                    }
-
-                    // テキスト表示
-                    var t = new createjs.Text("", "32px sans-serif", "gray");
-                    t.text = moji;
-                    t.textAlign = "center"; // 水平中央に
-                    t.textBaseline = "middle"; // 垂直中央に
-                    t.x = xx; // 座標を設定
-                    t.y = yy;
-                    clock.addChild(t);
-                }
-
-                // 短針を配置
-                var hShape = new createjs.Shape();
-                hShape.graphics
-                        .setStrokeStyle(12, "round") // 線幅(端を角丸に)
-                        .beginStroke("gray")
-                        .moveTo(0, 0)
-                        .lineTo(0, -120); // 垂直上方向に線を描く
-                clock.addChild(hShape);
-
-                // 分針を配置
-                var mShape = new createjs.Shape();
-                mShape.graphics
-                        .setStrokeStyle(5, "round") // 線幅(端を角丸に)
-                        .beginStroke("gray")
-                        .moveTo(0, 0)
-                        .lineTo(0, -200); // 垂直上方向に線を描く
-                clock.addChild(mShape);
-
-                // 秒針を配置
-                var sShape = new createjs.Shape();
-                sShape.graphics
-                        .setStrokeStyle(1) // 線幅
-                        .beginStroke("gray")
-                        .moveTo(0, 0)
-                        .lineTo(0, -200); // 垂直上方向に線を描く
-                clock.addChild(sShape);
-
-
-                // 時間経過のイベント
-                createjs.Ticker.addEventListener("tick", handleTick);
-                function handleTick() {
-                    // 現在時間を取得
-                    var now = new Date();
-
-                    // 時間の数値を取得
-                    var h = now.getHours(); // 時間(0〜23)
-                    var m = now.getMinutes(); // 分(0〜59)
-                    var s = now.getSeconds(); // 秒(0〜59)
-
-                    // 針の角度に反映する
-                    // 秒針
-                    sShape.rotation = s * (360 / 60);
-                    // 分針
-                    mShape.rotation = m * (360 / 60);
-                    // 短針 (短針は時間だけでなく分も角度に考慮する)
-                    hShape.rotation = h * (360 / 12) + m * (360 / 12 / 60);
-
-                    // Stageの描画を更新
-                    stage.update();
-                }
+                        .moveTo(startX, startY)
+                        .lineTo(endX, endY);
             }
-        </script>
-    </head>
-    <body>
+
+            // 数字を配置
+            var steps = 12; // 目盛りの個数
+            for (var i = 0; i < steps; i++) {
+                // 角度を計算
+                var angle = i * (360 / steps) - 90; // 開始座標を90度ずらす
+                var radian = angle * Math.PI / 180; // ラジアンに変換
+                // 配置座標 (直交座標に変換)
+                var xx = 160 * Math.cos(radian);
+                var yy = 160 * Math.sin(radian);
+
+                // 表示する文字
+                var moji = i;
+                // アナログ時計は「0」時と表示しないので、「12」時に設定する
+                if (i == 0) {
+                    moji = 12;
+                }
+
+                // テキスト表示
+                var t = new createjs.Text("", "32px sans-serif", "gray");
+                t.text = moji;
+                t.textAlign = "center"; // 水平中央に
+                t.textBaseline = "middle"; // 垂直中央に
+                t.x = xx; // 座標を設定
+                t.y = yy;
+                clock.addChild(t);
+            }
+
+            // 短針を配置
+            var hShape = new createjs.Shape();
+            hShape.graphics
+                    .setStrokeStyle(12, "round") // 線幅(端を角丸に)
+                    .beginStroke("gray")
+                    .moveTo(0, 0)
+                    .lineTo(0, -120); // 垂直上方向に線を描く
+            clock.addChild(hShape);
+
+            // 分針を配置
+            var mShape = new createjs.Shape();
+            mShape.graphics
+                    .setStrokeStyle(5, "round") // 線幅(端を角丸に)
+                    .beginStroke("gray")
+                    .moveTo(0, 0)
+                    .lineTo(0, -200); // 垂直上方向に線を描く
+            clock.addChild(mShape);
+
+            // 秒針を配置
+            var sShape = new createjs.Shape();
+            sShape.graphics
+                    .setStrokeStyle(1) // 線幅
+                    .beginStroke("gray")
+                    .moveTo(0, 0)
+                    .lineTo(0, -200); // 垂直上方向に線を描く
+            clock.addChild(sShape);
+
+
+            // 時間経過のイベント
+            createjs.Ticker.addEventListener("tick", handleTick);
+            function handleTick() {
+                // 現在時間を取得
+                var now = new Date();
+
+                // 時間の数値を取得
+                var h = now.getHours(); // 時間(0〜23)
+                var m = now.getMinutes(); // 分(0〜59)
+                var s = now.getSeconds(); // 秒(0〜59)
+
+                // 針の角度に反映する
+                // 秒針
+                sShape.rotation = s * (360 / 60);
+                // 分針
+                mShape.rotation = m * (360 / 60);
+                // 短針 (短針は時間だけでなく分も角度に考慮する)
+                hShape.rotation = h * (360 / 12) + m * (360 / 12 / 60);
+
+                // Stageの描画を更新
+                stage.update();
+            }
+        }
+    </script>
+</head>
+<body>
     <canvas id="myCanvas"
             width="960"
             height="540"
             style="background:lightgray;">
     </canvas>
-    </body>
+</body>
 </html>

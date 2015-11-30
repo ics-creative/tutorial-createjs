@@ -1,37 +1,36 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
-	<script>
-		window.addEventListener("load", init);
-		function init() {
-			var stage = new createjs.Stage("myCanvas");
+    <meta charset="UTF-8">
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script>
+        window.addEventListener("load", init);
+        function init() {
+            var stage = new createjs.Stage("myCanvas");
 
-			// 円のシェイプを作成
-			var circle = new createjs.Shape();
-			circle.graphics.beginFill("red").drawCircle(0, 0, 50);
-			circle.x = 400;
-			circle.y = 0;
-			stage.addChild(circle);
+            // 円のシェイプを作成
+            var circle = new createjs.Shape();
+            circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+            circle.x = 400;
+            circle.y = 0;
+            stage.addChild(circle);
 
-			createjs.Tween.get(circle) // ターゲットを指定
-					.to({y: 490}, 2000, createjs.Ease.bounceOut);
+            createjs.Tween.get(circle) // ターゲットを指定
+                    .to({y: 490}, 2000, createjs.Ease.bounceOut);
 
-			// ステージを更新する
-			createjs.Ticker.addEventListener("tick", handleTick);
-			function handleTick() {
-				stage.update();
-			}
-		}
-	</script>
+            // ステージを更新する
+            createjs.Ticker.addEventListener("tick", handleTick);
+            function handleTick() {
+                stage.update();
+            }
+        }
+    </script>
 </head>
-
 <body>
-	<canvas id="myCanvas"
-	        width="960"
-	        height="540"
-	        style="background:lightgray;">
-	</canvas>
+    <canvas id="myCanvas"
+            width="960"
+            height="540"
+            style="background:lightgray;">
+    </canvas>
 </body>
 </html>

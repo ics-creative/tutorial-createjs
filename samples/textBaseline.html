@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
-	<script>
-		// 読み込みが終わってから初期化
-		window.addEventListener("load", init);
-		function init() {
-			var stage = new createjs.Stage("myCanvas");
+    <meta charset="UTF-8">
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script>
+        // 読み込みが終わってから初期化
+        window.addEventListener("load", init);
+        function init() {
+            var stage = new createjs.Stage("myCanvas");
 
-			var arr = ["top", "hanging", "middle", "alphabetic", "ideographic", "bottom"];
+            var arr = ["top", "hanging", "middle", "alphabetic", "ideographic", "bottom"];
 
-			for (var i = 0; i < arr.length; i++) {
-				var t = new createjs.Text(arr[i].toUpperCase(), "32px sans-serif", "#000000");
-				t.textBaseline = arr[i];
-				stage.addChild(t);
+            for (var i = 0; i < arr.length; i++) {
+                var t = new createjs.Text(arr[i].toUpperCase(), "32px sans-serif", "#000000");
+                t.textBaseline = arr[i];
+                stage.addChild(t);
 
-				var shape = new createjs.Shape();
-				shape.graphics
-						.setStrokeStyle(1)
-						.beginStroke("#FF0000")
-						.moveTo(0, 0)
-						.lineTo(+100, 0)
-						.moveTo(0, -50)
-						.lineTo(0, +50);
-				stage.addChild(shape);
+                var shape = new createjs.Shape();
+                shape.graphics
+                        .setStrokeStyle(1)
+                        .beginStroke("#FF0000")
+                        .moveTo(0, 0)
+                        .lineTo(+100, 0)
+                        .moveTo(0, -50)
+                        .lineTo(0, +50);
+                stage.addChild(shape);
 
-				t.x = shape.x = (i % 3) * 300 + 100;
-				t.y = shape.y = Math.floor(i / 3) * 300 + 100;
-			}
+                t.x = shape.x = (i % 3) * 300 + 100;
+                t.y = shape.y = Math.floor(i / 3) * 300 + 100;
+            }
 
-			stage.update();
-		}
-	</script>
+            stage.update();
+        }
+    </script>
 </head>
-
 <body>
-	<canvas id="myCanvas"
-	        width="960"
-	        height="540"
-	        style="background:lightgray;">
-	</canvas>
+    <canvas id="myCanvas"
+            width="960"
+            height="540"
+            style="background:lightgray;">
+    </canvas>
 </body>
 </html>
