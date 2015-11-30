@@ -1,5 +1,6 @@
 ///<reference path="libs/node/node.d.ts" />
 ///<reference path="libs/phantom/phantom.d.ts" />
+///<reference path="libs/es6-promise/es6-promise.d.ts" />
 
 // gazo_fileがあるかないかの確認
 var fs = require('fs');
@@ -13,11 +14,11 @@ var render = "render.js";
 var width = "120";
 var height = "80";
 
-fs.readdir("../samples", (err: NodeJS.ErrnoException, files: string[]):void => {
-	console.log(files);
+fs.readdir("../samples", (err:NodeJS.ErrnoException, files:string[]):void => {
 
-	for (let i = 0; i<files.length; i++)
-	{
+	var promises = [];
+
+	for (let i = 0; i < files.length; i++) {
 		var outputFilePath = `../imgs/${files[i]}.png`;
 
 		var url = `../samples/${files[i]}`;
@@ -29,15 +30,25 @@ fs.readdir("../samples", (err: NodeJS.ErrnoException, files: string[]):void => {
 			height
 		];
 
-		// ここでrender.jsをphantomjsで呼び出して実行する
-		childProcess.execFile(binPath, options, function (error, stdout, stderr) {
-			console.log(stdout);
-			console.error(stderr);
-			if (error != null) {
-				console.error('error: ' + error);
-			}
-		});
-		console.log(outputFilePath, "nothing. create this file!");
+		var childPromise = new Promise((resolve:Function)=> {
+				console.log(`${i} : ${outputFilePath}`);
+				// ここでrender.jsをphantomjsで呼び出して実行する
+				childProcess.execFile(binPath, options, (error, stdout, stderr) => {
+					console.log(stdout);
+					if (error != null) {
+						console.error(stderr);
+						console.error('error: ' + error);
+					}
+					resolve();
+				});
+			});
+
+		promises.push(childPromise);
 	}
 
+	Promise
+		.all(promises)
+		.then((results)=> {
+			console.log("finish!!!");
+		});
 });
