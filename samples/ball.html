@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script>
+        // 読み込みが終わってから初期化
+        window.addEventListener("load", init);
+        function init() {
+            // 初期化
+            var stage = new createjs.Stage("myCanvas");
+
+            var vx = 0; // 初期の速さ
+            var vy = 0;
+            var oldX;
+            var oldY;
+            var flag = false;
+            var radius = 50;
+
+            //　ボールを作成
+            var ball = new createjs.Shape();
+            ball.graphics.beginFill("red").drawCircle(0, 0, radius);
+            ball.x = stage.canvas.width / 2; // 画面中央から
+            stage.addChild(ball);
+
+            // インタラクティブの設定
+            ball.addEventListener("mousedown", handleDown);
+            ball.addEventListener("pressmove", handleMove);
+            ball.addEventListener("pressup", handleUp);
+
+            // ボールを押したときの処理です
+            function handleDown(event) {
+                // マウスの位置を保存
+                oldX = stage.mouseX;
+                oldY = stage.mouseY;
+
+                // ボールの速度を無効にする
+                flag = true;
+            }
+
+            function handleMove(event) {
+                ball.x = stage.mouseX;
+                ball.y = stage.mouseY;
+            }
+
+            // ボールからマウスを離したときの処理です
+            function handleUp(event) {
+                // ボールの速度を有効にする(ドラッグした距離に応じて、速度を設定)
+                vx = stage.mouseX - oldX;
+                vy = stage.mouseY - oldY;
+
+                // ボールの速度を無効にする
+                flag = false;
+            }
+
+            // 時間制御
+            createjs.Ticker.addEventListener("tick", handleTick);
+            function handleTick() {
+                // ボールをドラッグ中でないときだけ物理演算
+                if (flag == false) {
+                    //重力
+                    vy += .5;
+
+                    // 摩擦
+                    vx *= 0.97;
+                    vy *= 0.97;
+
+                    // ボールに物理演算を適用
+                    ball.x += vx;
+                    ball.y += vy;
+
+                    // 画面の端からはみ出さないようにする処理
+                    if (ball.x + radius > stage.canvas.width) {
+                        ball.x = stage.canvas.width - radius;
+                        vx *= -0.7;
+                    } else if (ball.x - radius < 0) {
+                        ball.x = radius;
+                        vx *= -0.7;
+                    }
+                    if (ball.y + radius > stage.canvas.height) {
+                        ball.y = stage.canvas.height - radius;
+                        vy *= -0.7;
+                    } else if (ball.y - radius < 0) {
+                        ball.y = radius;
+                        vy *= -0.7;
+                    }
+                }
+
+                // 画面更新
+                stage.update();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas"
+            width="960"
+            height="540"
+            style="background:lightgray;">
+    </canvas>
+</body>
+</html>

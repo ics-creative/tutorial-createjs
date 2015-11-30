@@ -28,12 +28,13 @@
 	- [クリックイベント](docs/mouse_click.md)
 	- [マウスオーバー](docs/mouse_over.md)
   - [ドラッグ&ドロップ](docs/mouse_drag.md)
-	- [タッチデバイス対応](docs/mouse_touch.md)
+  - [タッチデバイス対応](docs/mouse_touch.md)
 - キーボード操作
   - [キーボードイベントの基本](docs/keyboard_basic.md)
   - [キーボードで自機を操作](docs/keyboard_ship.md)
 - [当たり判定](docs/hittest.md)
 
-## 時計を作ろう
+## 応用サンプル
 
 - [アナログ時計を作ろう](docs/clock.md)
+- [物理演算でボールを作ろう](docs/ball.md)
