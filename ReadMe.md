@@ -44,3 +44,4 @@
 ## その他
 
 - [スマホブラウザで全画面に表示する対応](docs/fullscreen.md)
+- [Adobe Flash Professional CC (Animate CC)とCreateJSの連携](docs/adobe_animate.md)
