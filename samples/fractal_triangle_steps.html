@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script>
+        window.addEventListener("load", init);
+        function init() {
+            // ステージを作成
+            var stage = new createjs.Stage("myCanvas");
+
+            // 描画用のシェイプを作成
+            var shape = new createjs.Shape();
+            stage.addChild(shape);
+
+            // 正三角形の一辺の大きさを指定
+            var SIZE = 220;
+            // 正三角形の高さを求める
+            var HEIGHT = SIZE * Math.sin(60 * Math.PI / 180);
+
+            var margin = SIZE + 20;
+
+            // フラクタルの三角形を複数個描く
+            for (var i = 0; i < 8; i++) {
+                // 起点位置をずらす(オフセット = ずらす座標を計算)
+                var offsetX = (i % 4) * margin;
+                var offsetY = Math.floor(i / 4) * margin;
+
+                // 三角形を描く
+                drawTriangle(i,
+                        0 + offsetX, HEIGHT + offsetY,
+                        SIZE / 2 + offsetX, 0 + offsetY,
+                        SIZE + offsetX, HEIGHT + offsetY);
+            }
+
+
+            // 三角形を描く関数
+            function drawTriangle(level,
+                                  x1, y1,
+                                  x2, y2,
+                                  x3, y3) {
+                // 再帰レベルが0になったら描く
+                if (level <= 0) {
+                    // 線の種類を設定
+                    shape.graphics.beginStroke("red").setStrokeStyle(0.5);
+                    // 三角形を描く
+                    shape.graphics.moveTo(x1, y1); // 始点を設定
+                    shape.graphics.lineTo(x2, y2); // 始点と2点目を結ぶ
+                    shape.graphics.lineTo(x3, y3); // 2点目と3点目を結ぶ
+                    shape.graphics.closePath(); // 始点まで結ぶ
+                } else { // 再帰レベルが 0 になるまで細分化を行う
+
+                    // 正三角形の3辺の中点を求める
+                    // 1辺目の中点
+                    var nx1 = (x1 + x2) / 2;
+                    var ny1 = (y1 + y2) / 2;
+                    // 2辺目の中点
+                    var nx2 = (x2 + x3) / 2;
+                    var ny2 = (y2 + y3) / 2;
+                    // 3辺目の中点
+                    var nx3 = (x3 + x1) / 2;
+                    var ny3 = (y3 + y1) / 2;
+
+                    // 再帰レベルを更新
+                    level = level - 1;
+                    // 中点を元に細分化を行う
+                    drawTriangle(level, x1, y1, nx1, ny1, nx3, ny3);
+                    drawTriangle(level, x2, y2, nx1, ny1, nx2, ny2);
+                    drawTriangle(level, x3, y3, nx2, ny2, nx3, ny3);
+                }
+            }
+
+            // 画面を更新
+            stage.update();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas"
+            width="960"
+            height="540"
+            style="background:lightgray;">
+    </canvas>
+</body>
+</html>
