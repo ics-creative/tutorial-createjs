@@ -1,30 +1,21 @@
-# CreateJS入門
+# CreateJSとは / CreateJSのサンプル
 
+## CreateJSとは
 
-## コラム：Google Chromeのデバッグ方法
+[CreateJS](http://www.createjs.com)は、HTML5でリッチコンテンツを制作するためのJavaScriptライブラリのスイート（特定用途のソフトウェアを詰め合わせたパッケージ）です。Flashデベロッパーとして著名なGrant Skinner氏が開発を行っており、オープンソースソフトウェアとして個人・商用でも無償で利用できます。
 
-コンソール(Console)を使うことのメリット
-- JavaScriptのエラー箇所がわかる
-- 実行ログが確認できるようになり、プログラム動作の理解に役立つ
+CreateJSには、リッチコンテンツを制作するための複数のJavaScriptライブラリが含まれています。
 
-
-Google Chromeメニュー(右上の横棒三個のアイコン)をクリック
-1. ［その他のツール］→［デベロッパーツール］を選択
-2. デベロッパーツールと呼ばれる機能が表示される
-3. タブの［Console］を選択
-4. JavaScriptのエラーがあるときに、［Console］パネルに指摘が表示される
-
-
-
-## CreateJS
-
-CreateJSはHTML5を介してリッチなインタラクティブコンテンツの制作をサポートする、JavaScriptフレームワークです。CreateJSにはEaselJS、TweenJS、SoundJS、PreloadJSの4つのJavaScriptライブラリがあります。
-
-- EaselJS	: HTML5 Canvasでの制作を扱うためのソリューションが提供されています。F
+- EaselJS	: HTML5 Canvasでの制作を扱うためのソリューションが提供されています。
 - TweenJS	: Javascriptで使用するためのシンプルなトゥイーンライブラリです。
 - SoundJS	: 簡単にサウンドを利用できるライブラリです。
-- PreloadJS	: 素材（画像、音声、JS、データ）をプリロードできるライブラリです。
+- PreloadJS	: 素材（画像、音声、JS、データ）を先読みできるライブラリです。
 
+## CreateJSのサンプル
 
+- [gskinner lab](http://lab.gskinner.com)
+- [Planetary Gary](http://sandbox.createjs.com/PlanetaryGary/)
+- [CreateJS Demo](http://www.createjs.com/#demos)
+- [日本全国花粉飛散マップ](http://ics-web.jp/projects/pollenmap/)
 
 [目次に戻る](../ReadMe.md)

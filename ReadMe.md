@@ -2,8 +2,9 @@
 
 ## 導入編
 
-- [セットアップ](docs/quickstart.md)
-- [CreateJSとは](docs/basic.md)
+- [CreateJSとは / CreateJSのサンプル](docs/basic.md)
+- [簡単なサンプルを試そう](docs/quickstart.md)
+- [制作の前にブラウザの開発ツールの使い方を抑えよう](docs/debug.md)
 
 ## 表示オブジェクト
 
