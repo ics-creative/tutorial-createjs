@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script>
+        window.addEventListener("load", init);
+        function init() {
+            // ステージを作成
+            var stage = new createjs.Stage("myCanvas");
+
+            // 描画用のシェイプを作成
+            var shape = new createjs.Shape();
+            stage.addChild(shape);
+            // 配置場所を調整
+            shape.rotation = -90;
+            shape.x = 960 / 2;
+            shape.y = 400;
+
+            // フラクタルの木を描く
+            drawTree(0, 0, 200, 0, 12);
+
+            // 枝を描く
+            function drawTree(x1, // 始点のX座標
+                              y1, // 始点のY座標
+                              leng, // 枝の長さ
+                              angle, // 枝の伸びる方向(角度)
+                              level) // 再帰レベル
+            {
+                // 次の枝の座標を算出
+                var x2 = leng * Math.cos(angle * Math.PI / 180) + x1;
+                var y2 = leng * Math.sin(angle * Math.PI / 180) + y1;
+                // 線の種類を設定
+                shape.graphics.setStrokeStyle(1).beginStroke("red");
+                // 枝を結ぶ
+                shape.graphics.moveTo(x1, y1);
+                shape.graphics.lineTo(x2, y2);
+
+                // 細分化
+                if (level > 0) {
+                    // 細分化レベルを更新
+                    level = level - 1;
+
+                    // 次の枝を描く
+                    drawTree(x2, y2, leng * 0.6, angle + 80, level);
+                    drawTree(x2, y2, leng * 0.6, angle - 80, level);
+                }
+            }
+
+            // 画面を更新
+            stage.update();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas"
+            width="960"
+            height="540"
+            style="background:lightgray;">
+    </canvas>
+</body>
+</html>
