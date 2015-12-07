@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script>
+        // 読み込みが終わってから初期化
+        window.addEventListener("load", init);
+        function init() {
+            // ステージを作成
+            var stage = new createjs.Stage("myCanvas");
+
+            // コンテナー(容れ物)を作成
+            var container = new createjs.Container();
+            stage.addChild(container);
+
+            // 赤い円を作成
+            var circleRed = new createjs.Shape();
+            circleRed.graphics.beginFill("red").drawCircle(40, 40, 40);
+
+            // 緑の円を作成
+            var circleGreen = new createjs.Shape();
+            circleGreen.graphics.beginFill("green").drawCircle(120, 40, 40);
+
+            // ２つの円をコンテナーに追加
+            container.addChild(circleRed);
+            container.addChild(circleGreen);
+
+            // 各種マウスイベントを登録する
+            circleRed.addEventListener("click", handleRedClick);
+            circleGreen.addEventListener("click", handleGreenClick);
+
+            // クリックしたとき
+            function handleRedClick(event) {
+                // 赤の円をコンテナーから削除
+                container.removeChild(circleRed);
+            }
+
+            function handleGreenClick(event) {
+                // 緑の円をコンテナーから削除
+                container.removeChild(circleGreen);
+            }
+
+            // 画面更新
+            createjs.Ticker.addEventListener("tick", stage);
+        }
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas"
+            width="400"
+            height="200"
+            style="background:lightgray;">
+    </canvas>
+</body>
+</html>
