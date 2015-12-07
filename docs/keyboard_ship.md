@@ -43,6 +43,80 @@ function handleKeyDown(event) {
 直行座標で管理しているので、コードはシンプルです。しかし斜めに動かすということができないので、次はアングルという概念を持ち込んでみます。
 
 
+
+## キーボード押下の処理
+
+![](../imgs/keyboard_ship_basic_tick.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/keyboard_ship_basic_tick.html)
+- [サンプルのソースコードを確認する](../samples/keyboard_ship_basic_tick.html)
+
+
+キーボードの制御処理をつくるときのコツを紹介します。先程までは`keydown`イベントでキー入力と、自機の操作を同じ関数で実行していました。しかしこの実装方法では2つ課題があります。
+
+- パソコンのキーボードの種類によってはキー入力の頻度が異なるため、マシンによっては`keydown`イベントが高い頻度で発生する可能性があります。そうなってくると、ゲームの公平性が失われる可能性があります。
+- 斜めの移動ができない
+
+これらの対策のためには、キー押下のタイミングとゲーム内部処理を分離するといいでしょう。次のコードでは、キーが押されているかを判定する真偽値の変数を用意しています。処理は`tick`イベントでのみ行われます。こうすることで、キー入力の頻度に関わらず、自機の操作は`tick`イベントのみとなるためマシン依存なくゲーム開発ができるようになります。
+
+```js
+// キーボードが押されているかの判定を行う
+var isPressLeft = false;
+var isPressRight = false;
+var isPressUp = false;
+var isPressDown = false;
+
+// キーボードを押したタイミングを検知
+window.addEventListener("keydown", handleKeyDown);
+window.addEventListener("keyup", handleKeyUp);
+function handleKeyDown(event) {
+   // キーコード(どのキーが押されたか)を取得
+   var keyCode = event.keyCode;
+   if (keyCode == 39) { // 右
+       isPressRight = true;// 真偽値が切り替わる
+   } else if (keyCode == 37) { // 左
+       isPressLeft = true;
+   } else if (keyCode == 40) { // 下
+       isPressDown = true;
+   } else if (keyCode == 38) { // 上
+       isPressUp = true;
+   }
+}
+
+function handleKeyUp(event) {
+   // キーコード(どのキーが押されたか)を取得
+   var keyCode = event.keyCode;
+   if (keyCode == 39) { // 右
+       isPressRight = false;// 真偽値が切り替わる
+   } else if (keyCode == 37) { // 左
+       isPressLeft = false;
+   } else if (keyCode == 40) { // 下
+       isPressDown = false;
+   } else if (keyCode == 38) { // 上
+       isPressUp = false;
+   }
+}
+
+// 時間経過
+createjs.Ticker.addEventListener("tick", handleTick);
+function handleTick() {
+   // 条件文で船の位置を変更する
+   if (isPressRight == true) { // 右
+       ship.x += 1; // 移動
+   } else if (isPressLeft == true) { // 左
+       ship.x -= 1;
+   }
+   if (isPressDown == true) { // 下
+       ship.y += 1;
+   } else if (isPressUp == true) { // 上
+       ship.y -= 1;
+   }
+
+   stage.update(); // 画面更新
+}
+```
+
+
 ## 船にハンドル操作を実装する
 
 ![](../imgs/keyboard_ship_vector.html.png)
