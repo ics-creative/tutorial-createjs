@@ -15,7 +15,9 @@
   - [様々な図形の描画](docs/shape_draw.md)
 - [テキスト](docs/text.md)
 - [画像の表示](docs/bitmap.md)
-- [表示オブジェクトのグループ化](docs/nest.md)
+- 表示オブジェクト(親子構造)
+  - [表示オブジェクトのグループ化](docs/nest.md)
+  - [表示オブジェクトの削除](docs/displayobject_remove.md)
 
 ## モーション
 
