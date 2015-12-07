@@ -69,10 +69,7 @@ if(isHit == true){
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/hittest_object_multi.html)
 - [サンプルのソースコードを確認する](../samples/hittest_object_multi.html)
 
-表示オブジェクトと表示オブジェクトが重なっていれば `true` が、重なっていなければ `false` が返ってきます。
-
-
-生成時は配列 `polyList` に保存します。
+表示オブジェクト生成時は配列 `polyList` に保存します。`polyList[i] = poly;`と書くことで配列の`i`番目に表示オブジェクトが保存されます。
 
 ```js
 var polyList = []; // 複数の星とのアタリ判定のために配列を作成
