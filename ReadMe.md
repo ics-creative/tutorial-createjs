@@ -43,6 +43,7 @@
 - [物理演算でボールを作ろう](docs/ball.md)
 - [フラクタル図形](docs/fractal.md)
 - [パーティクルシステム](docs/particle.md)
+- [パズルゲームの基礎](docs/game_pazzle.md)
 
 ## その他
 
