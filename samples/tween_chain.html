@@ -1,41 +1,41 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script>
-        window.addEventListener("load", init);
-        function init() {
-            var stage = new createjs.Stage("myCanvas");
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      var stage = new createjs.Stage("myCanvas");
 
-            // 円のシェイプを作成
-            var circle = new createjs.Shape();
-            circle.graphics.beginFill("red").drawCircle(0, 0, 50);
-            stage.addChild(circle);
+      // 円のシェイプを作成
+      var circle = new createjs.Shape();
+      circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+      stage.addChild(circle);
 
-            createjs.Tween.get(circle) // ターゲットを指定
-                    // 画面右下へ移動
-                    .to({x: 940, y: 500, alpha: 0.1}, 2000)
-                    // 画面中央上へ移動
-                    .to({x: 500, y: 0, alpha: 1.0}, 3000)
-                    // 画面中央へ移動
-                    .to({x: 500, y: 300}, 3000)
-                    // 300%の大きさに変形
-                    .to({scaleX: 3, scaleY: 3}, 5000);
+      createjs.Tween.get(circle) // ターゲットを指定
+              // 画面右下へ移動
+              .to({x: 940, y: 500, alpha: 0.1}, 2000)
+              // 画面中央上へ移動
+              .to({x: 500, y: 0, alpha: 1.0}, 3000)
+              // 画面中央へ移動
+              .to({x: 500, y: 300}, 3000)
+              // 300%の大きさに変形
+              .to({scaleX: 3, scaleY: 3}, 5000);
 
-            // ステージを更新する
-            createjs.Ticker.addEventListener("tick", handleTick);
-            function handleTick() {
-                stage.update();
-            }
-        }
-    </script>
+      // ステージを更新する
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        stage.update();
+      }
+    }
+  </script>
 </head>
 <body>
-    <canvas id="myCanvas"
-            width="960"
-            height="540"
-            style="background:lightgray;">
-    </canvas>
+  <canvas id="myCanvas"
+          width="960"
+          height="540"
+          style="background:lightgray;">
+  </canvas>
 </body>
 </html>

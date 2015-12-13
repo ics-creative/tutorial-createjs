@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script>
-        window.addEventListener("load", init);
-        function init() {
-            // Stageオブジェクトを作成。表示リストのルートになります。
-            var stage = new createjs.Stage("myCanvas");
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // Stageオブジェクトを作成。表示リストのルートになります。
+      var stage = new createjs.Stage("myCanvas");
 
-            // テキストを作成します
-            var t = new createjs.Text("Hello World!", "24px serif", "red");
-            t.textBaseline = "top";
-            stage.addChild(t);
-            t.x = 100;
-            t.y = 100;
+      // テキストを作成します
+      var t = new createjs.Text("Hello World!", "24px serif", "red");
+      t.textBaseline = "top";
+      stage.addChild(t);
+      t.x = 100;
+      t.y = 100;
 
-            // Stageの描画を更新
-            stage.update();
-        }
-    </script>
+      // Stageの描画を更新
+      stage.update();
+    }
+  </script>
 </head>
 <body>
-    <canvas id="myCanvas" width="980" height="540"></canvas>
+  <canvas id="myCanvas" width="980" height="540"></canvas>
 </body>
 </html>

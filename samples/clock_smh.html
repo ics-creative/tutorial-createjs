@@ -1,86 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script>
-        window.addEventListener("load", init);
-        function init() {
-            // Stageオブジェクトを作成。表示リストのルートになります。
-            var stage = new createjs.Stage("myCanvas");
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // Stageオブジェクトを作成。表示リストのルートになります。
+      var stage = new createjs.Stage("myCanvas");
 
-            // コンテナーを作成します。
-            var clock = new createjs.Container();
-            clock.x = 960 / 2; // 画面中央に配置
-            clock.y = 540 / 2;
-            stage.addChild(clock);
+      // コンテナーを作成します。
+      var clock = new createjs.Container();
+      clock.x = 960 / 2; // 画面中央に配置
+      clock.y = 540 / 2;
+      stage.addChild(clock);
 
-            // 座布団を配置
-            var bg = new createjs.Shape();
-            bg.graphics
-                    .setStrokeStyle(1) // 線幅
-                    .beginStroke("gray")// 線の色
-                    .drawCircle(0, 0, 200); // 円を描く
-            clock.addChild(bg);
+      // 座布団を配置
+      var bg = new createjs.Shape();
+      bg.graphics
+              .setStrokeStyle(1) // 線幅
+              .beginStroke("gray")// 線の色
+              .drawCircle(0, 0, 200); // 円を描く
+      clock.addChild(bg);
 
-            // 短針を配置
-            var hShape = new createjs.Shape();
-            hShape.graphics
-                    .setStrokeStyle(12, "round") // 線幅(端を角丸に)
-                    .beginStroke("gray")
-                    .moveTo(0, 0)
-                    .lineTo(0, -120); // 垂直上方向に線を描く
-            clock.addChild(hShape);
+      // 短針を配置
+      var hShape = new createjs.Shape();
+      hShape.graphics
+              .setStrokeStyle(12, "round") // 線幅(端を角丸に)
+              .beginStroke("gray")
+              .moveTo(0, 0)
+              .lineTo(0, -120); // 垂直上方向に線を描く
+      clock.addChild(hShape);
 
-            // 分針を配置
-            var mShape = new createjs.Shape();
-            mShape.graphics
-                    .setStrokeStyle(5, "round") // 線幅(端を角丸に)
-                    .beginStroke("gray")
-                    .moveTo(0, 0)
-                    .lineTo(0, -200); // 垂直上方向に線を描く
-            clock.addChild(mShape);
+      // 分針を配置
+      var mShape = new createjs.Shape();
+      mShape.graphics
+              .setStrokeStyle(5, "round") // 線幅(端を角丸に)
+              .beginStroke("gray")
+              .moveTo(0, 0)
+              .lineTo(0, -200); // 垂直上方向に線を描く
+      clock.addChild(mShape);
 
-            // 秒針を配置
-            var sShape = new createjs.Shape();
-            sShape.graphics
-                    .setStrokeStyle(1) // 線幅
-                    .beginStroke("gray")
-                    .moveTo(0, 0)
-                    .lineTo(0, -200); // 垂直上方向に線を描く
-            clock.addChild(sShape);
+      // 秒針を配置
+      var sShape = new createjs.Shape();
+      sShape.graphics
+              .setStrokeStyle(1) // 線幅
+              .beginStroke("gray")
+              .moveTo(0, 0)
+              .lineTo(0, -200); // 垂直上方向に線を描く
+      clock.addChild(sShape);
 
 
-            // 時間経過のイベント
-            createjs.Ticker.addEventListener("tick", handleTick);
-            function handleTick() {
-                // 現在時間を取得
-                var now = new Date();
+      // 時間経過のイベント
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        // 現在時間を取得
+        var now = new Date();
 
-                // 時間の数値を取得
-                var h = now.getHours(); // 時間(0〜23)
-                var m = now.getMinutes(); // 分(0〜59)
-                var s = now.getSeconds(); // 秒(0〜59)
+        // 時間の数値を取得
+        var h = now.getHours(); // 時間(0〜23)
+        var m = now.getMinutes(); // 分(0〜59)
+        var s = now.getSeconds(); // 秒(0〜59)
 
-                // 針の角度に反映する
-                // 秒針
-                sShape.rotation = s * (360 / 60);
-                // 分針
-                mShape.rotation = m * (360 / 60);
-                // 短針 (短針は時間だけでなく分も角度に考慮する)
-                hShape.rotation = h * (360 / 24 / 2) + m * (360 / 24 / 60);
+        // 針の角度に反映する
+        // 秒針
+        sShape.rotation = s * (360 / 60);
+        // 分針
+        mShape.rotation = m * (360 / 60);
+        // 短針 (短針は時間だけでなく分も角度に考慮する)
+        hShape.rotation = h * (360 / 24 / 2) + m * (360 / 24 / 60);
 
-                // Stageの描画を更新
-                stage.update();
-            }
-        }
-    </script>
+        // Stageの描画を更新
+        stage.update();
+      }
+    }
+  </script>
 </head>
 <body>
-    <canvas id="myCanvas"
-            width="960"
-            height="540"
-            style="background:lightgray;">
-    </canvas>
+  <canvas id="myCanvas"
+          width="960"
+          height="540"
+          style="background:lightgray;">
+  </canvas>
 </body>
 </html>

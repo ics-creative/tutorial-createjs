@@ -1,86 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script>
-        window.addEventListener("load", init);
-        function init() {
-            // Stageオブジェクトを作成。表示リストのルートになります。
-            var stage = new createjs.Stage("myCanvas");
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // Stageオブジェクトを作成。表示リストのルートになります。
+      var stage = new createjs.Stage("myCanvas");
+
+      var polyList = []; // 複数の星とのアタリ判定のために配列を作成
+      // 星をいくつか作成します
+      for (var i = 0; i < 20; i++) {
+        var poly = new createjs.Shape();
+        stage.addChild(poly); // 表示リストに追加
+        // ランダムに配置
+        poly.x = 400 * Math.random();
+        poly.y = 200 * Math.random();
+
+        // 配列に保存する
+        polyList[i] = poly;
+      }
 
 
-            var polyList = []; // 複数の星とのアタリ判定のために配列を作成
-            // 星をいくつか作成します
-            for (var i = 0; i < 20; i++) {
-                var poly = new createjs.Shape();
-                stage.addChild(poly); // 表示リストに追加
-                // ランダムに配置
-                poly.x = 400 * Math.random();
-                poly.y = 200 * Math.random();
+      // 小さな星を作成します
+      var miniStar = new createjs.Shape();
+      miniStar.graphics.beginFill("blue").drawPolyStar(0, 0, 10, 5, 0.6, -90);
+      miniStar.y = 100;
+      stage.addChild(miniStar); // 表示リストに追加
 
-                // 配列に保存する
-                polyList[i] = poly;
-            }
+      // 小さな星の移動速度です
+      var vx = +10;
 
-
-            // 小さな星を作成します
-            var miniStar = new createjs.Shape();
-            miniStar.graphics.beginFill("blue").drawPolyStar(0, 0, 10, 5, 0.6, -90);
-            miniStar.y = 100;
-            stage.addChild(miniStar); // 表示リストに追加
-
-            // 小さな星の移動速度です
-            var vx = +10;
-
-            // 時間経過のイベント
-            createjs.Ticker.addEventListener("tick", handleTick);
-            function handleTick() {
-                // 小さな星のモーションを指定
-                miniStar.x += vx;
-                if (miniStar.x > 400) {
-                    vx = -10;
-                    miniStar.x = 400;
-                } else if (miniStar.x < 0) {
-                    vx = +10;
-                    miniStar.x = 0;
-                }
-
-                // 複数の星とのアタリ判定をfor文でチェックする
-                for (var i = 0; i < polyList.length; i++) {
-                    // 配列の要素を参照する (i番目の星)
-                    var poly = polyList[i]; // i 番目の poly を取得
-
-                    // 小さな星とi番目の星の相対座標を求める
-                    var point = miniStar.localToLocal(0, 0, poly);
-                    // i番目の星と小さな星があたっているかを調べる
-                    var isHit = poly.hitTest(point.x, point.y);
-
-                    // あたっていれば
-                    if (isHit == true) {
-                        // i番目の星を赤色で塗る
-                        poly.graphics.clear()
-                                .beginFill("red")
-                                .drawPolyStar(0, 0, 30, 10, 0.6, -90);
-                    } else {
-                        // i番目の星を緑色で塗る
-                        poly.graphics.clear()
-                                .beginFill("green")
-                                .drawPolyStar(0, 0, 30, 10, 0.6, -90);
-                    }
-                }
-
-                // Stageの描画を更新
-                stage.update();
-            }
+      // 時間経過のイベント
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        // 小さな星のモーションを指定
+        miniStar.x += vx;
+        if (miniStar.x > 400) {
+          vx = -10;
+          miniStar.x = 400;
+        } else if (miniStar.x < 0) {
+          vx = +10;
+          miniStar.x = 0;
         }
-    </script>
+
+        // 複数の星とのアタリ判定をfor文でチェックする
+        for (var i = 0; i < polyList.length; i++) {
+          // 配列の要素を参照する (i番目の星)
+          var poly = polyList[i]; // i 番目の poly を取得
+
+          // 小さな星とi番目の星の相対座標を求める
+          var point = miniStar.localToLocal(0, 0, poly);
+          // i番目の星と小さな星があたっているかを調べる
+          var isHit = poly.hitTest(point.x, point.y);
+
+          // あたっていれば
+          if (isHit == true) {
+            // i番目の星を赤色で塗る
+            poly.graphics.clear()
+                    .beginFill("red")
+                    .drawPolyStar(0, 0, 30, 10, 0.6, -90);
+          } else {
+            // i番目の星を緑色で塗る
+            poly.graphics.clear()
+                    .beginFill("green")
+                    .drawPolyStar(0, 0, 30, 10, 0.6, -90);
+          }
+        }
+
+        // Stageの描画を更新
+        stage.update();
+      }
+    }
+  </script>
 </head>
 <body>
-    <canvas id="myCanvas"
-            width="400"
-            height="200"
-            style="background:lightgray;">
-    </canvas>
+  <canvas id="myCanvas"
+          width="400"
+          height="200"
+          style="background:lightgray;">
+  </canvas>
 </body>
 </html>

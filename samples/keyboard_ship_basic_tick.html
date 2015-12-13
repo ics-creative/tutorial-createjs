@@ -1,85 +1,85 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script>
-        window.addEventListener("load", init);
-        function init() {
-            // ステージを作成
-            var stage = new createjs.Stage("myCanvas");
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // ステージを作成
+      var stage = new createjs.Stage("myCanvas");
 
-            // シェイプ(船)を作成
-            var ship = new createjs.Shape();
-            ship.graphics.beginFill("red")
-                    .drawCircle(0, 0, 10);
-            stage.addChild(ship);
-            // 画面中央に配置
-            ship.x = stage.canvas.width / 2;
-            ship.y = stage.canvas.height / 2;
+      // シェイプ(船)を作成
+      var ship = new createjs.Shape();
+      ship.graphics.beginFill("red")
+              .drawCircle(0, 0, 10);
+      stage.addChild(ship);
+      // 画面中央に配置
+      ship.x = stage.canvas.width / 2;
+      ship.y = stage.canvas.height / 2;
 
-            // キーボードが押されているかの判定を行う
-            var isPressLeft = false;
-            var isPressRight = false;
-            var isPressUp = false;
-            var isPressDown = false;
+      // キーボードが押されているかの判定を行う
+      var isPressLeft = false;
+      var isPressRight = false;
+      var isPressUp = false;
+      var isPressDown = false;
 
-            // キーボードを押したタイミングを検知
-            window.addEventListener("keydown", handleKeyDown);
-            window.addEventListener("keyup", handleKeyUp);
-            function handleKeyDown(event) {
-                // キーコード(どのキーが押されたか)を取得
-                var keyCode = event.keyCode;
-                if (keyCode == 39) { // 右
-                    isPressRight = true;// 真偽値が切り替わる
-                } else if (keyCode == 37) { // 左
-                    isPressLeft = true;
-                } else if (keyCode == 40) { // 下
-                    isPressDown = true;
-                } else if (keyCode == 38) { // 上
-                    isPressUp = true;
-                }
-            }
-
-            function handleKeyUp(event) {
-                // キーコード(どのキーが押されたか)を取得
-                var keyCode = event.keyCode;
-                if (keyCode == 39) { // 右
-                    isPressRight = false;// 真偽値が切り替わる
-                } else if (keyCode == 37) { // 左
-                    isPressLeft = false;
-                } else if (keyCode == 40) { // 下
-                    isPressDown = false;
-                } else if (keyCode == 38) { // 上
-                    isPressUp = false;
-                }
-            }
-
-            // 時間経過
-            createjs.Ticker.addEventListener("tick", handleTick);
-            function handleTick() {
-                // 条件文で船の位置を変更する
-                if (isPressRight == true) { // 右
-                    ship.x += 1; // 移動
-                } else if (isPressLeft == true) { // 左
-                    ship.x -= 1;
-                }
-                if (isPressDown == true) { // 下
-                    ship.y += 1;
-                } else if (isPressUp == true) { // 上
-                    ship.y -= 1;
-                }
-
-                stage.update(); // 画面更新
-            }
+      // キーボードを押したタイミングを検知
+      window.addEventListener("keydown", handleKeyDown);
+      window.addEventListener("keyup", handleKeyUp);
+      function handleKeyDown(event) {
+        // キーコード(どのキーが押されたか)を取得
+        var keyCode = event.keyCode;
+        if (keyCode == 39) { // 右
+          isPressRight = true;// 真偽値が切り替わる
+        } else if (keyCode == 37) { // 左
+          isPressLeft = true;
+        } else if (keyCode == 40) { // 下
+          isPressDown = true;
+        } else if (keyCode == 38) { // 上
+          isPressUp = true;
         }
-    </script>
+      }
+
+      function handleKeyUp(event) {
+        // キーコード(どのキーが押されたか)を取得
+        var keyCode = event.keyCode;
+        if (keyCode == 39) { // 右
+          isPressRight = false;// 真偽値が切り替わる
+        } else if (keyCode == 37) { // 左
+          isPressLeft = false;
+        } else if (keyCode == 40) { // 下
+          isPressDown = false;
+        } else if (keyCode == 38) { // 上
+          isPressUp = false;
+        }
+      }
+
+      // 時間経過
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        // 条件文で船の位置を変更する
+        if (isPressRight == true) { // 右
+          ship.x += 1; // 移動
+        } else if (isPressLeft == true) { // 左
+          ship.x -= 1;
+        }
+        if (isPressDown == true) { // 下
+          ship.y += 1;
+        } else if (isPressUp == true) { // 上
+          ship.y -= 1;
+        }
+
+        stage.update(); // 画面更新
+      }
+    }
+  </script>
 </head>
 <body>
-    <canvas id="myCanvas"
-            width="960"
-            height="540"
-            style="background:lightgray;">
-    </canvas>
+  <canvas id="myCanvas"
+          width="960"
+          height="540"
+          style="background:lightgray;">
+  </canvas>
 </body>
 </html>

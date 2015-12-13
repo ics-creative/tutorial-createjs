@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script>
-        window.addEventListener("load", init);
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
 
-        function init() {
-            // Stageオブジェクトを作成。表示リストのルートになります。
-            var stage = new createjs.Stage("myCanvas");
+    function init() {
+      // Stageオブジェクトを作成。表示リストのルートになります。
+      var stage = new createjs.Stage("myCanvas");
 
-            var shape = new createjs.Shape();
-            // 赤い円
-            shape.graphics.beginFill("red");
-            shape.graphics.drawCircle(100, 100, 50);
-            // 緑の円
-            shape.graphics.beginFill("green");
-            shape.graphics.drawCircle(200, 100, 50);
-            // 青い円
-            shape.graphics.beginFill("blue");
-            shape.graphics.drawCircle(300, 100, 50);
+      var shape = new createjs.Shape();
+      // 赤い円
+      shape.graphics.beginFill("red");
+      shape.graphics.drawCircle(100, 100, 50);
+      // 緑の円
+      shape.graphics.beginFill("green");
+      shape.graphics.drawCircle(200, 100, 50);
+      // 青い円
+      shape.graphics.beginFill("blue");
+      shape.graphics.drawCircle(300, 100, 50);
 
-            // ステージにシェイプを追加
-            stage.addChild(shape);
+      // ステージにシェイプを追加
+      stage.addChild(shape);
 
-            // Stageの描画を更新
-            stage.update();
-        }
-    </script>
+      // Stageの描画を更新
+      stage.update();
+    }
+  </script>
 </head>
 <body>
-    <canvas id="myCanvas" width="640" height="320"></canvas>
+  <canvas id="myCanvas" width="640" height="320"></canvas>
 </body>
-
 </html>

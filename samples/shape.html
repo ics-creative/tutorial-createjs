@@ -1,74 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script>
-        window.addEventListener("load", init);
-        function init() {
-            // Stageオブジェクトを作成。表示リストのルートになります。
-            var stage = new createjs.Stage("myCanvas");
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // Stageオブジェクトを作成。表示リストのルートになります。
+      var stage = new createjs.Stage("myCanvas");
 
-            // 円を作成します
-            var shape = new createjs.Shape();
-            shape.graphics.beginFill("red"); // 赤色で描画するように設定
-            shape.graphics.drawCircle(0, 0, 40); //半径100pxの円を描画
-            stage.addChild(shape); // 表示リストに追加
-            shape.x = 100;
-            shape.y = 100;
+      // 円を作成します
+      var shape = new createjs.Shape();
+      shape.graphics.beginFill("red"); // 赤色で描画するように設定
+      shape.graphics.drawCircle(0, 0, 40); //半径100pxの円を描画
+      stage.addChild(shape); // 表示リストに追加
+      shape.x = 100;
+      shape.y = 100;
 
-            // 四角形を作成します
-            var rect = new createjs.Shape();
-            rect.graphics.beginFill("red"); // 赤色で描画するように設定
-            rect.graphics.drawRect(0, 0, 80, 80); // 80pxの正方形を描画
-            stage.addChild(rect); // 表示リストに追加
-            rect.x = 200;
-            rect.y = 50;
+      // 四角形を作成します
+      var rect = new createjs.Shape();
+      rect.graphics.beginFill("red"); // 赤色で描画するように設定
+      rect.graphics.drawRect(0, 0, 80, 80); // 80pxの正方形を描画
+      stage.addChild(rect); // 表示リストに追加
+      rect.x = 200;
+      rect.y = 50;
 
-            // 角丸四角形を作成します
-            var roundR = new createjs.Shape();
-            roundR.graphics.beginFill("red"); // 赤色で描画するように設定
-            roundR.graphics.drawRoundRect(0, 0, 80, 80, 20, 20); // 80pxの正方形を描画。20pxの角丸を設定。
-            stage.addChild(roundR); // 表示リストに追加
-            roundR.x = 300;
-            roundR.y = 50;
+      // 角丸四角形を作成します
+      var roundR = new createjs.Shape();
+      roundR.graphics.beginFill("red"); // 赤色で描画するように設定
+      roundR.graphics.drawRoundRect(0, 0, 80, 80, 20, 20); // 80pxの正方形を描画。20pxの角丸を設定。
+      stage.addChild(roundR); // 表示リストに追加
+      roundR.x = 300;
+      roundR.y = 50;
 
-            // 多角形を作成します
-            var poly = new createjs.Shape();
-            poly.graphics.beginFill("red"); // 赤色で描画するように設定
-            poly.graphics.drawPolyStar(0, 0, 50, 5, 0.6, -90); // 50pxの星を記述
-            stage.addChild(poly); // 表示リストに追加
-            poly.x = 440;
-            poly.y = 90;
+      // 多角形を作成します
+      var poly = new createjs.Shape();
+      poly.graphics.beginFill("red"); // 赤色で描画するように設定
+      poly.graphics.drawPolyStar(0, 0, 50, 5, 0.6, -90); // 50pxの星を記述
+      stage.addChild(poly); // 表示リストに追加
+      poly.x = 440;
+      poly.y = 90;
 
-            // 任意の図形を作成します
-            var obj = new createjs.Shape();
-            obj.graphics.beginFill("red"); // 赤色で描画するように設定
-            obj.graphics.moveTo(0, 0); // (0,0)座標から描き始める
-            obj.graphics.lineTo(100, 0); // (100,0)座標まで辺を描く
-            obj.graphics.lineTo(0, 100); // (0,100)座標まで辺を描く
-            obj.graphics.lineTo(0, 0); // (0,0)座標まで辺を描く
-            stage.addChild(obj); // 表示リストに追加
-            obj.x = 500;
-            obj.y = 50;
+      // 任意の図形を作成します
+      var obj = new createjs.Shape();
+      obj.graphics.beginFill("red"); // 赤色で描画するように設定
+      obj.graphics.moveTo(0, 0); // (0,0)座標から描き始める
+      obj.graphics.lineTo(100, 0); // (100,0)座標まで辺を描く
+      obj.graphics.lineTo(0, 100); // (0,100)座標まで辺を描く
+      obj.graphics.lineTo(0, 0); // (0,0)座標まで辺を描く
+      stage.addChild(obj); // 表示リストに追加
+      obj.x = 500;
+      obj.y = 50;
 
-            // 円を作成します
-            var shape = new createjs.Shape();
-            shape.graphics.beginFill("green"); // 緑色で描画するように設定
-            shape.graphics.setStrokeStyle(4); // 4pxの線幅を設定
-            shape.graphics.beginStroke("blue"); // 青色の線を描画するように設定
-            shape.graphics.drawCircle(0, 0, 50); //半径50pxの円を描画
-            stage.addChild(shape); // 表示リストに追加
-            shape.x = 100;
-            shape.y = 300;
+      // 円を作成します
+      var shape = new createjs.Shape();
+      shape.graphics.beginFill("green"); // 緑色で描画するように設定
+      shape.graphics.setStrokeStyle(4); // 4pxの線幅を設定
+      shape.graphics.beginStroke("blue"); // 青色の線を描画するように設定
+      shape.graphics.drawCircle(0, 0, 50); //半径50pxの円を描画
+      stage.addChild(shape); // 表示リストに追加
+      shape.x = 100;
+      shape.y = 300;
 
 
-            // Stageの描画を更新
-            stage.update();
-        }
-    </script>
+      // Stageの描画を更新
+      stage.update();
+    }
+  </script>
 </head>
 <body>
-    <canvas id="myCanvas" width="980" height="540"></canvas>
+  <canvas id="myCanvas" width="980" height="540"></canvas>
 </body>
 </html>

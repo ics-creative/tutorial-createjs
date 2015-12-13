@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script>
-        // 読み込みが終わってから初期化
-        window.addEventListener("load", init);
-        function init() {
-            // 初期化
-            var stage = new createjs.Stage("myCanvas");
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    // 読み込みが終わってから初期化
+    window.addEventListener("load", init);
+    function init() {
+      // 初期化
+      var stage = new createjs.Stage("myCanvas");
 
-            // ボールの半径
-            var radius = 100;
-            // ドラッグした場所を保存する変数
-            var dragPointX;
-            var dragPointY;
+      // ボールの半径
+      var radius = 100;
+      // ドラッグした場所を保存する変数
+      var dragPointX;
+      var dragPointY;
 
-            //　ボールを作成
-            var ball = new createjs.Shape();
-            ball.graphics.beginFill("red").drawCircle(0, 0, radius);
-            ball.x = stage.canvas.width / 2; // 画面中央に配置
-            ball.y = stage.canvas.height / 2;
-            stage.addChild(ball);
+      //　ボールを作成
+      var ball = new createjs.Shape();
+      ball.graphics.beginFill("red").drawCircle(0, 0, radius);
+      ball.x = stage.canvas.width / 2; // 画面中央に配置
+      ball.y = stage.canvas.height / 2;
+      stage.addChild(ball);
 
-            // インタラクティブの設定
-            ball.addEventListener("mousedown", handleDown);
-            ball.addEventListener("pressmove", handleMove);
-            ball.addEventListener("pressup", handleUp);
+      // インタラクティブの設定
+      ball.addEventListener("mousedown", handleDown);
+      ball.addEventListener("pressmove", handleMove);
+      ball.addEventListener("pressup", handleUp);
 
-            // ボールを押したときの処理です
-            function handleDown(event) {
-                // ドラッグを開始した座標を覚えておく
-                dragPointX = stage.mouseX - ball.x;
-                dragPointY = stage.mouseY - ball.y;
+      // ボールを押したときの処理です
+      function handleDown(event) {
+        // ドラッグを開始した座標を覚えておく
+        dragPointX = stage.mouseX - ball.x;
+        dragPointY = stage.mouseY - ball.y;
 
-                // ボールを半透明にする
-                ball.alpha = 0.5;
-            }
+        // ボールを半透明にする
+        ball.alpha = 0.5;
+      }
 
-            // ボールを押した状態で動かしたときの処理です
-            function handleMove(event) {
-                // ボールはマウス座標に追随する
-                // ただしドラッグ開始地点との補正をいれておく
-                ball.x = stage.mouseX - dragPointX;
-                ball.y = stage.mouseY - dragPointY;
-            }
+      // ボールを押した状態で動かしたときの処理です
+      function handleMove(event) {
+        // ボールはマウス座標に追随する
+        // ただしドラッグ開始地点との補正をいれておく
+        ball.x = stage.mouseX - dragPointX;
+        ball.y = stage.mouseY - dragPointY;
+      }
 
-            // ボールからマウスを離したときの処理です
-            function handleUp(event) {
-                // ボールを元の透明度に戻す
-                ball.alpha = 1.0;
-            }
+      // ボールからマウスを離したときの処理です
+      function handleUp(event) {
+        // ボールを元の透明度に戻す
+        ball.alpha = 1.0;
+      }
 
-            // 時間経過
-            createjs.Ticker.addEventListener("tick", handleTick);
-            function handleTick() {
-                stage.update(); // 画面更新
-            }
-        }
-    </script>
+      // 時間経過
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        stage.update(); // 画面更新
+      }
+    }
+  </script>
 </head>
-
 <body>
-    <canvas id="myCanvas"
-            width="960"
-            height="540"
-            style="background:lightgray;">
-    </canvas>
+  <canvas id="myCanvas"
+          width="960"
+          height="540"
+          style="background:lightgray;">
+  </canvas>
 </body>
 </html>

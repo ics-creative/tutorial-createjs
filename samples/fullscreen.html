@@ -1,80 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script>
-        // 読み込みが終わってから初期化
-        window.addEventListener("load", init);
-        function init() {
-            // ステージを作成
-            var stage = new createjs.Stage("myCanvas");
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    // 読み込みが終わってから初期化
+    window.addEventListener("load", init);
+    function init() {
+      // ステージを作成
+      var stage = new createjs.Stage("myCanvas");
 
-            // タッチ操作をサポートしているブラウザーならば
-            if (createjs.Touch.isSupported() == true) {
-                // タッチ操作を有効にします。
-                createjs.Touch.enable(stage)
-            }
+      // タッチ操作をサポートしているブラウザーならば
+      if (createjs.Touch.isSupported() == true) {
+        // タッチ操作を有効にします。
+        createjs.Touch.enable(stage)
+      }
 
-            //-------------------------------
-            // リサイズ処理
-            //-------------------------------
-            // リサイズイベントを検知してリサイズ処理を実行
-            window.addEventListener("resize", handleResize);
-            handleResize(); // 起動時にもリサイズしておく
+      //-------------------------------
+      // リサイズ処理
+      //-------------------------------
+      // リサイズイベントを検知してリサイズ処理を実行
+      window.addEventListener("resize", handleResize);
+      handleResize(); // 起動時にもリサイズしておく
 
-            // リサイズ処理
-            function handleResize(event) {
-                // 画面幅・高さを取得
-                var w = window.innerWidth;
-                var h = window.innerHeight;
-                // Canvas要素の大きさを画面幅・高さに合わせる
-                stage.canvas.width = w;
-                stage.canvas.height = h;
-                // 画面更新する
-                stage.update();
-            }
+      // リサイズ処理
+      function handleResize(event) {
+        // 画面幅・高さを取得
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        // Canvas要素の大きさを画面幅・高さに合わせる
+        stage.canvas.width = w;
+        stage.canvas.height = h;
+        // 画面更新する
+        stage.update();
+      }
 
-            //-------------------------------
-            // コンテンツの処理 (例)
-            //-------------------------------
-            // オブジェクトの作成
-            var shape = new createjs.Shape();
-            shape.graphics.beginFill("red").drawCircle(0, 0, 80);
-            stage.addChild(shape);
+      //-------------------------------
+      // コンテンツの処理 (例)
+      //-------------------------------
+      // オブジェクトの作成
+      var shape = new createjs.Shape();
+      shape.graphics.beginFill("red").drawCircle(0, 0, 80);
+      stage.addChild(shape);
 
-            // 時間経過処理
-            createjs.Ticker.addEventListener("tick", handleTick);
-            function handleTick(event) {
-                // 高速に移動する
-                shape.x += 30;
-                shape.y += 5;
-                // 画面端を超えたら反対側に移動する
-                if (shape.x > window.innerWidth) shape.x = 0;
-                if (shape.y > window.innerHeight) shape.y = 0;
-                // 画面更新
-                stage.update();
-            }
+      // 時間経過処理
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick(event) {
+        // 高速に移動する
+        shape.x += 30;
+        shape.y += 5;
+        // 画面端を超えたら反対側に移動する
+        if (shape.x > window.innerWidth) shape.x = 0;
+        if (shape.y > window.innerHeight) shape.y = 0;
+        // 画面更新
+        stage.update();
+      }
 
-        }
-    </script>
-    <style>
-        canvas#myCanvas {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    }
+  </script>
+  <style>
+    canvas#myCanvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 
 <body>
-    <canvas id="myCanvas"
-            style="background:lightgray;">
-    </canvas>
+  <canvas id="myCanvas"
+          style="background:lightgray;">
+  </canvas>
 </body>
 </html>

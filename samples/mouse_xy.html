@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script>
-        // 読み込みが終わってから初期化
-        window.addEventListener("load", init);
-        function init() {
-            // ステージを作成
-            var stage = new createjs.Stage("myCanvas");
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    // 読み込みが終わってから初期化
+    window.addEventListener("load", init);
+    function init() {
+      // ステージを作成
+      var stage = new createjs.Stage("myCanvas");
 
-            // オブジェクトの作成
-            var shape = new createjs.Shape();
-            shape.graphics.beginFill("red");
-            shape.graphics.drawCircle(0, 0, 40);
-            stage.addChild(shape);
+      // オブジェクトの作成
+      var shape = new createjs.Shape();
+      shape.graphics.beginFill("red");
+      shape.graphics.drawCircle(0, 0, 40);
+      stage.addChild(shape);
 
-            // tick イベントを登録する
-            createjs.Ticker.addEventListener("tick", handleTick);
+      // tick イベントを登録する
+      createjs.Ticker.addEventListener("tick", handleTick);
 
-            function handleTick(event) {
-                // マウス座標を取得する
-                var mx = stage.mouseX;
-                var my = stage.mouseY;
-                // シェイプをマウスに追随させる
-                shape.x = mx;
-                shape.y = my;
+      function handleTick(event) {
+        // マウス座標を取得する
+        var mx = stage.mouseX;
+        var my = stage.mouseY;
+        // シェイプをマウスに追随させる
+        shape.x = mx;
+        shape.y = my;
 
-                // 画面を更新する
-                stage.update();
-            }
-        }
-    </script>
+        // 画面を更新する
+        stage.update();
+      }
+    }
+  </script>
 </head>
-
 <body>
-    <canvas id="myCanvas"
-            width="400"
-            height="200"
-            style="background:lightgray;">
-    </canvas>
+  <canvas id="myCanvas"
+          width="400"
+          height="200"
+          style="background:lightgray;">
+  </canvas>
 </body>
 </html>
