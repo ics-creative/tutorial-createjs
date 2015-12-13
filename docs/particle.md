@@ -2,15 +2,7 @@
 
 パーティクル・システム（particle system）はコンピュータグラフィック技術のひとつで、ある種の曖昧さを持った事物をシミュレートするために使われます。一般にパーティクル・システムを使って模写される例としては、炎、爆発、煙、流水、火花、落葉、雲、霧、雪、埃、流星、毛髪、毛皮、草地、あるいは光跡や呪文の視覚効果などが挙げられます。
 
-## シンプルなパーティクルシステムの実装
-
-次のようなパーティクル表現を作成してみましょう。
-
-![](../imgs/particle.html.png)
-
-- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/particle.html)
-- [サンプルのソースコードを確認する](../samples/particle.html)
-
+段階を踏んで、一つ一つ学んでいきましょう。本章の解説は、約2時間程度で学べる内容となっています。
 
 ## 1つだけのパーティクル制御を実装
 
@@ -111,10 +103,10 @@ function handleTick() {
 
 ## パーティクルを時間経過で発生させ、寿命を設ける
 
-![](../imgs/particle.html.png)
+![](../imgs/particle_life.html.png)
 
-- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/particle.html)
-- [サンプルのソースコードを確認する](../samples/particle.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/particle_life.html)
+- [サンプルのソースコードを確認する](../samples/particle_life.html)
 
 ### プログラムの構造 : `tick`イベントで2つの関数を呼び出して制御
 
