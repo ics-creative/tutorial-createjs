@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+  <script>
+    // 読み込みが終わってから初期化
+    window.addEventListener("load", init);
+    function init() {
+      // ステージを作成
+      var stage = new createjs.Stage("myCanvas");
+
+      // 配列でパーティクルを管理します
+      var particles = [];
+
+      // tick イベントを登録する
+      createjs.Ticker.setFPS(60);
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick(event) {
+        // パーティクルを発生
+        emitParticles();
+        // パーティクルを更新
+        updateParticles();
+        // 画面を更新する
+        stage.update();
+      }
+
+      // パーティクルを発生させます
+      function emitParticles() {
+        // パーティクルの生成
+        for (var i = 0; i < 5; i++) {
+          // オブジェクトの作成
+          var particle = new createjs.Bitmap("imgs/particle.png");
+          particle.scaleX = particle.scaleY = Math.random();
+          stage.addChild(particle);
+
+          // パーティクルの発生場所
+          particle.x = stage.mouseX;
+          particle.y = stage.mouseY;
+
+          // 動的にプロパティーを追加します。
+          // 速度
+          particle.vx = 20 * (Math.random() - 0.5);
+          particle.vy = 20 * (Math.random() - 0.5);
+          // 寿命
+          particle.life = 100;
+
+          particles.push(particle);
+        }
+      }
+
+      // パーティクルを更新します
+      function updateParticles() {
+        // パーティクルの計算を行う
+        for (var i = 0; i < particles.length; i++) {
+          // オブジェクトの作成
+          var particle = particles[i];
+
+          // 重力
+          particle.vy += 1;
+
+          // 摩擦
+          particle.vx *= 0.96;
+          particle.vy *= 0.96;
+
+          // 速度を位置に適用
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+
+          // 寿命を減らす
+          particle.life -= 1;
+
+          // 寿命の判定
+          if (particle.life <= 0) {
+            // ステージから削除
+            stage.removeChild(particle);
+
+            // 配列からも削除
+            particles.splice(i, 1);
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <canvas id="myCanvas"
+          width="960"
+          height="540"
+          style="background:black;">
+  </canvas>
+</body>
+</html>
