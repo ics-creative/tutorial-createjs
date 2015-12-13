@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 	<script>
 		window.addEventListener("load", init);
 		function init() {
@@ -55,7 +55,7 @@ CreateJSはHTML5の`canvas`要素を利用します。`canvas`要素はコンテ
 次にJavaScriptライブラリを読み込みます。CreateJSはJavaScriptのライブラリですが、これを読み込むことによってはじめてCreateJSが利用できるようになります。
 
 ```html
-<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 ```
 
 具体的な処理はページの読み込みが終わってから実行させます。`addEventListener()`関数を使って`load`イベントが発生するのを監視させ、ページが読み込み終わったときに実行させたい関数を指定します。この関数`init()`の中にCreateJSのコードを書いていきます。
