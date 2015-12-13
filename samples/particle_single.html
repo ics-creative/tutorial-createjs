@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // ステージを作成
+      var stage = new createjs.Stage("myCanvas");
+
+      // パーティクルの大きさ(半径)
+      var size = 10;
+      // 赤い丸を作成
+      var particle = new createjs.Shape();
+      particle.graphics.beginFill("red").drawCircle(0, 0, size);
+      stage.addChild(particle);
+      particle.x = 200;
+      particle.y = 0;
+
+      // 速度情報
+      var vx = 0;
+      var vy = 0;
+
+      // 時間経過
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        // 重力
+        vy += 1;
+        // 摩擦
+        vx *= 0.95;
+        vy *= 0.95;
+        // 反映
+        particle.x += vx;
+        particle.y += vy;
+        // 地面の作成
+        if (particle.y > stage.canvas.height - size) {
+          particle.y = stage.canvas.height - size; // 行き過ぎ補正
+          vy *= -1; // Y軸の速度を反転
+        }
+        // ステージの更新
+        stage.update();
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="200" style="background: lightgray;"></canvas>
+</body>
+</html>

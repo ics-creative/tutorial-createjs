@@ -25,7 +25,8 @@
         stage.update();
       }
 
-      var count = 0;
+      var count = 0; // tick イベントの回数
+      var MAX_LIFE = 40; // 寿命の最大値
 
       // パーティクルを発生させます
       function emitParticles() {
@@ -48,10 +49,10 @@
 
           // 動的にプロパティーを追加します。
           // 速度
-          particle.vx = 20 * (Math.random() - 0.5);
-          particle.vy = 20 * (Math.random() - 0.5);
+          particle.vx = 30 * (Math.random() - 0.5);
+          particle.vy = 30 * (Math.random() - 0.5);
           // 寿命
-          particle.life = 100;
+          particle.life = MAX_LIFE;
 
           particles.push(particle);
         }
@@ -74,6 +75,16 @@
           // 速度を位置に適用
           particle.x += particle.vx;
           particle.y += particle.vy;
+
+          // 地面
+          if (particle.y > stage.canvas.height) {
+            particle.y = stage.canvas.height; // 行き過ぎ補正
+            particle.vy *= -1; // Y軸の速度を反転
+          }
+
+          // パーティクルのサイズをライフ依存にする
+          var scale = particle.life / MAX_LIFE;
+          particle.scaleX = particle.scaleY = scale;
 
           // 寿命を減らす
           particle.life -= 1;

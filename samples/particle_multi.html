@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // ステージを作成
+      var stage = new createjs.Stage("myCanvas");
+
+      // パーティクルの大きさ(半径)
+      var size = 10;
+
+      // 配列を作成
+      var particleList = [];
+
+      // for文を作成 (上限数はパーティクルの個数)
+      for (var i = 0; i < 20; i++) {
+        // 赤い丸を作成
+        var particle = new createjs.Shape();
+        particle.graphics.beginFill("red").drawCircle(0, 0, size);
+        stage.addChild(particle);
+        particle.x = stage.canvas.width * Math.random();
+        particle.y = stage.canvas.height * Math.random();
+        particle.vx = 0;
+        particle.vy = 0;
+
+        // 配列に保存
+        particleList[i] = particle;
+      }
+
+      // 時間経過
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        for (var i = 0; i < particleList.length; i++) {
+          // i番目の要素を変数に代入
+          var particle = particleList[i];
+          // 重力
+          particle.vy += 1;
+          // 摩擦
+          particle.vx *= 0.95;
+          particle.vy *= 0.95;
+          // 反映
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+
+          if (particle.y > stage.canvas.height - size) { // 地面
+            particle.y = stage.canvas.height - size; // 行き過ぎ補正
+            particle.vy *= -1; // Y軸の速度を反転
+          }
+        }
+        stage.update();
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <canvas id="myCanvas" width="400" height="200" style="background: lightgray;"></canvas>
+</body>
+</html>
