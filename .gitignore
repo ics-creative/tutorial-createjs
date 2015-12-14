@@ -2,4 +2,5 @@
 .idea
 tool-generate-captures/node_modules/*
 tool-generate-captures/.idea/workspace.xml
-html
+
+html/styles/style-tutorial.css.map
