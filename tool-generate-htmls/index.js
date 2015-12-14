@@ -9,6 +9,7 @@ var promises = [];
 var githubUrl = "https://github.com/ics-creative/tutorial-createjs/";
 var samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
 var samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/master/";
+var header, footer;
 var renderer = new marked.Renderer();
 renderer.link = function (href, title, text) {
     console.log("href:" + href);
@@ -38,9 +39,9 @@ renderer.image = function (href, title, text) {
     return "<img" + htmlHref + htmlTitle + ">" + text + "</a>";
 };
 marked.setOptions({
-    /*highlight: (code: string) => {
-        return hilight.hilight(code).value;
-    }*/
+    highlight: function (code) {
+        return require("highlight.js").highlightAuto(code).value;
+    },
     renderer: renderer
 });
 var generateHTML = function (dirName, fileName, resolve) {
@@ -48,7 +49,7 @@ var generateHTML = function (dirName, fileName, resolve) {
         if (error) {
             return;
         }
-        var textValue = marked(text);
+        var textValue = header + marked(text) + footer;
         fs.writeFile("../html/" + dirName + fileName.replace("md", "html"), textValue, function (error) {
             console.log(fileName + "- maked");
             if (error) {
@@ -67,6 +68,18 @@ fs.readdir("../docs", function (err, files) {
             else {
                 resolve();
             }
+        });
+    }));
+    promises.push(new Promise(function (resolve) {
+        fs.readFile("template-header.html", "utf8", function (error, text) {
+            header = text;
+            resolve();
+        });
+    }));
+    promises.push(new Promise(function (resolve) {
+        fs.readFile("template-footer.html", "utf8", function (error, text) {
+            footer = text;
+            resolve();
         });
     }));
     promises.push(new Promise(function (resolve) {

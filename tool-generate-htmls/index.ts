@@ -10,6 +10,7 @@ var promises: any = [];
 let githubUrl = "https://github.com/ics-creative/tutorial-createjs/"
 var samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
 var samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/master/";
+var header:string, footer:string;
 
 var renderer = new marked.Renderer();
 
@@ -49,9 +50,9 @@ renderer.image = ( href:string,  title:string,  text:string) =>{
 };
 
 marked.setOptions({
-	/*highlight: (code: string) => {
-		return hilight.hilight(code).value;
-	}*/
+	  highlight: function (code:string) {
+    return require("highlight.js").highlightAuto(code).value;
+  },
 	renderer:renderer
 });
 
@@ -62,7 +63,7 @@ var generateHTML = (dirName:string, fileName: string, resolve: Function) => {
 		if (error) {
 			return;
 		}
-		let textValue = marked(text);
+		let textValue = header + marked(text) + footer;
 	
 		fs.writeFile("../html/" + dirName + fileName.replace("md", "html"), textValue, (error: any) => {
 			console.log(fileName + "- maked");
@@ -77,7 +78,6 @@ var generateHTML = (dirName:string, fileName: string, resolve: Function) => {
 fs.readdir("../docs", (err: NodeJS.ErrnoException, files: string[]): void => {
 
 	promises.push(new Promise((resolve: Function) => {
-
 		mkdirp("../html/docs/", function(err: any) {
 			if (err) {
 				console.error("mkdir-error" + err);
@@ -85,8 +85,20 @@ fs.readdir("../docs", (err: NodeJS.ErrnoException, files: string[]): void => {
 				resolve();
 			}
 		});
-
 	}))
+
+
+	promises.push(new Promise((resolve: Function) => {
+		fs.readFile("template-header.html", "utf8", (error: any, text: string) => {
+			header = text;
+			resolve();
+	})}));
+
+	promises.push(new Promise((resolve: Function) => {
+		fs.readFile("template-footer.html", "utf8", (error: any, text: string) => {
+			footer = text;
+			resolve();
+	})}));
 
 	promises.push( new Promise((resolve: Function) => {
 		console.log("Readme.md");
