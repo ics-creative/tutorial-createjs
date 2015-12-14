@@ -17,4 +17,4 @@ Flash Professional CCからHTML5 Canvas素材として書き出し、CreateJSで
 
 
 
-[目次に戻る](../ReadMe.md)
+[目次に戻る](index.md)

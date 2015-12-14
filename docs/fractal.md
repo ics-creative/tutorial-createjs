@@ -195,4 +195,4 @@ function drawTree(x1, // 始点のX座標
 ```
 
 
-[目次に戻る](../ReadMe.md)
+[目次に戻る](index.md)

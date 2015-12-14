@@ -19,4 +19,4 @@ CreateJSには、リッチコンテンツを制作するための複数のJavaSc
 - [日本全国花粉飛散マップ](http://ics-web.jp/projects/pollenmap/)
 - [jsdo.it](http://jsdo.it/tag/createjs?search_order=favorite)
 
-[目次に戻る](../ReadMe.md)
+[目次に戻る](index.md)

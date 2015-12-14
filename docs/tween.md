@@ -123,4 +123,4 @@ createjs.Tween.get(circle) // ターゲットを指定
 - [サンプルのソースコードを確認する](../samples/tween_ease.html)
 
 
-[目次に戻る](../ReadMe.md)
+[目次に戻る](index.md)

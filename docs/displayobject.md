@@ -61,4 +61,4 @@ object.scaleX = 0.5; // 50%の幅に設定する
 object.scaleY = 2.0; // 200%の高さに設定する
 ```
 
-[目次に戻る](../ReadMe.md)
+[目次に戻る](index.md)
