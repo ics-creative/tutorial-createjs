@@ -1,0 +1,30 @@
+/* Medium Devices, Desktops */
+$mediaWidthLarge: 970px;
+/* Small Devices, Tablets */
+$mediaWidthMedium: 750px;
+/* Custom, iPhone Retina */
+$mediaWidthSmall: 320px;
+
+$contentWidth: 640px;
+
+// メディアクエリー対応時の左右のパディング
+$contentHorizontalPadding: 12px;
+
+body.tutorial {
+
+  line-height: 175%;
+  font-size: 1.0rem;
+
+  @media (min-width: $mediaWidthMedium) {
+    .pageContentContainer {
+      max-width: $mediaWidthMedium;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: $mediaWidthMedium) {
+    .pageContentContainer {
+      padding: 0 $contentHorizontalPadding;
+    }
+  }
+}
