@@ -78,7 +78,7 @@ var generateHTML = (dirName:string, fileName: string, resolve: Function) => {
 fs.readdir("../docs", (err: NodeJS.ErrnoException, files: string[]): void => {
 
 	promises.push(new Promise((resolve: Function) => {
-		mkdirp("../html/docs/", function(err: any) {
+		mkdirp("../html/", function(err: any) {
 			if (err) {
 				console.error("mkdir-error" + err);
 			} else {
@@ -99,17 +99,12 @@ fs.readdir("../docs", (err: NodeJS.ErrnoException, files: string[]): void => {
 			footer = text;
 			resolve();
 	})}));
-
-	promises.push( new Promise((resolve: Function) => {
-		console.log("Readme.md");
-		generateHTML("","ReadMe.md", resolve);
-	}));
 	
 	for (var i = 0; i < files.length; i++) {
 		var filename = files[i];
 
 		let childPromise = new Promise((resolve: Function) => {
-			generateHTML("docs/", filename, resolve);
+			generateHTML("", filename, resolve);
 		});
 
 		promises.push(childPromise);

@@ -61,7 +61,7 @@ var generateHTML = function (dirName, fileName, resolve) {
 };
 fs.readdir("../docs", function (err, files) {
     promises.push(new Promise(function (resolve) {
-        mkdirp("../html/docs/", function (err) {
+        mkdirp("../html/", function (err) {
             if (err) {
                 console.error("mkdir-error" + err);
             }
@@ -82,14 +82,10 @@ fs.readdir("../docs", function (err, files) {
             resolve();
         });
     }));
-    promises.push(new Promise(function (resolve) {
-        console.log("Readme.md");
-        generateHTML("", "ReadMe.md", resolve);
-    }));
     for (var i = 0; i < files.length; i++) {
         var filename = files[i];
         var childPromise = new Promise(function (resolve) {
-            generateHTML("docs/", filename, resolve);
+            generateHTML("", filename, resolve);
         });
         promises.push(childPromise);
     }
