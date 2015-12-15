@@ -20,6 +20,11 @@ var templateHtml:string;
  * @return string
  */
 var template = (text:string, values:any) =>{
+	if(!text){
+		console.log("template-error!");
+		return "";
+	}
+	
   return text.replace(/\$\{(.*?)\}/g, function(all, key){
     return Object.prototype.hasOwnProperty.call(values, key) ? values[key] : "";
   });
@@ -91,11 +96,17 @@ var generateHTML = (dirName:string, fileName: string, resolve: Function) => {
 			//	最初のH1だけ削除するとき。
 			articleMarkdown = articleMarkdown.replace(headerMatch[0],"");
 		}
+		
+		articleMarkdown = articleMarkdown.replace(/\<code class\=\"lang-/g, "<code class=\"hljs ");
 	
 		let values = {
 			"article-title":articleTitle,
 			"article-markdwon":articleMarkdown
 		};
+		if( !templateHtml ) {
+			console.log(fileName + " generate error!");
+			return ;
+		}
 		let textValue = template( templateHtml , values);
 	
 		fs.writeFile("../html/" + dirName + fileName.replace("md", "html"), textValue, (error: any) => {
