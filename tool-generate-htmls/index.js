@@ -24,7 +24,7 @@ var template = function (text, values) {
 };
 var renderer = new marked.Renderer();
 renderer.link = function (href, title, text) {
-    console.log("href:" + href);
+    //console.log("href:" + href);
     var sampledIndex = href.indexOf("samples/");
     var absolutePass = href.indexOf("http") == 0;
     if (!absolutePass && sampledIndex >= 0) {
@@ -40,7 +40,7 @@ renderer.link = function (href, title, text) {
     return "<a" + htmlHref + htmlTitle + ">" + text + "</a>";
 };
 renderer.image = function (href, title, text) {
-    console.log("imgs:" + href);
+    //console.log("imgs:" + href);
     var absolutePass = href.indexOf("http") == 0;
     var sampledIndex = href.indexOf("../imgs/");
     if (!absolutePass && sampledIndex >= 0) {
@@ -64,12 +64,22 @@ var generateHTML = function (dirName, fileName, resolve) {
         if (error) {
             return;
         }
+        var articleMarkdown = marked(text);
+        var headerMatch = articleMarkdown.match(/<h1>(.*?)<\/h1>/);
+        var articleTitle = headerMatch ? headerMatch[1] : "";
+        if (!headerMatch) {
+            console.log("no header " + fileName);
+        }
+        else {
+            articleMarkdown = articleMarkdown.replace(headerMatch[0], "");
+        }
         var values = {
-            "article-markdwon": marked(text)
+            "article-title": articleTitle,
+            "article-markdwon": articleMarkdown
         };
         var textValue = template(templateHtml, values);
         fs.writeFile("../html/" + dirName + fileName.replace("md", "html"), textValue, function (error) {
-            console.log(fileName + "- maked");
+            //console.log(fileName + "- maked");
             if (error) {
                 return;
             }

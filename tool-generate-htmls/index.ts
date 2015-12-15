@@ -29,7 +29,7 @@ var template = (text:string, values:any) =>{
 var renderer = new marked.Renderer();
 
 renderer.link = ( href:string,  title:string,  text:string) =>{
-	console.log("href:" + href);
+	//console.log("href:" + href);
 	
 	var sampledIndex = href.indexOf("samples/");
 	var absolutePass = href.indexOf("http") == 0;
@@ -49,7 +49,7 @@ renderer.link = ( href:string,  title:string,  text:string) =>{
 
 
 renderer.image = ( href:string,  title:string,  text:string) =>{
-	console.log("imgs:" + href);
+	//console.log("imgs:" + href);
 	
 	var absolutePass = href.indexOf("http") == 0;
 	var sampledIndex = href.indexOf("../imgs/");
@@ -81,13 +81,25 @@ var generateHTML = (dirName:string, fileName: string, resolve: Function) => {
 		if (error) {
 			return;
 		}
+		var articleMarkdown = marked(text);
+		let headerMatch = articleMarkdown.match(/<h1>(.*?)<\/h1>/);
+		let articleTitle = headerMatch ? headerMatch[1] : "";
+	
+		if( !headerMatch ){
+			console.log(`no header ${fileName}`);
+		} else {
+			//	最初のH1だけ削除するとき。
+			articleMarkdown = articleMarkdown.replace(headerMatch[0],"");
+		}
+	
 		let values = {
-			"article-markdwon":marked(text)
+			"article-title":articleTitle,
+			"article-markdwon":articleMarkdown
 		};
 		let textValue = template( templateHtml , values);
 	
 		fs.writeFile("../html/" + dirName + fileName.replace("md", "html"), textValue, (error: any) => {
-			console.log(fileName + "- maked");
+			//console.log(fileName + "- maked");
 			if (error) {
 				return;
 			}
