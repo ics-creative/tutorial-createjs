@@ -10,7 +10,21 @@ var promises: any = [];
 let githubUrl = "https://github.com/ics-creative/tutorial-createjs/"
 var samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
 var samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/master/";
-var header:string, footer:string;
+var templateHtml:string;
+
+/**
+ * テンプレート文字列を展開
+ * http://webdesign-dackel.com/2015/07/17/javascript-template-string/
+ * @param text:string テンプレート文字列
+ * @param values:Object 展開する値
+ * @return string
+ */
+var template = (text:string, values:any) =>{
+  return text.replace(/\$\{(.*?)\}/g, function(all, key){
+    return Object.prototype.hasOwnProperty.call(values, key) ? values[key] : "";
+  });
+}
+
 
 var renderer = new marked.Renderer();
 
@@ -27,10 +41,10 @@ renderer.link = ( href:string,  title:string,  text:string) =>{
 		}
 	}
 	
-	var htmlHref = (href != null && href != "") ? " href=\"" +href+ "\" " : "";
-	var htmlTitle = (title != null && title != "") ? " title=\"" +title+ "\" " : "";
-	
-	return "<a" + htmlHref + htmlTitle + ">" + text + "</a>";
+	var htmlHref = (href != null && href != "") ? ` href="${href}"` : "";
+	var htmlTitle = (title != null && title != "") ? ` title=${title}` : "";
+
+	return `<a${htmlHref}${htmlTitle}>${text}</a>`;
 };
 
 
@@ -43,11 +57,15 @@ renderer.image = ( href:string,  title:string,  text:string) =>{
 		href = samplesUrl + href.slice( sampledIndex + "../".length);
 	}
 	
-	var htmlHref = (href != null && href != "") ? " src=\"" +href+ "\" " : "";
-	var htmlTitle = (title != null && title != "") ? " title=\"" +title+ "\" " : "";
+	var htmlHref = (href != null && href != "") ?  ` src="${href}"` : "";
+	var htmlTitle = (title != null && title != "") ?  ` title=${title}` : "";
 	
-	return "<img" + htmlHref + htmlTitle + ">" + text + "</a>";
+	return `<img${htmlHref}${htmlTitle} />`;
 };
+
+renderer.heading = function (text:string, level:string) {
+  return `<h${level}>${text}</h${level}>`;
+}
 
 marked.setOptions({
 	  highlight: function (code:string) {
@@ -58,12 +76,15 @@ marked.setOptions({
 
 
 var generateHTML = (dirName:string, fileName: string, resolve: Function) => {
-	fs.readFile("../" + dirName + fileName, "utf8", (error: any, text: string) => {
+	fs.readFile("../docs/" + dirName + fileName, "utf8", (error: any, text: string) => {
 
 		if (error) {
 			return;
 		}
-		let textValue = header + marked(text) + footer;
+		let values = {
+			"article-markdwon":marked(text)
+		};
+		let textValue = template( templateHtml , values);
 	
 		fs.writeFile("../html/" + dirName + fileName.replace("md", "html"), textValue, (error: any) => {
 			console.log(fileName + "- maked");
@@ -89,17 +110,11 @@ fs.readdir("../docs", (err: NodeJS.ErrnoException, files: string[]): void => {
 
 
 	promises.push(new Promise((resolve: Function) => {
-		fs.readFile("template-header.html", "utf8", (error: any, text: string) => {
-			header = text;
+		fs.readFile("template-html.html", "utf8", (error: any, text: string) => {
+			templateHtml = text;
 			resolve();
-	})}));
+	});}));
 
-	promises.push(new Promise((resolve: Function) => {
-		fs.readFile("template-footer.html", "utf8", (error: any, text: string) => {
-			footer = text;
-			resolve();
-	})}));
-	
 	for (var i = 0; i < files.length; i++) {
 		var filename = files[i];
 

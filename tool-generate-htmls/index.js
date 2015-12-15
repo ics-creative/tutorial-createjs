@@ -9,7 +9,19 @@ var promises = [];
 var githubUrl = "https://github.com/ics-creative/tutorial-createjs/";
 var samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
 var samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/master/";
-var header, footer;
+var templateHtml;
+/**
+ * テンプレート文字列を展開
+ * http://webdesign-dackel.com/2015/07/17/javascript-template-string/
+ * @param text:string テンプレート文字列
+ * @param values:Object 展開する値
+ * @return string
+ */
+var template = function (text, values) {
+    return text.replace(/\$\{(.*?)\}/g, function (all, key) {
+        return Object.prototype.hasOwnProperty.call(values, key) ? values[key] : "";
+    });
+};
 var renderer = new marked.Renderer();
 renderer.link = function (href, title, text) {
     console.log("href:" + href);
@@ -23,8 +35,8 @@ renderer.link = function (href, title, text) {
             href = href.replace("md", "html");
         }
     }
-    var htmlHref = (href != null && href != "") ? " href=\"" + href + "\" " : "";
-    var htmlTitle = (title != null && title != "") ? " title=\"" + title + "\" " : "";
+    var htmlHref = (href != null && href != "") ? " href=\"" + href + "\"" : "";
+    var htmlTitle = (title != null && title != "") ? " title=" + title : "";
     return "<a" + htmlHref + htmlTitle + ">" + text + "</a>";
 };
 renderer.image = function (href, title, text) {
@@ -34,9 +46,12 @@ renderer.image = function (href, title, text) {
     if (!absolutePass && sampledIndex >= 0) {
         href = samplesUrl + href.slice(sampledIndex + "../".length);
     }
-    var htmlHref = (href != null && href != "") ? " src=\"" + href + "\" " : "";
-    var htmlTitle = (title != null && title != "") ? " title=\"" + title + "\" " : "";
-    return "<img" + htmlHref + htmlTitle + ">" + text + "</a>";
+    var htmlHref = (href != null && href != "") ? " src=\"" + href + "\"" : "";
+    var htmlTitle = (title != null && title != "") ? " title=" + title : "";
+    return "<img" + htmlHref + htmlTitle + " />";
+};
+renderer.heading = function (text, level) {
+    return "<h" + level + ">" + text + "</h" + level + ">";
 };
 marked.setOptions({
     highlight: function (code) {
@@ -45,11 +60,14 @@ marked.setOptions({
     renderer: renderer
 });
 var generateHTML = function (dirName, fileName, resolve) {
-    fs.readFile("../" + dirName + fileName, "utf8", function (error, text) {
+    fs.readFile("../docs/" + dirName + fileName, "utf8", function (error, text) {
         if (error) {
             return;
         }
-        var textValue = header + marked(text) + footer;
+        var values = {
+            "article-markdwon": marked(text)
+        };
+        var textValue = template(templateHtml, values);
         fs.writeFile("../html/" + dirName + fileName.replace("md", "html"), textValue, function (error) {
             console.log(fileName + "- maked");
             if (error) {
@@ -71,14 +89,8 @@ fs.readdir("../docs", function (err, files) {
         });
     }));
     promises.push(new Promise(function (resolve) {
-        fs.readFile("template-header.html", "utf8", function (error, text) {
-            header = text;
-            resolve();
-        });
-    }));
-    promises.push(new Promise(function (resolve) {
-        fs.readFile("template-footer.html", "utf8", function (error, text) {
-            footer = text;
+        fs.readFile("template-html.html", "utf8", function (error, text) {
+            templateHtml = text;
             resolve();
         });
     }));
