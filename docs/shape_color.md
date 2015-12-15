@@ -109,4 +109,4 @@ shape.graphics.drawCircle(300, 100, 50);
 
 
 
-[目次に戻る](../ReadMe.md)
+[目次に戻る](index.md)

@@ -46,4 +46,4 @@ function handleTick(event) {
 - [サンプルのソースコードを確認する](../samples/mouse_xy.html)
 
 
-[目次に戻る](../ReadMe.md)
+[目次に戻る](index.md)

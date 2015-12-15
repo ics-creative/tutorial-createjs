@@ -207,4 +207,4 @@ for (var i = 0; i < steps; i++) {
 
 - [サンプル](http://book.mynavi.jp/wd/sampledata/201503view/flash4html5/sample_3/clock_watch.html)
 
-[目次に戻る](../ReadMe.md)
+[目次に戻る](index.md)

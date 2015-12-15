@@ -69,4 +69,4 @@ function handleMouseOut(event) {
 - [サンプルのソースコードを確認する](../samples/mouse_over.html)
 
 
-[目次に戻る](../ReadMe.md)
+[目次に戻る](index.md)
