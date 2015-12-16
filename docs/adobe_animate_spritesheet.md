@@ -6,6 +6,7 @@ Adobe Flash Professional CCを使ってCreateJS用のスプライトシートを
 
 [サンプルのFLAファイルをダウンロードする](../samples/animate_spritesheet/Animal.fla)
 
+※ページ内の[View Raw]リンクをクリックください。
 
 ## スプライトシートを書きだそう
 
@@ -40,7 +41,7 @@ FLAファイルを開いたら、[ライブラリ]パネルにある「Animal」
 
 ![](../imgs/animate_spritesheet_html.png)
 
-HTMLでは、CreateJSライブラリと、FLAから書きだしたJSファイルを読み込みます。
+`spritesheet_click.html`ファイルでは、CreateJSライブラリと、FLAから書き出したJSファイルを読み込みます。
 
 ```html
 
@@ -49,6 +50,8 @@ HTMLでは、CreateJSライブラリと、FLAから書きだしたJSファイル
 ```
 
 CreateJSのステージにスプライトシートを配置してみましょう。`Animal.js`ファイルを読み込むとスプライトシートを扱うためのクラスが自動的に定義されます。FLAファイルでは「Animal」というシンボルで作っていたので、`Animal.js`ファイルを読み込むことによって、JavaScriptの「Animal」というクラスが定義されました。
+
+`new シンボル名()`とコードを書くと、表示オブジェクトのインスタンスを作ることができます。`addChild()`メソッドを使って画面に表示し、`play()`メソッドを使ってスプライトシートを再生します。
 
 ```js
 // スプライトを作成
