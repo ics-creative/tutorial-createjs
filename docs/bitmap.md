@@ -36,3 +36,5 @@ bmp.regY = 100;
 ```
 
 ※`regX`プロパティーの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Bitmap.html#property_regX)」を確認ください。
+
+[次の記事へ](nest.md)

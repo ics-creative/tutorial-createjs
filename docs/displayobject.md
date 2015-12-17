@@ -60,3 +60,5 @@ object.visible = false; // 非表示にする
 object.scaleX = 0.5; // 50%の幅に設定する
 object.scaleY = 2.0; // 200%の高さに設定する
 ```
+
+[次の記事へ](shape_fill_stroke.md)

@@ -20,3 +20,5 @@ if(createjs.Touch.isSupported() == true){
 - [サンプルのソースコードを確認する](../samples/mouse_touch.html)
 
 ※`enable()`メソッドの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Touch.html#method_enable)」を確認ください。
+
+[次の記事へ](keyboard_basic.md)

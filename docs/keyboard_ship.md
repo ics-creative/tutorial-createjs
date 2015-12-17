@@ -207,4 +207,4 @@ if (ship.y < 0) { ship.y = 0; }
 if (ship.y > stage.canvas.height) { ship.y = stage.canvas.height; }
 ```
 
-
+[次の記事へ](hittest.md)

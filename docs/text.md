@@ -108,3 +108,6 @@ stage.addChild(t);
 
 
 ※`text`プロパティーの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Text.html#property_text)」を確認ください。
+
+
+[次の記事へ](bitmap.md)

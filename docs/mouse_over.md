@@ -68,5 +68,4 @@ function handleMouseOut(event) {
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/mouse_over.html)
 - [サンプルのソースコードを確認する](../samples/mouse_over.html)
 
-
-
+[次の記事へ](mouse_drag.md)

@@ -110,3 +110,6 @@ shape.graphics.drawCircle(300, 100, 50);
 
 
 ※詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Graphics.html#method_getHSL)」を確認ください。
+
+
+[次の記事へ](shape_draw.md)

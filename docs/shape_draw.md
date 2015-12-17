@@ -149,3 +149,5 @@ shape.graphics.beginFill("#00ff00") // 緑色で描画するように設定
 	.drawCircle(0, 0, 100); //半径100pxの円を描画
 stage.addChild(shape); // 表示リストに追加
 ```
+
+[次の記事へ](text.md)

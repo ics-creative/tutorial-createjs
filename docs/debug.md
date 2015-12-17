@@ -23,3 +23,6 @@ Google Chromeメニュー(右上の横棒三個のアイコン)をクリック
 ![](../imgs/debug_console.png)
 
 ![](../imgs/debug_source.png)
+
+
+[次の記事へ](displayobject.md)
