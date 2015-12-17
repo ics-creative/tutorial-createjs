@@ -51,3 +51,4 @@ HTML5 Canvasのフレームワーク「CreateJS」の入門サイトです。初
 
 - [スマホブラウザで全画面に表示する対応](fullscreen.md)
 - [Adobe Flash Professional CC (Animate CC)とCreateJSの連携](adobe_animate.md)
+- [Adobe Flash Professional CC (Animate CC)とCreateJSの連携 (スプライトシート編)](adobe_animate_spritesheet.md)

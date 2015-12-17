@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="Animal.js"></script>
+  <script>
+    function init() {
+      var stage = new createjs.Stage("myCanvas");
+
+      // スプライトを作成
+      var chara = new Animal();
+      stage.addChild(chara);
+
+      // スプライトを再生する
+      chara.play();
+
+      // クリックしたら再生を止める
+      chara.addEventListener("click", handleClick);
+      function handleClick(event) {
+        // 再生が止まっていたら
+        if (chara.paused == true) {
+          // 再生する
+          chara.play();
+        } else { // 再生中であれば
+          // 再生を止める
+          chara.stop();
+        }
+      }
+
+      createjs.Ticker.addEventListener("tick", stage);
+      createjs.Ticker.addEventListener("tick", function () {
+        // 時間経過時の処理
+      });
+    }
+  </script>
+</head>
+<body onload="init()">
+  <canvas id="myCanvas" width="600" height="600"></canvas>
+</body>
+</html>
