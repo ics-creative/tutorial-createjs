@@ -45,5 +45,4 @@ function handleTick(event) {
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/mouse_xy.html)
 - [サンプルのソースコードを確認する](../samples/mouse_xy.html)
 
-
-
+[次の記事へ](mouse_click.md)

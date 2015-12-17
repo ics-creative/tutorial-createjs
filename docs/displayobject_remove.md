@@ -46,4 +46,4 @@ function handleGreenClick(event) {
 }
 ```
 
-
+[次の記事へ](ticker.md)

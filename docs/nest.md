@@ -22,3 +22,5 @@ stage.addChild(container);
 
 
 ※`createjs.Container`クラスの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Container.html)」を確認ください。
+
+[次の記事へ](displayobject_remove.md)

@@ -20,3 +20,4 @@ CreateJSには、リッチコンテンツを制作するための複数のJavaSc
 - [jsdo.it](http://jsdo.it/tag/createjs?search_order=favorite)
 
 
+[次の記事へ](quickstart.md)

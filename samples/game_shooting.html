@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    // 読み込みが終わってから初期化
+    window.addEventListener("load", init);
+    function init() {
+      var stage = new createjs.Stage("myCanvas");
+
+      var enemyList = []; // 敵の配列
+      var bulletList = []; // 発射弾の配列
+      var count = 0; // フレーム番号
+      var scoreNum = 0; // スコア
+      var STAGE_W = 960; // 画面サイズ
+      var STAGE_H = 540;
+
+      var bg = new createjs.Shape();
+      bg.graphics.beginFill("black").drawRect(0, 0, STAGE_W, STAGE_H);
+      stage.addChild(bg);
+
+      // 自機を作成
+      var player = new createjs.Shape();
+      player.graphics.beginFill("white").moveTo(5, 0).lineTo(-10, +5).lineTo(-10, -5).closePath();
+      stage.addChild(player);
+
+      // スコア欄を作成
+      var score = new createjs.Text("", "24px sans-serif", "white");
+      stage.addChild(score);
+
+      // タッチ操作も可能にする(iOS,Android向け)
+      if (createjs.Touch.isSupported()) {
+        createjs.Touch.enable(stage);
+      }
+
+      // マウスイベントの登録
+      stage.addEventListener("click", handleClick);
+
+      // tick イベントの登録
+      createjs.Ticker.setFPS(60);
+      createjs.Ticker.addEventListener("tick", handleTick);
+
+
+      // クリックした時の処理
+      function handleClick(event) {
+        var bullet = new createjs.Shape();
+        bullet.graphics.beginFill("white").drawCircle(0, 0, 3);
+        bullet.x = player.x;
+        bullet.y = player.y
+        stage.addChild(bullet); // 画面に表示
+        bulletList.push(bullet); // 配列に保存
+      }
+
+      // tick イベントの処理
+      function handleTick() {
+        // 自機をマウス座標まで移動させる(減速で移動)
+        player.x += (stage.mouseX - player.x) * 0.1;
+        player.y += (stage.mouseY - player.y) * 0.1;
+
+        // フレーム番号を更新(インクリメント)
+        count = count + 1;
+        // 60フレームに1回、敵を生成
+        if (count % 60 == 0) {
+          var enemy = new createjs.Shape();
+          enemy.graphics.beginFill("red").moveTo(-5, 0).lineTo(+10, +5).lineTo(+10, -5).closePath();
+          enemy.x = STAGE_W;
+          enemy.y = STAGE_H * Math.random();
+          stage.addChild(enemy); // 画面に表示
+          enemyList.push(enemy); // 配列に保存
+        }
+
+        // 発射弾の移動処理
+        for (var i = 0; i < bulletList.length; i++) {
+          bulletList[i].x += 10;
+          // 画面端まで移動したら
+          if (bulletList[i].x > STAGE_W) {
+            stage.removeChild(bulletList[i]); // 画面から削除
+            bulletList.splice(i, 1); // 配列から削除
+          }
+        }
+
+        // 敵の移動処理
+        for (var i = 0; i < enemyList.length; i++) {
+          enemyList[i].x -= 2;
+          // 画面端まで移動したら
+          if (enemyList[i].x < 0) {
+            showGameOver(); // ゲームオーバー処理へ
+          }
+        }
+
+        // 発射弾と敵の当たり判定
+        for (var j = 0; j < enemyList.length; j++) {
+          for (var i = 0; i < bulletList.length; i++) {
+            var bullet = bulletList[i];
+            var enemy = enemyList[j];
+            // 敵から見た発射弾のローカル座標を取得
+            var pt = bullet.localToLocal(0, 0, enemy);
+
+            // 当たり判定を行う
+            if (enemy.hitTest(pt.x, pt.y) == true) {
+              // 発射弾の削除
+              stage.removeChild(bullet);
+              bulletList.splice(i, 1);
+
+              // 敵の削除
+              stage.removeChild(enemyList[j]);
+              enemyList.splice(j, 1);
+
+              // スコアの更新
+              scoreNum += 100;
+              score.text = String(scoreNum);
+
+              break;
+            }
+          }
+        }
+
+        // ステージの更新
+        stage.update();
+      }
+
+      function showGameOver() {
+        alert("ゲームオーバー！ あなたのスコアは " + scoreNum + " でした。");
+
+        // 各種イベントをまとめて解除
+        createjs.Ticker.removeAllEventListeners();
+        stage.removeAllEventListeners();
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="960" height="540"></canvas>
+</body>
+</html>

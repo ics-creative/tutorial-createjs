@@ -84,6 +84,4 @@ function handleMove(event) {
 ```
 
 
-
-
-
+[次の記事へ](mouse_touch.md)

@@ -18,6 +18,8 @@ stage.addChild(bmp);
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/bitmap.html)
 - [サンプルのソースコードを確認する](../samples/bitmap.html)
 
+※このサンプルでは、`createjs.Ticker`クラスを利用していますが、このクラスの使い方は後述します。
+
 ※`createjs.Bitmap`クラスの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Bitmap.html)」を確認ください。
 
 ## 基準点の設定方法
@@ -34,3 +36,5 @@ bmp.regY = 100;
 ```
 
 ※`regX`プロパティーの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Bitmap.html#property_regX)」を確認ください。
+
+[次の記事へ](nest.md)

@@ -29,10 +29,10 @@
 ## ユーザーインタラクションを制御しよう
 
 - マウス操作
-	- [マウス座標](mouse_xy.md)
-	- [クリックイベント](mouse_click.md)
-	- [マウスオーバー](mouse_over.md)
-  - [ドラッグ&ドロップ](mouse_drag.md)
+  - [マウス座標](mouse_xy.md)
+  - [クリックイベント](mouse_click.md)
+  - [マウスオーバー](mouse_over.md)
+  - [ドラッグアンドドロップ](mouse_drag.md)
   - [タッチデバイス対応](mouse_touch.md)
 - キーボード操作
   - [キーボードイベントの基本](keyboard_basic.md)
@@ -45,7 +45,10 @@
 - [物理演算](ball.md)
 - [フラクタル図形](fractal.md)
 - [パーティクルシステム](particle.md)
-- [パズルゲーム](game_pazzle.md)
+- ゲーム
+  - [パズルゲーム](game_pazzle.md)
+  - [シューティングゲーム](game_shooting.md)
+- [カルーセル(スライドショー)](slideshow.md)
 
 ## Flash Professional CCを使おう
 

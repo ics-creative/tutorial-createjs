@@ -47,6 +47,4 @@ function handleRectClick(event) {
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/mouse_click.html)
 - [サンプルのソースコードを確認する](../samples/mouse_click.html)
 
-
-
-
+[次の記事へ](mouse_over.md)
