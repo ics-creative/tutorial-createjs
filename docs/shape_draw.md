@@ -108,7 +108,7 @@ stage.addChild(obj); // 表示リストに追加
 ```
 
 
-![](../imgs/2_shape_other.html.png)
+![](../imgs/shape_other.html.png)
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_other.html)
 - [サンプルのソースコードを確認する](../samples/shape_other.html)
