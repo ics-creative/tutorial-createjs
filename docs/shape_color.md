@@ -1,4 +1,4 @@
-# 色の指定方法
+# CreateJS での色の指定方法
 
 CreatJSでの色の指定方法を覚えましょう。CreateJSでは色を指定する方法がいくつかあります。
 
@@ -90,15 +90,14 @@ shape.graphics.drawCircle(300, 100, 50);
 
 
 ```js
-var shape = new createjs.Shape();
-// 赤い円
-shape.graphics.beginFill(createjs.Graphics.getHSL(0, 100, 100));
+// 赤い円 (色相, 彩度, 明度)
+shape.graphics.beginFill(createjs.Graphics.getHSL(0, 100, 50));
 shape.graphics.drawCircle(100, 100, 50);
-// 緑の円
-shape.graphics.beginFill(createjs.Graphics.getHSL(120, 100, 100));
+// 暗い赤い円 (色相, 彩度, 明度)
+shape.graphics.beginFill(createjs.Graphics.getHSL(0, 100, 20));
 shape.graphics.drawCircle(200, 100, 50);
-// 青い円
-shape.graphics.beginFill(createjs.Graphics.getHSL(240, 0, 255));
+// 明るい赤い円 (色相, 彩度, 明度)
+shape.graphics.beginFill(createjs.Graphics.getHSL(0, 100, 80));
 shape.graphics.drawCircle(300, 100, 50);
 ```
 
@@ -106,7 +105,3 @@ shape.graphics.drawCircle(300, 100, 50);
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/color_hsl.html)
 - [サンプルのソースコードを確認する](../samples/color_hsl.html)
-
-
-
-[目次に戻る](index.md)

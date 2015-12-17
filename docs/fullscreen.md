@@ -43,7 +43,7 @@
 
 <body>
     <canvas id="myCanvas"
-            style="background:lightgray;">
+            >
     </canvas>
 </body>
 </html>
@@ -94,4 +94,4 @@ if (createjs.Touch.isSupported() == true) {
 ```
 
 
-[目次に戻る](index.md)
+

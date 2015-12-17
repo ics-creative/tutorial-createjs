@@ -1,4 +1,4 @@
-# キーボード制御
+# CreateJS でのキーボード制御
 
 ## 船をキーボードで上下左右に移動する
 
@@ -207,4 +207,4 @@ if (ship.y < 0) { ship.y = 0; }
 if (ship.y > stage.canvas.height) { ship.y = stage.canvas.height; }
 ```
 
-[目次に戻る](index.md)
+

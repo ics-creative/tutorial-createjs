@@ -1,4 +1,4 @@
-# Adobe Flash Professional CC (Animate CC)とCreateJSの連携
+# Adobe Flash Professional CC と CreateJS の連携 (基本編)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RK6Z-ExOwuw" frameborder="0" allowfullscreen></iframe>
 
@@ -126,4 +126,4 @@ Flash Pro CC内で画像を含めた場合は、初期化の手順が少し複�
 書籍[「Flash for HTML5 ―HTML5開発環境としてのFlash Pro CC活用テクニック」](http://www.amazon.co.jp/dp/B014VWO2BU)の
 「外部から更新可能なスライドショーを作ってみよう」(044P)を参照ください。
 
-[目次に戻る](index.md)
+

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script>
     // 読み込みが終わってから初期化
@@ -18,7 +19,7 @@
 
       //　ボールを作成
       var ball = new createjs.Shape();
-      ball.graphics.beginFill("red").drawCircle(0, 0, radius);
+      ball.graphics.beginFill("DarkRed").drawCircle(0, 0, radius);
       ball.x = stage.canvas.width / 2; // 画面中央に配置
       ball.y = stage.canvas.height / 2;
       stage.addChild(ball);
@@ -61,10 +62,6 @@
   </script>
 </head>
 <body>
-  <canvas id="myCanvas"
-          width="960"
-          height="540"
-          style="background:lightgray;">
-  </canvas>
+  <canvas id="myCanvas" width="960" height="540" ></canvas>
 </body>
 </html>

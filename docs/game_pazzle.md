@@ -1,4 +1,4 @@
-# パズルゲーム
+# CreateJS でパズルゲーム開発に挑戦しよう
 
 ![](../imgs/game_pazzle.html.png)
 
@@ -84,4 +84,4 @@ if (isHit == true) {
 }
 ```
 
-[目次に戻る](index.md)
+

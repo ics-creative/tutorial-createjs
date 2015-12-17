@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script>
     // 読み込みが終わってから初期化
@@ -41,7 +42,7 @@
       //-------------------------------
       // オブジェクトの作成
       var shape = new createjs.Shape();
-      shape.graphics.beginFill("red").drawCircle(0, 0, 80);
+      shape.graphics.beginFill("DarkRed").drawCircle(0, 0, 80);
       stage.addChild(shape);
 
       // 時間経過処理
@@ -56,7 +57,6 @@
         // 画面更新
         stage.update();
       }
-
     }
   </script>
   <style>
@@ -72,8 +72,6 @@
 </head>
 
 <body>
-  <canvas id="myCanvas"
-          style="background:lightgray;">
-  </canvas>
+  <canvas id="myCanvas" width="960" height="540"></canvas>
 </body>
 </html>

@@ -1,4 +1,4 @@
-## テキストを表示する
+# CreateJS でテキストの表示方法
 
 文字を表示するには`createjs.Text`クラスを利用します。
 
@@ -11,7 +11,7 @@ new createjs.Text(テキスト, フォント, 色);
 
 ▼サンプル(
 ```js
-var t = new createjs.Text("Hello World!", "24px serif", "red");
+var t = new createjs.Text("Hello World!", "24px serif", "DarkRed");
 stage.addChild(t);
 ```
 
@@ -49,7 +49,7 @@ stage.addChild(t);
 テキストの水平方向の揃え方についても`textAlign`プロパティーを使うことで設定ができます。
 
 ```js
-var t = new Text("Hello World!", "24px serif", "red");
+var t = new Text("Hello World!", "24px serif", "DarkRed");
 t.textAlign = "center";
 stage.addChild(t);
 ```
@@ -76,22 +76,22 @@ http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.h
 
 ### 明朝体を表示する
 ```js
-var t = new Text("Hello World!", "24px serif", "red");
+var t = new Text("Hello World!", "24px serif", "DarkRed");
 stage.addChild(t);
 ```
 
 ### ゴシック体を表示する
 ```js
-var t = new Text("Hello World!", "24px sans-serif", "red");
+var t = new Text("Hello World!", "24px sans-serif", "DarkRed");
 stage.addChild(t);
 ```
 
 ## テキストの文言を変更する
 
 ```js
-var t = new Text("", "24px sans-serif", "red");
+var t = new Text("", "24px sans-serif", "DarkRed");
 t.text = "test";
 stage.addChild(t);
 ```
 
-[目次に戻る](index.md)
+

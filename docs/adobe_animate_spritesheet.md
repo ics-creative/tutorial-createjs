@@ -1,6 +1,8 @@
-# Adobe Flash Professional CC (Animate CC)とCreateJSの連携
+# Adobe Flash Professional CC と CreateJS の連携 (スプライトシート編)
 
 Adobe Flash Professional CCを使ってCreateJS用のスプライトシートを書き出し方を説明します。
+
+※[基本編](adobe_animate_spritesheet.md)とスプライトシート編の違いは、連携のさせ方が異なります。一般的には[基本編](adobe_animate_spritesheet.md)の方法がよく使われます。
 
 まずは FLA ファイルをダウンロードしましょう。
 
@@ -69,4 +71,4 @@ chara.play();
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/animate_spritesheet/spritesheet_click.html)
 - [サンプルのソースコードを確認する](../samples/animate_spritesheet/spritesheet_click.html)
 
-[目次に戻る](index.md)
+

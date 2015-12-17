@@ -1,5 +1,4 @@
-
-# 時間経過
+# CreateJS の Ticker の使い方
 
 インタラクティブコンテンツを実装するためのアニメーション機構を備えています。`createjs.Ticker`クラスがアニメーションに必要な時間経過を管理するクラスとなります。`createjs.Ticker`クラスの`addEventListener()`メソッドで`tick`イベントを監視することによって関数を一定間隔で実行します。デフォルトでは1/24秒ごとに呼び出されます。
 
@@ -30,7 +29,7 @@ var stage = new createjs.Stage("myCanvas");
 
 // 円を作成します
 var shape = new createjs.Shape();
-shape.graphics.beginFill("red").drawCircle(0, 0, 100); //半径100pxの円を描画
+shape.graphics.beginFill("DarkRed").drawCircle(0, 0, 100); //半径100pxの円を描画
 shape.y = 150; // Y座標300の位置に配置
 stage.addChild(shape); // 表示リストに追加
 
@@ -67,7 +66,7 @@ var stage = new createjs.Stage("myCanvas");
 
 // 円を作成します
 var shape = new createjs.Shape();
-shape.graphics.beginFill("red").drawCircle(0, 0, 100); //半径100pxの円を描画
+shape.graphics.beginFill("DarkRed").drawCircle(0, 0, 100); //半径100pxの円を描画
 shape.y = 150; // Y座標300の位置に配置
 stage.addChild(shape); // 表示リストに追加
 
@@ -89,4 +88,4 @@ function handleTick(){
 - [サンプルのソースコードを確認する](../samples/ticker_autoupdate.html)
 
 
-[目次に戻る](index.md)
+

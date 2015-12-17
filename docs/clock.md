@@ -1,4 +1,4 @@
-# アナログ時計を作ろう
+# CreateJS でアナログ時計の開発に挑戦しよう
 
 アナログ時計の作成を通して、CreateJSの理解を深めましょう。
 
@@ -207,4 +207,4 @@ for (var i = 0; i < steps; i++) {
 
 - [サンプル](http://book.mynavi.jp/wd/sampledata/201503view/flash4html5/sample_3/clock_watch.html)
 
-[目次に戻る](index.md)
+

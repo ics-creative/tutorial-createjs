@@ -1,6 +1,4 @@
-# モーションの実装〜トゥイーン効果
-
-
+# CreateJS でのトゥイーンの作成方法
 
 トゥイーンとは、始点と終点を設定してアニメーションさせるテクニックです。「間」を示すBetweenという単語から作られていれた用語です。TweenJSでは次の記述でトゥイーンを実装します。
 
@@ -16,7 +14,7 @@ createjs.Tween.get(対象)
 ```js
 // 円のシェイプを作成
 var circle = new createjs.Shape();
-circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.graphics.beginFill("DarkRed").drawCircle(0, 0, 50);
 circle.y = 200;
 stage.addChild(circle);
 
@@ -38,7 +36,7 @@ createjs.Tween.get(circle) // ターゲットを指定
 ```js
 // 円のシェイプを作成
 var circle = new createjs.Shape();
-circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.graphics.beginFill("DarkRed").drawCircle(0, 0, 50);
 circle.x = 0;
 circle.y = 0;
 stage.addChild(circle);
@@ -60,7 +58,7 @@ TweenJSはメソッドチェーンと呼ばれる書き方で、複数のモー�
 ```js
 // 円のシェイプを作成
 var circle = new createjs.Shape();
-circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.graphics.beginFill("DarkRed").drawCircle(0, 0, 50);
 stage.addChild(circle);
 
 createjs.Tween.get(circle) // ターゲットを指定
@@ -108,7 +106,7 @@ createjs.Tween.get(対象)
 ```js
 // 円のシェイプを作成
 var circle = new createjs.Shape();
-circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.graphics.beginFill("DarkRed").drawCircle(0, 0, 50);
 circle.x = 400;
 circle.y = 0;
 stage.addChild(circle);
@@ -121,6 +119,3 @@ createjs.Tween.get(circle) // ターゲットを指定
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/tween_ease.html)
 - [サンプルのソースコードを確認する](../samples/tween_ease.html)
-
-
-[目次に戻る](index.md)

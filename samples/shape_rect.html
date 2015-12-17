@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script>
     window.addEventListener("load", init);
@@ -11,11 +12,11 @@
 
       // 四角形を作成します
       var shape = new createjs.Shape();
-      shape.graphics.beginFill("red"); // 赤色で描画するように設定
-      shape.graphics.drawRect(0, 0, 200, 100); //100pxの正方形を描画
+      shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
+      shape.graphics.drawRect(0, 0, 200, 100); // 長方形を描画
       stage.addChild(shape); // 表示リストに追加
       shape.x = 100;
-      shape.y = 100;
+      shape.y = 50;
 
       // Stageの描画を更新
       stage.update();
@@ -23,10 +24,6 @@
   </script>
 </head>
 <body>
-  <canvas id="myCanvas"
-          width="400"
-          height="200"
-          style="background:lightgray;">
-  </canvas>
+  <canvas id="myCanvas" width="640" height="200"></canvas>
 </body>
 </html>

@@ -1,4 +1,4 @@
-## マウスオーバー/マウスアウト
+# CreateJS のマウスオーバー/マウスアウトの実装方法
 
 マウスイベントのマウスオーバーやマウスアウトを利用したい場合は、Stageオブジェクトの`stage.enableMouseOver()`メソッドを実行して有効にします。
 
@@ -57,7 +57,7 @@ function handleMouseOut(event) {
 	// 赤で塗り直す
 	shape.graphics
 			.clear()
-			.beginFill("red")
+			.beginFill("DarkRed")
 			.drawCircle(0, 0, 80);
 }
 ```
@@ -69,4 +69,4 @@ function handleMouseOut(event) {
 - [サンプルのソースコードを確認する](../samples/mouse_over.html)
 
 
-[目次に戻る](index.md)
+

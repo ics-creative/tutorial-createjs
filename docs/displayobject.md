@@ -1,4 +1,4 @@
-# 表示オブジェクト
+# CreateJS の表示オブジェクト
 
 CreateJSではステージに表示オブジェクトを追加することでコンテンツを作っていきます。例えば、舞台の演劇を想像してみましょう。ステージに役者が登場して演目が披露されますが、CreateJSのステージと役者の関係も同じです。ステージとはその名の通り`createjs.Stage`が、役者は表示オブジェクト`createjs.DisplayObject`になります。
 
@@ -8,7 +8,7 @@ CreateJSではステージに表示オブジェクトを追加することでコ
 
 ```js
 var object = new createjs.Shape();
-object.graphics.beginFill("red");
+object.graphics.beginFill("DarkRed");
 object.graphics.drawCircle(0, 0, 100);
 ```
 
@@ -61,4 +61,4 @@ object.scaleX = 0.5; // 50%の幅に設定する
 object.scaleY = 2.0; // 200%の高さに設定する
 ```
 
-[目次に戻る](index.md)
+

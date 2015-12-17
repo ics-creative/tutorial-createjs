@@ -1,0 +1,10 @@
+body {
+    /* ページ内の余白を削除 */
+    margin:0;
+    padding:0;
+}
+
+canvas {
+    /* 薄い灰色を指定 */
+    background: WhiteSmoke;
+}

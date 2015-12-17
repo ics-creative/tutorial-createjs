@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script>
     window.addEventListener("load", init);
@@ -20,7 +21,7 @@
         // 円を作成し
         var ball = new createjs.Shape();
         ball.graphics
-                .beginFill("red")
+                .beginFill("DarkRed")
                 .drawCircle(0, 0, 50);
         // 円周上に配置
         ball.x = 200 * Math.sin(i * 360 / 10 * Math.PI / 180);
@@ -40,6 +41,6 @@
   </script>
 </head>
 <body>
-  <canvas id="myCanvas" width="980" height="540"></canvas>
+  <canvas id="myCanvas" width="960" height="540"></canvas>
 </body>
 </html>

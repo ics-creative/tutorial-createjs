@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script>
     window.addEventListener("load", init);
@@ -12,7 +13,7 @@
       // シェイプを作成
       var shape = new createjs.Shape();
       // 塗りの色を指定
-      shape.graphics.beginFill("red");
+      shape.graphics.beginFill("DarkRed");
       // 円を描く
       shape.graphics.drawCircle(0, 0, 80);
       stage.addChild(shape); // 表示リストに追加
@@ -27,10 +28,6 @@
   </script>
 </head>
 <body>
-  <canvas id="myCanvas"
-          width="400"
-          height="200"
-          style="background:lightgray;">
-  </canvas>
+  <canvas id="myCanvas" width="640" height="200"></canvas>
 </body>
 </html>

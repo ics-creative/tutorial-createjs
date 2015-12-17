@@ -1,4 +1,4 @@
-# 簡単なサンプルを試そう
+# 簡単な CreateJS のサンプルを試そう
 
 まずは簡単なサンプルを通してCreateJSがどのようなものなのか確認しましょう。次のコードをHTMLファイルにコピー&ペーストして、ブラウザで開くと画面に赤い円が表示されます。
 
@@ -16,7 +16,7 @@
 
 			// 円を作成します
 			var shape = new createjs.Shape();
-			shape.graphics.beginFill("red"); // 赤色で描画するように設定
+			shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
 			shape.graphics.drawCircle(0, 0, 100); //半径 100px の円を描画
 			shape.x = 200; // X 座標 200px の位置に配置
 			shape.y = 200; // Y 座標 200px の位置に配置
@@ -29,7 +29,7 @@
 </head>
 
 <body>
-	<canvas id="myCanvas" width="980" height="540"></canvas>
+	<canvas id="myCanvas" width="960" height="540"></canvas>
 </body>
 </html>
 
@@ -48,7 +48,7 @@ CreateJSはHTML5の`canvas`要素を利用します。`canvas`要素はコンテ
 
 ```html
 <body>
-	<canvas id="myCanvas" width="980" height="540"></canvas>
+	<canvas id="myCanvas" width="960" height="540"></canvas>
 </body>
 ```
 
@@ -83,7 +83,7 @@ var stage = new createjs.Stage("myCanvas");
 ```js
 // 円を作成します
 var shape = new createjs.Shape();
-shape.graphics.beginFill("red"); // 赤色で描画するように設定
+shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
 shape.graphics.drawCircle(0, 0, 100); //半径100pxの円を描画
 ```
 
@@ -103,4 +103,4 @@ stage.update();
 これがCreateJSの簡単なサンプルです。具体的に一つずつ順番に理解していきましょう。
 
 
-[目次に戻る](index.md)
+

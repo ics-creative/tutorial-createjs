@@ -1,4 +1,4 @@
-# 表示オブジェクト
+# CreateJS で表示オブジェクトを削除するには
 
 自身の表示リストから、「任意の表示オブジェクト」を除外するには、`removeChild()` メソッドを使用します。
 
@@ -20,7 +20,7 @@ stage.addChild(container);
 
 // 赤い円を作成
 var circleRed = new createjs.Shape();
-circleRed.graphics.beginFill("red").drawCircle(40, 40, 40);
+circleRed.graphics.beginFill("DarkRed").drawCircle(40, 40, 40);
 
 // 緑の円を作成
 var circleGreen = new createjs.Shape();
@@ -46,4 +46,4 @@ function handleGreenClick(event) {
 }
 ```
 
-[目次に戻る](index.md)
+

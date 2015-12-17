@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script>
     window.addEventListener("load", init);
@@ -11,7 +12,7 @@
 
       // シェイプ(船)を作成
       var ship = new createjs.Shape();
-      ship.graphics.beginFill("red")
+      ship.graphics.beginFill("DarkRed")
               .moveTo(-10, +5)
               .lineTo(-10, -5)
               .lineTo(5, 0);
@@ -50,10 +51,6 @@
   </script>
 </head>
 <body>
-  <canvas id="myCanvas"
-          width="960"
-          height="540"
-          style="background:lightgray;">
-  </canvas>
+  <canvas id="myCanvas" width="960" height="540"></canvas>
 </body>
 </html>

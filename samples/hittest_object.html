@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script>
     window.addEventListener("load", init);
@@ -46,7 +47,7 @@
         if (isHit == true) {
           // 大きな星を赤色で塗る
           poly.graphics.clear()
-                  .beginFill("red")
+                  .beginFill("DarkRed")
                   .drawPolyStar(0, 0, 75, 10, 0.6, -90);
         } else {
           // 大きな星を緑色で塗る
@@ -62,10 +63,6 @@
   </script>
 </head>
 <body>
-  <canvas id="myCanvas"
-          width="400"
-          height="200"
-          style="background:lightgray;">
-  </canvas>
+  <canvas id="myCanvas" width="640" height="200"></canvas>
 </body>
 </html>

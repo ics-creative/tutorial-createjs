@@ -1,4 +1,4 @@
-# マウスインタラクション
+# CreateJS でマウス座標を調べる方法
 
 CreateJSにはマウスイベントを管理する機能が備わっています。簡単なインタラクションの実装例を通して学習していきましょう。
 
@@ -20,7 +20,7 @@ var stage = new createjs.Stage("myCanvas");
 
 // オブジェクトの作成
 var shape = new createjs.Shape();
-shape.graphics.beginFill("red");
+shape.graphics.beginFill("DarkRed");
 shape.graphics.drawCircle(0, 0, 40);
 stage.addChild(shape);
 
@@ -46,4 +46,4 @@ function handleTick(event) {
 - [サンプルのソースコードを確認する](../samples/mouse_xy.html)
 
 
-[目次に戻る](index.md)
+

@@ -1,4 +1,4 @@
-# 落下するボールを作成しましょう
+# CreateJSで物理演算〜落下するボールの作成〜
 
 ![](../imgs/ball.html.png)
 
@@ -13,7 +13,7 @@
 ```js
 //　ボールを作成
 var ball = new createjs.Shape();
-ball.graphics.beginFill("red").drawCircle(0, 0, radius);
+ball.graphics.beginFill("DarkRed").drawCircle(0, 0, radius);
 ball.x = stage.canvas.width / 2; // 画面中央から
 stage.addChild(ball);
 ```
@@ -125,7 +125,7 @@ var radius = 50;
 
 //　ボールを作成
 var ball = new createjs.Shape();
-ball.graphics.beginFill("red").drawCircle(0, 0, radius);
+ball.graphics.beginFill("DarkRed").drawCircle(0, 0, radius);
 ball.x = stage.canvas.width / 2; // 画面中央から
 stage.addChild(ball);
 
@@ -160,4 +160,4 @@ function handleUp(event) {
 }
 ```
 
-[目次に戻る](index.md)
+

@@ -1,4 +1,4 @@
-# シェイプの塗りと線
+# CreateJS でのシェイプの塗りと線の設定方法
 
 シェイプには塗りと枠線を設定できます。塗りだけを設定したり、線だけを描いて塗らないということも可能です。
 
@@ -18,7 +18,7 @@ Graphicsオブジェクト.endFill();
 // シェイプを作成
 var shape = new createjs.Shape();
 // 塗りの色を指定
-shape.graphics.beginFill("red");
+shape.graphics.beginFill("DarkRed");
 // 円を描く
 shape.graphics.drawCircle(0, 0, 80);
 ```
@@ -56,7 +56,7 @@ Graphicsオブジェクト.setStrokeStyle(線の太さ);
 // シェイプを作成
 var shape = new createjs.Shape();
 // 線の色を指定
-shape.graphics.beginStroke("red");
+shape.graphics.beginStroke("DarkRed");
 // 線の幅を指定
 shape.graphics.setStrokeStyle(5);
 // 円を描く
@@ -77,4 +77,4 @@ shape.graphics.drawCircle(0, 0, 80);
 図形を描いたら`endStroke()`メソッドで描き終わったことを指定します。必ずしも使わなくても大丈夫ですが、複数のシェイプを描くときには指定しておくほうが無難でしょう。
 
 
-[目次に戻る](index.md)
+

@@ -2,6 +2,7 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script>
     window.addEventListener("load", init);
@@ -13,7 +14,7 @@
       var size = 10;
       // 赤い丸を作成
       var particle = new createjs.Shape();
-      particle.graphics.beginFill("red").drawCircle(0, 0, size);
+      particle.graphics.beginFill("DarkRed").drawCircle(0, 0, size);
       stage.addChild(particle);
       particle.x = 200;
       particle.y = 0;
@@ -45,6 +46,6 @@
   </script>
 </head>
 <body>
-  <canvas id="myCanvas" width="400" height="200" style="background: lightgray;"></canvas>
+  <canvas id="myCanvas" width="640" height="200"></canvas>
 </body>
 </html>

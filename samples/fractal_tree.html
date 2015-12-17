@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script>
     window.addEventListener("load", init);
@@ -31,7 +32,7 @@
         var x2 = leng * Math.cos(angle * Math.PI / 180) + x1;
         var y2 = leng * Math.sin(angle * Math.PI / 180) + y1;
         // 線の種類を設定
-        shape.graphics.setStrokeStyle(1).beginStroke("red");
+        shape.graphics.setStrokeStyle(1).beginStroke("DarkRed");
         // 枝を結ぶ
         shape.graphics.moveTo(x1, y1);
         shape.graphics.lineTo(x2, y2);
@@ -53,10 +54,6 @@
   </script>
 </head>
 <body>
-  <canvas id="myCanvas"
-          width="960"
-          height="540"
-          style="background:lightgray;">
-  </canvas>
+  <canvas id="myCanvas" width="960" height="540" ></canvas>
 </body>
 </html>

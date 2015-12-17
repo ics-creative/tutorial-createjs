@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script>
     // 読み込みが終わってから初期化
@@ -16,7 +17,7 @@
 
       // 赤い円を作成
       var circleRed = new createjs.Shape();
-      circleRed.graphics.beginFill("red").drawCircle(40, 40, 40);
+      circleRed.graphics.beginFill("DarkRed").drawCircle(40, 40, 40);
 
       // 緑の円を作成
       var circleGreen = new createjs.Shape();
@@ -48,9 +49,9 @@
 </head>
 <body>
   <canvas id="myCanvas"
-          width="400"
+          width="640"
           height="200"
-          style="background:lightgray;">
+          style="background:WhiteSmoke;">
   </canvas>
 </body>
 </html>

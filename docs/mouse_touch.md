@@ -1,4 +1,4 @@
-## タッチデバイス対応
+# CreateJSのタッチデバイスの対応方法
 
 iOSやAndroid, Windows 10のようなタッチデバイスでタッチ操作を制御するには、`createjs.Touch`クラスを使ってタッチ操作を有効に設定します。`createjs.Touch`クラスによって自動的にタッチイベントがマウスイベントに変換されるため、特別な処理を実装する必要はありません。
 
@@ -21,4 +21,4 @@ if(createjs.Touch.isSupported() == true){
 
 
 
-[目次に戻る](index.md)
+
