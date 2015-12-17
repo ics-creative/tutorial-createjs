@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      var stage = new createjs.Stage("myCanvas");
+
+      // 写真の横幅
+      var PHOTO_WIDTH = 640;
+      // 写真の枚数
+      var PHOTO_NUM = 3;
+
+      // 親子構造を2層で用意する
+      var wrap = new createjs.Container();
+      wrap.x = 120; // 座標調整のため
+      stage.addChild(wrap);
+
+      // 写真を3枚配置
+      var container = new createjs.Container();
+      wrap.addChild(container);
+      for (var i = 0; i < PHOTO_NUM; i++) {
+        // 画像を読み込む
+        var url = "imgs/photo_" + i + ".jpg";
+        var photo = new createjs.Bitmap(url);
+        // 配置座標を調整
+        photo.x = PHOTO_WIDTH * i;
+        // 画面に配置
+        container.addChild(photo);
+      }
+
+      // マスク用のシェイプを作成する
+      var shapeMask = new createjs.Shape();
+      shapeMask.graphics
+              .beginFill("gold") // 適当な色で塗る
+              .drawRect(0, 0, PHOTO_WIDTH, 427); // 写真のサイズに設定
+      // マスクを適用する
+      container.mask = shapeMask;
+
+      var btnPrev = createButton("◀");
+      btnPrev.x = 10;
+      btnPrev.y = 210;
+      stage.addChild(btnPrev);
+
+      var btnNext = createButton("▶");
+      btnNext.x = 770;
+      btnNext.y = 210;
+      stage.addChild(btnNext);
+
+      // スライドショーのページナンバーを管理する変数を用意
+      var pageNumber = 0;
+
+      // ボタンをクリックしたときの処理
+      btnPrev.addEventListener("click", handlePrevClick);
+      function handlePrevClick(event) {
+        // ページナンバーを更新
+        pageNumber -= 1;
+        // 最初のページナンバーを超えたら
+        if (pageNumber < 0) {
+          pageNumber = 0; // 最小値で止める
+        }
+        updatePage(); // ページ番号にあった表示にする
+      }
+
+      // ボタンをクリックしたときの処理
+      btnNext.addEventListener("click", handleNextClick);
+      function handleNextClick(event) {
+        // ページナンバーを更新
+        pageNumber += 1;
+        // 最後のページナンバーを超えたら
+        if (pageNumber > PHOTO_NUM - 1) {
+          pageNumber = PHOTO_NUM - 1; // 最大値で止める
+        }
+
+        updatePage(); // ページ番号にあった表示にする
+      }
+
+
+      // ページ番号にあった配置にする
+      function updatePage() {
+        // 目標座標を計算
+        var targetX = -1 * PHOTO_WIDTH * pageNumber;
+        // トゥイーンさせる
+        createjs.Tween.get(container, {override: true})
+                .to({x: targetX}, 2000, createjs.Ease.cubicInOut);
+      }
+
+
+      // 画面更新処理 (自動)
+      createjs.Ticker.setFPS(60);
+      createjs.Ticker.addEventListener("tick", stage);
+    }
+
+    function createButton(label) {
+      // ボタンを用意する
+      var btn = new createjs.Container();
+      // ボタンの下敷き
+      var btnZabuton = new createjs.Shape();
+      btnZabuton.graphics.beginFill("black").drawRoundRect(0, 0, 45, 40, 5, 5);
+      btn.addChild(btnZabuton);
+      // ボタンのラベル
+      var btnLabel = new createjs.Text(label, "24px sans-serif", "white");
+      btnLabel.textAlign = "center";
+      btnLabel.textBaseline = "middle";
+      btnLabel.x = 20;
+      btnLabel.y = 20;
+      btn.addChild(btnLabel);
+
+      // 関数の戻り値としてボタンの参照を返す
+      return btn;
+    }
+  </script>
+</head>
+<body onload="init()">
+  <canvas id="myCanvas" width="960" height="427"></canvas>
+</body>
+</html>

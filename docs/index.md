@@ -48,7 +48,7 @@
 - ゲーム
   - [パズルゲーム](game_pazzle.md)
   - [シューティングゲーム](game_shooting.md)
-- スライドショー
+- [カルーセル(スライドショー)](slideshow.md)
 
 ## Flash Professional CCを使おう
 
