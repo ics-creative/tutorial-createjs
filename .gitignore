@@ -2,3 +2,14 @@
 .idea
 tool-generate-captures/node_modules/*
 tool-generate-captures/.idea/workspace.xml
+html/styles/.sass-cache/0fe24dfc41fffed2d6891c797fcd7dee100afa65/_clearfix.scssc
+html/js/main.js.map
+tool-generate-captures/.idea/*
+.name
+encodings.xml
+jsLibraryMappings.xml
+tool_generate_captures_node_modules.xml
+misc.xml
+modules.xml
+tool-generate-captures.iml
+typescript-compiler.xml
