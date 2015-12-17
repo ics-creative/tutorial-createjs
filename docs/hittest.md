@@ -30,6 +30,9 @@ if(isHit == true){
 マウス座標と表示オブジェクトが重なっていれば `true` が、重なっていなければ `false` が返ってきます。
 
 
+※`hitTest()`メソッドの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Shape.html#method_hitTest)」を確認ください。
+※`globalToLocal()`メソッドの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Shape.html#method_globalToLocal)」を確認ください。
+
 
 ## 表示オブジェクトと表示オブジェクトとで当たり判定を取る
 
@@ -56,6 +59,8 @@ if(isHit == true){
 - [サンプルのソースコードを確認する](../samples/hittest_object.html)
 
 表示オブジェクトと表示オブジェクトが重なっていれば `true` が、重なっていなければ `false` が返ってきます。
+
+※`localToLocal()`メソッドの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Shape.html#method_localToLocal)」を確認ください。
 
 
 ## 複数の表示オブジェクトと表示オブジェクトとで当たり判定を取る
@@ -115,8 +120,3 @@ function handleTick() {
     // (省略)
 }
 ```
-
-
-
-
-

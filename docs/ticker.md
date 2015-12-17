@@ -10,6 +10,9 @@ function handleTick(){
 }
 ```
 
+※`createjs.Ticker`クラスの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Ticker.html)」を確認ください。
+
+
 `tick()`関数内で、`stage.update()`メソッドを呼び出し、常にステージの画面更新が呼ばれるようにしておきましょう。
 
 ```js
@@ -86,6 +89,3 @@ function handleTick(){
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/ticker_autoupdate.html)
 - [サンプルのソースコードを確認する](../samples/ticker_autoupdate.html)
-
-
-

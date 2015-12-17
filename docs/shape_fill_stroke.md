@@ -29,7 +29,7 @@ shape.graphics.drawCircle(0, 0, 80);
 - [サンプルのソースコードを確認する](../samples/shape_begin_fill.html)
 
 
-
+※詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Graphics.html#method_beginFill)」を確認ください。
 
 
 
@@ -69,12 +69,9 @@ shape.graphics.drawCircle(0, 0, 80);
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_begin_stroke.html)
 - [サンプルのソースコードを確認する](../samples/shape_begin_stroke.html)
 
-
+※詳しい使い方は「 公式ドキュメント(日本語訳)」の[「beginStroke」](http://createjs.sub.jp/ja/EaselJS/reference/classes/Graphics.html#method_beginStroke)」と[「setStrokeStyle」](http://createjs.sub.jp/ja/EaselJS/reference/classes/Graphics.html#method_setStrokeStyle)」を確認ください。
 
 
 ### コラム
 
 図形を描いたら`endStroke()`メソッドで描き終わったことを指定します。必ずしも使わなくても大丈夫ですが、複数のシェイプを描くときには指定しておくほうが無難でしょう。
-
-
-
