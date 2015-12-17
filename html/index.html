@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>CreateJS入門サイト - ICS MEDIA</title>
+  <title>CreateJSチュートリアル 目次 - CreateJS入門 - ICS MEDIA</title>
   <link rel="icon" sizes="16x16 32x32 48x48 128x128 256x256" href="https://ics.media/wp-content/themes/icslab/img/favicon.ico"/>
-  <link rel="stylesheet" href="https://ics.media/wp-content/themes/icslab/style.css">
-  <link rel="stylesheet" href="styles/style-tutorial.css">
-  <script src="https://ics.media/wp-includes/js/jquery/jquery.js?ver=1.11.3"></script>
-  <script src="https://ics.media/wp-content/themes/icslab/js-concat/all.min.js" defer></script>
+  <link rel="stylesheet" type='text/css' href="https://ics.media/wp-content/themes/icslab/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type='text/css' href="styles/style.css">
+  <link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Source+Code+Pro'>
+  <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+  <script src="https://ics.media/wp-includes/js/jquery/jquery.js"></script>
+  <script src="https://use.typekit.net/djc6jhl.js"></script>
+  <script>try {
+    Typekit.load({async: true});
+  } catch (e) {
+  }</script>
+  <script src="js/main.js"></script>
 </head>
 <body class="tutorial">
   <div id="container">
     <div id="header-always">
       <div id="header-wrap">
-        <h1><a href="https://ics.media/"><span class="logoBlog">ICS LAB &ndash;
-          Webのインタラクションデザイン(Flash/HTML5)に関する最新情報が満載</span></a></h1>
+        <h1>
+          <a href="https://ics.media/"><span class="logoBlog"><img src="imgs/logo-blog.png" alt="ICS MEDIA - インタラクションデザイン×ウェブテクノロジー" width="477" height="26"/></a>
+        </h1>
         <nav>
           <ul>
             <li><a href="https://ics.media/feed/atom" target="_blank"><i class="fa fa-rss"></i></a></li>
@@ -23,468 +33,242 @@
           </ul>
         </nav>
       </div>
-    </div>
 
-    <div id="top-image">
-      <div id="top-image-wrap"></div>
-    </div>
-
-    <div id="wrap">
-      <div id="main">
-        <div class="content">
-          <article itemscope="" itemtype="http://schema.org/BlogPosting">
-            <div class="pageContentContainer">
-              <div class="article">
-
-                <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
-                  <a id="user-content-パーティクルシステム" class="anchor" href="#パーティクルシステム" aria-hidden="true"><span class="octicon octicon-link"></span></a>パーティクルシステム
-                </h1>
-
-                  <p>パーティクル・システム（particle
-                    system）はコンピュータグラフィック技術のひとつで、ある種の曖昧さを持った事物をシミュレートするために使われます。一般にパーティクル・システムを使って模写される例としては、炎、爆発、煙、流水、火花、落葉、雲、霧、雪、埃、流星、毛髪、毛皮、草地、あるいは光跡や呪文の視覚効果などが挙げられます。</p>
-
-                  <p>段階を踏んで、一つ一つ学んでいきましょう。本章の解説は、約2時間程度で学べる内容となっています。</p>
-
-                  <h2>
-                    <a id="user-content-1つだけのパーティクル制御を実装" class="anchor" href="#1つだけのパーティクル制御を実装" aria-hidden="true"><span class="octicon octicon-link"></span></a>1つだけのパーティクル制御を実装
-                  </h2>
-
-                  <p>
-                    <a href="/ics-creative/tutorial-createjs/blob/master/imgs/particle_single.html.png" target="_blank"><img src="https://raw.githubusercontent.com/ics-creative/tutorial-createjs/master/imgs/particle_single.html.png" alt="" style="max-width:100%;"></a>
-                  </p>
-
-                  <ul>
-                    <li><a href="https://ics-creative.github.io/tutorial-createjs/samples/particle_single.html">サンプルを再生する</a>
-                    </li>
-                    <li><a href="/ics-creative/tutorial-createjs/blob/master/samples/particle_single.html">サンプルのソースコードを確認する</a>
-                    </li>
-                  </ul>
-
-                  <p>パーティクルは<code>createjs.Shape</code>インスタンスとして作成します。このパーティクルに対して、速度の計算を行います。</p>
-
-                  <div class="highlight highlight-source-js"><pre><span class="pl-c">// 赤い丸を作成</span>
-<span class="pl-k">var</span> particle <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">createjs.Shape</span>();
-<span class="pl-c">//(省略)</span>
-
-<span class="pl-c">// 速度情報</span>
-<span class="pl-k">var</span> vx <span class="pl-k">=</span> <span class="pl-c1">0</span>;
-<span class="pl-k">var</span> vy <span class="pl-k">=</span> <span class="pl-c1">0</span>;
-
-<span class="pl-c">// 時間経過</span>
-<span class="pl-smi">createjs</span>.<span class="pl-smi">Ticker</span>.<span class="pl-en">addEventListener</span>(<span class="pl-s"><span class="pl-pds">"</span>tick<span class="pl-pds">"</span></span>, handleTick);
-<span class="pl-k">function</span> <span class="pl-en">handleTick</span>() {
-  <span class="pl-c">// 重力</span>
-  vy <span class="pl-k">+=</span> <span class="pl-c1">1</span>;
-  <span class="pl-c">// 摩擦</span>
-  vx <span class="pl-k">*=</span> <span class="pl-c1">0.95</span>;
-  vy <span class="pl-k">*=</span> <span class="pl-c1">0.95</span>;
-  <span class="pl-c">// 反映</span>
-  <span class="pl-smi">particle</span>.<span class="pl-c1">x</span> <span class="pl-k">+=</span> vx;
-  <span class="pl-smi">particle</span>.<span class="pl-c1">y</span> <span class="pl-k">+=</span> vy;
-  <span class="pl-c">// 地面の作成</span>
-  <span class="pl-c">//(省略)</span>
-}</pre>
-                  </div>
-
-                  <h2>
-                    <a id="user-content-配列で複数のパーティクルを制御" class="anchor" href="#配列で複数のパーティクルを制御" aria-hidden="true"><span class="octicon octicon-link"></span></a>配列で複数のパーティクルを制御
-                  </h2>
-
-                  <p><a href="/ics-creative/tutorial-createjs/blob/master/imgs/particle_multi.html.png" target="_blank"><img src="https://raw.githubusercontent.com/ics-creative/tutorial-createjs/master/imgs/particle_multi.html.png" alt="" style="max-width:100%;"></a>
-                  </p>
-
-                  <ul>
-                    <li>
-                      <a href="https://ics-creative.github.io/tutorial-createjs/samples/particle_multi.html">サンプルを再生する</a>
-                    </li>
-                    <li><a href="/ics-creative/tutorial-createjs/blob/master/samples/particle_multi.html">サンプルのソースコードを確認する</a>
-                    </li>
-                  </ul>
-
-                  <p>まずは複数のパーティクルを管理する配列を作成しましょう。</p>
-
-                  <div class="highlight highlight-source-js">
-                    <pre><span class="pl-k">var</span> particleList <span class="pl-k">=</span> [];　</pre>
-                  </div>
-
-                  <p>※ <code>[]</code>と記述しても<code>new Array()</code>と記述しても同じです。多くのコーディング規約で<code>[]</code>と記述することが推奨されているので、本サイトでは配列は<code>[]</code>として作成します。
-                  </p>
-
-                  <p>
-                    <code>for</code>文を使って、複数のパーティクルを作成し、この配列に保存します。パーティクルの発生座標は視覚的にわかりやすくするために、<code>Math.random()</code>メソッドを使ってランダムな座標にしています。
-                  </p>
-
-                  <div class="highlight highlight-source-js"><pre><span class="pl-c">// for文を作成 (上限数はパーティクルの個数)</span>
-<span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> <span class="pl-c1">20</span>; i<span class="pl-k">++</span>) {
- <span class="pl-c">// 赤い丸を作成</span>
- <span class="pl-k">var</span> particle <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">createjs.Shape</span>();
- <span class="pl-c">//(省略)</span>
- <span class="pl-smi">particle</span>.<span class="pl-c1">x</span> <span class="pl-k">=</span> <span class="pl-smi">stage</span>.<span class="pl-smi">canvas</span>.<span class="pl-c1">width</span> <span class="pl-k">*</span> <span class="pl-smi">Math</span>.<span class="pl-c1">random</span>();
- <span class="pl-smi">particle</span>.<span class="pl-c1">y</span> <span class="pl-k">=</span> <span class="pl-smi">stage</span>.<span class="pl-smi">canvas</span>.<span class="pl-c1">height</span> <span class="pl-k">*</span> <span class="pl-smi">Math</span>.<span class="pl-c1">random</span>();
- <span class="pl-c">//(省略)</span>
-
- <span class="pl-c">// 配列に保存</span>
- particleList[i] <span class="pl-k">=</span> particle;
-}</pre>
-                  </div>
-
-                  <p>速度情報の<code>vx</code>と<code>vy</code>は<code>createjs.Shape</code>インスタンスのプロパティーとして設定しています(<code>particle.vx
-                    =
-                    0;</code>)。JavaScriptは動的言語といい、自由にオブジェクトのプロパティーを追加できます。本来は<code>createjs.Shape</code>に<code>vx</code>と<code>vy</code>プロパティーは存在しませんが、速度情報はパーティクル自身それぞれで管理するべきものなので、パーティクル自身に速度情報をもたせたほうがプログラムの見通しがよくなります。
-                  </p>
-
-                  <div class="highlight highlight-source-js"><pre><span class="pl-smi">particle</span>.<span class="pl-smi">vx</span> <span class="pl-k">=</span> <span class="pl-c1">0</span>;
-<span class="pl-smi">particle</span>.<span class="pl-smi">vy</span> <span class="pl-k">=</span> <span class="pl-c1">0</span>;</pre>
-                  </div>
-
-                  <p>
-                    次に<code>tick</code>イベントでは配列に保存した複数のパーティクルを制御します。<code>for</code>文では配列の長さ<code>particleList.length</code>に応じてループさせます。配列の制御では要素を変数に取り出し(<code>var
-                    particle = particleList[i];</code>)、一個のパーティクルを制御したときと同じ処理を実装します。</p>
-
-                  <div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">handleTick</span>() {
-  <span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> <span class="pl-smi">particleList</span>.<span class="pl-c1">length</span>; i<span class="pl-k">++</span>) {
-    <span class="pl-c">// i番目の要素を変数に代入</span>
-    <span class="pl-k">var</span> particle <span class="pl-k">=</span> particleList[i];
-    <span class="pl-c">// 重力</span>
-    <span class="pl-smi">particle</span>.<span class="pl-smi">vy</span> <span class="pl-k">+=</span> <span class="pl-c1">1</span>;
-    <span class="pl-c">// 摩擦</span>
-    <span class="pl-smi">particle</span>.<span class="pl-smi">vx</span> <span class="pl-k">*=</span> <span class="pl-c1">0.95</span>;
-    <span class="pl-smi">particle</span>.<span class="pl-smi">vy</span> <span class="pl-k">*=</span> <span class="pl-c1">0.95</span>;
-    <span class="pl-c">// 反映</span>
-    <span class="pl-smi">particle</span>.<span class="pl-c1">x</span> <span class="pl-k">+=</span> <span class="pl-smi">particle</span>.<span class="pl-smi">vx</span>;
-    <span class="pl-smi">particle</span>.<span class="pl-c1">y</span> <span class="pl-k">+=</span> <span class="pl-smi">particle</span>.<span class="pl-smi">vy</span>;
-
-    <span class="pl-c">//(省略)</span>
-  }
-  <span class="pl-c">//(省略)</span>
-}</pre>
-                  </div>
-
-                  <h2>
-                    <a id="user-content-パーティクルを時間経過で発生させ寿命を設ける" class="anchor" href="#パーティクルを時間経過で発生させ寿命を設ける" aria-hidden="true"><span class="octicon octicon-link"></span></a>パーティクルを時間経過で発生させ、寿命を設ける
-                  </h2>
-
-                  <p>
-                    <a href="/ics-creative/tutorial-createjs/blob/master/imgs/particle_life.html.png" target="_blank"><img src="https://raw.githubusercontent.com/ics-creative/tutorial-createjs/master/imgs/particle_life.html.png" alt="" style="max-width:100%;"></a>
-                  </p>
-
-                  <ul>
-                    <li>
-                      <a href="https://ics-creative.github.io/tutorial-createjs/samples/particle_life.html">サンプルを再生する</a>
-                    </li>
-                    <li><a href="/ics-creative/tutorial-createjs/blob/master/samples/particle_life.html">サンプルのソースコードを確認する</a>
-                    </li>
-                  </ul>
-
-                  <h3>
-                    <a id="user-content-プログラムの構造--tickイベントで2つの関数を呼び出して制御" class="anchor" href="#プログラムの構造--tickイベントで2つの関数を呼び出して制御" aria-hidden="true"><span class="octicon octicon-link"></span></a>プログラムの構造
-                    : <code>tick</code>イベントで2つの関数を呼び出して制御</h3>
-
-                  <p>時間経過でパーティクルを発生させたいので、パーティクルの作成を<code>tick</code>イベントで行います。<code>emitParticles()</code>関数でパーティクルを発生させ、<code>updateParticles()</code>関数でパーティクルを動かします。
-                  </p>
-
-                  <div class="highlight highlight-source-js"><pre><span class="pl-c">// 配列でパーティクルを管理します</span>
-<span class="pl-k">var</span> particles <span class="pl-k">=</span> [];
-
-<span class="pl-c">// tick イベントを登録する</span>
-<span class="pl-smi">createjs</span>.<span class="pl-smi">Ticker</span>.<span class="pl-en">addEventListener</span>(<span class="pl-s"><span class="pl-pds">"</span>tick<span class="pl-pds">"</span></span>, handleTick);
-<span class="pl-k">function</span> <span class="pl-en">handleTick</span>(<span class="pl-smi">event</span>) {
-  <span class="pl-c">// パーティクルを発生</span>
-  <span class="pl-en">emitParticles</span>();
-  <span class="pl-c">// パーティクルを更新</span>
-  <span class="pl-en">updateParticles</span>();
-  <span class="pl-c">// 画面を更新する</span>
-  <span class="pl-smi">stage</span>.<span class="pl-en">update</span>();
-}</pre>
-                  </div>
-
-                  <p>これらの関数の役割を掘り下げてみましょう。</p>
-
-                  <h4>
-                    <a id="user-content-パーティクルの発生を担当するemitparticles関数" class="anchor" href="#パーティクルの発生を担当するemitparticles関数" aria-hidden="true"><span class="octicon octicon-link"></span></a>パーティクルの発生を担当する<code>emitParticles()</code>関数
-                  </h4>
-
-                  <p>
-                    パーティクルは時間経過で次々と発生します。配列の大きさに制限はなく、いくらでも要素を追加することができます。今回は新しく発生したパーティクルは配列の最後に追加するため、<code>push()</code>メソッドを使ってパーティクルを保存しています。
-                  </p>
-
-                  <div class="highlight highlight-source-js"><pre><span class="pl-c">// パーティクルを発生させます</span>
-<span class="pl-k">function</span> <span class="pl-en">emitParticles</span>() {
-  <span class="pl-c">// パーティクルの生成</span>
-  <span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> <span class="pl-c1">10</span>; i<span class="pl-k">++</span>) {
-    <span class="pl-c">// オブジェクトの作成</span>
-    <span class="pl-k">var</span> particle <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">createjs.Shape</span>();
-    <span class="pl-smi">stage</span>.<span class="pl-en">addChild</span>(particle);
-    <span class="pl-c">//(省略)</span>
-    <span class="pl-c">// 配列に保存</span>
-    <span class="pl-smi">particles</span>.<span class="pl-c1">push</span>(particle);
-  }
-}</pre>
-                  </div>
-
-                  <p>
-                    パーティクルには座標<code>x</code>、<code>y</code>や速度情報<code>vx</code>、<code>vy</code>を設定しますが、今回はパーティクルに寿命<code>life</code>を設定します。<code>createjs.Shape</code>クラスには<code>life</code>というプロパティーは本来存在しませんが、勝手に追加しておきます。
-                  </p>
-
-                  <div class="highlight highlight-source-js"><pre><span class="pl-c">// 寿命</span>
-<span class="pl-smi">particle</span>.<span class="pl-smi">life</span> <span class="pl-k">=</span> <span class="pl-c1">100</span>;</pre>
-                  </div>
-
-                  <h4>
-                    <a id="user-content-パーティクルの更新を担当するupdateparticles関数" class="anchor" href="#パーティクルの更新を担当するupdateparticles関数" aria-hidden="true"><span class="octicon octicon-link"></span></a>パーティクルの更新を担当する<code>updateParticles()</code>関数
-                  </h4>
-
-                  <p>パーティクルの更新処理では寿命の更新をおこないます。寿命というと難しいように思いますが、処理としてはプロパティー<code>life</code>の値を<code>-1</code>するだけです。1回の<code>tick</code>イベントで<code>life</code>が1ずつ減っていきます。
-                  </p>
-
-                  <div class="highlight highlight-source-js"><pre><span class="pl-c">// パーティクルを更新します</span>
-<span class="pl-k">function</span> <span class="pl-en">updateParticles</span>() {
-  <span class="pl-c">// パーティクルの計算を行う</span>
-  <span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> <span class="pl-smi">particles</span>.<span class="pl-c1">length</span>; i<span class="pl-k">++</span>) {
-    <span class="pl-c">// オブジェクトの作成</span>
-    <span class="pl-k">var</span> particle <span class="pl-k">=</span> particles[i];
-    <span class="pl-c">// (省略)</span>
-    <span class="pl-c">// 寿命を減らす</span>
-    <span class="pl-smi">particle</span>.<span class="pl-smi">life</span> <span class="pl-k">-=</span> <span class="pl-c1">1</span>;
-
-    <span class="pl-c">// 寿命の判定</span>
-    <span class="pl-k">if</span> (<span class="pl-smi">particle</span>.<span class="pl-smi">life</span> <span class="pl-k">&lt;=</span> <span class="pl-c1">0</span>) {
-      <span class="pl-c">// (省略)</span>
-    }
-  }
-}</pre>
-                  </div>
-
-                  <p>
-                    寿命がつきたとき、つまり<code>life</code>が<code>0</code>になったときにパーティクルを消去しましょう。<code>if</code>文での判定は<code>life</code>が<code>0</code>になったかどうかを調べればわかります。削除処理には２つの実装が必要となり、画面から消す<code>stage.removeChild()</code>と、保存されている配列からの消去<code>particles.splice()</code>を行います。
-                  </p>
-
-                  <p><code>removeChild()</code>はステージから消去する命令で画面からパーティクルを消すことができます。配列の<code>splice(a, b)</code>は配列の<code>a</code>番目から<code>b</code>個の要素を消すという命令になります。画面から消すだけでは不十分で、配列からもパーティクルを消しておかなければ、無駄に座標更新や物理演算の計算が行われ続けます。
-                  </p>
-
-                  <div class="highlight highlight-source-js"><pre><span class="pl-c">// 寿命の判定</span>
-<span class="pl-k">if</span> (<span class="pl-smi">particle</span>.<span class="pl-smi">life</span> <span class="pl-k">&lt;=</span> <span class="pl-c1">0</span>) {
-  <span class="pl-c">// ステージから削除</span>
-  <span class="pl-smi">stage</span>.<span class="pl-en">removeChild</span>(particle);
-
-  <span class="pl-c">// 配列からも削除</span>
-  <span class="pl-smi">particles</span>.<span class="pl-c1">splice</span>(i, <span class="pl-c1">1</span>);
-}</pre>
-                  </div>
-
-                  <h2>
-                    <a id="user-content-カラフルなパーティクルシステムの実装" class="anchor" href="#カラフルなパーティクルシステムの実装" aria-hidden="true"><span class="octicon octicon-link"></span></a>カラフルなパーティクルシステムの実装
-                  </h2>
-
-                  <p>
-                    <a href="/ics-creative/tutorial-createjs/blob/master/imgs/particle_colorful.html.png" target="_blank"><img src="https://raw.githubusercontent.com/ics-creative/tutorial-createjs/master/imgs/particle_colorful.html.png" alt="" style="max-width:100%;"></a>
-                  </p>
-
-                  <ul>
-                    <li><a href="https://ics-creative.github.io/tutorial-createjs/samples/particle_colorful.html">サンプルを再生する</a>
-                    </li>
-                    <li><a href="/ics-creative/tutorial-createjs/blob/master/samples/particle_colorful.html">サンプルのソースコードを確認する</a>
-                    </li>
-                  </ul>
-
-                  <p>最後に表現をブラッシュしていきましょう。</p>
-
-                  <h3>
-                    <a id="user-content-パーティクルの色を時間経過で変える" class="anchor" href="#パーティクルの色を時間経過で変える" aria-hidden="true"><span class="octicon octicon-link"></span></a>パーティクルの色を時間経過で変える
-                  </h3>
-
-                  <p><code>beginFill()</code>メソッドでパーティクルの色を設定しますが、これを時間経過で色をかえていきます。今回は時間経過で色相(赤→緑→青)をかえるためにHSLカラーを使います。HSLカラーは<a href="/ics-creative/tutorial-createjs/blob/master/docs/shape_color.md">カラーの説明</a>で説明しましたが、値(0〜360で色相環の一周になる)をかえるだけで色相が変わります。カラフルな表現をつくるときに便利な命令です。<code>count</code>変数は<code>tick</code>イベントが発生するたびにインクリメント(1ずつ増やすこと)させておきます。
-                  </p>
-
-                  <div class="highlight highlight-source-js"><pre><span class="pl-c">// オブジェクトの作成</span>
-<span class="pl-k">var</span> particle <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">createjs.Shape</span>();
-<span class="pl-smi">particle</span>.<span class="pl-smi">graphics</span>
-       .<span class="pl-en">beginFill</span>(<span class="pl-smi">createjs</span>.<span class="pl-smi">Graphics</span>.<span class="pl-en">getHSL</span>(count, <span class="pl-c1">50</span>, <span class="pl-c1">50</span>))
-       .<span class="pl-en">drawCircle</span>(<span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">30</span> <span class="pl-k">*</span> <span class="pl-smi">Math</span>.<span class="pl-c1">random</span>());
-<span class="pl-smi">stage</span>.<span class="pl-en">addChild</span>(particle);</pre>
-                  </div>
-
-                  <h3>
-                    <a id="user-content-パーティクルの合成方法を変える" class="anchor" href="#パーティクルの合成方法を変える" aria-hidden="true"><span class="octicon octicon-link"></span></a>パーティクルの合成方法を変える
-                  </h3>
-
-                  <p>表示オブジェクトの重なり方を指示できる<code>compositeOperation</code>プロパティーを使って、レイヤーの合成方法を変更させておきます。パーティクルとパーティクルが重ねると、色が加算されて(<code>lighter</code>の指定によって)、明るくみえるようになります。
-                  </p>
-
-                  <div class="highlight highlight-source-js">
-                    <pre><span class="pl-smi">particle</span>.<span class="pl-smi">compositeOperation</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>lighter<span class="pl-pds">"</span></span>;</pre>
-                  </div>
-
-                  <h3>
-                    <a id="user-content-パーティクルのサイズを時間経過で小さくする" class="anchor" href="#パーティクルのサイズを時間経過で小さくする" aria-hidden="true"><span class="octicon octicon-link"></span></a>パーティクルのサイズを時間経過で小さくする
-                  </h3>
-
-                  <p>
-                    <code>life</code>プロパティーの数値に比例して、パーティクルのサイズを小さくさせてみましょう。大きさを変化させるには<code>scaleX</code>と<code>scaleY</code>プロパティーを使います。現在のライフが寿命の何%に相当するかを計算し(<code>particle.life
-                    / MAX_LIFE</code>)、その値が<code>0.0〜1.0</code>の範囲になるので<code>scaleX</code>と<code>scaleY</code>プロパティーに適用します。
-                  </p>
-
-                  <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-c1">MAX_LIFE</span> <span class="pl-k">=</span> <span class="pl-c1">40</span>; <span class="pl-c">// 寿命の最大値</span>
-
-<span class="pl-c">// パーティクルを発生させます</span>
-<span class="pl-k">function</span> <span class="pl-en">emitParticles</span>() {
-  <span class="pl-c">// パーティクルの生成</span>
-  <span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> <span class="pl-c1">5</span>; i<span class="pl-k">++</span>) {
-    <span class="pl-c">// (省略)</span>
-    <span class="pl-c">// 寿命</span>
-    <span class="pl-smi">particle</span>.<span class="pl-smi">life</span> <span class="pl-k">=</span> <span class="pl-c1">MAX_LIFE</span>;
-  }
-}
-
-<span class="pl-c">// パーティクルを更新します</span>
-<span class="pl-k">function</span> <span class="pl-en">updateParticles</span>() {
-  <span class="pl-c">// パーティクルの計算を行う</span>
-  <span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> <span class="pl-smi">particles</span>.<span class="pl-c1">length</span>; i<span class="pl-k">++</span>) {
-    <span class="pl-c">// (省略)</span>
-    <span class="pl-c">// パーティクルのサイズをライフ依存にする</span>
-    <span class="pl-k">var</span> scale <span class="pl-k">=</span> <span class="pl-smi">particle</span>.<span class="pl-smi">life</span> <span class="pl-k">/</span> <span class="pl-c1">MAX_LIFE</span>;
-    <span class="pl-smi">particle</span>.<span class="pl-smi">scaleX</span> <span class="pl-k">=</span> <span class="pl-smi">particle</span>.<span class="pl-smi">scaleY</span> <span class="pl-k">=</span> scale;
-
-    <span class="pl-c">// 寿命を減らす</span>
-    <span class="pl-smi">particle</span>.<span class="pl-smi">life</span> <span class="pl-k">-=</span> <span class="pl-c1">1</span>;
-    <span class="pl-c">// (省略)</span>
-  }
-}</pre>
-                  </div>
-
-                  <h2>
-                    <a id="user-content-まとめ" class="anchor" href="#まとめ" aria-hidden="true"><span class="octicon octicon-link"></span></a>まとめ
-                  </h2>
-
-                  <p>
-                    いかがでしたでしょうか。パーティクルは難しそうなものに見えますが、一つ一つ分解してみるとシンプルな実装の組み合わせに過ぎません。パーティクルの移動方向や、パーティクル自体の形状を変更すると様々な表現に転換できます。ぜひ、いろいろパラメーターを調整してみてください。</p>
-
-                  <p><a href="/ics-creative/tutorial-createjs/blob/master/ReadMe.md">目次に戻る</a></p>
-                </article>
-
-
-              </div>
-            </div>
-          </article>
+      <!-- ================================== -->
+      <!-- パンくず -->
+      <!-- ================================== -->
+      <div id="header-breadcrumb">
+        <div class="wrap">
+          <ul class="breadcrumb">
+            <!-- 第1階層 -->
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="https://ics.media" itemprop="url">
+                <i class="fa fa-homze"></i> <span itemprop="title">ICS MEDIA</span>
+              </a>
+            </li>
+
+            <!-- 第2階層 -->
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="index.html" itemprop="url">
+                <i class="fa fa-folder-open"></i> <span itemprop="title">CreateJS入門</span>
+              </a>
+            </li>
+
+            <!-- 第3階層 -->
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <i class="fa fa-pencil-square-o"></i> <span itemprop="title">CreateJSチュートリアル 目次</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-
-
-    <!-- サイドバー領域のモジュール -->
-    <div id="sidebar"></div>
-    <div id="sideShare">
-      <ul>
-        <!-- Hatena -->
-        <li class="share-hatena">
-          <a href="http://b.hatena.ne.jp/add?mode=confirm&amp;url=https://ics.media"
-             title="はてなでブックマークする"
-             target="_blank">
-            <span class="iconHatena"></span>
-          </a>
-        </li>
-
-        <!-- Twitter -->
-        <li class="share-twitter">
-          <a href="https://twitter.com/share?text=&amp;lang=ja&amp;url=https://ics.media"
-             title="Twitterでシェアする"
-             target="_blank">
-            <i class="fa fa-twitter"></i>
-          </a>
-        </li>
-
-        <!-- Facebook -->
-        <li class="share-facebook">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://ics.media"
-             title="Facebookでいいね！する"
-             target="_blank">
-            <i class="fa fa-facebook"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-
-    <div id="footer-bottom" class="cf">
-
-      <div id="footer-menu-container" class="default">
-        <div class="footer-menu">
-          <div id="footer-menu-inside">
-            <div class="post_info">
-              <div class="hatebu">
-                <a href="http://b.hatena.ne.jp/entry/https://ics.media" title="このエントリーをはてなブックマークに追加"><span class="iconHatena"></span></a>
-              </div>
-              <div class="facebook">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://ics.media"
-                   title="Facebookでいいね！する"
-                   target="_blank">
-                  <i class="fa fa-facebook-square"></i>
-                </a>
-              </div>
-              <div class="tweet">
-                <a href="https://twitter.com/share?text=&amp;lang=ja&amp;url=https://ics.media"
-                   title="Twitterでシェアする"
-                   target="_blank">
-                  <i class="fa fa-twitter-square"></i>
-                </a>
-              </div>
-            </div>
-
-            <nav>
-              <ul id="footer-menu">
-                <li><a href="https://ics.media/feed/atom" target="_blank"><i class="fa fa-rss fa-3"></i> RSS</a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/icswebjp" target="_blank"><i class="fa fa-facebook-square fa-3"></i>
-                    Facebook</a></li>
-                <li><a href="http://ics-web.jp/blog/recruit" target="_blank">採用情報</a></li>
-                <li><a href="http://ics-web.jp/blog/" target="_blank">最新事例</a></li>
-                <li><a href="http://ics-web.jp/blog/contact" target="_blank">お問い合わせ</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-sections cf">
-
-        <div class="footer-section large">
-          <p class="widget_title">ICSについて</p>
-          <p><img src="https://ics.media/wp-content/themes/icslab/img/footer-ics-01.jpg" alt="ICSのオフィス"></p>
-          <p>
-            ICSはインタラクションデザインのプロダクション。Webのテクノロジーを駆使し、オンスクリーンメディアの表現分野で活動しています。国内の各種広告賞を多数受賞。
-          </p>
-        </div>
-
-        <div class="footer-section large">
-          <p class="widget_title">メンバー募集について</p>
-          <p><img src="https://ics.media/wp-content/themes/icslab/img/footer-ics-03.jpg" alt="スタッフ"></p>
-          <p>
-            インタラクションコンテンツの制作や新しいことに挑戦しながら、互いにスキルを高め合えるメンバーをICSでは募集しています。詳しくは採用情報をご覧ください。
-          </p>
-          <i class="fa fa-external-link"></i>
-          <a href="http://ics-web.jp/blog/recruit" target="_blank">採用情報について</a>
-        </div>
-
-        <div class="footer-section large">
-          <p class="widget_title">Facebookページをフォローしよう！</p>
-          <!-- Facebook Plugin 2014/02/05 by Ikeda  -->
-          <div class="fb-page" data-href="https://www.facebook.com/icswebjp" data-small-header="false" data-width="384"
-               data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"
-               data-show-posts="false">
-            <div class="fb-xfbml-parse-ignore">
-              <blockquote cite="https://www.facebook.com/icswebjp"><a href="https://www.facebook.com/icswebjp">ICS
-                INC.</a></blockquote>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div id="copyright">Copyright &copy; ICS INC. All Rights Reserved.</div>
-    </div>
-
   </div>
+
+  <!-- メインビジュアル -->
+  <div id="archive-image-wrap">
+    <iframe src="https://ics.media/wp-content/themes/icslab/special/151118_createjs_title/archives.html"></iframe>
+    <div class="title">
+      <p>HTML5 と CreateJS で学ぶインタラクションデザイン入門</p>
+      <h1>CreateJSチュートリアル 目次</h1>
+    </div>
+  </div>
+
+  <div id="wrap">
+    <div id="main">
+      <div class="content">
+        <article itemscope="" itemtype="http://schema.org/BlogPosting">
+          <div class="pageContentContainer">
+            <div class="article">
+
+              <article itemprop="mainContentOfPage">
+                <p>このサイトはHTML5 Canvasのフレームワーク「CreateJS」の入門サイトです。初学者から学べるように基本から解説しつつ、発展的な内容までまとめています。このサイトを通して、Webでのインタラクションデザインについて学んでいきましょう。</p>
+<h2>導入編</h2><ul>
+<li><a href="basic.html">CreateJS とは / CreateJS のサンプル</a></li>
+<li><a href="quickstart.html">簡単なサンプルを試そう</a></li>
+<li><a href="debug.html">ブラウザの開発ツールの使い方を抑えよう</a></li>
+</ul>
+<h2>画面に表示しよう</h2><ul>
+<li><a href="displayobject.html">表示オブジェクトの基本</a></li>
+<li>シェイプの表示<ul>
+<li><a href="shape_fill_stroke.html">線と塗り</a></li>
+<li><a href="shape_color.html">色の指定</a></li>
+<li><a href="shape_draw.html">様々な図形の描画</a></li>
+</ul>
+</li>
+<li><a href="text.html">テキストの表示</a></li>
+<li><a href="bitmap.html">画像の表示</a></li>
+<li>親子構造<ul>
+<li><a href="nest.html">表示オブジェクトのグループ化</a></li>
+<li><a href="displayobject_remove.html">表示オブジェクトの削除</a></li>
+</ul>
+</li>
+</ul>
+<h2>モーションを実装しよう</h2><ul>
+<li><a href="ticker.html">Ticker の使い方</a></li>
+<li><a href="tween.html">Tween の使い方</a></li>
+</ul>
+<h2>ユーザーインタラクションを制御しよう</h2><ul>
+<li>マウス操作<ul>
+<li><a href="mouse_xy.html">マウス座標</a></li>
+<li><a href="mouse_click.html">クリックイベント</a></li>
+<li><a href="mouse_over.html">マウスオーバー</a></li>
+<li><a href="mouse_drag.html">ドラッグアンドドロップ</a></li>
+<li><a href="mouse_touch.html">タッチデバイス対応</a></li>
+</ul>
+</li>
+<li>キーボード操作<ul>
+<li><a href="keyboard_basic.html">キーボードイベントの基本</a></li>
+<li><a href="keyboard_ship.html">キーボードで自機を操作</a></li>
+</ul>
+</li>
+<li><a href="hittest.html">当たり判定</a></li>
+</ul>
+<h2>応用サンプルに挑戦しよう</h2><ul>
+<li><a href="clock.html">アナログ時計の作成</a></li>
+<li><a href="ball.html">物理演算</a></li>
+<li><a href="fractal.html">フラクタル図形</a></li>
+<li><a href="particle.html">パーティクルシステム</a></li>
+<li>ゲーム<ul>
+<li><a href="game_pazzle.html">パズルゲーム</a></li>
+<li><a href="game_shooting.html">シューティングゲーム</a></li>
+</ul>
+</li>
+<li><a href="slideshow.html">カルーセル(スライドショー)</a></li>
+</ul>
+<h2>Flash Professional CCを使おう</h2><ul>
+<li><a href="adobe_animate.html">Adobe Flash Pro CC と CreateJS の連携 (基本編)</a></li>
+<li><a href="adobe_animate_spritesheet.html">Adobe Flash Pro CC と CreateJS の連携 (スプライトシート編)</a></li>
+</ul>
+<h2>その他</h2><ul>
+<li><a href="fullscreen.html">スマホブラウザで全画面に表示する対応</a></li>
+</ul>
+
+              </article>
+              <div class="text-center link-index">
+                <a href="index.html">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-list-ul"></i>
+                    目次に戻る
+                  </button>
+                </a>
+
+                <hr/>
+              </div>
+
+
+              <div class="text-center">
+                <a class="share-twitter">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-twitter"></i>
+                    Twitterでツイートする
+                  </button>
+                </a>
+                <a class="share-facebook">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-facebook"></i>
+                    Facebookでシェアする
+                  </button>
+                </a>
+              </div>
+
+              <hr/>
+
+              <div class="text-center">
+                <a href="/">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-home"></i>
+                    サイトトップに戻る
+                  </button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-bottom" class="cf">
+    <div id="footer-menu-container" class="default">
+      <div class="footer-menu">
+        <div id="footer-menu-inside">
+          <nav>
+            <ul id="footer-menu">
+              <li><a href="https://ics.media/feed/atom" target="_blank"><i class="fa fa-rss fa-3"></i> RSS</a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/icswebjp" target="_blank"><i class="fa fa-facebook-square fa-3"></i>
+                  Facebook</a></li>
+              <li><a href="http://ics-web.jp/blog/recruit" target="_blank">採用情報</a></li>
+              <li><a href="http://ics-web.jp/blog/" target="_blank">最新事例</a></li>
+              <li><a href="http://ics-web.jp/blog/contact" target="_blank">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-sections cf">
+
+      <div class="footer-section large">
+        <p class="widget_title">CreateJSのサンプル</p>
+        <ul>
+          <li><a href="http://lab.gskinner.com" target="_blank"><i class="fa fa-external-link"></i> gskinner lab</a>
+          </li>
+          <li><a href="http://sandbox.createjs.com/PlanetaryGary/" target="_blank"><i class="fa fa-external-link"></i>
+            Planetary Gary</a></li>
+          <li><a href="http://www.createjs.com/#demos" target="_blank"><i class="fa fa-external-link"></i> CreateJS Demo</a>
+          </li>
+          <li><a href="http://ics-web.jp/projects/pollenmap/" target="_blank"><i class="fa fa-external-link"></i>
+            日本全国花粉飛散マップ</a></li>
+          <li>
+            <a href="http://jsdo.it/tag/createjs?search_order=favorite" target="_blank"><i class="fa fa-external-link"></i>
+              jsdo.it</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section large">
+        <p class="widget_title">CreateJSフレームワーク</p>
+        <ul>
+          <li><a href="http://createjs.com/easeljs" target="_blank"><i class="fa fa-external-link"></i> EaselJS</a></li>
+          <li><a href="http://createjs.com/tweenjs" target="_blank"><i class="fa fa-external-link"></i> TweenJS</a></li>
+          <li><a href="http://createjs.com/soundjs" target="_blank"><i class="fa fa-external-link"></i> SoundJS</a></li>
+          <li><a href="http://createjs.com/preloadjs" target="_blank"><i class="fa fa-external-link"></i> PreloadJS</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-section large">
+        <p class="widget_title">CreateJSについて</p>
+        <i class="fa fa-external-link"></i>
+        <a href="http://www.createjs.com/" target="_blank">CreateJS公式サイト(英語)</a><br/>
+        <i class="fa fa-external-link"></i>
+        <a href="http://createjs.sub.jp/ja/" target="_blank">CreateJS 日本語リファレンス</a><br/>
+        <i class="fa fa-external-link"></i>
+        <a href="https://www.facebook.com/CreateJS" target="_blank">CreateJS Facebookページ</a><br/>
+      </div>
+
+    </div>
+
+    <div id="copyright">Copyright &copy; ICS INC. All Rights Reserved.</div>
+  </div>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34243464-2']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- /Google Analytics -->
 
 </body>
 </html>

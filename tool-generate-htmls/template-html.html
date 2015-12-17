@@ -83,22 +83,34 @@
               <article itemprop="mainContentOfPage">
                 ${article-markdwon}
               </article>
-              <div class="text-center">
-                <a href="#">
-                  <button class="btn btn-secondary" type="button">
-                    <i class="fa fa-arrow-circle-up"></i>
-                    先頭に戻る
-                  </button>
-                </a>
+              <div class="text-center link-index">
                 <a href="index.html">
                   <button class="btn btn-secondary" type="button">
                     <i class="fa fa-list-ul"></i>
                     目次に戻る
                   </button>
                 </a>
+
+                <hr/>
               </div>
 
-              <hr />
+
+              <div class="text-center">
+                <a class="share-twitter">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-twitter"></i>
+                    Twitterでツイートする
+                  </button>
+                </a>
+                <a class="share-facebook">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-facebook"></i>
+                    Facebookでシェアする
+                  </button>
+                </a>
+              </div>
+
+              <hr/>
 
               <div class="text-center">
                 <a href="/">
@@ -120,23 +132,6 @@
     <div id="footer-menu-container" class="default">
       <div class="footer-menu">
         <div id="footer-menu-inside">
-          <div class="post_info">
-            <div class="facebook">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://ics.media"
-                 title="Facebookでいいね！する"
-                 target="_blank">
-                <i class="fa fa-facebook-square"></i>
-              </a>
-            </div>
-            <div class="tweet">
-              <a href="https://twitter.com/share?text=&amp;lang=ja&amp;url=https://ics.media"
-                 title="Twitterでシェアする"
-                 target="_blank">
-                <i class="fa fa-twitter-square"></i>
-              </a>
-            </div>
-          </div>
-
           <nav>
             <ul id="footer-menu">
               <li><a href="https://ics.media/feed/atom" target="_blank"><i class="fa fa-rss fa-3"></i> RSS</a>
@@ -156,21 +151,31 @@
     <div class="footer-sections cf">
 
       <div class="footer-section large">
-        <p class="widget_title">ICSについて</p>
-        <p><img src="https://ics.media/wp-content/themes/icslab/img/footer-ics-01.jpg" alt="ICSのオフィス"></p>
-        <p>
-          ICSはインタラクションデザインのプロダクション。Webのテクノロジーを駆使し、オンスクリーンメディアの表現分野で活動しています。国内の各種広告賞を多数受賞。
-        </p>
+        <p class="widget_title">CreateJSのサンプル</p>
+        <ul>
+          <li><a href="http://lab.gskinner.com" target="_blank"><i class="fa fa-external-link"></i> gskinner lab</a>
+          </li>
+          <li><a href="http://sandbox.createjs.com/PlanetaryGary/" target="_blank"><i class="fa fa-external-link"></i>
+            Planetary Gary</a></li>
+          <li><a href="http://www.createjs.com/#demos" target="_blank"><i class="fa fa-external-link"></i> CreateJS Demo</a>
+          </li>
+          <li><a href="http://ics-web.jp/projects/pollenmap/" target="_blank"><i class="fa fa-external-link"></i>
+            日本全国花粉飛散マップ</a></li>
+          <li>
+            <a href="http://jsdo.it/tag/createjs?search_order=favorite" target="_blank"><i class="fa fa-external-link"></i>
+              jsdo.it</a></li>
+        </ul>
       </div>
 
       <div class="footer-section large">
-        <p class="widget_title">メンバー募集について</p>
-        <p><img src="https://ics.media/wp-content/themes/icslab/img/footer-ics-03.jpg" alt="スタッフ"></p>
-        <p>
-          インタラクションコンテンツの制作や新しいことに挑戦しながら、互いにスキルを高め合えるメンバーをICSでは募集しています。詳しくは採用情報をご覧ください。
-        </p>
-        <i class="fa fa-external-link"></i>
-        <a href="http://ics-web.jp/blog/recruit" target="_blank">採用情報について</a>
+        <p class="widget_title">CreateJSフレームワーク</p>
+        <ul>
+          <li><a href="http://createjs.com/easeljs" target="_blank"><i class="fa fa-external-link"></i> EaselJS</a></li>
+          <li><a href="http://createjs.com/tweenjs" target="_blank"><i class="fa fa-external-link"></i> TweenJS</a></li>
+          <li><a href="http://createjs.com/soundjs" target="_blank"><i class="fa fa-external-link"></i> SoundJS</a></li>
+          <li><a href="http://createjs.com/preloadjs" target="_blank"><i class="fa fa-external-link"></i> PreloadJS</a>
+          </li>
+        </ul>
       </div>
 
       <div class="footer-section large">
@@ -188,17 +193,18 @@
     <div id="copyright">Copyright &copy; ICS INC. All Rights Reserved.</div>
   </div>
 
-  </div>
-
   <!-- Google Analytics -->
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-34243464-2']);
     _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
     })();
   </script>
   <!-- /Google Analytics -->

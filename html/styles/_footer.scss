@@ -301,7 +301,10 @@ $footer-height: 26px;
       line-height: 200%;
       margin-bottom: 1em;
     }
-    a, a:hover, a:visited, a:active {
+    a, a:visited, a:active {
+      text-decoration: none;
+    }
+    a:hover {
       text-decoration: underline;
     }
 

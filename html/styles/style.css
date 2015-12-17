@@ -526,7 +526,10 @@ iframe {
   line-height: 200%;
   margin-bottom: 1em;
 }
-#footer-bottom .footer-section a, #footer-bottom .footer-section a:hover, #footer-bottom .footer-section a:visited, #footer-bottom .footer-section a:active {
+#footer-bottom .footer-section a, #footer-bottom .footer-section a:visited, #footer-bottom .footer-section a:active {
+  text-decoration: none;
+}
+#footer-bottom .footer-section a:hover {
   text-decoration: underline;
 }
 #footer-bottom .footer-section .widget_title {
