@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>CreateJS入門サイト - ICS MEDIA</title>
+  <title>${article-title} - CreateJS入門 - ICS MEDIA</title>
   <link rel="icon" sizes="16x16 32x32 48x48 128x128 256x256" href="https://ics.media/wp-content/themes/icslab/img/favicon.ico"/>
-  <link rel="stylesheet" href="https://ics.media/wp-content/themes/icslab/style.css">
-  <link rel="stylesheet" href="styles/style-tutorial.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
-  <script src="https://ics.media/wp-includes/js/jquery/jquery.js?ver=1.11.3"></script>
-  <script src="https://ics.media/wp-content/themes/icslab/js-concat/all.min.js" defer></script>
+  <link rel="stylesheet" type='text/css' href="https://ics.media/wp-content/themes/icslab/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type='text/css' href="styles/style.css">
+  <link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Source+Code+Pro'>
+  <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+  <script src="https://ics.media/wp-includes/js/jquery/jquery.js"></script>
+  <script src="https://use.typekit.net/djc6jhl.js"></script>
+  <script>try {
+    Typekit.load({async: true});
+  } catch (e) {
+  }</script>
+  <script src="js/main.js"></script>
 </head>
 <body class="tutorial">
   <div id="container">
     <div id="header-always">
       <div id="header-wrap">
-        <h1><a href="https://ics.media/"><span class="logoBlog">ICS LAB &ndash;
-          Webのインタラクションデザイン(Flash/HTML5)に関する最新情報が満載</span></a></h1>
+        <h1>
+          <a href="https://ics.media/"><span class="logoBlog"><img src="imgs/logo-blog.png" alt="ICS MEDIA - インタラクションデザイン×ウェブテクノロジー" width="477" height="26"/></a>
+        </h1>
         <nav>
           <ul>
             <li><a href="https://ics.media/feed/atom" target="_blank"><i class="fa fa-rss"></i></a></li>
@@ -24,145 +33,160 @@
           </ul>
         </nav>
       </div>
-    </div>
 
-    <div id="top-image">
-      <div id="top-image-wrap"></div>
-    </div>
+      <!-- ================================== -->
+      <!-- パンくず -->
+      <!-- ================================== -->
+      <div id="header-breadcrumb">
+        <div class="wrap">
+          <ul class="breadcrumb">
+            <!-- 第1階層 -->
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="https://ics.media" itemprop="url">
+                <i class="fa fa-homze"></i> <span itemprop="title">ICS MEDIA</span>
+              </a>
+            </li>
 
-    <div id="wrap">
-      <div id="main">
-        <div class="content">
-          <article itemscope="" itemtype="http://schema.org/BlogPosting">
-            <div class="pageContentContainer">
-              <div class="article">
+            <!-- 第2階層 -->
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="index.html" itemprop="url">
+                <i class="fa fa-folder-open"></i> <span itemprop="title">CreateJS入門</span>
+              </a>
+            </li>
 
-									${article-title}
-                <article class="markdown-body entry-content" itemprop="mainContentOfPage">
-									${article-markdwon}
-                </article>
-
-
-              </div>
-            </div>
-          </article>
+            <!-- 第3階層 -->
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <i class="fa fa-pencil-square-o"></i> <span itemprop="title">${article-title}</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
+  </div>
 
-
-    <!-- サイドバー領域のモジュール -->
-    <div id="sidebar"></div>
-    <div id="sideShare">
-      <ul>
-        <!-- Hatena -->
-        <li class="share-hatena">
-          <a href="http://b.hatena.ne.jp/add?mode=confirm&amp;url=https://ics.media"
-             title="はてなでブックマークする"
-             target="_blank">
-            <span class="iconHatena"></span>
-          </a>
-        </li>
-
-        <!-- Twitter -->
-        <li class="share-twitter">
-          <a href="https://twitter.com/share?text=&amp;lang=ja&amp;url=https://ics.media"
-             title="Twitterでシェアする"
-             target="_blank">
-            <i class="fa fa-twitter"></i>
-          </a>
-        </li>
-
-        <!-- Facebook -->
-        <li class="share-facebook">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://ics.media"
-             title="Facebookでいいね！する"
-             target="_blank">
-            <i class="fa fa-facebook"></i>
-          </a>
-        </li>
-      </ul>
+  <!-- メインビジュアル -->
+  <div id="archive-image-wrap">
+    <iframe src="https://ics.media/wp-content/themes/icslab/special/151118_createjs_title/archives.html"></iframe>
+    <div class="title">
+      <p>HTML5 と CreateJS で学ぶインタラクションデザイン入門</p>
+      <h1>${article-title}</h1>
     </div>
+  </div>
 
+  <div id="wrap">
+    <div id="main">
+      <div class="content">
+        <article itemscope="" itemtype="http://schema.org/BlogPosting">
+          <div class="pageContentContainer">
+            <div class="article">
 
-    <div id="footer-bottom" class="cf">
-
-      <div id="footer-menu-container" class="default">
-        <div class="footer-menu">
-          <div id="footer-menu-inside">
-            <div class="post_info">
-              <div class="hatebu">
-                <a href="http://b.hatena.ne.jp/entry/https://ics.media" title="このエントリーをはてなブックマークに追加"><span class="iconHatena"></span></a>
-              </div>
-              <div class="facebook">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://ics.media"
-                   title="Facebookでいいね！する"
-                   target="_blank">
-                  <i class="fa fa-facebook-square"></i>
+              <article itemprop="mainContentOfPage">
+                ${article-markdwon}
+              </article>
+              <div class="text-center">
+                <a href="#">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-arrow-circle-up"></i>
+                    先頭に戻る
+                  </button>
+                </a>
+                <a href="index.html">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-list-ul"></i>
+                    目次に戻る
+                  </button>
                 </a>
               </div>
-              <div class="tweet">
-                <a href="https://twitter.com/share?text=&amp;lang=ja&amp;url=https://ics.media"
-                   title="Twitterでシェアする"
-                   target="_blank">
-                  <i class="fa fa-twitter-square"></i>
+
+              <hr />
+
+              <div class="text-center">
+                <a href="/">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-home"></i>
+                    サイトトップに戻る
+                  </button>
                 </a>
               </div>
-            </div>
 
-            <nav>
-              <ul id="footer-menu">
-                <li><a href="https://ics.media/feed/atom" target="_blank"><i class="fa fa-rss fa-3"></i> RSS</a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/icswebjp" target="_blank"><i class="fa fa-facebook-square fa-3"></i>
-                    Facebook</a></li>
-                <li><a href="http://ics-web.jp/blog/recruit" target="_blank">採用情報</a></li>
-                <li><a href="http://ics-web.jp/blog/" target="_blank">最新事例</a></li>
-                <li><a href="http://ics-web.jp/blog/contact" target="_blank">お問い合わせ</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-sections cf">
-
-        <div class="footer-section large">
-          <p class="widget_title">ICSについて</p>
-          <p><img src="https://ics.media/wp-content/themes/icslab/img/footer-ics-01.jpg" alt="ICSのオフィス"></p>
-          <p>
-            ICSはインタラクションデザインのプロダクション。Webのテクノロジーを駆使し、オンスクリーンメディアの表現分野で活動しています。国内の各種広告賞を多数受賞。
-          </p>
-        </div>
-
-        <div class="footer-section large">
-          <p class="widget_title">メンバー募集について</p>
-          <p><img src="https://ics.media/wp-content/themes/icslab/img/footer-ics-03.jpg" alt="スタッフ"></p>
-          <p>
-            インタラクションコンテンツの制作や新しいことに挑戦しながら、互いにスキルを高め合えるメンバーをICSでは募集しています。詳しくは採用情報をご覧ください。
-          </p>
-          <i class="fa fa-external-link"></i>
-          <a href="http://ics-web.jp/blog/recruit" target="_blank">採用情報について</a>
-        </div>
-
-        <div class="footer-section large">
-          <p class="widget_title">Facebookページをフォローしよう！</p>
-          <!-- Facebook Plugin 2014/02/05 by Ikeda  -->
-          <div class="fb-page" data-href="https://www.facebook.com/icswebjp" data-small-header="false" data-width="384"
-               data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"
-               data-show-posts="false">
-            <div class="fb-xfbml-parse-ignore">
-              <blockquote cite="https://www.facebook.com/icswebjp"><a href="https://www.facebook.com/icswebjp">ICS
-                INC.</a></blockquote>
             </div>
           </div>
-        </div>
-
+        </article>
       </div>
-
-      <div id="copyright">Copyright &copy; ICS INC. All Rights Reserved.</div>
     </div>
+  </div>
+
+  <div id="footer-bottom" class="cf">
+    <div id="footer-menu-container" class="default">
+      <div class="footer-menu">
+        <div id="footer-menu-inside">
+          <div class="post_info">
+            <div class="facebook">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://ics.media"
+                 title="Facebookでいいね！する"
+                 target="_blank">
+                <i class="fa fa-facebook-square"></i>
+              </a>
+            </div>
+            <div class="tweet">
+              <a href="https://twitter.com/share?text=&amp;lang=ja&amp;url=https://ics.media"
+                 title="Twitterでシェアする"
+                 target="_blank">
+                <i class="fa fa-twitter-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <nav>
+            <ul id="footer-menu">
+              <li><a href="https://ics.media/feed/atom" target="_blank"><i class="fa fa-rss fa-3"></i> RSS</a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/icswebjp" target="_blank"><i class="fa fa-facebook-square fa-3"></i>
+                  Facebook</a></li>
+              <li><a href="http://ics-web.jp/blog/recruit" target="_blank">採用情報</a></li>
+              <li><a href="http://ics-web.jp/blog/" target="_blank">最新事例</a></li>
+              <li><a href="http://ics-web.jp/blog/contact" target="_blank">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-sections cf">
+
+      <div class="footer-section large">
+        <p class="widget_title">ICSについて</p>
+        <p><img src="https://ics.media/wp-content/themes/icslab/img/footer-ics-01.jpg" alt="ICSのオフィス"></p>
+        <p>
+          ICSはインタラクションデザインのプロダクション。Webのテクノロジーを駆使し、オンスクリーンメディアの表現分野で活動しています。国内の各種広告賞を多数受賞。
+        </p>
+      </div>
+
+      <div class="footer-section large">
+        <p class="widget_title">メンバー募集について</p>
+        <p><img src="https://ics.media/wp-content/themes/icslab/img/footer-ics-03.jpg" alt="スタッフ"></p>
+        <p>
+          インタラクションコンテンツの制作や新しいことに挑戦しながら、互いにスキルを高め合えるメンバーをICSでは募集しています。詳しくは採用情報をご覧ください。
+        </p>
+        <i class="fa fa-external-link"></i>
+        <a href="http://ics-web.jp/blog/recruit" target="_blank">採用情報について</a>
+      </div>
+
+      <div class="footer-section large">
+        <p class="widget_title">CreateJSについて</p>
+        <i class="fa fa-external-link"></i>
+        <a href="http://www.createjs.com/" target="_blank">CreateJS公式サイト(英語)</a><br/>
+        <i class="fa fa-external-link"></i>
+        <a href="http://createjs.sub.jp/ja/" target="_blank">CreateJS 日本語リファレンス</a><br/>
+        <i class="fa fa-external-link"></i>
+        <a href="https://www.facebook.com/CreateJS" target="_blank">CreateJS Facebookページ</a><br/>
+      </div>
+
+    </div>
+
+    <div id="copyright">Copyright &copy; ICS INC. All Rights Reserved.</div>
+  </div>
 
   </div>
 
