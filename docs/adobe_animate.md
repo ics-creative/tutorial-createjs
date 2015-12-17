@@ -1,4 +1,4 @@
-# Adobe Flash Professional CC (Animate CC)とCreateJSの連携
+# Adobe Flash Professional CC と CreateJS の連携 (基本編)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RK6Z-ExOwuw" frameborder="0" allowfullscreen></iframe>
 

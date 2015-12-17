@@ -1,4 +1,4 @@
-# パズルゲーム
+# CreateJS でパズルゲーム開発に挑戦しよう
 
 ![](../imgs/game_pazzle.html.png)
 
