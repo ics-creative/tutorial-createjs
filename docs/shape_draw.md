@@ -24,6 +24,9 @@ stage.addChild(shape); // 表示リストに追加
 - [サンプルのソースコードを確認する](../samples/shape_circle.html)
 
 
+※詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Graphics.html#method_drawCircle)」を確認ください。
+
+
 ## 四角形を描く
 
 四角形を描いてみましょう。
@@ -47,7 +50,7 @@ stage.addChild(shape); // 表示リストに追加
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_rect.html)
 - [サンプルのソースコードを確認する](../samples/shape_rect.html)
 
-
+※詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Graphics.html#method_drawRect)」を確認ください。
 
 ## 角丸四角形を描く
 
@@ -73,6 +76,10 @@ stage.addChild(shape); // 表示リストに追加
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_roundrect.html)
 - [サンプルのソースコードを確認する](../samples/shape_roundrect.html)
 
+
+※詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Graphics.html#method_drawRoundRect)」を確認ください。
+
+
 ## 多角形の描画
 
 `drawPolyStar()`メソッドを使うことで多角形を描くことができます。第1～3引数は`drawCircle()`メソッドと同じですが、第4引数が頂点の数です。第5引数の谷の深さは谷の深さで、`0`以上`1`未満の数値を設定します。デフォルト値の0を渡すと谷はなくなり、正多角形になります。第6引数は頂点の角度で、デフォルト値`0`ではx軸の正方向つまり時計の3時の方向を起点に描かれます。y軸の負つまり時計の12時の方向から描くには、`-90`度を起点の角度とします。
@@ -94,6 +101,9 @@ stage.addChild(poly); // 表示リストに追加
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_polystar.html)
 - [サンプルのソースコードを確認する](../samples/shape_polystar.html)
+
+※詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Graphics.html#method_drawPolyStar)」を確認ください。
+
 
 ## 任意の図形の描画
 
@@ -121,6 +131,10 @@ stage.addChild(obj); // 表示リストに追加
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_other.html)
 - [サンプルのソースコードを確認する](../samples/shape_other.html)
+
+
+※詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Graphics.html#method_lineTo)」を確認ください。
+
 
 
 ## コラム : ドットシンタックス

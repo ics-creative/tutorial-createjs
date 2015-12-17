@@ -7,6 +7,8 @@ createjs.Tween.get(対象)
      .to(パラメーター, ミリ秒);
 ```
 
+※`createjs.Tween`クラスの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/TweenJS/reference/classes/Tween.html)」を確認ください。
+
 ## モーションを設定する
 
 具体的な例を見て理解を深めて行きましょう。2000ミリ秒かけて円がx座標が0から940pxまで移動します。
@@ -27,6 +29,8 @@ createjs.Tween.get(circle) // ターゲットを指定
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/tween_basic.html)
 - [サンプルのソースコードを確認する](../samples/tween_basic.html)
+
+※`to()`メソッドの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/TweenJS/reference/classes/Tween.html#method_to)」を確認ください。
 
 
 ## 複数のモーションを設定する

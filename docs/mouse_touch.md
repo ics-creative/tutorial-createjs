@@ -19,6 +19,4 @@ if(createjs.Touch.isSupported() == true){
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/mouse_touch.html)
 - [サンプルのソースコードを確認する](../samples/mouse_touch.html)
 
-
-
-
+※`enable()`メソッドの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Touch.html#method_enable)」を確認ください。
