@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/base.css">
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script src="Animal.js"></script>
   <script>
+    window.addEventListener("load", init);
     function init() {
       var stage = new createjs.Stage("myCanvas");
 
@@ -28,14 +30,14 @@
         }
       }
 
-      createjs.Ticker.addEventListener("tick", stage);
       createjs.Ticker.addEventListener("tick", function () {
         // 時間経過時の処理
+        stage.update();
       });
     }
   </script>
 </head>
-<body onload="init()">
+<body>
   <canvas id="myCanvas" width="600" height="600"></canvas>
 </body>
 </html>

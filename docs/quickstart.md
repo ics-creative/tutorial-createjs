@@ -29,7 +29,7 @@
 </head>
 
 <body>
-	<canvas id="myCanvas" width="980" height="540"></canvas>
+	<canvas id="myCanvas" width="960" height="540"></canvas>
 </body>
 </html>
 
@@ -48,7 +48,7 @@ CreateJSはHTML5の`canvas`要素を利用します。`canvas`要素はコンテ
 
 ```html
 <body>
-	<canvas id="myCanvas" width="980" height="540"></canvas>
+	<canvas id="myCanvas" width="960" height="540"></canvas>
 </body>
 ```
 
