@@ -4,4 +4,4 @@ HTML5 Canvasのフレームワーク「CreateJS」の入門サイトです。初
 
 ## 目次
 
-- [目次をご覧ください](docs/index.md)
+- [目次をご覧ください](https://ics.media/tutorial-createjs/)
