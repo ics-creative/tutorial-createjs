@@ -207,4 +207,4 @@ if (ship.y < 0) { ship.y = 0; }
 if (ship.y > stage.canvas.height) { ship.y = stage.canvas.height; }
 ```
 
-[目次に戻る](index.md)
+

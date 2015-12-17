@@ -127,4 +127,4 @@ shape.graphics.beginFill("#00ff00") // 緑色で描画するように設定
 stage.addChild(shape); // 表示リストに追加
 ```
 
-[目次に戻る](index.md)
+

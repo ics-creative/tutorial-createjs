@@ -16,4 +16,4 @@ Google Chromeメニュー(右上の横棒三個のアイコン)をクリック
 4. JavaScriptのエラーがあるときに、［Console］パネルに指摘が表示される
 
 
-[目次に戻る](index.md)
+

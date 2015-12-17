@@ -119,6 +119,3 @@ createjs.Tween.get(circle) // ターゲットを指定
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/tween_ease.html)
 - [サンプルのソースコードを確認する](../samples/tween_ease.html)
-
-
-[目次に戻る](index.md)

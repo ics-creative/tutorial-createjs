@@ -71,4 +71,4 @@ chara.play();
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/animate_spritesheet/spritesheet_click.html)
 - [サンプルのソースコードを確認する](../samples/animate_spritesheet/spritesheet_click.html)
 
-[目次に戻る](index.md)
+

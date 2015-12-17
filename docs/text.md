@@ -1,4 +1,4 @@
-# CreateJS でテキストを表示する
+# CreateJS でテキストの表示方法
 
 文字を表示するには`createjs.Text`クラスを利用します。
 
@@ -94,4 +94,4 @@ t.text = "test";
 stage.addChild(t);
 ```
 
-[目次に戻る](index.md)
+

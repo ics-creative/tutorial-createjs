@@ -19,6 +19,3 @@ stage.addChild(container);
 
 
 複数のShapeオブジェクトが円周上を移動している
-
-
-[目次に戻る](index.md)
