@@ -6,33 +6,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-	<script>
-		window.addEventListener("load", init);
-		function init() {
-			// Stageオブジェクトを作成します
-			var stage = new createjs.Stage("myCanvas");
+  <meta charset="utf-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
 
-			// 円を作成します
-			var shape = new createjs.Shape();
-			shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
-			shape.graphics.drawCircle(0, 0, 100); //半径 100px の円を描画
-			shape.x = 200; // X 座標 200px の位置に配置
-			shape.y = 200; // Y 座標 200px の位置に配置
-			stage.addChild(shape); // 表示リストに追加
+    function init() {
+      // Stageオブジェクトを作成します
+      var stage = new createjs.Stage("myCanvas");
 
-			// Stageの描画を更新します
-			stage.update();
-		}
-	</script>
+      // 円を作成します
+      var shape = new createjs.Shape();
+      shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
+      shape.graphics.drawCircle(0, 0, 100); //半径 100px の円を描画
+      shape.x = 200; // X 座標 200px の位置に配置
+      shape.y = 200; // Y 座標 200px の位置に配置
+      stage.addChild(shape); // 表示リストに追加
+
+      // Stageの描画を更新します
+      stage.update();
+    }
+  </script>
 </head>
-
 <body>
-	<canvas id="myCanvas" width="960" height="540"></canvas>
+  <canvas id="myCanvas" width="640" height="320"></canvas>
 </body>
 </html>
-
 ```
 
 
