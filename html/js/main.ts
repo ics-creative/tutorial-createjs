@@ -18,8 +18,8 @@ namespace project {
       $("div.link-index").hide();
     }
 
-    $("a.share-twitter").attr("href", `https://twitter.com/share?text=${encodeURI($.trim($("h1").text()) + " - ICS MEDIA " + location.href)}&lang=ja&url=${location.href}`);
-    $("a.share-facebook").attr("href", `https://www.facebook.com/sharer/sharer.php?u=${location.href}`);
+    $("a.share-twitter").attr("href", `https://twitter.com/share?text=${encodeURI($.trim($("h1").text()) + " - ICS MEDIA")}&lang=ja&url=${location.href}`).attr("target", "_blank");
+    $("a.share-facebook").attr("href", `https://www.facebook.com/sharer/sharer.php?u=${location.href}`).attr("target", "_blank");
 
   }
 }
