@@ -100,6 +100,12 @@
           }
         }
       }
+
+      // 初期値の上書き。
+      // 画面の中央からパーティクルが表示するよう強制的に設定。
+      // 必須ではないオマケの処理です。
+      stage.mouseX = stage.canvas.width / 2;
+      stage.mouseY = stage.canvas.height * 1 / 3;
     }
   </script>
 </head>

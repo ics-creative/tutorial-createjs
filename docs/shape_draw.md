@@ -9,7 +9,7 @@ Graphicsオブジェクト.drawCircle(中心のX座標, 中心のY座標, 半径
 サンプル
 ```js
 var shape = new Shape();
-shape.graphics.beginFill("red"); // 赤色で描画するように設定
+shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
 shape.graphics.drawCircle(0, 0, 100); //半径100pxの円を描画
 stage.addChild(shape); // 表示リストに追加
 ```
@@ -32,8 +32,8 @@ Graphicsオブジェクト.drawRect(X座標, Y座標, 横幅, 高さ);
 ```js
 // 四角形を作成します
 var shape = new createjs.Shape();
-shape.graphics.beginFill("red"); // 赤色で描画するように設定
-shape.graphics.drawRect(0, 0, 200, 100); //100pxの正方形を描画
+shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
+shape.graphics.drawRect(0, 0, 200, 100); // 長方形を描画
 stage.addChild(shape); // 表示リストに追加
 ```
 
@@ -54,7 +54,7 @@ Graphicsオブジェクト.drawRect(X座標, Y座標, 横幅, 高さ, 角丸の�
 ```js
 // 角丸四角形を作成します
 var shape = new createjs.Shape();
-shape.graphics.beginFill("red"); // 赤色で描画するように設定
+shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
 shape.graphics.drawRoundRect(0, 0, 100, 100, 20, 20); //100pxの正方形を描画。20pxの角丸を設定。
 stage.addChild(shape); // 表示リストに追加
 ```
@@ -76,7 +76,7 @@ Graphicsオブジェクト.drawPolyStar(x座標, y座標, 半径, 頂点数, 谷
 サンプル
 ```js
 var poly = new createjs.Shape();
-poly.graphics.beginFill("red"); // 赤色で描画するように設定
+poly.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
 poly.graphics.drawPolyStar(0, 0, 75, 5, 0.6, -90); //75pxの星を記述
 stage.addChild(poly); // 表示リストに追加
 ```
@@ -99,7 +99,7 @@ Graphicsオブジェクト.lineTo(x座標, y座標);
 ▼サンプル
 ```js
 var obj = new createjs.Shape();
-obj.graphics.beginFill("red"); // 赤色で描画するように設定
+obj.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
 obj.graphics.moveTo(0,0); // (0,0)座標から描き始める
 obj.graphics.lineTo(100,0); // (100,0)座標まで辺を描く
 obj.graphics.lineTo(0,100); // (0,100)座標まで辺を描く
@@ -126,5 +126,3 @@ shape.graphics.beginFill("#00ff00") // 緑色で描画するように設定
 	.drawCircle(0, 0, 100); //半径100pxの円を描画
 stage.addChild(shape); // 表示リストに追加
 ```
-
-

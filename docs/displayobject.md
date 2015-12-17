@@ -8,7 +8,7 @@ CreateJSではステージに表示オブジェクトを追加することでコ
 
 ```js
 var object = new createjs.Shape();
-object.graphics.beginFill("red");
+object.graphics.beginFill("DarkRed");
 object.graphics.drawCircle(0, 0, 100);
 ```
 

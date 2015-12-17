@@ -20,7 +20,7 @@ function handleClick(event){
 ```js
 // 円の作成
 var circle = new createjs.Shape();
-circle.graphics.beginFill("red").drawCircle(100, 100, 80);
+circle.graphics.beginFill("DarkRed").drawCircle(100, 100, 80);
 stage.addChild(circle);
 
 // 四角形の作成

@@ -57,7 +57,7 @@ function handleMouseOut(event) {
 	// 赤で塗り直す
 	shape.graphics
 			.clear()
-			.beginFill("red")
+			.beginFill("DarkRed")
 			.drawCircle(0, 0, 80);
 }
 ```

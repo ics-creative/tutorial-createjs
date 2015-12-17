@@ -20,7 +20,7 @@
       for (var i = 0; i < 20; i++) {
         // 赤い丸を作成
         var particle = new createjs.Shape();
-        particle.graphics.beginFill("red").drawCircle(0, 0, size);
+        particle.graphics.beginFill("DarkRed").drawCircle(0, 0, size);
         stage.addChild(particle);
         particle.x = stage.canvas.width * Math.random();
         particle.y = stage.canvas.height * Math.random();
@@ -58,6 +58,6 @@
   </script>
 </head>
 <body>
-  <canvas id="myCanvas" width="400" height="200"></canvas>
+  <canvas id="myCanvas" width="640" height="200"></canvas>
 </body>
 </html>

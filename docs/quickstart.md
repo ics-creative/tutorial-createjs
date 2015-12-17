@@ -16,7 +16,7 @@
 
 			// 円を作成します
 			var shape = new createjs.Shape();
-			shape.graphics.beginFill("red"); // 赤色で描画するように設定
+			shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
 			shape.graphics.drawCircle(0, 0, 100); //半径 100px の円を描画
 			shape.x = 200; // X 座標 200px の位置に配置
 			shape.y = 200; // Y 座標 200px の位置に配置
@@ -83,7 +83,7 @@ var stage = new createjs.Stage("myCanvas");
 ```js
 // 円を作成します
 var shape = new createjs.Shape();
-shape.graphics.beginFill("red"); // 赤色で描画するように設定
+shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
 shape.graphics.drawCircle(0, 0, 100); //半径100pxの円を描画
 ```
 

@@ -18,7 +18,7 @@
       var shape = new createjs.Shape();
       shape.x = 200;
       shape.y = 100;
-      shape.graphics.beginFill("red");
+      shape.graphics.beginFill("DarkRed");
       shape.graphics.drawCircle(0, 0, 80);
       stage.addChild(shape);
 
@@ -40,7 +40,7 @@
         // 赤で塗り直す
         shape.graphics
                 .clear()
-                .beginFill("red")
+                .beginFill("DarkRed")
                 .drawCircle(0, 0, 80);
       }
 

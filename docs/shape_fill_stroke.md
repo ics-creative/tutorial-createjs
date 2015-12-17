@@ -18,7 +18,7 @@ Graphicsオブジェクト.endFill();
 // シェイプを作成
 var shape = new createjs.Shape();
 // 塗りの色を指定
-shape.graphics.beginFill("red");
+shape.graphics.beginFill("DarkRed");
 // 円を描く
 shape.graphics.drawCircle(0, 0, 80);
 ```
@@ -56,7 +56,7 @@ Graphicsオブジェクト.setStrokeStyle(線の太さ);
 // シェイプを作成
 var shape = new createjs.Shape();
 // 線の色を指定
-shape.graphics.beginStroke("red");
+shape.graphics.beginStroke("DarkRed");
 // 線の幅を指定
 shape.graphics.setStrokeStyle(5);
 // 円を描く

@@ -75,7 +75,7 @@ function drawTriangle(level,・・・) {
 
 ```js
 // 線の種類を設定
-shape.graphics.beginStroke("red").setStrokeStyle(2.0);
+shape.graphics.beginStroke("DarkRed").setStrokeStyle(2.0);
 // 三角形を描く
 shape.graphics.moveTo(x1, y1); // 始点を設定
 shape.graphics.lineTo(x2, y2); // 始点と2点目を結ぶ
@@ -120,7 +120,7 @@ function drawTree(x1, // 始点のX座標
     var x2 = leng * Math.cos(angle * Math.PI / 180) + x1;
     var y2 = leng * Math.sin(angle * Math.PI / 180) + y1;
     // 線の種類を設定
-    shape.graphics.setStrokeStyle(1).beginStroke("red");
+    shape.graphics.setStrokeStyle(1).beginStroke("DarkRed");
     // 枝を結ぶ
     shape.graphics.moveTo(x1, y1);
     shape.graphics.lineTo(x2, y2);

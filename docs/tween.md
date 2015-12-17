@@ -14,7 +14,7 @@ createjs.Tween.get(対象)
 ```js
 // 円のシェイプを作成
 var circle = new createjs.Shape();
-circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.graphics.beginFill("DarkRed").drawCircle(0, 0, 50);
 circle.y = 200;
 stage.addChild(circle);
 
@@ -36,7 +36,7 @@ createjs.Tween.get(circle) // ターゲットを指定
 ```js
 // 円のシェイプを作成
 var circle = new createjs.Shape();
-circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.graphics.beginFill("DarkRed").drawCircle(0, 0, 50);
 circle.x = 0;
 circle.y = 0;
 stage.addChild(circle);
@@ -58,7 +58,7 @@ TweenJSはメソッドチェーンと呼ばれる書き方で、複数のモー�
 ```js
 // 円のシェイプを作成
 var circle = new createjs.Shape();
-circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.graphics.beginFill("DarkRed").drawCircle(0, 0, 50);
 stage.addChild(circle);
 
 createjs.Tween.get(circle) // ターゲットを指定
@@ -106,7 +106,7 @@ createjs.Tween.get(対象)
 ```js
 // 円のシェイプを作成
 var circle = new createjs.Shape();
-circle.graphics.beginFill("red").drawCircle(0, 0, 50);
+circle.graphics.beginFill("DarkRed").drawCircle(0, 0, 50);
 circle.x = 400;
 circle.y = 0;
 stage.addChild(circle);

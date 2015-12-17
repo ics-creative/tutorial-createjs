@@ -29,7 +29,7 @@ var stage = new createjs.Stage("myCanvas");
 
 // 円を作成します
 var shape = new createjs.Shape();
-shape.graphics.beginFill("red").drawCircle(0, 0, 100); //半径100pxの円を描画
+shape.graphics.beginFill("DarkRed").drawCircle(0, 0, 100); //半径100pxの円を描画
 shape.y = 150; // Y座標300の位置に配置
 stage.addChild(shape); // 表示リストに追加
 
@@ -66,7 +66,7 @@ var stage = new createjs.Stage("myCanvas");
 
 // 円を作成します
 var shape = new createjs.Shape();
-shape.graphics.beginFill("red").drawCircle(0, 0, 100); //半径100pxの円を描画
+shape.graphics.beginFill("DarkRed").drawCircle(0, 0, 100); //半径100pxの円を描画
 shape.y = 150; // Y座標300の位置に配置
 stage.addChild(shape); // 表示リストに追加
 

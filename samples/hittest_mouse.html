@@ -12,7 +12,7 @@
 
       // 星を作成します
       var poly = new createjs.Shape();
-      poly.graphics.beginFill("red"); // 赤色で描画するように設定
+      poly.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
       poly.graphics.drawPolyStar(0, 0, 75, 5, 0.6, -90); //75pxの星を記述
       stage.addChild(poly); // 表示リストに追加
       poly.x = 200;
@@ -40,7 +40,7 @@
         if (isHit == true) {
           // 赤色で塗る
           poly.graphics.clear()
-                  .beginFill("red")
+                  .beginFill("DarkRed")
                   .drawPolyStar(0, 0, 75, 5, 0.6, -90);
         } else {
           // 緑色で塗る

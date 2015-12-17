@@ -20,7 +20,7 @@ var stage = new createjs.Stage("myCanvas");
 
 // オブジェクトの作成
 var shape = new createjs.Shape();
-shape.graphics.beginFill("red");
+shape.graphics.beginFill("DarkRed");
 shape.graphics.drawCircle(0, 0, 40);
 stage.addChild(shape);
 

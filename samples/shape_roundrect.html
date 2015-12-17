@@ -10,13 +10,13 @@
       // Stageオブジェクトを作成。表示リストのルートになります。
       var stage = new createjs.Stage("myCanvas");
 
-      // 星を作成します
-      var poly = new createjs.Shape();
-      poly.graphics.beginFill("red"); // 赤色で描画するように設定
-      poly.graphics.drawPolyStar(0, 0, 75, 5, 0.6, -90); //75pxの星を記述
-      stage.addChild(poly); // 表示リストに追加
+      // 角丸四角形を作成します
+      var shape = new createjs.Shape();
+      shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
+      shape.graphics.drawRoundRect(0, 0, 100, 100, 20, 20); //100pxの正方形を描画。20pxの角丸を設定。
+      stage.addChild(shape); // 表示リストに追加
       shape.x = 100;
-      shape.y = 100;
+      shape.y = 50;
 
       // Stageの描画を更新
       stage.update();

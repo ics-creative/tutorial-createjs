@@ -6,21 +6,28 @@
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <script>
     window.addEventListener("load", init);
-
     function init() {
       // Stageオブジェクトを作成。表示リストのルートになります。
       var stage = new createjs.Stage("myCanvas");
 
       var shape = new createjs.Shape();
       // 赤い円 (色相, 彩度, 明度)
-      shape.graphics.beginFill(createjs.Graphics.getHSL(0, 1.0, 1.0));
+      shape.graphics.beginFill(createjs.Graphics.getHSL(0, 100, 50));
       shape.graphics.drawCircle(100, 100, 50);
-      // 緑の円
-      shape.graphics.beginFill(createjs.Graphics.getHSL(120, 1.0, 1.0));
+      // 暗い赤い円 (色相, 彩度, 明度)
+      shape.graphics.beginFill(createjs.Graphics.getHSL(0, 100, 20));
       shape.graphics.drawCircle(200, 100, 50);
-      // 青い円
-      shape.graphics.beginFill(createjs.Graphics.getHSL(240, 1.0, 1.0));
+      // 明るい赤い円 (色相, 彩度, 明度)
+      shape.graphics.beginFill(createjs.Graphics.getHSL(0, 100, 80));
       shape.graphics.drawCircle(300, 100, 50);
+
+      // 緑の円 (色相, 彩度, 明度)
+      shape.graphics.beginFill(createjs.Graphics.getHSL(120, 100, 50));
+      shape.graphics.drawCircle(100, 200, 50);
+
+      // 青の円 (色相, 彩度, 明度)
+      shape.graphics.beginFill(createjs.Graphics.getHSL(240, 100, 50));
+      shape.graphics.drawCircle(200, 200, 50);
 
       // ステージにシェイプを追加
       stage.addChild(shape);
