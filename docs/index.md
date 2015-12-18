@@ -53,6 +53,7 @@
 ## Flash Professional CCを使おう
 
 - [Adobe Flash Pro CC と CreateJS の連携 (基本編)](adobe_animate.md)
+- [Adobe Flash Pro CC と CreateJS の連携 (ビットマップ含む編)](adobe_animate_bitmap.md)
 - [Adobe Flash Pro CC と CreateJS の連携 (スプライトシート編)](adobe_animate_spritesheet.md)
 
 
