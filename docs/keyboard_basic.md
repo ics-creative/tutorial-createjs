@@ -20,7 +20,7 @@ window.addEventListener("keydown", handleKeydown);
 function handleKeydown(event){
   // キーコード
 	var keyCode = event.keyCode;
-	console.log("押されたキーのコード : " + key_code);
+	console.log("押されたキーのコード : " + keyCode);
 }
 ```
 

@@ -71,7 +71,7 @@ function drawTriangle(level,・・・) {
 }
 ```
 
-①の部分では三角形を描きます。`lineTo()`と`moveTo`を使って三角形を描きましょう。
+①の部分では三角形を描きます。`lineTo()`と`moveTo()`メソッドを使って三角形を描きましょう。
 
 ```js
 // 線の種類を設定
@@ -193,6 +193,3 @@ function drawTree(x1, // 始点のX座標
     }
 }
 ```
-
-
-
