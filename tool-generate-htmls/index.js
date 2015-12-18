@@ -127,3 +127,4 @@ fs.readdir("../docs", function (err, files) {
         console.log("finish!!!");
     });
 });
+//# sourceMappingURL=index.js.map

@@ -9,7 +9,8 @@
   },
   "scripts": {
     "postinstall": "dtsm install",
-    "build": "tsc index.ts --out index.js;node index.js",
+		"compile-ts" : "tsc -p .",
+    "build": "npm run compile-ts;node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nozomi Nohara <nozomi.nohara@ics-web.jp>",
