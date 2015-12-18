@@ -94,7 +94,7 @@ vy *= 0.98;
 
 ドラッグ処理は[mouse_drag.md](mouse_drag.md)を参考にしてください。
 
-ドラッグ中には重力計算は行わないようにするための条件文を追加しおます。
+ドラッグ中には重力計算は行わないようにするための条件文を追加します。
 ```js
 // 時間制御
 createjs.Ticker.addEventListener("tick", handleTick);
@@ -159,5 +159,3 @@ function handleUp(event) {
     flag = false;
 }
 ```
-
-
