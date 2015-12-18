@@ -60,120 +60,118 @@ body.tutorial {
 
   #main {
     margin-top: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
-    article {
-      line-height: 175%;
-      font-size: 1.0rem;
+    line-height: 175%;
+    font-size: 1.0rem;
 
-      @mixin createPageContentWidth($mediaW, $contentW) {
-        @media (min-width: $mediaW) {
-          .pageContentContainer {
-            max-width: $contentW;
-            margin: 0 auto;
-          }
-        }
-
-        @media (max-width: $mediaW) {
-          .pageContentContainer {
-            padding: 0 $contentHorizontalPadding;
-          }
+    @mixin createPageContentWidth($mediaW, $contentW) {
+      @media (min-width: $mediaW) {
+        .pageContentContainer {
+          max-width: $contentW;
+          margin: 0 auto;
         }
       }
 
-      // ノートパソコンの高さ
-      $mediaScreenHeightMedium: 700px;
-      @media (min-height: $mediaScreenHeightMedium) {
-        @include createPageContentWidth($mediaWidthLarge, $contentWidth);
+      @media (max-width: $mediaW) {
+        .pageContentContainer {
+          padding: 0 $contentHorizontalPadding;
+        }
       }
-      @media (max-height: $mediaScreenHeightMedium) {
-        @include createPageContentWidth($mediaWidthMedium, 640px);
+    }
+
+    // ノートパソコンの高さ
+    $mediaScreenHeightMedium: 700px;
+    @media (min-height: $mediaScreenHeightMedium) {
+      @include createPageContentWidth($mediaWidthLarge, $contentWidth);
+    }
+    @media (max-height: $mediaScreenHeightMedium) {
+      @include createPageContentWidth($mediaWidthMedium, 640px);
+    }
+
+    div.article {
+
+      overflow: hidden;
+      $colorArticle: #666;
+
+      .syntaxhighlighter {
+        font-size: 0.80rem !important;
       }
 
-      div.article {
+      b, strong {
+        font-weight: bold;
+        color: $colorBlack;
+        background: #E6EE9C;
+      }
 
-        overflow: hidden;
-        $colorArticle: #666;
+      a {
+        text-decoration: none;
+        font-weight: normal; // CreateJSサイト専用
+      }
+      a:visited {
+        color: $colorTextLinkVisited;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      a:active {
+      }
 
-        .syntaxhighlighter {
-          font-size: 0.80rem !important;
-        }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
 
-        b, strong {
-          font-weight: bold;
-          color: $colorBlack;
-          background: #E6EE9C;
-        }
+      object, embed, video {
+        max-width: 100%;
+      }
 
-        a {
-          text-decoration: none;
-          font-weight: normal; // CreateJSサイト専用
-        }
-        a:visited {
-          color: $colorTextLinkVisited;
-        }
-        a:hover {
-          text-decoration: underline;
-        }
-        a:active {
-        }
+      p {
+        margin: 1.5em 0;
+        color: $colorArticle;
+        text-align: left;
+      }
 
-        img {
-          max-width: 100%;
-          height: auto;
-        }
+      h1, h2, h3, h4, h5 {
+        //font-family : "遊明朝";
+        font-weight: normal;
+        line-height: 1.5;
+        font-family: $font-cursive;
+      }
 
-        object, embed, video {
-          max-width: 100%;
-        }
+      h2 {
+        border-bottom: 1px solid #DBDBDB;
+        padding: 0.25em 0;
 
-        p {
-          margin: 1.5em 0;
+      }
+
+      code {
+        color: inherit;
+        font-family: 'Source Code Pro', monospace;
+      }
+
+      .hljs {
+        background-color: #f7f7f7;
+        border-radius: 3px;
+        padding: 16px; // GitHub と同じ指定
+      }
+
+      ul, ol {
+        padding-left: 2em;
+
+        li {
           color: $colorArticle;
-          text-align: left;
         }
 
-        h1, h2, h3, h4, h5 {
-          //font-family : "遊明朝";
-          font-weight: normal;
-          line-height: 1.5;
-          font-family: $font-cursive;
+      }
+      ul {
+        li {
+          list-style: inherit;
         }
-
-        h2 {
-          border-bottom: 1px solid #DBDBDB;
-          padding: 0.25em 0;
-
-        }
-
-        code {
-          color: inherit;
-          font-family: 'Source Code Pro', monospace;
-        }
-
-        .hljs {
-          background-color: #f7f7f7;
-          border-radius: 3px;
-          padding: 16px; // GitHub と同じ指定
-        }
-
-        ul, ol {
-          padding-left: 2em;
-
-          li {
-            color: $colorArticle;
-          }
-
-        }
-        ul {
-          li {
-            list-style: inherit;
-          }
-        }
-        ol {
-          li {
-            list-style: decimal;
-          }
+      }
+      ol {
+        li {
+          list-style: decimal;
         }
       }
     }

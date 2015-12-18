@@ -588,97 +588,95 @@ body.tutorial {
 }
 body.tutorial #main {
   margin-top: 20px;
-  margin-bottom: 100px;
-}
-body.tutorial #main article {
+  margin-bottom: 50px;
   line-height: 175%;
   font-size: 1.0rem;
 }
 @media (min-height: 700px) and (min-width: 970px) {
-  body.tutorial #main article .pageContentContainer {
+  body.tutorial #main .pageContentContainer {
     max-width: 640px;
     margin: 0 auto;
   }
 }
 @media (min-height: 700px) and (max-width: 970px) {
-  body.tutorial #main article .pageContentContainer {
+  body.tutorial #main .pageContentContainer {
     padding: 0 12px;
   }
 }
 
 @media (max-height: 700px) and (min-width: 750px) {
-  body.tutorial #main article .pageContentContainer {
+  body.tutorial #main .pageContentContainer {
     max-width: 640px;
     margin: 0 auto;
   }
 }
 @media (max-height: 700px) and (max-width: 750px) {
-  body.tutorial #main article .pageContentContainer {
+  body.tutorial #main .pageContentContainer {
     padding: 0 12px;
   }
 }
 
-body.tutorial #main article div.article {
+body.tutorial #main div.article {
   overflow: hidden;
 }
-body.tutorial #main article div.article .syntaxhighlighter {
+body.tutorial #main div.article .syntaxhighlighter {
   font-size: 0.80rem !important;
 }
-body.tutorial #main article div.article b, body.tutorial #main article div.article strong {
+body.tutorial #main div.article b, body.tutorial #main div.article strong {
   font-weight: bold;
   color: #404040;
   background: #E6EE9C;
 }
-body.tutorial #main article div.article a {
+body.tutorial #main div.article a {
   text-decoration: none;
   font-weight: normal;
 }
-body.tutorial #main article div.article a:visited {
+body.tutorial #main div.article a:visited {
   color: #795548;
 }
-body.tutorial #main article div.article a:hover {
+body.tutorial #main div.article a:hover {
   text-decoration: underline;
 }
-body.tutorial #main article div.article img {
+body.tutorial #main div.article img {
   max-width: 100%;
   height: auto;
 }
-body.tutorial #main article div.article object, body.tutorial #main article div.article embed, body.tutorial #main article div.article video {
+body.tutorial #main div.article object, body.tutorial #main div.article embed, body.tutorial #main div.article video {
   max-width: 100%;
 }
-body.tutorial #main article div.article p {
+body.tutorial #main div.article p {
   margin: 1.5em 0;
   color: #666;
   text-align: left;
 }
-body.tutorial #main article div.article h1, body.tutorial #main article div.article h2, body.tutorial #main article div.article h3, body.tutorial #main article div.article h4, body.tutorial #main article div.article h5 {
+body.tutorial #main div.article h1, body.tutorial #main div.article h2, body.tutorial #main div.article h3, body.tutorial #main div.article h4, body.tutorial #main div.article h5 {
   font-weight: normal;
   line-height: 1.5;
   font-family: "a-otf-ryumin-pr6n", "リュウミン", serif;
 }
-body.tutorial #main article div.article h2 {
+body.tutorial #main div.article h2 {
   border-bottom: 1px solid #DBDBDB;
   padding: 0.25em 0;
 }
-body.tutorial #main article div.article code {
+body.tutorial #main div.article code {
   color: inherit;
   font-family: 'Source Code Pro', monospace;
 }
-body.tutorial #main article div.article .hljs {
+body.tutorial #main div.article .hljs {
   background-color: #f7f7f7;
   border-radius: 3px;
   padding: 16px;
 }
-body.tutorial #main article div.article ul, body.tutorial #main article div.article ol {
+body.tutorial #main div.article ul, body.tutorial #main div.article ol {
   padding-left: 2em;
 }
-body.tutorial #main article div.article ul li, body.tutorial #main article div.article ol li {
+body.tutorial #main div.article ul li, body.tutorial #main div.article ol li {
   color: #666;
 }
-body.tutorial #main article div.article ul li {
+body.tutorial #main div.article ul li {
   list-style: inherit;
 }
-body.tutorial #main article div.article ol li {
+body.tutorial #main div.article ol li {
   list-style: decimal;
 }
 
