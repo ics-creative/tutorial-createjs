@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="HeartAsset.js"></script>
+  <script>
+    window.addEventListener("load", init);
+
+    function init() {
+      images = images||{};
+
+      var loader = new createjs.LoadQueue(false);
+      loader.addEventListener("fileload", handleFileLoad);
+      loader.addEventListener("complete", handleComplete);
+      loader.loadManifest(lib.properties.manifest);
+    }
+
+    function handleFileLoad(evt) {
+      if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+    }
+
+    function handleComplete(evt) {
+      var stage = new createjs.Stage("myCanvas");
+
+      // スプライトを作成
+      var root = new lib.HeartAsset();
+      stage.addChild(root);
+
+      createjs.Ticker.addEventListener("tick", function () {
+        // 時間経過時の処理
+        stage.update();
+      });
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="960" height="540"></canvas>
+</body>
+</html>
