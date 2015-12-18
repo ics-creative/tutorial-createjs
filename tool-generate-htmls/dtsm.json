@@ -15,9 +15,6 @@
   "dependencies": {
     "node/node.d.ts": {
       "ref": "8ea42cd8bb11863ed6f242d67c502288ebc45a7b"
-    },
-    "es6-promise/es6-promise.d.ts": {
-      "ref": "8ea42cd8bb11863ed6f242d67c502288ebc45a7b"
     }
   }
 }
