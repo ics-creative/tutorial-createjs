@@ -6,8 +6,8 @@ Flash Professional CCからHTML5 Canvas素材として書き出し、CreateJSで
 Flash Professional CCで画像ファイルを含むコンテンツを作っていた場合に、先の解説と一部手順が異なります。
 
 
-- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/createjs-toolkit/index.html)
-- [サンプルのソースコードを確認する](../samples/createjs-toolkit/)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/createjs-toolkit-bitmaps/index.html)
+- [サンプルのソースコードを確認する](../samples/createjs-toolkit-bitmaps/)
 
 
 ## Adobe Flash Professional CC (Flash Pro CC)を起動
@@ -16,7 +16,7 @@ Flash Professional CCで画像ファイルを含むコンテンツを作って�
 
 ![](../imgs/adobe_animate_startup.png)
 
-作成したら作業用フォルダに`StarAsset.fla`ファイルとして保存しましょう。
+作成したら作業用フォルダに`HeartAsset.fla`ファイルとして保存しましょう。
 
 ## 2. シンボルを作成する (ここでは「Star」という名前で作成)
 
@@ -27,15 +27,15 @@ Flash Professional CCで画像ファイルを含むコンテンツを作って�
 
 メニューバーから[制御]→[プレビュー]を選択しましょう。するとブラウザが立ち上がり、描いたグラフィックが表示されます。これはHTML5 Canvas (つまりCreateJS)で表示されています。
 
-このとき`StarAsset.fla`ファイルと同階層にいくつかファイルとフォルダが作られます。
+このとき`HeartAsset.fla`ファイルと同階層にいくつかファイルとフォルダが作られます。
 
-- `StarAsset.html` : HTML5 Canvasを再生するための再生用のHTMLファイル。
-- `StarAsset.js` : Flash Pro CCで作成したデータが保存されているファイル。
+- `HeartAsset.html` : HTML5 Canvasを再生するための再生用のHTMLファイル。
+- `HeartAsset.js` : Flash Pro CCで作成したデータが保存されているファイル。
 - `images` : 画像が格納されたフォルダ。
 
 ## 4. 別ファイルとしてHTMLファイルを作成
 
-制御用のHTMLとして作業用フォルダに`index.html`ファイルを用意しましょう。`StarAsset.fla`ファイルと__同階層に配置ください__。
+制御用のHTMLとして作業用フォルダに`index.html`ファイルを用意しましょう。`HeartAsset.fla`ファイルと__同階層に配置ください__。
 
 
 
@@ -53,17 +53,17 @@ Flash Professional CCで画像ファイルを含むコンテンツを作って�
 
 ## 6. Flash Pro CCから出力したJSファイルも読み込む
 
-`index.html`ファイルと同じ階層に、`StarAsset.fla`ファイルから出力した`StarAsset.js`ファイルが存在するはずです。このファイルを読み込むため`<script>`タグで取り込みましょう。
+`index.html`ファイルと同じ階層に、`HeartAsset.fla`ファイルから出力した`HeartAsset.js`ファイルが存在するはずです。このファイルを読み込むため`<script>`タグで取り込みましょう。
 
 ```js
 <!-- Flash Professional CCのデータを読み込む -->
-<script src="StarAsset.js"></script>
+<script src="HeartAsset.js"></script>
 ```
 
 ## 7. CreateJS起動のためのコードを記載する
 
 
-CreateJSを起動するためのコードを記載しましょう。
+CreateJSを起動するためのコードを記載しましょう。コードが長くなりますが、モーション中に利用する画像ファイルを先読み(プリロード)する仕組みが入っています。
 
 ```js
 window.addEventListener("load", init);
@@ -88,15 +88,13 @@ function handleComplete(evt) {
 }
 ```
 
-## 8. Flash Pro CCのシンボルは「lib.Star」という名前で呼び出せる
+## 8. Flash Pro CCのコンテンツを呼び出す
 
-Flash Pro CCのシンボル名の先頭に「lib.」をつけるとクラスとして利用できます。
+Flash Pro CCのシンボル名の先頭に「lib.」をつけるとクラスとして利用できます。ルートのタイムラインは「lib.ファイル名」として呼び出せます。
 
 ```js
-// Flash Pro CCのシンボル名の先頭に「lib.」をつけると利用できます
 var root = new lib.HeartAsset();
 stage.addChild(root);
-
 ```
 
 この「lib.HeartAsset」というのはFLAファイル名と一致します。
