@@ -5,8 +5,8 @@
 		"removeComments": false,
 		"preserveConstEnums": true,
 		"out": "index.js",
-		"sourceMap": true,
-		"target": "es5"
+		"sourceMap": false,
+		"target": "es6"
 	},
 	"files": [
         "index.ts"

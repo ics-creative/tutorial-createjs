@@ -6,7 +6,7 @@ var marked = require("marked");
 var hilight = require("highlight");
 var mkdirp = require("mkdirp");
 var promises = [];
-var githubUrl = "https://github.com/ics-creative/tutorial-createjs/";
+let githubUrl = "https://github.com/ics-creative/tutorial-createjs/";
 var samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
 var samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/master/";
 var templateHtml;
@@ -17,7 +17,7 @@ var templateHtml;
  * @param values:Object 展開する値
  * @return string
  */
-var template = function (text, values) {
+var template = (text, values) => {
     if (!text) {
         console.log("template-error!");
         return "";
@@ -27,7 +27,7 @@ var template = function (text, values) {
     });
 };
 var renderer = new marked.Renderer();
-renderer.link = function (href, title, text) {
+renderer.link = (href, title, text) => {
     //console.log("href:" + href);
     var sampledIndex = href.indexOf("samples/");
     var absolutePass = href.indexOf("http") == 0;
@@ -39,23 +39,23 @@ renderer.link = function (href, title, text) {
             href = href.replace("md", "html");
         }
     }
-    var htmlHref = (href != null && href != "") ? " href=\"" + href + "\"" : "";
-    var htmlTitle = (title != null && title != "") ? " title=" + title : "";
-    return "<a" + htmlHref + htmlTitle + ">" + text + "</a>";
+    var htmlHref = (href != null && href != "") ? ` href="${href}"` : "";
+    var htmlTitle = (title != null && title != "") ? ` title=${title}` : "";
+    return `<a${htmlHref}${htmlTitle}>${text}</a>`;
 };
-renderer.image = function (href, title, text) {
+renderer.image = (href, title, text) => {
     //console.log("imgs:" + href);
     var absolutePass = href.indexOf("http") == 0;
     var sampledIndex = href.indexOf("../imgs/");
     if (!absolutePass && sampledIndex >= 0) {
         href = samplesUrl + href.slice(sampledIndex + "../".length);
     }
-    var htmlHref = (href != null && href != "") ? " src=\"" + href + "\"" : "";
-    var htmlTitle = (title != null && title != "") ? " title=" + title : "";
-    return "<img" + htmlHref + htmlTitle + " />";
+    var htmlHref = (href != null && href != "") ? ` src="${href}"` : "";
+    var htmlTitle = (title != null && title != "") ? ` title=${title}` : "";
+    return `<img${htmlHref}${htmlTitle} />`;
 };
 renderer.heading = function (text, level) {
-    return "<h" + level + ">" + text + "</h" + level + ">";
+    return `<h${level}>${text}</h${level}>`;
 };
 marked.setOptions({
     highlight: function (code) {
@@ -63,23 +63,23 @@ marked.setOptions({
     },
     renderer: renderer
 });
-var generateHTML = function (dirName, fileName, resolve) {
-    fs.readFile("../docs/" + dirName + fileName, "utf8", function (error, text) {
+var generateHTML = (dirName, fileName, resolve) => {
+    fs.readFile("../docs/" + dirName + fileName, "utf8", (error, text) => {
         if (error) {
             return;
         }
         var articleMarkdown = marked(text);
-        var headerMatch = articleMarkdown.match(/<h1>(.*?)<\/h1>/);
-        var articleTitle = headerMatch ? headerMatch[1] : "";
+        let headerMatch = articleMarkdown.match(/<h1>(.*?)<\/h1>/);
+        let articleTitle = headerMatch ? headerMatch[1] : "";
         if (!headerMatch) {
-            console.log("no header " + fileName);
+            console.log(`no header ${fileName}`);
         }
         else {
             //	最初のH1だけ削除するとき。
             articleMarkdown = articleMarkdown.replace(headerMatch[0], "");
         }
         articleMarkdown = articleMarkdown.replace(/\<code class\=\"lang-/g, "<code class=\"hljs ");
-        var values = {
+        let values = {
             "article-title": articleTitle,
             "article-markdwon": articleMarkdown
         };
@@ -87,8 +87,8 @@ var generateHTML = function (dirName, fileName, resolve) {
             console.log(fileName + " generate error!");
             return;
         }
-        var textValue = template(templateHtml, values);
-        fs.writeFile("../html/" + dirName + fileName.replace("md", "html"), textValue, function (error) {
+        let textValue = template(templateHtml, values);
+        fs.writeFile("../html/" + dirName + fileName.replace("md", "html"), textValue, (error) => {
             //console.log(fileName + "- maked");
             if (error) {
                 return;
@@ -97,8 +97,8 @@ var generateHTML = function (dirName, fileName, resolve) {
         });
     });
 };
-fs.readdir("../docs", function (err, files) {
-    promises.push(new Promise(function (resolve) {
+fs.readdir("../docs", (err, files) => {
+    promises.push(new Promise((resolve) => {
         mkdirp("../html/", function (err) {
             if (err) {
                 console.error("mkdir-error" + err);
@@ -108,22 +108,22 @@ fs.readdir("../docs", function (err, files) {
             }
         });
     }));
-    promises.push(new Promise(function (resolve) {
-        fs.readFile("template-html.html", "utf8", function (error, text) {
+    promises.push(new Promise((resolve) => {
+        fs.readFile("template-html.html", "utf8", (error, text) => {
             templateHtml = text;
             resolve();
         });
     }));
     for (var i = 0; i < files.length; i++) {
         var filename = files[i];
-        var childPromise = new Promise(function (resolve) {
+        let childPromise = new Promise((resolve) => {
             generateHTML("", filename, resolve);
         });
         promises.push(childPromise);
     }
     Promise
         .all(promises)
-        .then(function (results) {
+        .then((results) => {
         console.log("finish!!!");
     });
 });
