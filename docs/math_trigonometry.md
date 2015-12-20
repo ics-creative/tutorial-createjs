@@ -75,10 +75,10 @@ function handleTick() {
 
 プロパティーごとに異なる角度で制御してみましょう。
 
-![](../imgs/math_sin_pulse.html.png)
+![](../imgs/math_sin_twoangles.html.png)
 
-- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/math_sin_pulse.html)
-- [サンプルのソースコードを確認する](../samples/math_sin_pulse.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/math_sin_twoangles.html)
+- [サンプルのソースコードを確認する](../samples/math_sin_twoangles.html)
 
 XとY座標それぞれにことなる三角関数の角度を適用するため、変数を増やして制御しています。
 
@@ -138,10 +138,10 @@ X座標の`px`は単純増加させ、Y座標の`py`は三角関数によって�
 
 サインカーブ(三角波)を三角関数を使って描いてみましょう。
 
-![](../imgs/math_sin_pulse.html.png)
+![](../imgs/math_sin_drawing.html.png)
 
-- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/math_sin_pulse.html)
-- [サンプルのソースコードを確認する](../samples/math_sin_pulse.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/math_sin_drawing.html)
+- [サンプルのソースコードを確認する](../samples/math_sin_drawing.html)
 
 これを実現している主なコードは次の通りです。
 
