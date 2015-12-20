@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    // 読み込みが終わってから初期化
+    window.addEventListener("load", init);
+    function init() {
+      // 初期化
+      var stage = new createjs.Stage("myCanvas");
+
+      // 空のシェイプを作成 (線の描画用)
+      var shape = new createjs.Shape();
+      stage.addChild(shape);
+
+      // ボールを作成
+      var ball = new createjs.Shape();
+      ball.graphics.beginFill("DarkRed").drawCircle(0, 0, 10);
+      ball.x = stage.canvas.width / 2; // 画面中央に配置
+      ball.y = stage.canvas.height / 2;
+      stage.addChild(ball);
+
+      var label = new createjs.Text("", "32px sans-serif", "gray");
+      stage.addChild(label);
+
+
+      // 時間経過
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        // 距離を計算
+        var dx = ball.x - stage.mouseX;
+        var dy = ball.y - stage.mouseY;
+        var distance = Math.sqrt(dx * dx + dy * dy);
+        // ラベルに距離を表示
+        label.text = distance + "px";
+
+        // 二点間を線分でつなぐ
+        shape.graphics.clear()
+                .setStrokeStyle(1).beginStroke("gray")
+                .moveTo(ball.x, ball.y)
+                .lineTo(stage.mouseX, stage.mouseY);
+
+        stage.update(); // 画面更新
+      }
+
+
+      // 画面更新の頻度を60FPSに設定
+      createjs.Ticker.timingMode = createjs.Ticker.RAF;
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="640" height="200"></canvas>
+</body>
+</html>

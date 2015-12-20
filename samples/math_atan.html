@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    // 読み込みが終わってから初期化
+    window.addEventListener("load", init);
+    function init() {
+      // 初期化
+      var stage = new createjs.Stage("myCanvas");
+
+      // 矢印を作成
+      var arrow = new createjs.Shape();
+      arrow.graphics
+              .beginFill("DarkRed") // 四角形を描く
+              .drawRect(-6, -3, 12, 6)
+              .beginFill("DarkRed") // 三角形を描く
+              .moveTo(5, 10)
+              .lineTo(15, 0)
+              .lineTo(5, -10)
+              .closePath();
+      // 画面中央に配置
+      arrow.x = stage.canvas.width / 2;
+      arrow.y = stage.canvas.height / 2;
+      stage.addChild(arrow);
+
+      // 時間経過
+
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        // マウス座標との差分を計算
+        var dx = stage.mouseX - arrow.x;
+        var dy = stage.mouseY - arrow.y;
+        // 差分を元に方向を計算
+        var radians = Math.atan2(dy, dx);
+        // ラジアンを角度に変換
+        var degrees = radians * 180 / Math.PI;
+        // 表示オブジェクトの角度に反映
+        arrow.rotation = degrees;
+
+        stage.update(); // 画面更新
+      }
+
+      // 画面更新を60FPSに設定
+      createjs.Ticker.timingMode = createjs.Ticker.RAF;
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="640" height="200"></canvas>
+</body>
+</html>
