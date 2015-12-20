@@ -39,6 +39,12 @@
   - [キーボードで自機を操作](keyboard_ship.md)
 - [当たり判定](hittest.md)
 
+## 数学を理解しよう
+
+- 三角関数
+  - [三角関数の活用](math_basic.md)
+  - [三角関数をモーションに使う](math_trigonometry.md)
+
 ## 応用サンプルに挑戦しよう
 
 - [アナログ時計の作成](clock.md)
