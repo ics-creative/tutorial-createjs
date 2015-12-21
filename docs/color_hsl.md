@@ -46,6 +46,68 @@ for (var i = 0; i < 100; i++) {
 }
 ```
 
+## 色相と彩度と明度を順番に配置する
+
+### 色相
+
+色相をずらしながら、左側から右側へ順番に円を配置してみましょう。左端が`0`、中央が`180`、右端が`360`となります。
+
+![](../imgs/color_hsl_dots_hue.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/color_hsl_dots_hue.html)
+- [サンプルのソースコードを確認する](../samples/color_hsl_dots_hue.html)
+
+
+```js
+var MAX = 20;
+for (var i = 0; i < MAX; i++) {
+  // HSLカラーを算出
+  var hue = i * (360 / MAX);
+  var color = "hsl(" + hue + ", 100%, 50%)";
+  // (省略)
+}
+```
+
+### 彩度
+
+彩度をずらしながら、左側から右側へ順番に円を配置してみましょう。左端が`0`%、中央が`50`%、右端が`100`%となります。左端が灰色で、右側に行くほど色が鮮やかになっていきます。
+
+![](../imgs/color_hsl_dots_satuation.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/color_hsl_dots_satuation.html)
+- [サンプルのソースコードを確認する](../samples/color_hsl_dots_satuation.html)
+
+```js
+var MAX = 20;
+for (var i = 0; i < MAX; i++) {
+  // HSLカラーを算出
+  var satuation = i * (100 / MAX);
+  var color = "hsl(0, " + satuation + "%, 50%)";
+  // (省略)
+}
+```
+
+### 明度
+
+明度をずらしながら、左側から右側へ順番に円を配置してみましょう。左端が`0`%、中央が`50`%、右端が`100`%となります。左端が暗く、右側に行くほど明るくなっていきます。
+
+![](../imgs/color_hsl_dots_luminance.html.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/color_hsl_dots_luminance.html)
+- [サンプルのソースコードを確認する](../samples/color_hsl_dots_luminance.html)
+
+
+```js
+var MAX = 20;
+for (var i = 0; i < MAX; i++) {
+  // HSLカラーを算出
+  var luminance = i * (100 / MAX);
+  var color = "hsl(0, 100%, " + luminance + "%)";
+  // (省略)
+}
+```
+
+
 ## グラフィックの色を時間経過で変化させる
 
 時間経過で色が変わっていく表現を作ってみましょう。
