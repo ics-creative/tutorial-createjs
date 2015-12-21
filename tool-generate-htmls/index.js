@@ -1,14 +1,14 @@
 ///<reference path="typings/bundle.d.ts" />
-var fs = require("fs");
-var path = require("path");
-var childProcess = require("child_process");
-var marked = require("marked");
-var hilight = require("highlight");
-var mkdirp = require("mkdirp");
-var promises = [];
+"use strict";
+let fs = require("fs");
+let path = require("path");
+let childProcess = require("child_process");
+let marked = require("marked");
+let mkdirp = require("mkdirp");
+let promises = [];
 let githubUrl = "https://github.com/ics-creative/tutorial-createjs/";
-var samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
-var samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/master/";
+let samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
+let samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/master/";
 var templateHtml;
 /**
  * テンプレート文字列を展開
