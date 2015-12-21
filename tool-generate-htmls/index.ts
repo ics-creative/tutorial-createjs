@@ -101,7 +101,7 @@ var generateHTML = (dirName:string, fileName:string, resolve:Function) => {
 
     let values = {
       "article-title": articleTitle,
-      "article-markdwon": articleMarkdown
+      "article-markdown": articleMarkdown
     };
     if (!templateHtml) {
       console.log(fileName + " generate error!");

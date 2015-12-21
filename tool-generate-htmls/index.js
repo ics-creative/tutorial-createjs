@@ -81,7 +81,7 @@ var generateHTML = (dirName, fileName, resolve) => {
         articleMarkdown = articleMarkdown.replace(/\<code class\=\"lang-/g, "<code class=\"hljs ");
         let values = {
             "article-title": articleTitle,
-            "article-markdwon": articleMarkdown
+            "article-markdown": articleMarkdown
         };
         if (!templateHtml) {
             console.log(fileName + " generate error!");
@@ -127,4 +127,3 @@ fs.readdir("../docs", (err, files) => {
         console.log("finish!!!");
     });
 });
-//# sourceMappingURL=index.js.map
