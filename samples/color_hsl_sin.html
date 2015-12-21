@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    // 読み込みが終わってから初期化
+    window.addEventListener("load", init);
+    function init() {
+      // 初期化
+      var stage = new createjs.Stage("myCanvas");
+
+      // シェイプを作成
+      var shape = new createjs.Shape();
+      stage.addChild(shape);
+
+      var angle = 0;
+      var centerHue = 180;
+      var radius = 80;
+      var speed = 0.01;
+
+      // 時間経過
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        // HSLカラーを算出
+        var hue = centerHue + Math.cos(angle) * radius;
+        var color = "hsl(" + hue + ", 100%, 50%)";
+
+        shape.graphics.clear()
+                .beginFill(color)
+                .drawCircle(320, 100, 80);
+
+        angle += speed;
+
+        stage.update(); // 画面更新
+      }
+
+      // 画面更新の頻度を60FPSに設定
+      createjs.Ticker.timingMode = createjs.Ticker.RAF;
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="640" height="200"></canvas>
+</body>
+</html>
