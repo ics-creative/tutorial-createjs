@@ -107,7 +107,7 @@ function handleTick() {
 
 振幅しながら横に移動するモーションを作ってみましょう。
 
-![](../imgs/math_sin_vertical.html.png)
+![](../imgs/math_sin_vertical_debug.html.png)
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/math_sin_vertical.html)
 - [サンプルのソースコードを確認する](../samples/math_sin_vertical.html)

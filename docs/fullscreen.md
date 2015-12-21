@@ -80,7 +80,7 @@ function handleResize(event) {
 
 ## タッチデバイス対応
 
-タッチ操作のために[タッチデバイス対応](docs/mouse_touch.md)にも対応させておきましょう。
+タッチ操作のために[タッチデバイス対応](mouse_touch.md)にも対応させておきましょう。
 
 ```js
 // ステージを作成
@@ -92,6 +92,3 @@ if (createjs.Touch.isSupported() == true) {
    createjs.Touch.enable(stage)
 }
 ```
-
-
-
