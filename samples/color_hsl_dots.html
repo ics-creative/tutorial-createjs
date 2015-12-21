@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    // 読み込みが終わってから初期化
+    window.addEventListener("load", init);
+    function init() {
+      // 初期化
+      var stage = new createjs.Stage("myCanvas");
+
+      for (var i = 0; i < 100; i++) {
+        // シェイプを作成
+        var shape = new createjs.Shape();
+        stage.addChild(shape);
+
+        // HSLカラーを算出
+        var hue = 360 * Math.random();
+        var color = "hsl(" + hue + ", 100%, 50%)";
+
+        var x = stage.canvas.width * Math.random();
+        var y = stage.canvas.height * Math.random();
+
+        shape.graphics.clear()
+                .beginFill(color)
+                .drawCircle(x, y, 20);
+      }
+
+      stage.update(); // 画面更新
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="640" height="200"></canvas>
+</body>
+</html>

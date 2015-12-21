@@ -1,0 +1,26 @@
+{
+  "name": "tool-generate-htmls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://ics-ikeda@github.com/ics-creative/tutorial-createjs.git"
+  },
+  "scripts": {
+    "postinstall": "dtsm install",
+		"compile-ts" : "tsc -p .",
+    "build": "npm run compile-ts;node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nozomi Nohara <nozomi.nohara@ics-web.jp>",
+  "license": "ISC",
+  "devDependencies": {
+    "dtsm": "^0.13.0",
+    "highlight": "^0.2.4",
+    "highlight.js": "^9.0.0",
+    "marked": "^0.3.5",
+    "mkdirp": "^0.5.1",
+    "pdc": "^0.2.2"
+  }
+}

@@ -37,4 +37,10 @@ bmp.regY = 100;
 
 ※`regX`プロパティーの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Bitmap.html#property_regX)」を確認ください。
 
+## 画像の制限
+
+ローカル上ではHTML5 Canvasのセキュリティーの制限があるため、Google Chromeでは期待どおりに挙動しない場合があります(例：`createjs.Bitmap`オブジェクトをクリックしたらエラーが発生する等)。その時は、Firefoxで確認してみましょう。
+
+Webサーバーにアップすれば、その問題は解消され、Google Chromeでも問題なく挙動するようになります。
+
 [次の記事へ](nest.md)

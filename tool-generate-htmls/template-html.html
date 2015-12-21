@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>${article-title} - CreateJS入門 - ICS MEDIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="unsafe-url" />
+  <meta property="article:author" content="https://www.facebook.com/icswebjp" />
+  <link rel="icon" sizes="16x16 32x32 48x48 128x128 256x256" href="https://ics.media/wp-content/themes/icslab/img/favicon.ico" />
+  <link rel="stylesheet" type='text/css' href="https://ics.media/wp-content/themes/icslab/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type='text/css' href="styles/style.css">
+  <link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" />
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Source+Code+Pro' />
+  <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/vs.min.css" />
+  <script src="https://ics.media/wp-includes/js/jquery/jquery.js"></script>
+  <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+  <script src="https://use.typekit.net/djc6jhl.js"></script>
+  <script>try {
+    Typekit.load({async: true});
+  } catch (e) {
+  }</script>
+  <script src="js/main.js"></script>
+</head>
+<body class="tutorial">
+  <div id="container">
+    <div id="header-always">
+      <div id="header-wrap">
+        <h1>
+          <a href="https://ics.media/"><span class="logoBlog"><img src="imgs/logo-blog.png" alt="ICS MEDIA - インタラクションデザイン×ウェブテクノロジー" width="477" height="26"/></a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="https://ics.media/feed/atom" target="_blank"><i class="fa fa-rss"></i></a></li>
+            <li><a href="https://www.facebook.com/icswebjp" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/icsweb" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- ================================== -->
+      <!-- パンくず -->
+      <!-- ================================== -->
+      <div id="header-breadcrumb">
+        <div class="wrap">
+          <ul class="breadcrumb">
+            <!-- 第1階層 -->
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="https://ics.media" itemprop="url">
+                <i class="fa fa-homze"></i> <span itemprop="title">ICS MEDIA</span>
+              </a>
+            </li>
+
+            <!-- 第2階層 -->
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a href="index.html" itemprop="url">
+                <i class="fa fa-folder-open"></i> <span itemprop="title">HTML5 と CreateJS で学ぶインタラクションデザイン入門</span>
+              </a>
+            </li>
+
+            <!-- 第3階層 -->
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+              <i class="fa fa-pencil-square-o"></i> <span itemprop="title">${article-title}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインビジュアル -->
+  <div id="archive-image-wrap">
+    <iframe src="https://ics.media/wp-content/themes/icslab/special/151118_createjs_title/archives.html"></iframe>
+    <div class="title">
+      <p>HTML5 と CreateJS で学ぶインタラクションデザイン入門</p>
+
+      <h1>${article-title}</h1>
+    </div>
+  </div>
+
+  <div id="wrap">
+    <div id="main">
+      <div class="content">
+        <div class="pageContentContainer">
+          <div class="article">
+            <div class="text-left link-index">
+              <a href="index.html">
+                <button class="btn btn-secondary btn-sm" type="button" data-toggle="tooltip" data-placement="right" title="目次へ戻る">
+                  <i class="fa fa-list-ul"></i>
+                  目次
+                </button>
+              </a>
+            </div>
+
+            <!-- MarkDown から出力 -->
+            <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+            ${article-markdown}
+            </article>
+
+
+            <div class="text-center link-index">
+              <a href="index.html">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-list-ul"></i>
+                  目次に戻る
+                </button>
+              </a>
+              <hr/>
+            </div>
+
+
+            <div class="text-center">
+              <a class="share-twitter">
+                <button class="btn btn-secondary btn-sm" type="button">
+                  <i class="fa fa-twitter"></i>
+                  Twitterでツイートする
+                </button>
+              </a>
+              <a class="share-facebook">
+                <button class="btn btn-secondary btn-sm" type="button">
+                  <i class="fa fa-facebook"></i>
+                  Facebookでシェアする
+                </button>
+              </a>
+            </div>
+
+            <hr/>
+
+            <div class="text-center">
+              <a href="/">
+                <button class="btn btn-secondary" type="button">
+                  <i class="fa fa-home"></i>
+                  サイトトップに戻る
+                </button>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-bottom" class="cf">
+    <div id="footer-menu-container" class="default">
+      <div class="footer-menu">
+        <div id="footer-menu-inside">
+          <nav>
+            <ul id="footer-menu">
+              <li><a href="https://ics.media/feed/atom" target="_blank"><i class="fa fa-rss fa-3"></i> RSS</a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/icswebjp" target="_blank"><i class="fa fa-facebook-square fa-3"></i>
+                  Facebook</a></li>
+              <li><a href="http://ics-web.jp/blog/recruit" target="_blank">採用情報</a></li>
+              <li><a href="http://ics-web.jp/blog/" target="_blank">最新事例</a></li>
+              <li><a href="http://ics-web.jp/blog/contact" target="_blank">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-sections cf">
+
+      <div class="footer-section large">
+        <p class="widget_title">CreateJSのサンプル</p>
+
+        <p>作例をみてCreateJSで実現可能な表現のインスピレーションを得ましょう。</p>
+        <ul>
+          <li><a href="http://lab.gskinner.com" target="_blank"><i class="fa fa-external-link"></i> gskinner lab</a>
+          </li>
+          <li><a href="http://sandbox.createjs.com/PlanetaryGary/" target="_blank"><i class="fa fa-external-link"></i>
+            Planetary Gary</a></li>
+          <li><a href="http://www.createjs.com/#demos" target="_blank"><i class="fa fa-external-link"></i> CreateJS Demo</a>
+          </li>
+          <li><a href="http://ics-web.jp/projects/pollenmap/" target="_blank"><i class="fa fa-external-link"></i>
+            日本全国花粉飛散マップ</a></li>
+          <li>
+            <a href="http://jsdo.it/tag/createjs?search_order=favorite" target="_blank"><i class="fa fa-external-link"></i>
+              jsdo.it</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section large">
+        <p class="widget_title">CreateJSフレームワーク</p>
+
+        <p>CreateJSは4つのライブラリからなるJavaScriptフレームワークです。</p>
+        <ul>
+          <li><a href="http://createjs.com/" target="_blank"><i class="fa fa-external-link"></i> CreateJS公式サイト(英語)</a>
+          </li>
+          <li><a href="http://createjs.com/easeljs" target="_blank"><i class="fa fa-external-link"></i> EaselJS</a></li>
+          <li><a href="http://createjs.com/tweenjs" target="_blank"><i class="fa fa-external-link"></i> TweenJS</a></li>
+          <li><a href="http://createjs.com/soundjs" target="_blank"><i class="fa fa-external-link"></i> SoundJS</a></li>
+          <li><a href="http://createjs.com/preloadjs" target="_blank"><i class="fa fa-external-link"></i> PreloadJS</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-section large">
+        <p class="widget_title">CreateJS コミュニティー</p>
+
+        <p>わからないことがあれば、日本のユーザーコミュニティーを活用してみましょう。</p>
+        <i class="fa fa-external-link"></i>
+        <a href="http://createjs.sub.jp/ja/" target="_blank">CreateJS 日本語リファレンス</a><br/>
+        <i class="fa fa-external-link"></i>
+        <a href="https://www.facebook.com/CreateJS" target="_blank">CreateJS Facebookページ</a><br/>
+      </div>
+
+    </div>
+
+    <div id="copyright">Copyright &copy; ICS INC. All Rights Reserved.</div>
+  </div>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34243464-2']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- /Google Analytics -->
+
+</body>
+</html>
