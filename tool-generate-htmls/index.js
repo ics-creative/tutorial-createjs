@@ -1,12 +1,9 @@
 ///<reference path="typings/bundle.d.ts" />
 "use strict";
-let fs = require("fs");
-let path = require("path");
-let childProcess = require("child_process");
-let marked = require("marked");
-let mkdirp = require("mkdirp");
+var fs = require("fs");
+var marked = require("marked");
+var mkdirp = require("mkdirp");
 let promises = [];
-let githubUrl = "https://github.com/ics-creative/tutorial-createjs/";
 let samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
 let samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/master/";
 var templateHtml;

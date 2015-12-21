@@ -1,13 +1,12 @@
 ///<reference path="typings/bundle.d.ts" />
 "use strict";
 
-let fs = require("fs");
-let path = require("path");
-let childProcess = require("child_process");
-let marked = require("marked");
-let mkdirp = require("mkdirp");
+import fs = require("fs");
+import path = require("path");
+import childProcess = require("child_process");
+import marked = require("marked");
+import mkdirp = require("mkdirp");
 let promises:any = [];
-let githubUrl = "https://github.com/ics-creative/tutorial-createjs/"
 let samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
 let samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/master/";
 var templateHtml:string;
@@ -29,7 +28,6 @@ var template = (text:string, values:any) => {
     return Object.prototype.hasOwnProperty.call(values, key) ? values[key] : "";
   });
 }
-
 
 var renderer = new marked.Renderer();
 
@@ -129,7 +127,7 @@ fs.readdir("../docs", (err:NodeJS.ErrnoException, files:string[]):void => {
         resolve();
       }
     });
-  }))
+  }));
 
 
   promises.push(new Promise((resolve:Function) => {
