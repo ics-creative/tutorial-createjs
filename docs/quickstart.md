@@ -75,7 +75,7 @@ function init(){
 var stage = new createjs.Stage("myCanvas");
 ```
 
-※`createjs.Stage`クラスの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Stage.html)」を確認ください。
+※`createjs.Stage`クラスの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Stage.html)」を確認ください。
 
 `createjs.Shape`クラスを使って円のシェイプ(図形)を作成します。
 
@@ -101,7 +101,7 @@ stage.addChild(shape); // 表示リストに追加
 stage.update();
 ```
 
-※`update()`メソッドの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Stage.html#method_update)」を確認ください。
+※`update()`メソッドの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Stage.html#method_update)」を確認ください。
 
 これがCreateJSの簡単なサンプルです。具体的に一つずつ順番に理解していきましょう。
 

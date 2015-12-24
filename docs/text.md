@@ -23,7 +23,7 @@ stage.addChild(t);
 - [サンプルのソースコードを確認する](../samples/text.html)
 
 
-※`createjs.Text`クラスの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Text.html)」を確認ください。
+※`createjs.Text`クラスの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Text.html)」を確認ください。
 
 
 
@@ -53,7 +53,7 @@ stage.addChild(t);
 
 
 
-※`textAlign`プロパティーの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Text.html#property_textAlign)」を確認ください。
+※`textAlign`プロパティーの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Text.html#property_textAlign)」を確認ください。
 
 
 
@@ -78,7 +78,7 @@ stage.addChild(t);
 左上から順に、`top`, `hanging`, `middle`,
 `alphabetic`, `ideographic`, `bottom` の結果となります。赤色線は基準点。
 
-※`textBaseline`プロパティーの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Text.html#property_textBaseline)」を確認ください。
+※`textBaseline`プロパティーの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Text.html#property_textBaseline)」を確認ください。
 
 
 
@@ -107,7 +107,7 @@ stage.addChild(t);
 ```
 
 
-※`text`プロパティーの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Text.html#property_text)」を確認ください。
+※`text`プロパティーの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Text.html#property_text)」を確認ください。
 
 
 [次の記事へ](bitmap.md)

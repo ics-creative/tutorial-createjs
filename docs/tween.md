@@ -7,7 +7,7 @@ createjs.Tween.get(対象)
      .to(パラメーター, ミリ秒);
 ```
 
-※`createjs.Tween`クラスの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/TweenJS/reference/classes/Tween.html)」を確認ください。
+※`createjs.Tween`クラスの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.sub.jp/ja/TweenJS/reference/classes/Tween.html)」を確認ください。
 
 ## モーションを設定する
 
@@ -30,7 +30,7 @@ createjs.Tween.get(circle) // ターゲットを指定
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/tween_basic.html)
 - [サンプルのソースコードを確認する](../samples/tween_basic.html)
 
-※`to()`メソッドの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/TweenJS/reference/classes/Tween.html#method_to)」を確認ください。
+※`to()`メソッドの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.sub.jp/ja/TweenJS/reference/classes/Tween.html#method_to)」を確認ください。
 
 
 ## 複数のモーションを設定する

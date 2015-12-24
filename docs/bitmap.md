@@ -20,7 +20,7 @@ stage.addChild(bmp);
 
 ※このサンプルでは、`createjs.Ticker`クラスを利用していますが、このクラスの使い方は後述します。
 
-※`createjs.Bitmap`クラスの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Bitmap.html)」を確認ください。
+※`createjs.Bitmap`クラスの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Bitmap.html)」を確認ください。
 
 ## 基準点の設定方法
 
@@ -35,7 +35,7 @@ bmp.regX = 100;
 bmp.regY = 100;
 ```
 
-※`regX`プロパティーの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Bitmap.html#property_regX)」を確認ください。
+※`regX`プロパティーの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Bitmap.html#property_regX)」を確認ください。
 
 ## 画像の制限
 
