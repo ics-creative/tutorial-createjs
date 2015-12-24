@@ -1,0 +1,109 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // ステージを作成
+      var stage = new createjs.Stage("myCanvas");
+
+      // パーティクルの大きさ(半径)
+      var size = 3;
+
+      // 配列を作成
+      var particleList = [];
+
+      // for文を作成 (上限数はパーティクルの個数)
+      for (var i = 0; i < 200; i++) {
+        // 赤い丸を作成
+        var particle = new createjs.Shape();
+        particle.graphics.beginFill("DarkRed").drawCircle(0, 0, size);
+        stage.addChild(particle);
+        particle.x = stage.canvas.width * Math.random();
+        particle.y = stage.canvas.height * Math.random();
+        particle.vx = 10 * (Math.random() - 0.5);
+        particle.vy = 10 * (Math.random() - 0.5);
+
+        // 配列に保存
+        particleList[i] = particle;
+      }
+
+      // マウスを押している状態であるかどうかを判定する変数
+      var isPressed = false;
+
+      // マウスを押したとき
+      stage.canvas.addEventListener("mousedown", handleMouseDown);
+      function handleMouseDown(event) {
+        // 「マウスを押した状態」ということを変数に記録する
+        isPressed = true;
+
+        // tick() 関数でマウスから離れる処理を実装する
+      }
+
+      // マウスを離したとき
+      stage.canvas.addEventListener("mouseup", handleMouseUp);
+      function handleMouseUp(event) {
+        // 「マウスを離した状態」ということを変数に記録する
+        isPressed = false;
+
+        for (var i = 0; i < particleList.length; i++) {
+          // i番目の要素を変数に代入
+          var particle = particleList[i];
+          // 速度をランダムに設定する
+          particle.vx = 10 * (Math.random() - 0.5);
+          particle.vy = 10 * (Math.random() - 0.5);
+        }
+      }
+
+      // 時間経過
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        for (var i = 0; i < particleList.length; i++) {
+          // i番目の要素を変数に代入
+          var particle = particleList[i];
+
+          // マウスを押した状態であれば
+          if (isPressed == true) {
+            // マウス座標とパーティクルがどれだけ離れているかを計算
+            var dx = stage.mouseX - particle.x;
+            var dy = stage.mouseY - particle.y;
+
+            // マウスとパーティクルの距離を計算
+            var distance = Math.sqrt(dx * dx + dy * dy);
+
+            // マウスに近いパーティクルだけ分岐処理させる
+            if(distance < 100){
+              // 上記で求めた値を使ってパーティクルをマウスと逆方向に進ませる
+              particle.vx = -1 * 0.05 * dx;
+              particle.vy = -1 * 0.05 * dy;
+            }
+          }
+
+          // 速度を座標に適用する
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+
+          // 画面端の処理 (水平方向)
+          if (particle.x > stage.canvas.width) {
+            particle.x = 0;
+          } else if (particle.x < 0) {
+            particle.x = stage.canvas.width;
+          }
+          // 画面端の処理 (垂直方向)
+          if (particle.y > stage.canvas.height) {
+            particle.y = 0;
+          } else if (particle.y < 0) {
+            particle.y = stage.canvas.height;
+          }
+        }
+        stage.update();
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="640" height="200"></canvas>
+</body>
+</html>
