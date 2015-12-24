@@ -21,6 +21,6 @@ stage.addChild(container);
 複数のShapeオブジェクトが円周上を移動している
 
 
-※`createjs.Container`クラスの詳しい使い方は「 [公式ドキュメント(日本語訳)](http://createjs.sub.jp/ja/EaselJS/reference/classes/Container.html)」を確認ください。
+※`createjs.Container`クラスの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Container.html)」を確認ください。
 
 [次の記事へ](displayobject_remove.md)

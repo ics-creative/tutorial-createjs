@@ -37,7 +37,7 @@ shape.graphics.drawCircle(300, 100, 50);
 - [CSS Color Names](http://memopad.bitter.jp/w3c/css/css_colornames.html)
 
 
-※`beginFill()`メソッドの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_beginFill)」を確認ください。
+※`beginFill()`メソッドの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_beginFill)」を確認ください。
 
 
 ## 16進数表記で指定
@@ -109,7 +109,7 @@ shape.graphics.drawCircle(300, 100, 50);
 - [サンプルのソースコードを確認する](../samples/color_hsl.html)
 
 
-※詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_getHSL)」を確認ください。
+※詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_getHSL)」を確認ください。
 
 
 [次の記事へ](shape_draw.md)

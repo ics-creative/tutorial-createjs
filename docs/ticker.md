@@ -10,7 +10,7 @@ function handleTick(){
 }
 ```
 
-※`createjs.Ticker`クラスの詳しい使い方は「 [公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Ticker.html)」を確認ください。
+※`createjs.Ticker`クラスの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Ticker.html)」を確認ください。
 
 
 `tick()`関数内で、`stage.update()`メソッドを呼び出し、常にステージの画面更新が呼ばれるようにしておきましょう。
