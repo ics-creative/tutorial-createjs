@@ -5,7 +5,7 @@ var marked = require("marked");
 var mkdirp = require("mkdirp");
 let promises = [];
 let samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
-let samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/master/";
+let samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/gh-pages/";
 var templateHtml;
 /**
  * テンプレート文字列を展開

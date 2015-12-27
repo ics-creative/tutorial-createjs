@@ -1,54 +1,65 @@
 ///<reference path="libs/node/node.d.ts" />
 ///<reference path="libs/phantom/phantom.d.ts" />
-///<reference path="libs/es6-promise/es6-promise.d.ts" />
+
+"use strict";
 
 // gazo_fileがあるかないかの確認
-var fs = require('fs');
-var path = require('path');
-var childProcess = require('child_process');
+import fs = require('fs');
+import path = require('path');
+import childProcess = require('child_process');
 var phantomjs = require('phantomjs');
-var binPath = phantomjs.path;
-var render = "render.js";
+let binPath = phantomjs.path;
+let render = "render.js";
 
 // この辺が引数みたいな感じで渡したい
-var width = "120";
-var height = "80";
+const width = "180";
+const height = "80";
+
+const IGNORE_LIST:string[] = [".idea", ".DS_Store", "imgs", "css"];
 
 fs.readdir("../samples", (err:NodeJS.ErrnoException, files:string[]):void => {
 
-	var promises = [];
+  let promises:any[] = [];
 
-	for (let i = 0; i < files.length; i++) {
-		var outputFilePath = `../imgs/${files[i]}.png`;
+  for (let i = 0; i < files.length; i++) {
 
-		var url = `../samples/${files[i]}`;
-		var options = [
-			render,
-			url,
-			outputFilePath,
-			width,
-			height
-		];
+    if (IGNORE_LIST.indexOf(files[i]) > -1) {
+      continue;
+    }
 
-		var childPromise = new Promise((resolve:Function)=> {
-				console.log(`${i} : ${outputFilePath}`);
-				// ここでrender.jsをphantomjsで呼び出して実行する
-				childProcess.execFile(binPath, options, (error, stdout, stderr) => {
-					console.log(stdout);
-					if (error != null) {
-						console.error(stderr);
-						console.error('error: ' + error);
-					}
-					resolve();
-				});
-			});
+    if(i > 10)
+      continue;
 
-		promises.push(childPromise);
-	}
+    let outputFilePath = `../imgs/${files[i]}.png`;
 
-	Promise
-		.all(promises)
-		.then((results)=> {
-			console.log("finish!!!");
-		});
+    let url = `../samples/${files[i]}`;
+
+    let options = ["render.js", url, outputFilePath, width, height];
+
+    let childPromise = new Promise((resolve:Function)=> {
+      console.log(`${i} : ${outputFilePath}`);
+      // ここでrender.jsをphantomjsで呼び出して実行する
+      childProcess.execFile(binPath, options, (error, stdout, stderr) => {
+        if (error != null) {
+          console.error(stderr);
+        } else {
+          console.log(stdout);
+        }
+        resolve();
+      });
+    });
+
+    promises.push(childPromise);
+  }
+
+  Promise
+    .all(promises)
+    .then((results)=> {
+      console.log("finish!!!");
+    });
+
+  console.log("step - 2");
 });
+
+
+console.log("step - 1");
