@@ -73,7 +73,7 @@
             var distance = Math.sqrt(dx * dx + dy * dy);
 
             // マウスに近いパーティクルだけ分岐処理させる
-            if(distance < 100){
+            if (distance < 100) {
               // 上記で求めた値を使ってパーティクルをマウスと逆方向に進ませる
               particle.vx = -1 * 0.05 * dx;
               particle.vy = -1 * 0.05 * dy;
