@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // Stageオブジェクトを作成。表示リストのルートになります。
+      var stage = new createjs.Stage("myCanvas");
+
+      // マウスオーバーを有効にする
+      stage.enableMouseOver();
+
+      var btnW = 240; // ボタンの横幅
+      var btnH = 50; // ボタンの高さ
+      var keyColor = "#563d7c";
+
+      // ボタン要素をグループ化
+      var button = new createjs.Container();
+      button.x = 200;
+      button.y = 70;
+      button.cursor = "pointer"; // ホバー時にカーソルを変更する
+      stage.addChild(button);
+
+      // 通常時の座布団を作成
+      var bgUp = new createjs.Shape();
+      bgUp.graphics
+              .setStrokeStyle(1)
+              .beginStroke("#563d7c")
+              .beginFill("white")
+              .drawRoundRect(0, 0, btnW, btnH, 4);
+      button.addChild(bgUp);
+      bgUp.visible = true; // 表示する
+
+      // ロールオーバー時の座布団を作成
+      var bgOver = new createjs.Shape();
+      bgOver.graphics
+              .beginFill(keyColor)
+              .drawRoundRect(0, 0, btnW, btnH, 4);
+      bgOver.visible = false; // 非表示にする
+      button.addChild(bgOver);
+
+      // ラベルを作成
+      var label = new createjs.Text("Button", "24px sans-serif", keyColor);
+      label.x = btnW / 2;
+      label.y = btnH / 2;
+      label.textAlign = "center";
+      label.textBaseline = "middle";
+      button.addChild(label);
+
+      // ロールオーバーイベントを登録
+      button.addEventListener("mouseover", handleMouseOver);
+      button.addEventListener("mouseout", handleMouseOut);
+      function handleMouseOver(event) {
+        bgUp.visble = false;
+        bgOver.visible = true;
+        label.color = "white";
+      }
+      function handleMouseOut(event) {
+        bgUp.visble = true;
+        bgOver.visible = false;
+        label.color = keyColor;
+      }
+
+      // イベントを登録
+      button.addEventListener("click", handleClick);
+      function handleClick(event) {
+        // クリックされた時の処理を記述
+        alert("クリックされました。");
+      }
+
+      // 時間経過のイベント
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        // Stageの描画を更新
+        stage.update();
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas"
+          width="640"
+          height="200">
+  </canvas>
+</body>
+</html>
