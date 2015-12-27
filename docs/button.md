@@ -49,10 +49,10 @@ function handleClick(event) {
 
 より実用的なボタンを作成してみましょう。ボタンにマウスカーソルが触れたとき、グラフィックが変化する「ロールオーバー」を実装するとボタンらしくなります。ロールオーバーによって、エンドユーザーはそれがボタンとして挙動することを認識します。ここでは[CreateJS のマウスオーバー/マウスアウトの実装方法](mouse_over.md)で紹介した方法を使ってロールオーバー(ホバー)を実装してみます。
 
-![](../imgs/button_over.html.png)
+![](../imgs/button_rollover.html.png)
 
-- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/button_over.html)
-- [サンプルのソースコードを確認する](../samples/button_over.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/button_rollover.html)
+- [サンプルのソースコードを確認する](../samples/button_rollover.html)
 
 まずはステージのロールオーバーを有効にします。
 
