@@ -24,22 +24,26 @@
 ## モーションを実装しよう
 
 - [Ticker の使い方](ticker.md)
-- [Tween の使い方](tween.md)
+- トゥイーンの使い方
+  - [トゥイーンの作成方法](tween.md)
+  - [トゥイーン実装方法まとめ](tween_api.md)
 
 ## ユーザーインタラクションを制御しよう
 
-- マウス操作
+- マウス操作 (基本編)
   - [マウス座標](mouse_xy.md)
   - [クリックイベント](mouse_click.md)
   - [マウスオーバー](mouse_over.md)
   - [ドラッグアンドドロップ](mouse_drag.md)
   - [タッチデバイス対応](mouse_touch.md)
+- マウス操作 (応用編)
+  - [ボタンの作成](button.md)
 - キーボード操作
   - [キーボードイベントの基本](keyboard_basic.md)
   - [キーボードで自機を操作](keyboard_ship.md)
 - [当たり判定](hittest.md)
 
-## 数学を理解しよう
+## 数学を活用しよう
 
 - 三角関数
   - [三角関数の活用](math_basic.md)
@@ -63,7 +67,6 @@
 - [Adobe Flash Pro CC と CreateJS の連携 (基本編)](adobe_animate.md)
 - [Adobe Flash Pro CC と CreateJS の連携 (ビットマップ含む編)](adobe_animate_bitmaps.md)
 - [Adobe Flash Pro CC と CreateJS の連携 (スプライトシート編)](adobe_animate_spritesheet.md)
-
 
 ## その他
 
