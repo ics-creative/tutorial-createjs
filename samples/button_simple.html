@@ -26,7 +26,7 @@
               .beginStroke("#563d7c")
               .beginFill("white")
               .drawRoundRect(0, 0, btnW, btnH, 4);
-      button_simple.addChild(bg);
+      button.addChild(bg);
 
       // ラベルを作成
       var label = new createjs.Text("Button", "24px sans-serif", "#563d7c");
@@ -34,7 +34,7 @@
       label.y = btnH / 2;
       label.textAlign = "center";
       label.textBaseline = "middle";
-      button_simple.addChild(label);
+      button.addChild(label);
 
       // イベントを登録
       button.addEventListener("click", handleClick);
