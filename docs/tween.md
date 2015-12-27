@@ -1,6 +1,6 @@
 # CreateJS でのトゥイーンの作成方法
 
-トゥイーンとは、始点と終点を設定してアニメーションさせるテクニックです。「間」を示すBetweenという単語から作られていれた用語です。TweenJSでは次の記述でトゥイーンを実装します。
+トゥイーンとは、始点と終点を設定してアニメーションさせるテクニックです。「間」を示すBetweenという単語から作られていれた用語です。CreateJSでは次の記述でトゥイーンを実装します。
 
 ```js
 createjs.Tween.get(対象)
@@ -8,6 +8,7 @@ createjs.Tween.get(対象)
 ```
 
 ※`createjs.Tween`クラスの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.sub.jp/ja/TweenJS/reference/classes/Tween.html)」を確認ください。
+※トゥイーン機能を提供するJSライブラリはCreateJSに含まれる「TweenJS」となります。
 
 ## モーションを設定する
 
@@ -101,9 +102,9 @@ createjs.Tween.get(対象)
 - `ease.Ease.bounceOut` ボールが跳ね返るような動き
 - `ease.Ease.backOut` 目標を行き過ぎてから戻ってくる動き
 
-他にもイージングの種類が存在するので、次のドキュメントを参考ください。
+他にもイージングの種類が存在しますが、[TweenJSのサンプル](http://createjs.com/demos/tweenjs/tween_sparktable)を試すと違いがわかりやすいでしょう。
 
-[Ease Class | TweenJS 日本語リファレンス](http://createjs.sub.jp/ja/TweenJS/reference/classes/Ease.html#methods)
+※`createjs.Ease`クラスの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/tweenjs/classes/Ease.html)」を確認ください。
 
 サンプル
 
@@ -124,4 +125,4 @@ createjs.Tween.get(circle) // ターゲットを指定
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/tween_ease.html)
 - [サンプルのソースコードを確認する](../samples/tween_ease.html)
 
-[次の記事へ](mouse_xy.md)
+[次の記事へ](tween_api.md)
