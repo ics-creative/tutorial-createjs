@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // Stageオブジェクトを作成。表示リストのルートになります
+      var stage = new createjs.Stage("myCanvas");
+
+      // 画像を作成します
+      var bmp1 = new createjs.Bitmap("imgs/sushi.png");
+      bmp1.x = 100;
+      bmp1.y = 20;
+      stage.addChild(bmp1);
+
+      // 画像を作成します
+      var bmp2 = new createjs.Bitmap("imgs/sushi.png");
+      bmp2.regX = 100;
+      bmp2.regY = 50;
+      bmp2.x = 400;
+      bmp2.y = 100;
+      stage.addChild(bmp2);
+
+      // tick イベントを監視します
+      createjs.Ticker.timingMode = createjs.Ticker.RAF;
+      createjs.Ticker.on("tick", handleTick);
+      function handleTick() {
+        bmp1.rotation += 2;
+        bmp2.rotation += 2;
+        // Stageの描画を更新します
+        stage.update();
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="640" height="200"></canvas>
+</body>
+</html>
