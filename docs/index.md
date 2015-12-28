@@ -1,14 +1,20 @@
-# CreateJSチュートリアル 目次
+# CreateJS入門 目次
 
 このサイトはHTML5 Canvasのフレームワーク「CreateJS」の入門サイトです。初学者から学べるように基本的な**CreateJSの使い方**から解説しつつ、発展的な内容までまとめています。このサイトを通して、Webでのインタラクションデザインについて学んでいきましょう。
 
 ## 導入編
 
+![CreateJSの導入編](../imgs/title_createjs.jpg)
+
 - [CreateJS とは / CreateJS のサンプル](basic.md)
 - [簡単なサンプルを試そう](quickstart.md)
 - [ブラウザの開発ツールの使い方を抑えよう](debug.md)
 
-## 画面に表示しよう
+## 基本編
+
+![CreateJSの基本編](../imgs/title_shape.jpg)
+
+### 画面に表示しよう
 
 - [表示オブジェクトの基本](displayobject.md)
 - シェイプの表示
@@ -21,14 +27,17 @@
   - [表示オブジェクトのグループ化](nest.md)
   - [表示オブジェクトの削除](displayobject_remove.md)
 
-## モーションを実装しよう
+### モーションを実装しよう
 
 - [Ticker の使い方](ticker.md)
-- トゥイーンの使い方
-  - [トゥイーンの作成方法](tween.md)
-  - [トゥイーン実装方法まとめ](tween_api.md)
 
-## ユーザーインタラクションを制御しよう
+
+### サンプル (初級編)
+
+- [アナログ時計の作成](clock.md)
+- [パズル](game_pazzle.md)
+
+### ユーザーインタラクションを制御しよう
 
 - マウス操作 (基本編)
   - [マウス座標](mouse_xy.md)
@@ -43,7 +52,16 @@
   - [キーボードで自機を操作](keyboard_ship.md)
 - [当たり判定](hittest.md)
 
-## 数学を活用しよう
+## 中級編
+
+![CreateJS入門の中級編](../imgs/title_trigonometry.jpg)
+
+### トゥイーンを使おう
+
+- [トゥイーンの作成方法](tween.md)
+- [トゥイーン実装方法まとめ](tween_api.md)
+
+### 数学を活用しよう
 
 - 三角関数
   - [三角関数の活用](math_basic.md)
@@ -51,18 +69,25 @@
 - 色の制御
   - [HSLカラー](color_hsl.md)
 
-## 応用サンプルに挑戦しよう
+### サンプル (中級編)
 
-- [アナログ時計の作成](clock.md)
 - [物理演算](ball.md)
-- [フラクタル図形](fractal.md)
-- [パーティクルシステム](particle.md)
-- ゲーム
-  - [パズルゲーム](game_pazzle.md)
-  - [シューティングゲーム](game_shooting.md)
 - [カルーセル(スライドショー)](slideshow.md)
 
+
+## 応用編
+
+![CreateJS入門の応用編](../imgs/title_particle.jpg)
+
+### サンプル(応用編)
+
+- [フラクタル図形](fractal.md)
+- [パーティクルシステム](particle.md)
+- [シューティングゲーム](game_shooting.md)
+
 ## Flash Professional CCを使おう
+
+![CreateJS入門 - Adobe Animate CCとの連携](../imgs/title_animatecc.jpg)
 
 - [Adobe Flash Pro CC と CreateJS の連携 (基本編)](adobe_animate.md)
 - [Adobe Flash Pro CC と CreateJS の連携 (ビットマップ含む編)](adobe_animate_bitmaps.md)
