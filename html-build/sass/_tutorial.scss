@@ -91,6 +91,8 @@ body.tutorial {
 
     div.article {
 
+
+
       overflow: hidden;
       $colorArticle: #555;
 
@@ -104,18 +106,22 @@ body.tutorial {
         background: #E6EE9C;
       }
 
-      a {
-        text-decoration: none;
-        font-weight: normal; // CreateJSサイト専用
+      .aritcleBody {
+        a {
+          text-decoration: none;
+          font-weight: normal; // CreateJSサイト専用
+        }
+        a:visited {
+          color: $colorTextLinkVisited;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+        a:active {
+        }
       }
-      a:visited {
-        color: $colorTextLinkVisited;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      a:active {
-      }
+
+
 
       img {
         max-width: 100%;
@@ -144,7 +150,10 @@ body.tutorial {
       h2 {
         border-bottom: 1px solid #DBDBDB;
         padding: 0.25em 0;
-
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 1.25rem;
       }
 
       code {
@@ -176,8 +185,17 @@ body.tutorial {
           list-style: decimal;
         }
       }
+
+      div.text-data {
+        font-size: 0.75rem;
+        line-height: 1.5;
+        font-style: italic;
+        text-align: center;
+      }
     }
   }
+
+
 }
 
 #archive-image-wrap {
