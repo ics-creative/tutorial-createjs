@@ -76,9 +76,12 @@ var generateHTML = (dirName, fileName, resolve) => {
             articleMarkdown = articleMarkdown.replace(headerMatch[0], "");
         }
         articleMarkdown = articleMarkdown.replace(/\<code class\=\"lang-/g, "<code class=\"hljs ");
+        var now = new Date();
+        let articleDateStr = `${now.getFullYear()}年${now.getMonth() + 1}月${now.getDate()}日`;
         let values = {
             "article-title": articleTitle,
-            "article-markdown": articleMarkdown
+            "article-markdown": articleMarkdown,
+            "article-date": articleDateStr
         };
         if (!templateHtml) {
             console.log(fileName + " generate error!");

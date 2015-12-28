@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>${article-title} - CreateJS入門 - ICS MEDIA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="referrer" content="unsafe-url" />
-  <meta property="article:author" content="https://www.facebook.com/icswebjp" />
-  <link rel="icon" sizes="16x16 32x32 48x48 128x128 256x256" href="https://ics.media/wp-content/themes/icslab/img/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="referrer" content="unsafe-url"/>
+  <meta property="article:author" content="https://www.facebook.com/icswebjp"/>
+  <link rel="icon" sizes="16x16 32x32 48x48 128x128 256x256" href="https://ics.media/wp-content/themes/icslab/img/favicon.ico"/>
   <link rel="stylesheet" type='text/css' href="styles/css/style.css">
-  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Source+Code+Pro' />
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Source+Code+Pro'/>
   <script src="js/main.js" defer></script>
 </head>
 <body class="tutorial">
@@ -16,7 +16,7 @@
     <div id="header-always">
       <div id="header-wrap">
         <h1>
-          <a href="https://ics.media/"><span class="logoBlog"><img src="imgs/logo-blog.png" alt="ICS MEDIA - インタラクションデザイン×ウェブテクノロジー" width="477" height="26"/></a>
+          <a href="https://ics.media/"><span class="logoBlog"><img src="imgs/logo-blog.png" alt="ICS MEDIA - インタラクションデザイン×ウェブテクノロジー" width="477" height="26"/></span></a>
         </h1>
         <nav>
           <ul>
@@ -57,78 +57,88 @@
     </div>
   </div>
 
-  <!-- メインビジュアル -->
-  <div id="archive-image-wrap">
-    <iframe src="https://ics.media/wp-content/themes/icslab/special/151118_createjs_title/archives.html"></iframe>
-    <div class="title">
-      <p>HTML5 と CreateJS で学ぶインタラクションデザイン入門</p>
+  <article itemscope itemtype="http://schema.org/Article">
 
-      <h1>${article-title}</h1>
+    <!-- メインビジュアル -->
+    <div id="archive-image-wrap">
+      <iframe src="https://ics.media/wp-content/themes/icslab/special/151118_createjs_title/archives.html"></iframe>
+      <div class="title">
+        <header>
+          <p>HTML5 と CreateJS で学ぶインタラクションデザイン入門</p>
+          <h1 itemprop="name">${article-title}</h1>
+        </header>
+      </div>
     </div>
-  </div>
 
-  <div id="wrap">
-    <div id="main">
-      <div class="content">
-        <div class="pageContentContainer">
-          <div class="article">
-            <div class="text-left link-index">
-              <a href="index.html">
-                <button class="btn btn-secondary btn-sm" type="button" data-toggle="tooltip" data-placement="right" title="目次へ戻る">
+    <div id="wrap">
+      <div id="main">
+        <div class="content">
+          <div class="pageContentContainer">
+            <div class="article">
+              <div class="text-left link-index">
+                <a href="index.html" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="right" title="目次へ戻る">
                   <i class="fa fa-list-ul"></i>
                   目次
-                </button>
-              </a>
-            </div>
+                </a>
+              </div>
 
-            <!-- MarkDown から出力 -->
-            <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-            ${article-markdown}
-            </article>
+              <!-- ============================================= -->
+              <!-- MarkDown から出力はここから -->
+              <section itemprop="articleBody" class="aritcleBody">
+                ${article-markdown}
+              </section>
+              <!-- MarkDown から出力はここまで -->
+              <!-- ============================================= -->
 
 
-            <div class="text-center link-index">
-              <a href="index.html">
-                <button class="btn btn-primary" type="button">
+              <div class="text-center link-index">
+                <a href="index.html" class="btn btn-primary">
                   <i class="fa fa-list-ul"></i>
                   目次に戻る
-                </button>
-              </a>
-              <hr/>
-            </div>
+                </a>
+                <hr/>
+              </div>
 
-
-            <div class="text-center">
-              <a class="share-twitter">
-                <button class="btn btn-secondary btn-sm" type="button">
+              <div class="text-center">
+                <a class="share-twitter btn btn-secondary btn-sm">
                   <i class="fa fa-twitter"></i>
                   Twitterでツイートする
-                </button>
-              </a>
-              <a class="share-facebook">
-                <button class="btn btn-secondary btn-sm" type="button">
+                </a>
+                <a class="share-facebook btn btn-secondary btn-sm">
                   <i class="fa fa-facebook"></i>
                   Facebookでシェアする
-                </button>
-              </a>
-            </div>
+                </a>
+              </div>
 
-            <hr/>
+              <hr/>
 
-            <div class="text-center">
-              <a href="/">
-                <button class="btn btn-secondary" type="button">
+              <div class="text-center">
+                <a href="/" class="btn btn-secondary">
                   <i class="fa fa-home"></i>
                   サイトトップに戻る
-                </button>
-              </a>
-            </div>
+                </a>
+              </div>
 
+              <hr/>
+
+              <footer>
+                <div class="text-data">
+                  <div>更新日時 : <span itemprop="datePublished">${article-date}</span> / 著者 :
+                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                      <span itemprop="name"><a href="https://twitter.com/clockmaker">池田 泰延</a>
+                      </span>
+                    </span></div>
+                  <div>※この記事は CreateJS の2015年11月26日バージョンを元に執筆しています。</div>
+                </div>
+              </footer>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+  </article>
 
   <div id="footer-bottom" class="cf">
     <div id="footer-menu-container" class="default">
@@ -190,9 +200,12 @@
         <p class="widget_title">CreateJS コミュニティー</p>
 
         <p>わからないことがあれば、日本のユーザーコミュニティーを活用してみましょう。</p>
-        <a href="http://eventdots.jp/event/search?keyword=createjs&pref=&from=&to=&sort=started_desc" target="_blank"> <i class="fa fa-external-link"></i> 勉強会・イベント一覧 (dots)</a><br/>
-        <a href="https://www.facebook.com/CreateJS" target="_blank"> <i class="fa fa-external-link"></i> CreateJS Facebookページ</a><br/>
-        <a href="http://qiita.com/tags/CreateJS/items" target="_blank"> <i class="fa fa-external-link"></i> Qiita 技術情報共有サービス</a><br/>
+        <a href="http://eventdots.jp/event/search?keyword=createjs&pref=&from=&to=&sort=started_desc" target="_blank">
+          <i class="fa fa-external-link"></i> 勉強会・イベント一覧 (dots)</a><br/>
+        <a href="https://www.facebook.com/CreateJS" target="_blank"> <i class="fa fa-external-link"></i> CreateJS
+          Facebookページ</a><br/>
+        <a href="http://qiita.com/tags/CreateJS/items" target="_blank"> <i class="fa fa-external-link"></i> Qiita
+          技術情報共有サービス</a><br/>
       </div>
 
     </div>
