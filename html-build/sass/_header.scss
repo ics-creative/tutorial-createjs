@@ -169,52 +169,6 @@
           }
         }
       }
-
-      ul.navigation {
-        float: right;
-        width: 72px;
-        background: rgba(0, 0, 0, 0.5);
-
-        li {
-          &.alignleft {
-            a:before {
-              @include sprite-background(arrow-left);
-              display: block;
-              content: '';
-            }
-          }
-          &.alignright {
-            a:before {
-              @include sprite-background(arrow-right);
-              display: block;
-              content: '';
-            }
-          }
-
-          a {
-            display: inline-block;
-            line-height: $itemHeight;
-            width: 36px;
-            text-indent: -999px;
-            background: rgba(0, 0, 0, 0.2);
-
-            @include transition(all 0.6s);
-
-            &:hover {
-              @include transition(all 0.075s);
-              background: $colorBaseGray;
-            }
-            &:active {
-              @include transition(all 0.075s);
-              background: $colorBaseLightGray;
-            }
-
-          }
-          display: block;
-          float: left;
-
-        }
-      }
     }
 
     a, a:visited, a:hover, a:active {

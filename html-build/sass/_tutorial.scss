@@ -24,9 +24,9 @@ $colorTextLinkVisited: #795548;
 $colorTextLinkActive: #42A5F5;
 
 $colorBlack: #404040;
-$font-cursive: "kazuraki-sp2n", 'HGP行書体', YuMincho, "游明朝", cursive;
-$font-midashi: "kazuraki-sp2n", 'HGP行書体', YuMincho, "游明朝", cursive;
-$font-cursive: "a-otf-ryumin-pr6n", "リュウミン", serif;
+$font-family-midashi: "游明朝 Light", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "a-otf-ryumin-pr6n", "ＭＳ 明朝", serif;
+$font-weight-midashi: 300;
+//$font-cursive: "a-otf-ryumin-pr6n", "リュウミン", serif;
 
 /* Medium Devices, Desktops */
 $mediaWidthLarge: 970px;
@@ -92,7 +92,7 @@ body.tutorial {
     div.article {
 
       overflow: hidden;
-      $colorArticle: #666;
+      $colorArticle: #555;
 
       .syntaxhighlighter {
         font-size: 0.80rem !important;
@@ -136,7 +136,9 @@ body.tutorial {
         //font-family : "遊明朝";
         font-weight: normal;
         line-height: 1.5;
-        font-family: $font-cursive;
+        font-family: $font-family-midashi;
+        font-weight: $font-weight-midashi;
+        color: #444;
       }
 
       h2 {
@@ -208,7 +210,8 @@ body.tutorial {
     color: white;
     position: absolute;
     top: 55%;
-    font-family: $font-cursive;
+    font-family: $font-family-midashi;
+    font-weight: $font-weight-midashi;
 
     p {
       font-size: 1.1rem;

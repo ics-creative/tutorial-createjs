@@ -186,21 +186,3 @@ iframe {
     padding-right: $gap;
   }
 }
-
-/* .row の左右のネガティブマージンを0にする */
-.row-spacing-0 {
-  @include create-row-spacing(0);
-}
-
-.row-spacing-4 {
-  @include create-row-spacing(4px);
-}
-
-.row-spacing-5 {
-  @include create-row-spacing(5px);
-}
-
-.row-spacing-6 {
-  @include create-row-spacing(6px);
-}
-

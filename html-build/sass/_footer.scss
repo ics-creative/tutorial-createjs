@@ -140,22 +140,6 @@ $footer-height: 26px;
                 display: none;
               }
             }
-
-            .iconFacebook {
-              @include sprite-background(icon-facebook);
-
-              @media (max-width: $mediaWidthMedium) {
-                margin: 0 auto;
-              }
-            }
-
-            .iconRss {
-              @include sprite-background(icon-rss);
-              @media (max-width: $mediaWidthMedium) {
-                margin: 0 auto;
-              }
-            }
-
           }
 
         }
@@ -200,21 +184,6 @@ $footer-height: 26px;
             background-color: $colorShareTwitter;
           }
         }
-        div.hatebu {
-          .iconHatena {
-            @include sprite-background(icon-hatena);
-            display: inline-block;
-
-            margin-right: 0.5rem;
-            zoom: 0.7; // バッドノウハウ 2015-11-18
-          }
-          a {
-            background-color: $colorShareHatena;
-          }
-        }
-        div.google a {
-
-        }
 
         div.facebook a {
           background-color: $colorShareFacebook;
@@ -236,7 +205,7 @@ $footer-height: 26px;
 }
 
 #footer-bottom {
-  background-image: url(../imgs/footer-bg.jpg);
+  background-image: url(../../imgs/footer-bg.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-color: black;
