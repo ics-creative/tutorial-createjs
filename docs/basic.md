@@ -2,22 +2,63 @@
 
 ## CreateJSとは
 
+![CreateJSの導入編](../imgs/title_createjs.jpg)
+
 [CreateJS](http://www.createjs.com)は、HTML5でリッチコンテンツを制作するためのJavaScriptライブラリのスイート（特定用途のソフトウェアを詰め合わせたパッケージ）です。Flashデベロッパーとして著名なGrant Skinner氏が開発を行っており、オープンソースソフトウェアとして個人・商用でも無償で利用できます。
+
+## CreateJS を構成する4つのJSライブラリ
 
 CreateJSには、リッチコンテンツを制作するための複数のJavaScriptライブラリが含まれています。
 
-- EaselJS	: HTML5 Canvasでの制作を扱うためのソリューションが提供されています。
-- TweenJS	: Javascriptで使用するためのシンプルなトゥイーンライブラリです。
-- SoundJS	: 簡単にサウンドを利用できるライブラリです。
-- PreloadJS	: 素材（画像、音声、JS、データ）を先読みできるライブラリです。
+- EaselJS	: HTML5 Canvasでの制作を扱うためのJSライブラリ。キャンバスに対するイーゼルを意図した名前になっています。
+- TweenJS	: JavaScriptのトゥイーンエンジンです。モーション制作に役立てることができます。
+- SoundJS	: サウンドを利用するためのJSライブラリ。簡単にクロスブラウザでの音声再生が実現できます。
+- PreloadJS	: 素材（画像、音声、JS、データ）を先読みできるJSライブラリ。
+
+CreateJSはグラフィックの表現機能だけではなく、リッチコンテンツを作るための統合的なソリューションが提供されているというのがポイントです。
+
+## 類似技術との比較 - なぜ CreateJS を選ぶのか？
+
+Webページのリッチコンテンツを作るための技術はたくさんあります。スタイルシートとしてのCSS3、GPUを活用するWebGL、ベクター情報のSVG、プラグインシステムのFlash Player・・・など、例を挙げればきりがありません。CreateJSはHTML5 Canvasというテクノロジーを中心に構築されたフレームワークです。HTML5 Canvasは類似の技術と比べて次の特徴を持っています。
+
+- グラフィック描画ができる
+- 描画速度が非常に高速である
+- 対応環境が幅広い (モダンブラウザであれば100%)
+- いかなる表現も自由に作ることができる
+
+では、デメリットはどの点にあるのでしょうか。処理性能面だけで言えばWebGLのほうが高速ですし、メンテナンスを考慮すればHTML5+CSS3のほうが適しているでしょう。しかし、WebGLは実装難易度が高く素材の取り回しの手間は高いスキルを必要とします。HTML5+CSS3は情報としてのWebページの制作には向いていますが、モーション実装においては自由度は十分高いとは言えません。このように、Webのテクノロジーは一長一短であり、用途に応じて適した技術を選択するのが理想です。
+
+HTML5 Canvasは2Dのインタラクションデザインという用途に適しています。この用途に限って言えば、学習のしやすさ、表現の幅広さ、処理性能、対応環境の充実度という点で、HTML5 CanvasをベースとするCreateJSに敵うソリューションはないでしょう。CreateJSはFlash時代から受け継がれるインタラクションデザインのナレッジがあり、カジュアルに作れる手軽さと強力な表現力を有しています。スポンサーにAdobeやMicrosoft、Mozillaが入っていることで業界の注目を集めており、将来性も期待できます。
+
+なによりも、CreateJSを学ぶことでインタラクションデザイン全般に応用できる基礎力が身につきます。本サイトでは、HTML5 Canvas特有のテクニックよりも、インタラクションデザイン実装の基礎力を習得できることを中心にまとめています。それを学ぶことで異なるテクノロジーでも応用できるからです。ここで学ぶことは永遠の知的資産になるというマインドを持って、最後までぜひお付き合いください。
+
+
 
 ## CreateJSのサンプル
 
-- [gskinner lab](http://lab.gskinner.com)
-- [Planetary Gary](http://sandbox.createjs.com/PlanetaryGary/)
-- [CreateJS Demo](http://www.createjs.com/#demos)
-- [日本全国花粉飛散マップ](http://ics-web.jp/projects/pollenmap/)
-- [jsdo.it](http://jsdo.it/tag/createjs?search_order=favorite)
+![](../imgs/sample_gskinnercom.png)
+
+[gskinner lab](http://lab.gskinner.com)
+
+CreateJSを開発しているgskinner社の実験サイト。ビジュアル・アートのデモが多数公開されています。それぞれのデモは完成形に至るまでの開発バージョンを掲載しており、完成品にたどり着くまでどのような開発の過程があったかを確認することができます。
+
+![](../imgs/sample_gary.png)
+
+[Planetary Gary](http://sandbox.createjs.com/PlanetaryGary/)
+
+シンプルなシューティングアクションゲーム。[ソースコード](https://github.com/CreateJS/sandbox/tree/master/PlanetaryGary)も公開されており、CreateJSの学習に適した教材にもなっています。
+
+![](../imgs/sample_pollenmap.png)
+
+[日本全国花粉飛散マップ](http://ics-web.jp/projects/pollenmap/)
+
+花粉の飛散量をデータビジュアライゼーションしたスペシャルサイト。CreateJSの得意とするラインの描画やパーティクルの演出を駆使したリッチ表現のサイトとなっています。
+
+![](../imgs/sample_jsdoit.png)
+
+[jsdo.it](http://jsdo.it/tag/createjs?search_order=favorite)
+
+ユーザーがコードを投稿できるウェブサービス。CreateJSのコードが多数投稿されています。他のユーザーが開発したコードを眺めて、インスピレーションを得たり参考にするのがいいでしょう。
 
 
 [次の記事へ](quickstart.md)
