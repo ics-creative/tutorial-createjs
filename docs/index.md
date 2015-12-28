@@ -10,7 +10,7 @@
 - [簡単なサンプルを試そう](quickstart.md)
 - [ブラウザの開発ツールの使い方を抑えよう](debug.md)
 
-## 基本編
+## CreateJS の基本的な使い方
 
 ![CreateJSの基本編](../imgs/title_shape.jpg)
 
@@ -31,11 +31,9 @@
 
 - [Ticker の使い方](ticker.md)
 
+## 初級編
 
-### サンプル (初級編)
-
-- [アナログ時計の作成](clock.md)
-- [パズル](game_pazzle.md)
+![CreateJSのサンプル](../imgs/title_clock.jpg)
 
 ### ユーザーインタラクションを制御しよう
 
@@ -51,6 +49,11 @@
   - [キーボードイベントの基本](keyboard_basic.md)
   - [キーボードで自機を操作](keyboard_ship.md)
 - [当たり判定](hittest.md)
+
+### サンプル (初級編)
+
+- [アナログ時計の作成](clock.md)
+- [パズル](game_pazzle.md)
 
 ## 中級編
 
