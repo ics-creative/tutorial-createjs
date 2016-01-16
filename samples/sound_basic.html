@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // 使用するサウンドは事前に登録する
+      createjs.Sound.registerSound("sounds/click.mp3");
+    }
+
+    function playSound() {
+      // ファイルパスを指定する
+      createjs.Sound.play("sounds/click.mp3");
+    }
+  </script>
+</head>
+<body>
+  <button onclick="playSound()">音を再生する</button>
+</body>
+</html>
