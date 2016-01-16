@@ -17,8 +17,7 @@ fs.readdir("../samples", (err, files) => {
         if (IGNORE_LIST.indexOf(files[i]) > -1) {
             continue;
         }
-        if (i > 10)
-            continue;
+
         let outputFilePath = `../imgs/${files[i]}.png`;
         let url = `../samples/${files[i]}`;
         let options = ["render.js", url, outputFilePath, width, height];

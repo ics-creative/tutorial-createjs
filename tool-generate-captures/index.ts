@@ -27,9 +27,6 @@ fs.readdir("../samples", (err:NodeJS.ErrnoException, files:string[]):void => {
       continue;
     }
 
-    if(i > 10)
-      continue;
-
     let outputFilePath = `../imgs/${files[i]}.png`;
 
     let url = `../samples/${files[i]}`;
