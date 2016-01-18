@@ -33,32 +33,4 @@ HTML5 Canvasは2Dのインタラクションデザインという用途に適し
 なによりも、CreateJSを学ぶことでインタラクションデザイン全般に応用できる基礎力が身につきます。本サイトでは、HTML5 Canvas特有のテクニックよりも、インタラクションデザイン実装の基礎力を習得できることを中心にまとめています。それを学ぶことで異なるテクノロジーでも応用できるからです。ここで学ぶことは永遠の知的資産になるというマインドを持って、最後までぜひお付き合いください。
 
 
-
-## CreateJSのサンプル
-
-![](../imgs/sample_gskinnercom.png)
-
-[gskinner lab](http://lab.gskinner.com)
-
-CreateJSを開発しているgskinner社の実験サイト。ビジュアル・アートのデモが多数公開されています。それぞれのデモは完成形に至るまでの開発バージョンを掲載しており、完成品にたどり着くまでどのような開発の過程があったかを確認することができます。
-
-![](../imgs/sample_gary.png)
-
-[Planetary Gary](http://sandbox.createjs.com/PlanetaryGary/)
-
-シンプルなシューティングアクションゲーム。[ソースコード](https://github.com/CreateJS/sandbox/tree/master/PlanetaryGary)も公開されており、CreateJSの学習に適した教材にもなっています。
-
-![](../imgs/sample_pollenmap.png)
-
-[日本全国花粉飛散マップ](http://ics-web.jp/projects/pollenmap/)
-
-花粉の飛散量をデータビジュアライゼーションしたスペシャルサイト。CreateJSの得意とするラインの描画やパーティクルの演出を駆使したリッチ表現のサイトとなっています。
-
-![](../imgs/sample_jsdoit.png)
-
-[jsdo.it](http://jsdo.it/tag/createjs?search_order=favorite)
-
-ユーザーがコードを投稿できるウェブサービス。CreateJSのコードが多数投稿されています。他のユーザーが開発したコードを眺めて、インスピレーションを得たり参考にするのがいいでしょう。
-
-
-[次の記事へ](quickstart.md)
+[次の記事へ](basic_showcase.md)
