@@ -68,6 +68,7 @@ var generateHTML = (dirName, fileName, resolve) => {
         var articleMarkdown = marked(text);
         let headerMatch = articleMarkdown.match(/<h1>(.*?)<\/h1>/);
         let articleTitle = headerMatch ? headerMatch[1] : "";
+        let fileRawName = fileName.split(".md").join("");
         if (!headerMatch) {
             console.log(`no header ${fileName}`);
         }
@@ -78,10 +79,12 @@ var generateHTML = (dirName, fileName, resolve) => {
         articleMarkdown = articleMarkdown.replace(/\<code class\=\"lang-/g, "<code class=\"hljs ");
         var now = new Date();
         let articleDateStr = `${now.getFullYear()}年${now.getMonth() + 1}月${now.getDate()}日`;
+        let url = `https://ics.media/tutorial-createjs/${fileRawName}.html`;
         let values = {
             "article-title": articleTitle,
             "article-markdown": articleMarkdown,
-            "article-date": articleDateStr
+            "article-date": articleDateStr,
+            "url": url
         };
         if (!templateHtml) {
             console.log(fileName + " generate error!");
