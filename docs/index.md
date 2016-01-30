@@ -1,4 +1,4 @@
-# CreateJS入門
+# CreateJS入門サイト
 
 このサイトはHTML5 Canvasのフレームワーク「[CreateJS](http://www.createjs.com/easeljs)」の入門サイトです。初学者から学べるように基本的な**CreateJSの使い方**から解説しつつ、発展的な内容までまとめています。このサイトを通して、Webでのインタラクションデザインについて学んでいきましょう。
 
