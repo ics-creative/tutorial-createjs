@@ -1,5 +1,6 @@
 .DS_Store
 .idea
+*.iml
 tool-generate-captures/node_modules/*
 tool-generate-captures/.idea/workspace.xml
 
