@@ -1,10 +1,10 @@
-# CreateJSとは / CreateJSのサンプル
+# CreateJSとは
 
 ## CreateJSとは
 
 ![CreateJSの導入編](../imgs/title_createjs.jpg)
 
-[CreateJS](http://www.createjs.com)は、HTML5でリッチコンテンツを制作するためのJavaScriptライブラリのスイート（特定用途のソフトウェアを詰め合わせたパッケージ）です。Flashデベロッパーとして著名なGrant Skinner氏が代表を務めるgskinner社が開発を行っており、オープンソースソフトウェアとして個人・商用でも無償で利用できます。
+[CreateJS](http://www.createjs.com)は、HTML5でリッチコンテンツを制作するためのJavaScriptライブラリのスイート（特定用途のソフトウェアを詰め合わせたパッケージ）です。Flashデベロッパーとして著名な[Grant Skinner](https://twitter.com/gskinner)氏が代表を務める[gskinner](http://gskinner.com/)社が開発を行っており、オープンソースソフトウェアとして個人・商用でも無償で利用できます。
 
 ## CreateJS を構成する4つのJSライブラリ
 
