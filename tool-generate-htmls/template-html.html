@@ -136,9 +136,11 @@
 
               <footer>
                 <div class="text-data">
-                  <div>更新日時 : <span itemprop="datePublished">${article-date}</span> / 著者 :
+                  <div>公開日 : <span itemprop="datePublished" content="${article-datePublished}">${article-datePublished-locale}</span>
+                    / 最終更新日 : <span itemprop="dateModified" content="${article-dateModified}">${article-dateModified-locale}</span>
+                    / 著者 :
                     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                      <span itemprop="name"><a href="https://twitter.com/clockmaker">池田 泰延</a>
+                      <span itemprop="name"><a href="https://twitter.com/clockmaker">${article-author}</a>
                       </span>
                     </span></div>
                   <div>※この記事は CreateJS の2015年11月26日バージョンを元に執筆しています。</div>

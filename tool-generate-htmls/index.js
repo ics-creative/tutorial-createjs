@@ -66,9 +66,12 @@ let generateHTML = (dirName, fileName, resolve) => {
             return;
         }
         let articleMarkdown = marked(text);
+        let fileRawName = fileName.split(".md").join("");
+        // --------------------------------
+        // h1 要素の選定
+        // --------------------------------
         let headerMatch = articleMarkdown.match(/<h1>(.*?)<\/h1>/);
         let articleTitle = headerMatch ? headerMatch[1] : "";
-        let fileRawName = fileName.split(".md").join("");
         if (!headerMatch) {
             console.error(`h1 Element is not written. : ${fileName}`);
         }
@@ -76,14 +79,59 @@ let generateHTML = (dirName, fileName, resolve) => {
             //	最初のH1だけ削除するとき。
             articleMarkdown = articleMarkdown.replace(headerMatch[0], "");
         }
+        // --------------------------------
+        // メタデータの選定
+        // --------------------------------
+        let articleAuthorArr = articleMarkdown.match(/<p><article-author>(.*?)<\/article-author><\/p>/);
+        let articleAuthorStr = articleAuthorArr ? articleAuthorArr[1] : "";
+        if (!articleAuthorArr) {
+            console.error(`<article-author> Element is not written. : ${fileName}`);
+        }
+        else {
+            // 要素を削除
+            articleMarkdown = articleMarkdown.replace(articleAuthorArr[0], "");
+        }
+        // --------------------------------
+        // メタデータの選定 (公開日)
+        // --------------------------------
+        let articleUpdatedArr = articleMarkdown.match(/<article-date-published>(.*?)<\/article-date-published>/);
+        let articleUpdatedStr = articleUpdatedArr ? articleUpdatedArr[1] : "";
+        let articleUpdatedDate = new Date(articleUpdatedStr);
+        let articleUpdatedStrLocale = articleUpdatedArr ? toLocaleString(articleUpdatedDate) : "";
+        if (!articleUpdatedArr) {
+            console.error(`<article-date-modified> Element is not written. : ${fileName}`);
+        }
+        else {
+            // 要素を削除
+            articleMarkdown = articleMarkdown.replace(articleUpdatedArr[0], "");
+        }
+        // --------------------------------
+        // メタデータの選定 (更新日)
+        // --------------------------------
+        let articleModifiedArr = articleMarkdown.match(/<article-date-modified>(.*?)<\/article-date-modified>/);
+        let articleModifiedStr = articleModifiedArr ? articleModifiedArr[1] : "";
+        let articleModifiedDate = new Date(articleModifiedStr);
+        let articleModifiedStrLocale = articleUpdatedArr ? toLocaleString(articleModifiedDate) : "";
+        if (!articleModifiedArr) {
+            console.error(`<article-date-published> Element is not written. : ${fileName}`);
+        }
+        else {
+            // 要素を削除
+            articleMarkdown = articleMarkdown.replace(articleModifiedArr[0], "");
+        }
+        // --------------------------------
+        // テンプレートへの適用
+        // --------------------------------
         articleMarkdown = articleMarkdown.replace(/\<code class\=\"lang-/g, "<code class=\"hljs ");
-        let now = new Date();
-        let articleDateStr = `${now.getFullYear()}年${now.getMonth() + 1}月${now.getDate()}日`;
         let url = `https://ics.media/tutorial-createjs/${fileRawName}.html`;
         let values = {
             "article-title": articleTitle,
             "article-markdown": articleMarkdown,
-            "article-date": articleDateStr,
+            "article-author": articleAuthorStr,
+            "article-datePublished": articleUpdatedStr,
+            "article-dateModified": articleModifiedStr,
+            "article-datePublished-locale": articleUpdatedStrLocale,
+            "article-dateModified-locale": articleModifiedStrLocale,
             "url": url
         };
         if (!templateHtml) {
@@ -130,3 +178,11 @@ fs.readdir("../docs", (err, files) => {
         console.log("[Success] HTML files are generated.");
     });
 });
+/**
+ * 日付をフォーマットで変換します。
+ * @param date Date オブジェクト
+ * @returns {string} 「◯年◯月◯日」フォーマットの日付
+ */
+function toLocaleString(date) {
+    return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+}
