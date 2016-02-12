@@ -112,15 +112,15 @@ Webのリッチコンテンツを作るためのフレームワーク「CreateJS
 - [パーティクルシステム](particle.md)
 - [シューティングゲーム](game_shooting.md)
 
-## Flash Professional CCを使おう
+## Adobe Animate CCを使おう
 
 ![CreateJS入門 - Adobe Animate CCとの連携](../imgs/title_animatecc.jpg)
 
-Adobe Flash Professional CCというアプリケーションを使えば、CreateJS用のグラフィックやモーションをコードを書かなくても作ることができます。コードが書くのは苦手という方はFlash Professional CCでCreateJSコンテンツを作ってみるといいでしょう。ここではFlash Professional CCで作ったCreateJSコンテンツを、プログラムで連携する方法を解説します。
+Adobe Animate CC(旧Flash Professional CC)というアプリケーションを使えば、CreateJS用のグラフィックやモーションをコードを書かなくても作ることができます。コードが書くのは苦手という方はAnimate CCでCreateJSコンテンツを作ってみるといいでしょう。ここではAnimate CCで作ったCreateJSコンテンツを、プログラムで連携する方法を解説します。
 
-- [Adobe Flash Pro CC と CreateJS の連携 (基本編)](adobe_animate.md)
-- [Adobe Flash Pro CC と CreateJS の連携 (ビットマップ含む編)](adobe_animate_bitmaps.md)
-- [Adobe Flash Pro CC と CreateJS の連携 (スプライトシート編)](adobe_animate_spritesheet.md)
+- [Adobe Animate CC と CreateJS の連携 (基本編)](adobe_animate.md)
+- [Adobe Animate CC と CreateJS の連携 (ビットマップ含む編)](adobe_animate_bitmaps.md)
+- [Adobe Animate CC と CreateJS の連携 (スプライトシート編)](adobe_animate_spritesheet.md)
 
 ## その他
 

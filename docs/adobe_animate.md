@@ -1,17 +1,17 @@
-# Adobe Flash Professional CC と CreateJS の連携 (基本編)
+# Adobe Animate CC と CreateJS の連携 (基本編)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RK6Z-ExOwuw" frameborder="0" allowfullscreen></iframe>
 
-Flash Professional CCからHTML5 Canvas素材として書き出し、CreateJSで利用する手順を紹介します。[YouTubeのチュートリアル動画](https://www.youtube.com/watch?v=RK6Z-ExOwuw)を参考に進めましょう。
+Adobe Animate CCからHTML5 Canvas素材として書き出し、CreateJSで利用する手順を紹介します。[YouTubeのチュートリアル動画](https://www.youtube.com/watch?v=RK6Z-ExOwuw)を参考に進めましょう。
 
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/createjs-toolkit/index.html)
 - [サンプルのソースコードを確認する](../samples/createjs-toolkit/)
 
 
-## 1. Adobe Flash Professional CC (Flash Pro CC)を起動
+## 1. Adobe Animate CCを起動
 
-Adobe Flash Professional CCはもともとはFlashやHTML5制作のオーサリングツールです。ステージに直接グラフィックを描いたり、タイムラインを使ってモーションを作ることができます。今回はCreateJS用のグラフィックとモーションを用意したので、起動したら[新規作成]の一覧から[HTML5 Canvas]を選択します。
+Adobe Animate CCはもともとはFlashやHTML5制作のオーサリングツールです。ステージに直接グラフィックを描いたり、タイムラインを使ってモーションを作ることができます。今回はCreateJS用のグラフィックとモーションを用意したので、起動したら[新規作成]の一覧から[HTML5 Canvas]を選択します。
 
 ![](../imgs/adobe_animate_startup.png)
 
@@ -29,14 +29,14 @@ Adobe Flash Professional CCはもともとはFlashやHTML5制作のオーサリ�
 
 ステージ上でドラッグ・アンド・ドロップして星を描いてみましょう。
 
-## 3. Flash Pro CCで[プレビュー]するとHTML5素材が出力される
+## 3. Animate CCで[プレビュー]するとHTML5素材が出力される
 
 メニューバーから[制御]→[プレビュー]を選択しましょう。するとブラウザが立ち上がり、描いたグラフィックが表示されます。これはHTML5 Canvas (つまりCreateJS)で表示されています。
 
 このとき`StarAsset.fla`ファイルと同階層に2つファイルが作られます。
 
 - `StarAsset.html` : HTML5 Canvasを再生するための再生用のHTMLファイル。
-- `StarAsset.js` : Flash Pro CCで作成したデータが保存されているファイル。
+- `StarAsset.js` : Animate CCで作成したデータが保存されているファイル。
 
 ## 4. 別ファイルとしてHTMLファイルを作成
 
@@ -58,12 +58,12 @@ Adobe Flash Professional CCはもともとはFlashやHTML5制作のオーサリ�
 ※YouTubeのビデオでは、CDNからmovieclipも読み込んでいますが、2015年11月26日から公開された新しいバージョンのCreateJSではmovieclipを別途読み込む必要がなくなりました。
 
 
-## 6. Flash Pro CCから出力したJSファイルも読み込む
+## 6. Animate CCから出力したJSファイルも読み込む
 
 `index.html`ファイルと同じ階層に、`StarAsset.fla`ファイルから出力した`StarAsset.js`ファイルが存在するはずです。このファイルを読み込むため`<script>`タグで取り込みましょう。
 
 ```js
-<!-- Flash Professional CCのデータを読み込む -->
+<!-- Adobe Animate CCのデータを読み込む -->
 <script src="StarAsset.js"></script>
 ```
 
@@ -80,18 +80,18 @@ function init(){
 }
 ```
 
-## 8. Flash Pro CCのシンボルは「lib.Star」という名前で呼び出せる
+## 8. Animate CCのシンボルは「lib.Star」という名前で呼び出せる
 
-Flash Pro CCのシンボル名の先頭に「lib.」をつけるとクラスとして利用できます。
+Animate CCのシンボル名の先頭に「lib.」をつけるとクラスとして利用できます。
 
 ```js
-// Flash Pro CCのシンボル名の先頭に「lib.」をつけると利用できます
+// Animate CCのシンボル名の先頭に「lib.」をつけると利用できます
 var star = new lib.Star();
 ```
 
 ![](../imgs/adobe_animate_lib.png)
 
-この「lib.Star」というのはFlash Pro CCの[ライブラリ]パネル内の名前(シンボル名)と一致します。
+この「lib.Star」というのはAnimate CCの[ライブラリ]パネル内の名前(シンボル名)と一致します。
 
 ## 9. 表示オブジェクトとしてStageに追加して制御しよう
 
@@ -116,14 +116,14 @@ function onTick(){
 }
 ```
 
-[YouTubeのチュートリアル動画](https://www.youtube.com/watch?v=RK6Z-ExOwuw)ではさらにFlash Pro CCでタイムラインアニメーションを実装する方法を紹介しています。
+[YouTubeのチュートリアル動画](https://www.youtube.com/watch?v=RK6Z-ExOwuw)ではさらにAnimate CCでタイムラインアニメーションを実装する方法を紹介しています。
 
 
 ## 参考
 
-Flash Pro CC内で画像を含めた場合は、初期化の手順が少し複雑になります。
+Animate CC内で画像を含めた場合は、初期化の手順が少し複雑になります。
 
-書籍[「Flash for HTML5 ―HTML5開発環境としてのFlash Pro CC活用テクニック」](http://www.amazon.co.jp/dp/B014VWO2BU)の
+書籍[「Flash for HTML5 ―HTML5開発環境としてのFlash Professional CC活用テクニック」](http://www.amazon.co.jp/dp/B014VWO2BU)の
 「外部から更新可能なスライドショーを作ってみよう」(044P)を参照ください。
 
 

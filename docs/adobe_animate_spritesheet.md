@@ -1,6 +1,6 @@
-# Adobe Flash Professional CC と CreateJS の連携 (スプライトシート編)
+# Adobe Animate CC と CreateJS の連携 (スプライトシート編)
 
-Adobe Flash Professional CCを使ってCreateJS用のスプライトシートを書き出し方を説明します。
+Adobe Animate CCを使ってCreateJS用のスプライトシートを書き出し方を説明します。
 
 ※[基本編](adobe_animate_spritesheet.md)とスプライトシート編の違いは、連携のさせ方が異なります。一般的には[基本編](adobe_animate_spritesheet.md)の方法がよく使われます。
 

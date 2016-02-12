@@ -203,7 +203,7 @@ for (var i = 0; i < steps; i++) {
 
 いかがでしたでしょうか。目盛りをより細かく描くと機械式時計のような細かい円盤をデザインすることができます。ここで紹介した方法を工夫してぜひオリジナルの時計の表現にチャレンジしてみてください。
 
-書籍[「Flash for HTML5 ―HTML5開発環境としてのFlash Pro CC活用テクニック」](http://www.amazon.co.jp/dp/B014VWO2BU)では、このグラフィックの作り方を紹介しています。
+書籍[「Flash for HTML5 ―HTML5開発環境としてのFlash Professional CC活用テクニック」](http://www.amazon.co.jp/dp/B014VWO2BU)では、このグラフィックの作り方を紹介しています。
 
 - [サンプル](http://book.mynavi.jp/wd/sampledata/201503view/flash4html5/sample_3/clock_watch.html)
 
