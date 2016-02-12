@@ -10,7 +10,7 @@ import mkdirp = require("mkdirp");
 let promises:any = [];
 let samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
 let samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/gh-pages/";
-var templateHtml:string;
+let templateHtml:string;
 
 /**
  * テンプレート文字列を展開
@@ -19,7 +19,7 @@ var templateHtml:string;
  * @param values:Object 展開する値
  * @return string
  */
-var template = (text:string, values:any) => {
+let template = (text:string, values:any) => {
   if (!text) {
     console.log("template-error!");
     return "";
@@ -28,15 +28,15 @@ var template = (text:string, values:any) => {
   return text.replace(/\$\{(.*?)\}/g, function (all, key) {
     return Object.prototype.hasOwnProperty.call(values, key) ? values[key] : "";
   });
-}
+};
 
-var renderer = new marked.Renderer();
+const renderer = new marked.Renderer();
 
 renderer.link = (href:string, title:string, text:string) => {
   //console.log("href:" + href);
 
-  var sampledIndex = href.indexOf("samples/");
-  var absolutePass = href.indexOf("http") == 0;
+  let sampledIndex = href.indexOf("samples/");
+  let absolutePass = href.indexOf("http") == 0;
   if (!absolutePass && sampledIndex >= 0) {
     href = samplesHtmlUrl + href.slice(sampledIndex);
   } else {
@@ -45,8 +45,8 @@ renderer.link = (href:string, title:string, text:string) => {
     }
   }
 
-  var htmlHref = (href != null && href != "") ? ` href="${href}"` : "";
-  var htmlTitle = (title != null && title != "") ? ` title=${title}` : "";
+  let htmlHref = (href != null && href != "") ? ` href="${href}"` : "";
+  let htmlTitle = (title != null && title != "") ? ` title=${title}` : "";
 
   return `<a${htmlHref}${htmlTitle}>${text}</a>`;
 };
@@ -55,21 +55,21 @@ renderer.link = (href:string, title:string, text:string) => {
 renderer.image = (href:string, title:string, text:string) => {
   //console.log("imgs:" + href);
 
-  var absolutePass = href.indexOf("http") == 0;
-  var sampledIndex = href.indexOf("../imgs/");
+  let absolutePass:boolean = href.indexOf("http") == 0;
+  let sampledIndex:number = href.indexOf("../imgs/");
   if (!absolutePass && sampledIndex >= 0) {
-    href = samplesUrl + href.slice(sampledIndex + "../".length);
+    href = samplesUrl + href.slice(sampledIndex + ("../").length);
   }
 
-  var htmlHref = (href != null && href != "") ? ` src="${href}"` : "";
-  var htmlTitle = (title != null && title != "") ? ` title=${title}` : "";
+  let htmlHref = (href != null && href != "") ? ` src="${href}"` : "";
+  let htmlTitle = (title != null && title != "") ? ` title=${title}` : "";
 
   return `<img${htmlHref}${htmlTitle} />`;
 };
 
 renderer.heading = function (text:string, level:string) {
   return `<h${level}>${text}</h${level}>`;
-}
+};
 
 marked.setOptions({
   highlight: function (code:string) {
@@ -79,19 +79,19 @@ marked.setOptions({
 });
 
 
-var generateHTML = (dirName:string, fileName:string, resolve:Function) => {
+let generateHTML = (dirName:string, fileName:string, resolve:Function) => {
   fs.readFile("../docs/" + dirName + fileName, "utf8", (error:any, text:string) => {
 
     if (error) {
       return;
     }
-    var articleMarkdown = marked(text);
+    let articleMarkdown = marked(text);
     let headerMatch = articleMarkdown.match(/<h1>(.*?)<\/h1>/);
     let articleTitle = headerMatch ? headerMatch[1] : "";
     let fileRawName = fileName.split(".md").join("");
 
     if (!headerMatch) {
-      console.log(`no header ${fileName}`);
+      console.error(`h1 Element is not written. : ${fileName}`);
     } else {
       //	最初のH1だけ削除するとき。
       articleMarkdown = articleMarkdown.replace(headerMatch[0], "");
@@ -100,7 +100,7 @@ var generateHTML = (dirName:string, fileName:string, resolve:Function) => {
     articleMarkdown = articleMarkdown.replace(/\<code class\=\"lang-/g, "<code class=\"hljs ");
 
 
-    var now = new Date();
+    let now = new Date();
     let articleDateStr = `${now.getFullYear()}年${now.getMonth() + 1}月${now.getDate()}日`;
     let url = `https://ics.media/tutorial-createjs/${fileRawName}.html`;
 
@@ -146,8 +146,8 @@ fs.readdir("../docs", (err:NodeJS.ErrnoException, files:string[]):void => {
     });
   }));
 
-  for (var i = 0; i < files.length; i++) {
-    var filename = files[i];
+  for (let i = 0; i < files.length; i++) {
+    let filename:string = files[i];
 
     let childPromise = new Promise((resolve:Function) => {
       generateHTML("", filename, resolve);
@@ -158,7 +158,7 @@ fs.readdir("../docs", (err:NodeJS.ErrnoException, files:string[]):void => {
 
   Promise
       .all(promises)
-      .then((results) => {
-        console.log("finish!!!");
+      .then((results:any) => {
+        console.log("[Success] HTML files are generated.");
       });
 });

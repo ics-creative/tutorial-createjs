@@ -6,7 +6,7 @@ var mkdirp = require("mkdirp");
 let promises = [];
 let samplesUrl = "https://ics-creative.github.io/tutorial-createjs/";
 let samplesHtmlUrl = "https://github.com/ics-creative/tutorial-createjs/blob/gh-pages/";
-var templateHtml;
+let templateHtml;
 /**
  * テンプレート文字列を展開
  * http://webdesign-dackel.com/2015/07/17/javascript-template-string/
@@ -14,7 +14,7 @@ var templateHtml;
  * @param values:Object 展開する値
  * @return string
  */
-var template = (text, values) => {
+let template = (text, values) => {
     if (!text) {
         console.log("template-error!");
         return "";
@@ -23,11 +23,11 @@ var template = (text, values) => {
         return Object.prototype.hasOwnProperty.call(values, key) ? values[key] : "";
     });
 };
-var renderer = new marked.Renderer();
+const renderer = new marked.Renderer();
 renderer.link = (href, title, text) => {
     //console.log("href:" + href);
-    var sampledIndex = href.indexOf("samples/");
-    var absolutePass = href.indexOf("http") == 0;
+    let sampledIndex = href.indexOf("samples/");
+    let absolutePass = href.indexOf("http") == 0;
     if (!absolutePass && sampledIndex >= 0) {
         href = samplesHtmlUrl + href.slice(sampledIndex);
     }
@@ -36,19 +36,19 @@ renderer.link = (href, title, text) => {
             href = href.replace("md", "html");
         }
     }
-    var htmlHref = (href != null && href != "") ? ` href="${href}"` : "";
-    var htmlTitle = (title != null && title != "") ? ` title=${title}` : "";
+    let htmlHref = (href != null && href != "") ? ` href="${href}"` : "";
+    let htmlTitle = (title != null && title != "") ? ` title=${title}` : "";
     return `<a${htmlHref}${htmlTitle}>${text}</a>`;
 };
 renderer.image = (href, title, text) => {
     //console.log("imgs:" + href);
-    var absolutePass = href.indexOf("http") == 0;
-    var sampledIndex = href.indexOf("../imgs/");
+    let absolutePass = href.indexOf("http") == 0;
+    let sampledIndex = href.indexOf("../imgs/");
     if (!absolutePass && sampledIndex >= 0) {
-        href = samplesUrl + href.slice(sampledIndex + "../".length);
+        href = samplesUrl + href.slice(sampledIndex + ("../").length);
     }
-    var htmlHref = (href != null && href != "") ? ` src="${href}"` : "";
-    var htmlTitle = (title != null && title != "") ? ` title=${title}` : "";
+    let htmlHref = (href != null && href != "") ? ` src="${href}"` : "";
+    let htmlTitle = (title != null && title != "") ? ` title=${title}` : "";
     return `<img${htmlHref}${htmlTitle} />`;
 };
 renderer.heading = function (text, level) {
@@ -60,24 +60,24 @@ marked.setOptions({
     },
     renderer: renderer
 });
-var generateHTML = (dirName, fileName, resolve) => {
+let generateHTML = (dirName, fileName, resolve) => {
     fs.readFile("../docs/" + dirName + fileName, "utf8", (error, text) => {
         if (error) {
             return;
         }
-        var articleMarkdown = marked(text);
+        let articleMarkdown = marked(text);
         let headerMatch = articleMarkdown.match(/<h1>(.*?)<\/h1>/);
         let articleTitle = headerMatch ? headerMatch[1] : "";
         let fileRawName = fileName.split(".md").join("");
         if (!headerMatch) {
-            console.log(`no header ${fileName}`);
+            console.error(`h1 Element is not written. : ${fileName}`);
         }
         else {
             //	最初のH1だけ削除するとき。
             articleMarkdown = articleMarkdown.replace(headerMatch[0], "");
         }
         articleMarkdown = articleMarkdown.replace(/\<code class\=\"lang-/g, "<code class=\"hljs ");
-        var now = new Date();
+        let now = new Date();
         let articleDateStr = `${now.getFullYear()}年${now.getMonth() + 1}月${now.getDate()}日`;
         let url = `https://ics.media/tutorial-createjs/${fileRawName}.html`;
         let values = {
@@ -117,8 +117,8 @@ fs.readdir("../docs", (err, files) => {
             resolve();
         });
     }));
-    for (var i = 0; i < files.length; i++) {
-        var filename = files[i];
+    for (let i = 0; i < files.length; i++) {
+        let filename = files[i];
         let childPromise = new Promise((resolve) => {
             generateHTML("", filename, resolve);
         });
@@ -127,6 +127,6 @@ fs.readdir("../docs", (err, files) => {
     Promise
         .all(promises)
         .then((results) => {
-        console.log("finish!!!");
+        console.log("[Success] HTML files are generated.");
     });
 });
