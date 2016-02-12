@@ -79,3 +79,7 @@ function handleTick() {
 対象物からどれだけ距離が離れているかは、演出に役立てることもできます。対象物に近いほど過剰に演出して、対象物から離れていると静かに待機するといった使い分けにも役立てることができるでしょう。
 
 [次の記事へ](math_trigonometry.md)
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-12-20</article-date-published>
+<article-date-modified>2015-12-20</article-date-modified>

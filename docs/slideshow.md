@@ -46,3 +46,8 @@ function updatePage() {
 ```
 
 `{override: true}`のコードは、ボタンが連打されたときにアニメーションを正しく動作させるための指定です。トゥイーンアニメーションの再生中に、新しいトゥイーンの命令が入ったとき、再生中のトゥイーンアニメーションを中断させる効果があります。
+
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-12-17</article-date-published>
+<article-date-modified>2015-12-17</article-date-modified>

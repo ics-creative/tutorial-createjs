@@ -159,3 +159,8 @@ function handleUp(event) {
     flag = false;
 }
 ```
+
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-11-30</article-date-published>
+<article-date-modified>2015-12-18</article-date-modified>

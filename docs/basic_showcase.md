@@ -30,3 +30,7 @@ CreateJSを開発しているgskinner社の実験サイト。ビジュアル・�
 
 
 [次の記事へ](quickstart.md)
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2016-01-18</article-date-published>
+<article-date-modified>2016-01-18</article-date-modified>

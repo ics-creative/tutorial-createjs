@@ -26,3 +26,8 @@ Google Chromeメニュー(右上の横棒三個のアイコン)をクリック
 
 
 [次の記事へ](displayobject.md)
+
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-12-03</article-date-published>
+<article-date-modified>2015-12-17</article-date-modified>

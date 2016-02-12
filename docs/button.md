@@ -166,3 +166,8 @@ function handleClick(event) {
 こうやって作っておくとコピペ(コピー&ペースト)でボタンが作れます。[CreateJSでのボタンのサンプル集](button_samples.md)では様々なボタンのサンプルを用意していますので、あわせて参照ください。
 
 また[Adobe Flash Professional CC](adobe_animate.md)を使えば、さらに自由度が高くボタンのグラフィックを作成できます。直感的に作成できるので活用してみるといいでしょう。
+
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-12-27</article-date-published>
+<article-date-modified>2015-12-27</article-date-modified>

@@ -125,3 +125,8 @@ Adobe Flash Professional CCというアプリケーションを使えば、Creat
 ## その他
 
 - [スマホブラウザで全画面に表示する対応](fullscreen.md)
+
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-11-22</article-date-published>
+<article-date-modified>2016-02-12</article-date-modified>

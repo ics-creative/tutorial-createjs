@@ -92,3 +92,8 @@ if (createjs.Touch.isSupported() == true) {
    createjs.Touch.enable(stage)
 }
 ```
+
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-12-03</article-date-published>
+<article-date-modified>2015-12-21</article-date-modified>

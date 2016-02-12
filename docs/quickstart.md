@@ -106,3 +106,9 @@ stage.update();
 これがCreateJSの簡単なサンプルです。具体的に一つずつ順番に理解していきましょう。
 
 [次の記事へ](debug.md)
+
+
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-11-29</article-date-published>
+<article-date-modified>2015-12-24</article-date-modified>

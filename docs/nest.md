@@ -31,3 +31,10 @@ stage.addChild(container);
 ※`createjs.Container`クラスの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Container.html)」を確認ください。
 
 [次の記事へ](displayobject_remove.md)
+
+
+
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-11-22</article-date-published>
+<article-date-modified>2015-12-27</article-date-modified>

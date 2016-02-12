@@ -127,3 +127,6 @@ Flash Pro CC内で画像を含めた場合は、初期化の手順が少し複�
 「外部から更新可能なスライドショーを作ってみよう」(044P)を参照ください。
 
 
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-12-17</article-date-published>
+<article-date-modified>2016-02-12</article-date-modified>

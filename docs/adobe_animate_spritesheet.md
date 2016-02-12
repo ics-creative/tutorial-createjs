@@ -72,3 +72,7 @@ chara.play();
 - [サンプルのソースコードを確認する](../samples/animate_spritesheet/spritesheet_click.html)
 
 
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-12-18</article-date-published>
+<article-date-modified>2016-02-12</article-date-modified>

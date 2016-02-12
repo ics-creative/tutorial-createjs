@@ -118,3 +118,7 @@ function handleTick(){
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/ticker_autoupdate.html)
 - [サンプルのソースコードを確認する](../samples/ticker_autoupdate.html)
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-11-22</article-date-published>
+<article-date-modified>2016-02-12</article-date-modified>

@@ -126,3 +126,8 @@ createjs.Tween.get(circle) // ターゲットを指定
 - [サンプルのソースコードを確認する](../samples/tween_ease.html)
 
 [次の記事へ](tween_api.md)
+
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-11-22</article-date-published>
+<article-date-modified>2015-12-27</article-date-modified>

@@ -54,3 +54,8 @@ createjs.Sound.play("任意のID");
 ```
 
 いかがでしたか。音声再生といっても、あまりにも簡単であっけなかったのではないでしょうか。
+
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2016-01-16</article-date-published>
+<article-date-modified>2016-01-16</article-date-modified>

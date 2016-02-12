@@ -62,3 +62,8 @@ object.scaleY = 2.0; // 200%の高さに設定する
 ```
 
 [次の記事へ](shape_fill_stroke.md)
+
+
+<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
+<article-date-published>2015-11-29</article-date-published>
+<article-date-modified>2015-12-17</article-date-modified>
