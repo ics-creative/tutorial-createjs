@@ -118,6 +118,7 @@ Webのリッチコンテンツを作るためのフレームワーク「CreateJS
 
 Adobe Animate CC(旧Flash Professional CC)というアプリケーションを使えば、CreateJS用のグラフィックやモーションをコードを書かなくても作ることができます。コードが書くのは苦手という方はAnimate CCでCreateJSコンテンツを作ってみるといいでしょう。ここではAnimate CCで作ったCreateJSコンテンツを、プログラムで連携する方法を解説します。
 
+- [Adobe Animate CC の使い方](adobe_animate_basic.md)
 - [Adobe Animate CC と CreateJS の連携 (基本編)](adobe_animate.md)
 - [Adobe Animate CC と CreateJS の連携 (ビットマップ含む編)](adobe_animate_bitmaps.md)
 - [Adobe Animate CC と CreateJS の連携 (スプライトシート編)](adobe_animate_spritesheet.md)
@@ -129,4 +130,4 @@ Adobe Animate CC(旧Flash Professional CC)というアプリケーションを�
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2016-02-12</article-date-modified>
+<article-date-modified>2016-02-16</article-date-modified>
