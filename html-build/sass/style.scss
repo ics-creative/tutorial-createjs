@@ -130,7 +130,8 @@ html {
   }
 }
 
-$font-base : YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif !important;
+//$font-base : sans-serif;
+$font-base : YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 
 body {
   font-family: $font-base;
