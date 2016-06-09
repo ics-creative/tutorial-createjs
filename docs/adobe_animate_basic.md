@@ -110,11 +110,9 @@ Animate CCをインストールしたら起動します。起動したら[新規
 
 ## Animate CCを効率的に学習するには
 
-もっとAnimate CCの使い方を知りたい方は、野中先生の動画チュートリアルがとてもわかりやすいのでご覧になるとよいでしょう。有料ではありますが、書籍の解説書を買うのと同じぐらいの値段でシリーズを勉強できるので、最短で覚えることができると思います。
+もっとAnimate CCの使い方を知りたい方は、野中先生の動画チュートリアルがとてもわかりやすいのでご覧になるとよいでしょう。有料ですが、書籍の解説書を買うのと同じぐらいの値段でシリーズを勉強できるので、最短で覚えることができるはずです。
 
-解説ソフトはFlash Professional CCとされてますが、Animate CCの一つ前のバージョンであり、全く同じ操作方法なので安心ください。
-
-[Flash Professional CC 2015 基本講座-Flash Professional](https://www.lynda.jp/courses/flash-professional-cc-2015-essential-training)
+[Animate CC 基本講座-Animate](https://www.lynda.jp/courses/animate-cc-essential-training)
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2016-02-16</article-date-published>
