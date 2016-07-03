@@ -1,12 +1,12 @@
 # CreateJS入門サイト
 
-このサイトはHTML5 Canvasのフレームワーク「[CreateJS](http://www.createjs.com/easeljs)」の入門サイトです。初学者から学べるように基本的な**CreateJSの使い方**から解説しつつ、発展的な内容までまとめています。このサイトを通して、Webでのインタラクションデザインについて学んでいきましょう。
+このサイトはHTML5 Canvasのフレームワーク「[CreateJS](http://www.createjs.com/easeljs)」の入門サイトです。初学者から学べるように基本的な**CreateJSの使い方**から解説しつつ、発展的な内容までまとめています。このサイトを通して、webでのインタラクションデザインについて学んでいきましょう。
 
 ## 導入編
 
 ![CreateJSの導入編](../imgs/title_createjs.jpg)
 
-Webのリッチコンテンツを作るためのフレームワーク「CreateJS」。どのような場面で利用されるのか、どういった表現が可能なのかという点を中心に、概要と導入方法を説明します。
+webのリッチコンテンツを作るためのフレームワーク「CreateJS」。どのような場面で利用されるのか、どういった表現が可能なのかという点を中心に、概要と導入方法を説明します。
 
 - [CreateJS とは](basic.md)
 - [CraeteJS の事例](basic_showcase.md)
