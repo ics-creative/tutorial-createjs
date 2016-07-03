@@ -1,29 +1,44 @@
 # Adobe Animate CC の使い方
 
-Animate CCはwebアニメーションを制作するソフトウェア。アドビシステムズというクリエイティブのツールを中心に開発している会社の製品です。このソフトでは、グラフィックを描きタイムラインで動きをつけ、スクリプトでインタラクティブな操作を実装することができます。これはどういうことかというと、Animate CCを使えば、「動くwebコンテンツ」を自由に作れるということです。
+**Animate CCはwebアニメーションを制作するソフトウェア**。アドビシステムズというクリエイティブのツールを中心に開発している会社の製品です。このソフトでは、**グラフィックを描きタイムラインで動きをつけ、スクリプトでインタラクティブな操作を実装できます**。これはどういうことかというと、Animate CCを使えば、「動くwebコンテンツ」を自由に作れるということです。
 
-制作できるものの種類は多岐にわたります。アニメやモーショングラフィックスといった動画や映像作品、ゲームやメニュー画面といったインタラクティブコンテンツ、グラフやシミュレーションといったビジュアライゼーション(データの可視化)に向いています。
 
-## Adobe Animate CCとCreateJSの関係
+制作できるものの種類は多岐にわたります。アニメやモーショングラフィックスといった動画や映像作品、ゲームやメニュー画面といったインタラクティブコンテンツ、グラフやシミュレーションといったビジュアライゼーション(データの可視化)に利用できます。
 
-CreateJS入門サイトでAnimate CCを扱うのには理由があります。Animate CCでは「HTML5 Canvasドキュメント」が作れます。このHTML5 Canvasドキュメントというのはその名の通り、Animate CCで作ったコンテンツをHTMLの`canvas`要素で再生するというものですが、その再生エンジンにCreateJSが採用されているのです。
+初心者でも手軽に使えるうえに、放送品質のアニメまで作り込めるという幅の広さがAnimate CCが最大の魅力です。
 
-再生エンジンにCreateJSが使われているというとイメージしづらいかもしれませんが、アニメーションとCreateJSが連携しやすいということを意味します。このことは、「プログラムとアニメーションの連携」という他のツールにない圧倒的な利点となります。
+
+![](../imgs/adobe_animate_basic/animate_cc_basic_official.png)
+
+▲ <a href="https://helpx.adobe.com/jp/animate/how-to/make-an-animation.html">公式サイトの紹介ビデオ</a>ではソフトの利用用途や利点がわかりやすく紹介されています
+
+## Animate CCの事例
+
+実際にAdobe Animate CC(旧Flash Professional)は多くの制作現場で使われています。有名な事例をまとめました。
+
+[Flash animation in Ping Pong on Vimeo](https://vimeo.com/102103466)
+
+▲ TVアニメ「ピンポン」でのアニメーションの動画の様子。「手書きだと動画が大変なので、デジタルで作業しました」とのこと。Flash Professionalのソフト上でアニメが再生されているので、作業がイメージしやすいです。
+
+[Long Way North - Official Festival Trailer - YouTube](https://www.youtube.com/watch?v=n4PFEICjlv8)
+
+▲東京アニメアワード2016の長編アニメ部門グランプリ作品『[Long Way North](http://www.longwaynorththemovie.com/)』。81分のFlashアニメーションとして制作された81分の映画です。予告編は1分10秒ですが、Animate CCの可能性を知るにはわかりやすい事例です。
+
 
 ## Adobe Animate CCをはじめるには？
 
-Adobe Animate CCをはじめるには、ソフトの導入が必要になります。Animate CCは有料ソフトですが、AdobeのCreative Cloudという月額課金(もしくは年契約)のサービスを契約して使います。学生の場合は月1,980円(全CCアプリ利用可)、社会人の場合は月2,180円(単体アプリ)から利用できるので、お手軽です。昔は10万円近い製品価格だったので、とても導入しやすくなりました。
+Adobe Animate CCをはじめるには、ソフトの導入が必要になります。Animate CCは有料ソフトですが、AdobeのCreative Cloudという月額課金(もしくは年契約)のサービスを契約して使います。**学生の場合は月1,980円(全CCアプリ利用可)、社会人の場合は月2,180円(単体アプリ)から利用できるので、お手軽です**。昔は10万円近い製品価格だったので、とても導入しやすくなりました。
 
 [HTML5ベクターアニメーションソフト | Animate CC（Flash Pro）](http://www.adobe.com/jp/products/animate.html)
 
-ちなみにはじめは体験版で30日間無料で使うことができます。体験版でも機能制限はないので、購入に慎重な方は様子見で使ってみるのがいいと思います。
+ちなみにはじめは体験版で無料で使うことができます。体験版でも機能制限はないので、購入に慎重な方は様子見で使ってみるのがいいと思います。
 
 
 ## Adobe Animate CCが使えるようになるにはどのくらいかかるのか
 
 1週間から1ヶ月ぐらいでしょう。とは言っても、どのくらいレベルをもって使えると言っていいのか、絵やモーション制作の得手不得手があるので人によりけりです。
 
-多くは大学/専門学校で使いはじめる人が多いですが、中学生から始める人もいれば、社会人から使いはじめる人もいます。学ぶのに年齢は関係ありません。学校の放課後の時間や、週末に集中して勉強すれば無理なく覚えていけます。
+多くは大学/専門学校で使いはじめる人が多いですが、**中学生から始める人もいれば、社会人から使いはじめる人もいます。学ぶのに年齢は関係ありません**。学校の放課後の時間や、週末に集中して勉強すれば無理なく覚えていけます。
 
 勉強で使いはじめる人もいれば、趣味で、仕事で、と理由は様々でしょう。「好きこそものの上手なれ」ということわざがありますが、いずれにしても**楽しく学んでいくことが大事**です。
 
@@ -110,10 +125,16 @@ Animate CCをインストールしたら起動します。起動したら[新規
 
 ## Animate CCを効率的に学習するには
 
-もっとAnimate CCの使い方を知りたい方は、野中先生の動画チュートリアルがとてもわかりやすいのでご覧になるとよいでしょう。有料ですが、書籍の解説書を買うのと同じぐらいの値段でシリーズを勉強できるので、最短で覚えることができるはずです。
+Animate CCの入門的な学習として、「[初心者のためのAdobe Animateブログ](http://animate.hatenadiary.jp/)」がオススメです。イラスト付きでわかりやすく解説されているので、ここから勉強をはじめてみるといいでしょう。
 
-[Animate CC 基本講座-Animate](https://www.lynda.jp/courses/animate-cc-essential-training)
+- [1.Animateでとりあえず何か描いてみる！](http://animate.hatenadiary.jp/entry/2016/03/22/182655)
+- [2.お絵描き機能の特徴](http://animate.hatenadiary.jp/entry/2016/04/25/150307)
+- [3.基本のトゥイーンアニメ（移動アニメ）](http://animate.hatenadiary.jp/entry/2016/05/27/105112)
+
+さらにAnimate CCの使い方を知りたい方は、野中先生の解説講座「[Animate CC 基本講座-Animate](https://www.lynda.jp/courses/animate-cc-essential-training)」もオススメです。ビデオなので操作につまづくことなく、安心して勉強をすすめられます。有料ですが書籍の解説書を買うのと同じぐらいの値段でシリーズを勉強できるので、最短で覚えることができるはずです。
+
+- [Animate CC 基本講座-Animate](https://www.lynda.jp/courses/animate-cc-essential-training)
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2016-02-16</article-date-published>
-<article-date-modified>2016-02-16</article-date-modified>
+<article-date-modified>2016-07-03</article-date-modified>
