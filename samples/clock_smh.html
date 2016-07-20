@@ -69,7 +69,7 @@
         // 分針
         mShape.rotation = m * (360 / 60);
         // 短針 (短針は時間だけでなく分も角度に考慮する)
-        hShape.rotation = h * (360 / 24 / 2) + m * (360 / 24 / 60);
+        hShape.rotation = h * (360 / (24 / 2)) + m * (360 / 24 / 60);
 
         // Stageの描画を更新
         stage.update();
