@@ -126,7 +126,7 @@ sShape.rotation = s * (360 / 60);
 // 分針
 mShape.rotation = m * (360 / 60);
 // 短針 (短針は時間だけでなく分も角度に考慮する)
-hShape.rotation = h * (360 / 24 / 2) + m * (360 / 24 / 60);
+hShape.rotation = h * (360 / (24 / 2)) + m * (360 / 24 / 60);
 ```
 
 
@@ -209,4 +209,4 @@ for (var i = 0; i < steps; i++) {
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-30</article-date-published>
-<article-date-modified>2015-12-17</article-date-modified>
+<article-date-modified>2016-07-20</article-date-modified>
