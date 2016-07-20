@@ -22,7 +22,7 @@
 
 [Long Way North - Official Festival Trailer - YouTube](https://www.youtube.com/watch?v=n4PFEICjlv8)
 
-▲東京アニメアワード2016の長編アニメ部門グランプリ作品『[Long Way North](http://www.longwaynorththemovie.com/)』。81分のFlashアニメーションとして制作された81分の映画です。予告編は1分10秒ですが、Animate CCの可能性を知るにはわかりやすい事例です。
+▲東京アニメアワード2016の長編アニメ部門グランプリ作品『[Long Way North](http://www.longwaynorththemovie.com/)』。Flashアニメーションとして制作された81分の映画です。予告編は約2分ですが、Animate CCの可能性を知るにはわかりやすい事例です。
 
 
 ## Adobe Animate CCをはじめるには？
