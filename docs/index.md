@@ -138,4 +138,4 @@ CreateJS入門サイトでAnimate CCを扱うのには理由があります。An
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2016-07-03</article-date-modified>
+<article-date-modified>2016-10-18</article-date-modified>

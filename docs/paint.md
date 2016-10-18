@@ -168,6 +168,10 @@ function handleUp(event) {
 
 `input`タグで`type="color"`の種類を指定すると、カラーパレットを使えます。OSやブラウザの種類によって、カラーパレットのデザインが異なります。
 
+![](../imgs/paint_input.png)
+
+▲ 左上はWindows 10のChrome、中央はEdge、右側はmacOSのSafariのカラーパレット
+
 ### 色の値の取得
 
 お絵描きの線の色は`input`タグの`value`値を使います。`document.querySelector()`メソッドは、HTML要素を参照するメソッドですが、これを使って`input`タグの値を参照します。
@@ -201,6 +205,12 @@ document.querySelector("#buttonReset").addEventListener("click", function(){
   }
 });
 ```
+
+
+![](../imgs/paint_confirm.png)
+
+▲ `confirm()`メソッドはダイアログを簡単に実装できる命令
+
 
 ### 保存ボタンの制御
 
