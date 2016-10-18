@@ -32,9 +32,9 @@ shape.graphics.drawCircle(300, 100, 50);
 
 
 
-使える色の名前はCSSの記法と同じです。次の記事を参考にするといいでしょう。
+使える色の名前はCSSの記法と同じです。次のURLを参考にするといいでしょう。
 
-- [CSS Color Names](http://memopad.bitter.jp/w3c/css/css_colornames.html)
+- [HTML Color Names](http://www.w3schools.com/colors/colors_names.asp)
 
 
 ※`beginFill()`メソッドの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_beginFill)」を確認ください。
@@ -62,11 +62,14 @@ shape.graphics.drawCircle(300, 100, 50);
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/color_hex.html)
 - [サンプルのソースコードを確認する](../samples/color_hex.html)
 
+16進数表記のカラーコードは次のカラーピッカーを参考にするといいでしょう。一般的にウェブで扱える色の種類は1650万色ありますが、コンテンツの雰囲気にあわせてカラーピッカーを用いて色を選びます。
+
+- [HTML Color Picker](http://www.w3schools.com/colors/colors_picker.asp)
 
 
 ## HSLで指定
 
-HSLでの色の指定もできます。色相, 彩度, 明度を示し、それぞれは次の範囲のパラメーターを指定します。プログラミングで色相だけ変化させるときに役立ちます。
+HSLでの色の指定もできます。色相, 彩度, 明度を示し、それぞれは次の範囲のパラメーターを指定します。解説「[CreateJS で HSL カラーを使いこなそう](https://ics.media/tutorial-createjs/color_hsl.html)」で後述しますが、プログラミングで色相だけ変化させるときに役立ちます。
 
 - 色相 (0〜360)
 - 彩度 (0%〜100%)
@@ -118,4 +121,4 @@ shape.graphics.drawCircle(300, 100, 50);
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2015-12-24</article-date-modified>
+<article-date-modified>2016-10-18</article-date-modified>
