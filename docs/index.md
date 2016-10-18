@@ -111,6 +111,7 @@ webのリッチコンテンツを作るためのフレームワーク「CreateJS
 - [フラクタル図形](fractal.md)
 - [パーティクルシステム](particle.md)
 - [シューティングゲーム](game_shooting.md)
+- [お絵描きツール](paint.md)
 
 ## Adobe Animate CCを使おう
 
