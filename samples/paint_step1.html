@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    /* canvas タグの背景にルーラーを指定 */
+    #myCanvas {
+      background: url(imgs/bg_ruler.png) no-repeat;
+    }
+  </style>
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // Stageオブジェクトを作成。表示リストのルートになります。
+      var stage = new createjs.Stage("myCanvas");
+
+      // 描画をするためのシェイプを作成
+      var shape = new createjs.Shape();
+
+      // シェイプをステージに配置
+      stage.addChild(shape);
+
+      // 線のスタイルを設定
+      shape.graphics
+              .beginStroke("DarkRed"); // 赤色で線の描画を開始
+
+      // 線の曲線を指定
+      shape.graphics
+              .moveTo(100, 100) // 描画開始位置を指定
+              .lineTo(300, 400) // 線の終了位置を指定
+              .lineTo(700, 200);
+
+      stage.update(); // Stageの描画を更新
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="960" height="540"></canvas>
+</body>
+</html>

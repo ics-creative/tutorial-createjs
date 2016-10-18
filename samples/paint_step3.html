@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    /* canvas タグの背景にルーラーを指定 */
+    #myCanvas {
+      background: url(imgs/bg_ruler.png) no-repeat;
+    }
+  </style>
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // Stageオブジェクトを作成。表示リストのルートになります。
+      var stage = new createjs.Stage("myCanvas");
+
+      // タッチイベントが有効なブラウザの場合、
+      // CreateJSでタッチイベントを扱えるようにする
+      if (createjs.Touch.isSupported()) {
+        createjs.Touch.enable(stage);
+      }
+
+      var shape = new createjs.Shape(); // シェイプを作成
+      stage.addChild(shape); // ステージに配置
+
+      // ステージ上でマウスボタンを押した時のイベント設定
+      stage.addEventListener("stagemousedown", handleDown);
+
+      // マウスを押した時に実行される
+      function handleDown(event) {
+
+        var paintColor = document.querySelector("#inputColor").value;
+
+        // 線の描画を開始
+        shape.graphics
+                .beginStroke(paintColor) // 任意のカラーで描画
+                .moveTo(event.stageX, event.stageY); // 描画開始位置を指定
+
+        // ステージ上でマウスを動かした時と離した時のイベント設定
+        stage.addEventListener("stagemousemove", handleMove);
+        stage.addEventListener("stagemouseup", handleUp);
+      }
+
+      // マウスが動いた時に実行する
+      function handleMove(event) {
+        // マウス座標への線を引く
+        shape.graphics
+                .lineTo(event.stageX, event.stageY);
+      }
+
+      // マウスボタンが離された時に実行される
+      function handleUp(event) {
+        // マウス座標への線を引く
+        shape.graphics
+                .lineTo(event.stageX, event.stageY);
+
+        // 線の描画を終了する
+        shape.graphics.endStroke();
+
+        // イベント解除
+        stage.removeEventListener("stagemousemove", handleMove);
+        stage.removeEventListener("stagemouseup", handleUp);
+      }
+
+      createjs.Ticker.timingMode = createjs.Ticker.RAF;
+      createjs.Ticker.addEventListener("tick", onTick);
+      function onTick() {
+        stage.update(); // Stageの描画を更新
+      }
+
+      // リセットボタンの処理
+      document.querySelector("#buttonReset").addEventListener("click", function(){
+        var result = confirm("リセットしてもよろしいですか？");
+        if(result == true){
+          // シェイプのグラフィックスを消去
+          shape.graphics.clear();
+        }
+      });
+
+      // 保存ボタンの処理
+      document.querySelector("#buttonSave").addEventListener("click", function(){
+        // Canvasタグから画像に変換
+        var png = stage.canvas.toDataURL();
+        // 新規ウインドウで画像を表示
+        window.open(png);
+      });
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="960" height="540"></canvas>
+  <div>
+    <input id="inputColor" type="color" value="#ff0000">
+    <button id="buttonSave">保存</button>
+    <button id="buttonReset">リセット</button>
+  </div>
+</body>
+</html>
