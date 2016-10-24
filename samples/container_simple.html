@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // Stageの作成
+      var stage = new createjs.Stage("myCanvas");
+
+      // コンテナー(グループの親)を作成
+      var container = new createjs.Container();
+      container.x = 0;
+      container.y = 0;
+      stage.addChild(container); // 画面に追加
+
+      // 1つ目の円を作成
+      var circle1 = new createjs.Shape();
+      circle1.graphics.beginFill("DarkRed").drawCircle(0, 0, 50);
+      circle1.y = 100;
+
+      // 2つ目の円を作成
+      var circle2 = new createjs.Shape();
+      circle2.graphics.beginFill("Blue").drawCircle(0, 0, 50);
+      circle2.y = 300;
+
+      // 2つの円を親に追加
+      container.addChild(circle1);
+      container.addChild(circle2);
+
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        // 親だけを移動
+        container.x += 1;
+        if (container.x > 960) {　// 画面端まで移動したら、元に戻す
+          container.x = 0;
+        }
+        stage.update();
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="960" height="540"></canvas>
+</body>
+</html>
