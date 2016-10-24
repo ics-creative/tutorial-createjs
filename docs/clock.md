@@ -210,9 +210,9 @@ for (var i = 0; i < steps; i++) {
 
 ## デジタル時計の作り方
 
-デジタル時計の作り方ですが、`createjs.Text`クラスを使います。
+デジタル時計の作り方ですが、`createjs.Text`クラスを使います。見栄えはさておき、現在時刻を表示させてみましょう。
 
-![](../imgs/clock_digital_simple.png)
+![](../imgs/clock_digital_simple.html.png)
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/clock_digital_simple.html)
 - [サンプルのソースコードを確認する](../samples/clock_digital_simple.html)
@@ -246,14 +246,13 @@ createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
   // (省略)
   // Text インスタンスを作成
-  var label = new createjs.Text("", "80px sans-serif", "red");
-  // Text インスタンスは一度だけしか stage に追加しない
+  var label = new createjs.Text(◯◯◯, "80px sans-serif", "red");
   stage.addChild(label);
   // (省略)
 }
 ```
 
-![](../imgs/clock_digital_simple_miss.png)
+![](../imgs/clock_digital_simple_miss.html.png)
 
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
