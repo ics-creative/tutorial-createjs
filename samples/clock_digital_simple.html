@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script>
+    window.addEventListener("load", init);
+    function init() {
+      // Stageオブジェクトを作成。表示リストのルートになります。
+      var stage = new createjs.Stage("myCanvas");
+
+      // Text インスタンスを作成
+      var label = new createjs.Text("", "80px sans-serif", "red");
+      // Text インスタンスは一度だけしか stage に追加しない
+      stage.addChild(label);
+
+      // 時間経過のイベント
+      createjs.Ticker.addEventListener("tick", handleTick);
+      function handleTick() {
+        // 現在時間を取得
+        var now = new Date();
+
+        // 時間の数値を取得
+        var h = now.getHours(); // 時(0〜23)
+        var m = now.getMinutes(); // 分(0〜59)
+        var s = now.getSeconds(); // 秒(0〜59)
+
+        // 表示文言を作成
+        var time = h + ":" + m + ":" + s;
+        // Text インスタンスの文字列を更新
+        label.text = time;
+
+        // Stageの描画を更新
+        stage.update();
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="960" height="540"></canvas>
+</body>
+</html>
