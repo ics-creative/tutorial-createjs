@@ -201,12 +201,61 @@ for (var i = 0; i < steps; i++) {
 }
 ```
 
-いかがでしたでしょうか。目盛りをより細かく描くと機械式時計のような細かい円盤をデザインすることができます。ここで紹介した方法を工夫してぜひオリジナルの時計の表現にチャレンジしてみてください。
+目盛りをより細かく描くと機械式時計のような細かい円盤をデザインすることができます。ここで紹介した方法を工夫してぜひオリジナルの時計の表現にチャレンジしてみてください。
 
 書籍[「Flash for HTML5 ―HTML5開発環境としてのFlash Professional CC活用テクニック」](http://www.amazon.co.jp/dp/B014VWO2BU)では、このグラフィックの作り方を紹介しています。
 
 - [サンプル](http://book.mynavi.jp/wd/sampledata/201503view/flash4html5/sample_3/clock_watch.html)
 
+
+## デジタル時計の作り方
+
+デジタル時計の作り方ですが、`createjs.Text`クラスを使います。
+
+![](../imgs/clock_digital_simple.png)
+
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/clock_digital_simple.html)
+- [サンプルのソースコードを確認する](../samples/clock_digital_simple.html)
+
+ポイントとしては、`createjs.Text`インスタンスは一度だけ作成し、そのインスタンスの`text`プロパティーを変更することで変化させます。詳しくは[テキストの解説](text.md)を参照ください。
+
+```js
+// Text インスタンスを作成
+var label = new createjs.Text("", "80px sans-serif", "red");
+// Text インスタンスは一度だけしか stage に追加しない
+stage.addChild(label);
+
+// 時間経過のイベント
+createjs.Ticker.addEventListener("tick", handleTick);
+function handleTick() {
+  // (省略)
+  // Text インスタンスの文字列を更新
+  label.text = ◯◯◯;
+  // (省略)
+}
+```
+
+ありがちな失敗例として、`tick`イベントで`createjs.Text`インスタンスを追加し続けていたら、残像効果のような表示になってしまいます。
+
+
+失敗例のコード
+
+```js
+// 時間経過のイベント
+createjs.Ticker.addEventListener("tick", handleTick);
+function handleTick() {
+  // (省略)
+  // Text インスタンスを作成
+  var label = new createjs.Text("", "80px sans-serif", "red");
+  // Text インスタンスは一度だけしか stage に追加しない
+  stage.addChild(label);
+  // (省略)
+}
+```
+
+![](../imgs/clock_digital_simple_miss.png)
+
+
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-30</article-date-published>
-<article-date-modified>2016-07-20</article-date-modified>
+<article-date-modified>2016-10-24</article-date-modified>
