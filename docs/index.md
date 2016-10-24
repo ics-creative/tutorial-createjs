@@ -64,6 +64,7 @@ webのリッチコンテンツを作るためのフレームワーク「CreateJS
 
 ここまで学習した内容の理解を深めるべく、サンプル制作に挑戦ください。まずは自分でコードを書いていくといいでしょう。困ったら完成形のサンプルのコードを参照してください。
 
+- [デジタル時計の作成](clock_digital.md)
 - [アナログ時計の作成](clock.md)
 - [パズル](game_pazzle.md)
 
@@ -138,4 +139,4 @@ CreateJS入門サイトでAnimate CCを扱うのには理由があります。An
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2016-10-18</article-date-modified>
+<article-date-modified>2016-10-24</article-date-modified>
