@@ -131,10 +131,11 @@ html {
 }
 
 //$font-base : sans-serif;
-$font-base : YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$font-base : -apple-system, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 
 body {
   font-family: $font-base;
+  font-feature-settings: "palt";
 }
 
 img {
