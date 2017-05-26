@@ -156,7 +156,7 @@ LINEアニメスタンプの製作にもAnimate CCが役立ちます。Adobe Cre
 ![](../imgs/adobe_animate_basic/animtecc-complete.gif)
 
 - [1. 便利なアニメーション制作機能の紹介](https://blogs.adobe.com/creativestation/web-animate-cc-animation-stamp-1-overview)
-- [2. イラストの制作手順](https://blogsimages.adobe.com/creativestation/files/2016/10/animtecc-illust-setup-1.png)
+- [2. イラストの制作手順](https://blogs.adobe.com/creativestation/web-animate-cc-animation-stamp-2-animation)
 - [3. コマアニメで動きを作る](https://blogs.adobe.com/creativestation/web-animate-cc-animation-stamp-3-animation)
 - [4. トゥイーンアニメで動きを作る](https://blogs.adobe.com/creativestation/web-animate-cc-animation-stamp-4-tween)
 - [5. APNGファイルの作成](https://blogs.adobe.com/creativestation/animate-cc-animation-stamp-5-apng)
