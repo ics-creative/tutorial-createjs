@@ -16,13 +16,22 @@
 
 実際にAdobe Animate CC(旧Flash Professional)は多くの制作現場で使われています。有名な事例をまとめました。
 
+<iframe src="https://player.vimeo.com/video/102103466" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
 [Flash animation in Ping Pong on Vimeo](https://vimeo.com/102103466)
 
 ▲ TVアニメ「ピンポン」でのアニメーションの動画の様子。「手書きだと動画が大変なので、デジタルで作業しました」とのこと。Flash Professionalのソフト上でアニメが再生されているので、作業がイメージしやすいです。
 
-[Long Way North - Official Festival Trailer - YouTube](https://www.youtube.com/watch?v=n4PFEICjlv8)
+<iframe width="640" height="360" src="https://www.youtube.com/embed/wItC_fYJ4fI" frameborder="0" allowfullscreen></iframe>
+
+[Long Way North - Official Festival Trailer - YouTube](https://www.youtube.com/watch?v=wItC_fYJ4fI)
 
 ▲東京アニメアワード2016の長編アニメ部門グランプリ作品『[Long Way North](http://www.longwaynorththemovie.com/)』。Flashアニメーションとして制作された81分の映画です。予告編は約2分ですが、Animate CCの可能性を知るにはわかりやすい事例です。
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/tmeU9GFJW3I" frameborder="0" allowfullscreen></iframe>
+
+▲最近だと、2017年公開映画「[夜は短し歩けよ乙女](http://kurokaminootome.com/)」もFlashアニメーションが使われていることで話題に。[IGN Japanのレビュー記事](http://jp.ign.com/yoruhamijikashi/12541/review/)によれば「フラッシュはまるで手描きのアニメーションのような味わいを残す制作ソフトである。国内ではショートアニメーションで使われることが多いが、海外ではテレビなどのより長尺の作品でも一般的に使われる」と紹介されています。
 
 
 ## Adobe Animate CCをはじめるには？
@@ -125,15 +134,42 @@ Animate CCをインストールしたら起動します。起動したら[新規
 
 ## Animate CCを効率的に学習するには
 
+### お手軽に入門するなら
+
 Animate CCの入門的な学習として、「[初心者のためのAdobe Animateブログ](http://animate.hatenadiary.jp/)」がオススメです。イラスト付きでわかりやすく解説されているので、ここから勉強をはじめてみるといいでしょう。
+
+![](../imgs/adobe_animate_basic/animate_cc_intro.png)
 
 - [1.Animateでとりあえず何か描いてみる！](http://animate.hatenadiary.jp/entry/2016/03/22/182655)
 - [2.お絵描き機能の特徴](http://animate.hatenadiary.jp/entry/2016/04/25/150307)
 - [3.基本のトゥイーンアニメ（移動アニメ）](http://animate.hatenadiary.jp/entry/2016/05/27/105112)
+- [4\.基本のトゥイーンアニメ（拡大・縮小）](http://animate.hatenadiary.jp/entry/2016/07/27/222612)
+- [5\.基本のトゥイーンアニメ（モーションガイドに沿って動かす）](http://animate.hatenadiary.jp/entry/2016/09/01/140550)
+- [6\.応用アニメ【フェードイン・フェードアウト】](http://animate.hatenadiary.jp/entry/2016/12/23/183144)
+- [7\.応用アニメ【着色・明度】](http://animate.hatenadiary.jp/entry/2017/03/01/192850)
+- [8\.応用アニメ【マスク機能】](http://animate.hatenadiary.jp/entry/2017/04/20/134018)
 
-さらにAnimate CCの使い方を知りたい方は、野中先生の解説講座「[Animate CC 基本講座-Animate](https://www.lynda.jp/courses/animate-cc-essential-training)」もオススメです。ビデオなので操作につまづくことなく、安心して勉強をすすめられます。有料ですが書籍の解説書を買うのと同じぐらいの値段でシリーズを勉強できるので、最短で覚えることができるはずです。
+### LINEアニメスタンプの制作を通して学ぶには
 
-- [Animate CC 基本講座-Animate](https://www.lynda.jp/courses/animate-cc-essential-training)
+LINEアニメスタンプの製作にもAnimate CCが役立ちます。Adobe Creative Stationというサイトに、筆者が連載を寄稿しました。特にコマアニメの作り方とトゥイーンアニメの作り方が参考になるでしょう。
+
+![](../imgs/adobe_animate_basic/animtecc-complete.gif)
+
+- [1. 便利なアニメーション制作機能の紹介](https://blogs.adobe.com/creativestation/web-animate-cc-animation-stamp-1-overview)
+- [2. イラストの制作手順](https://blogsimages.adobe.com/creativestation/files/2016/10/animtecc-illust-setup-1.png)
+- [3. コマアニメで動きを作る](https://blogs.adobe.com/creativestation/web-animate-cc-animation-stamp-3-animation)
+- [4. トゥイーンアニメで動きを作る](https://blogs.adobe.com/creativestation/web-animate-cc-animation-stamp-4-tween)
+- [5. APNGファイルの作成](https://blogs.adobe.com/creativestation/animate-cc-animation-stamp-5-apng)
+
+
+### 体系的に安心して学ぶには
+
+さらにAnimate CCの使い方を知りたい方は、野中先生の解説講座「[Animate CC 2017 入門](https://www.lynda.jp/courses/learning-animate-cc-2017)」もオススメです。ビデオなので操作につまづくことなく、安心して勉強をすすめられます。有料ですが **書籍の解説書を買うのと同じぐらいの値段でシリーズを勉強できる** ので、最短で覚えることができるはずです。
+
+![](../imgs/adobe_animate_basic/animate_cc_lynda.jpg)
+
+
+- [Animate CC 2017 入門](https://www.lynda.jp/courses/learning-animate-cc-2017)
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2016-02-16</article-date-published>
