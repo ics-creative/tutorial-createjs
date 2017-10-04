@@ -81,8 +81,8 @@ for (var i = 0; i < MAX; i++) {
 var MAX = 20;
 for (var i = 0; i < MAX; i++) {
   // HSLカラーを算出
-  var satuation = i * (100 / MAX);
-  var color = "hsl(0, " + satuation + "%, 50%)";
+  var saturation = i * (100 / MAX);
+  var color = "hsl(0, " + saturation + "%, 50%)";
   // (省略)
 }
 ```
