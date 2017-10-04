@@ -1,6 +1,7 @@
 const fs = require('fs');
 const marked = require('marked');
 const mkdirp = require('mkdirp');
+const highlightJs = require('highlight.js');
 
 let promises = [];
 let samplesUrl = 'https://ics-creative.github.io/tutorial-createjs/';
@@ -23,8 +24,6 @@ const template = (text, values) => {
     return Object.prototype.hasOwnProperty.call(values, key) ? values[key] : '';
   });
 };
-
-
 
 
 const renderer = new marked.Renderer();
@@ -63,11 +62,10 @@ renderer.heading = function (text, level) {
 
 marked.setOptions({
   highlight: function (code) {
-    return require('highlight.js').highlightAuto(code).value;
+    return highlightJs.highlightAuto(code).value;
   },
   renderer: renderer
 });
-
 
 
 const generateHTML = (dirName, fileName, resolve) => {
