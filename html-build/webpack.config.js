@@ -41,7 +41,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               // オプションでCSS内のurl()メソッドの取り込みを禁止する
-              url: false,
+              url: true,
               // ソースマップを有効にする
               sourceMap: useSourceMap,
             },
@@ -56,6 +56,10 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
+        use: 'url-loader'
+      }
     ],
   },
   plugins: [
