@@ -50,4 +50,4 @@ function handleGreenClick(event) {
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-12-03</article-date-published>
-<article-date-modified>2015-12-17</article-date-modified>
+<article-date-modified>2018-02-20</article-date-modified>

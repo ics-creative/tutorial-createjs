@@ -82,9 +82,15 @@ function init(){
 
 ## 8. Animate CCのシンボルは「lib.Star」という名前で呼び出せる
 
-Animate CCのシンボル名の先頭に「lib.」をつけるとクラスとして利用できます。
+Animate CCのシンボル名の先頭に「lib.」をつけるとクラスとして利用できます。`AdobeAn.getComposition()`メソッドの引数は、同階層に出力されたHTMLファイルから調べます。
 
 ```js
+// Animate CCで出力したコンテンツを読み込む
+// 引数の文字列はAnimate CCから出力したHTMLファイルから調べる
+var comp = AdobeAn.getComposition("61930C3D5DE64B7EA1A7EAD48B1047A7");
+// ライブラリ内のコンテンツを読み込む
+var lib = comp.getLibrary();
+
 // Animate CCのシンボル名の先頭に「lib.」をつけると利用できます
 var star = new lib.Star();
 ```

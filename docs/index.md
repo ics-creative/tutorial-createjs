@@ -134,9 +134,8 @@ CreateJS入門サイトでAnimate CCを扱うのには理由があります。An
 
 再生エンジンにCreateJSが使われているというとイメージしづらいかもしれませんが、アニメーションとCreateJSが連携しやすいということを意味します。次のページでは、Animate CCで作ったCreateJSコンテンツを、プログラムで連携する方法を解説します。
 
-- [Adobe Animate CC と CreateJS の連携 (基本編)](adobe_animate.md)
-- [Adobe Animate CC と CreateJS の連携 (ビットマップ含む編)](adobe_animate_bitmaps.md)
 - [Adobe Animate CC と CreateJS の連携 (スプライトシート編)](adobe_animate_spritesheet.md)
+- [Adobe Animate CC と CreateJS の連携 (シェイプ編)](adobe_animate.md)
 
 
 
@@ -147,4 +146,4 @@ CreateJS入門サイトでAnimate CCを扱うのには理由があります。An
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2016-10-24</article-date-modified>
+<article-date-modified>2018-02-20</article-date-modified>

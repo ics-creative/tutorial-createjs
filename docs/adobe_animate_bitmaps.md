@@ -10,6 +10,8 @@ Adobe Animate CCで画像ファイルを含むコンテンツを作っていた�
 - [サンプルのソースコードを確認する](../samples/createjs-toolkit-bitmaps/)
 
 
+※2018/02/20更新：Animate CC 18.0ではこの記事の内容がそのまま使えません。準備していますのでお待ち下さい。
+
 ## Adobe Animate CCを起動
 
 今回はCreateJS用のグラフィックとモーションを用意したいので、起動したら[新規作成]の一覧から[HTML5 Canvas]を選択します。
