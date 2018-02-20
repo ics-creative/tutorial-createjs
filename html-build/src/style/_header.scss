@@ -12,9 +12,15 @@
 
     max-width: $contentWidth;
     margin: 0 auto;
-    @include clearfix;
+
     line-height: 42px;
     height: 42px;
+
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
 
     h1 {
       float: left;
@@ -71,15 +77,16 @@
             color: #CCC;
           }
 
-          @include transition(all 0.6s);
+          transition: all 0.6s;
+
 
           &:hover {
-            @include transition(all 0.075s);
+            transition: all 0.075s;
             background: $colorBaseGray;
             color: #FFF;
           }
           &:active {
-            @include transition(all 0.075s);
+            transition: all 0.075s;
             background: $colorBaseLightGray;
             color: #FFF;
           }
@@ -88,7 +95,7 @@
     }
   }
 
-  @include transition(all 0.3s ease);
+  transition: all 0.3s ease;
   &.active {
 
     #header-breadcrumb {
@@ -107,15 +114,18 @@
     font-size: 0.8rem;
 
     height: $itemHeight;
-    //line-height: $itemHeight;
-    overflow: hidden;
 
-    @include transition(background 0.6s ease);
+    transition : background 0.6s ease;
 
     .wrap {
       max-width: $contentWidth;
       margin: 0 auto;
-      @include clearfix;
+
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
 
       ul.breadcrumb {
 
@@ -144,7 +154,7 @@
           text-overflow: ellipsis;
 
           a {
-            @include transition(all 0.3s);
+            transition: all 0.3s;
 
             line-height: inherit;
 

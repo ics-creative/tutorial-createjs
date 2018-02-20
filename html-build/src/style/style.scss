@@ -1,6 +1,3 @@
-@import 'compass';
-@import "compass/utilities/general/clearfix";
-
 // ======================================================
 // 定数
 // ======================================================
@@ -47,7 +44,7 @@ $contentHorizontalPadding: 12px;
       border: 12px solid rgba(255, 255, 255, 0.7);
       background: rgba(255, 255, 255, 0.2);
 
-      @include transition(all 0.25s cubic-bezier(0, 1, .4, 1));
+      transition: all 0.25s cubic-bezier(0, 1, .4, 1);
     }
   }
 
@@ -63,23 +60,23 @@ $contentHorizontalPadding: 12px;
     border: 0px solid rgba(255, 255, 255, 0);
     background: rgba(0, 0, 0, 0);
 
-    @include transition(all 3.5s cubic-bezier(0, 1, .4, 1));
+    transition: all 3.5s cubic-bezier(0, 1, .4, 1);
   }
 }
 
 @mixin gradationBorder() {
-  @include background-image(linear-gradient(right,
+  background-image: linear-gradient(right,
           rgba(189, 195, 199, 0),
           rgba(189, 195, 199, 1.0),
           rgba(189, 195, 199, 1.0),
-          rgba(189, 195, 199, 0)));
+          rgba(189, 195, 199, 0));
 }
 
 @mixin gradationBorderLeft() {
-  @include background-image(linear-gradient(left,
+  background-image: linear-gradient(left,
           rgba(189, 195, 199, 1.0),
           rgba(189, 195, 199, 1.0),
-          rgba(189, 195, 199, 0)));
+          rgba(189, 195, 199, 0));
 }
 
 /**
@@ -89,36 +86,20 @@ $contentHorizontalPadding: 12px;
   // 出現エフェクト
   @media (min-width: $mediaWidthMedium) {
     opacity: 0.0;
-    @include transform(translate(-100px, 0));
+    transform: translate(-100px, 0);
     &.show {
       opacity: 1.0;
-      @include transform(translate(0px, 0));
-      @include transition(all 1.0s cubic-bezier(0.19, 1, 0.22, 1) 0.1s);
+      transform: translate(0px, 0);
+      transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
     }
   }
 }
 
 @mixin createGradientBackground() {
-  @include background-image(linear-gradient(left,
+  background-image: linear-gradient(left,
           #6ebdfb,
-          #80deea));
+          #80deea);
 }
-
-$supported-browsers: reject(browsers(),
-  /* android, */
-        blackberry,
-  /* chrome,*/
-  /* android-chrome,*/
-        firefox,
-        android-firefox,
-        ie,
-        ie-mobile,
-  /* safari,*/
-  /* ios-safari,*/
-        opera,
-        opera-mini,
-        opera-mobile
-);
 
 html {
 
@@ -131,7 +112,7 @@ html {
 }
 
 //$font-base : sans-serif;
-$font-base : -apple-system, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$font-base: -apple-system, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 
 body {
   font-family: $font-base;

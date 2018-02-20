@@ -9,7 +9,7 @@ $footer-height: 26px;
   text-decoration: none;
   padding: 0 1rem;
 
-  @include transition(all 2.0s cubic-bezier(0, 1, .4, 1));
+  transition: all 2.0s cubic-bezier(0, 1, .4, 1);
 
   @media (min-width: $mediaWidthMedium) {
     line-height: $footer-height;
@@ -26,7 +26,7 @@ $footer-height: 26px;
   &:hover {
     background: $colorBaseGray;
     color: #FFF;
-    @include transition(all 0.15s cubic-bezier(0, 1, .4, 1));
+    transition : all 0.15s cubic-bezier(0, 1, .4, 1);
   }
 }
 
@@ -45,7 +45,7 @@ $footer-height: 26px;
   width: 100%;
   border-top: 1px solid #888;
 
-  @include transition(transform 0.6s ease);
+  transition: transform 0.6s ease;
 
   &.active {
     position: fixed;
@@ -69,7 +69,11 @@ $footer-height: 26px;
       }
 
       margin: 0 auto;
-      @include clearfix;
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
 
       .count {
         font-size: 0.75rem;
@@ -95,7 +99,11 @@ $footer-height: 26px;
 
         @media (min-width: $mediaWidthMedium) {
           float: left;
-          @include clearfix;
+          &:after{
+            content: "";
+            display: block;
+            clear: both;
+          }
         }
 
         @media (max-width: $mediaWidthMedium) {
@@ -148,7 +156,11 @@ $footer-height: 26px;
 
       div.post_info {
 
-        @include clearfix;
+        &:after{
+          content: "";
+          display: block;
+          clear: both;
+        }
 
         @media (min-width: $mediaWidthMedium) {
           float: right;
@@ -195,7 +207,7 @@ $footer-height: 26px;
 
           &:hover {
             background: $colorBaseGray;
-            @include transition(background 0.15s cubic-bezier(0, 1, .4, 1));
+            transition : background 0.15s cubic-bezier(0, 1, .4, 1);
           }
         }
       }
@@ -220,7 +232,11 @@ $footer-height: 26px;
     }
 
     margin: 0 auto;
-    @include clearfix;
+    &:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
   }
 
   .footer-section {
@@ -245,8 +261,6 @@ $footer-height: 26px;
       img {
         max-width: 100%;
         height: auto;
-
-        //				@include filter(grayscale(100%));
       }
 
     }
