@@ -20,23 +20,23 @@ stage.addChild(ship);
 window.addEventListener("keydown", handleKeyDown);
 
 function handleKeyDown(event) {
-   // キーコード(どのキーが押されたか)を取得
-   var keyCode = event.keyCode;
-   console.log(event.keyCode);
-   // 条件文で船の位置を変更する
-   if (keyCode == 39) { // 右
-      ship.x += 1; // 移動
-      ship.rotation = 0; // 向きを変更
-   } else if (keyCode == 37) { // 左
-      ship.x -= 1;
-      ship.rotation = 180;
-   } else if (keyCode == 40) { // 下
-      ship.y += 1;
-      ship.rotation = 90;
-   } else if (keyCode == 38) { // 上
-      ship.y -= 1;
-      ship.rotation = -90;
-   }
+  // キーコード(どのキーが押されたか)を取得
+  var keyCode = event.keyCode;
+  console.log(event.keyCode);
+  // 条件文で船の位置を変更する
+  if (keyCode == 39) { // 右
+    ship.x += 1; // 移動
+    ship.rotation = 0; // 向きを変更
+  } else if (keyCode == 37) { // 左
+    ship.x -= 1;
+    ship.rotation = 180;
+  } else if (keyCode == 40) { // 下
+    ship.y += 1;
+    ship.rotation = 90;
+  } else if (keyCode == 38) { // 上
+    ship.y -= 1;
+    ship.rotation = -90;
+  }
 }
 ```
 
@@ -70,49 +70,48 @@ var isPressDown = false;
 window.addEventListener("keydown", handleKeyDown);
 window.addEventListener("keyup", handleKeyUp);
 function handleKeyDown(event) {
-   // キーコード(どのキーが押されたか)を取得
-   var keyCode = event.keyCode;
-   if (keyCode == 39) { // 右
-       isPressRight = true;// 真偽値が切り替わる
-   } else if (keyCode == 37) { // 左
-       isPressLeft = true;
-   } else if (keyCode == 40) { // 下
-       isPressDown = true;
-   } else if (keyCode == 38) { // 上
-       isPressUp = true;
-   }
+  // キーコード(どのキーが押されたか)を取得
+  var keyCode = event.keyCode;
+  if (keyCode == 39) { // 右
+      isPressRight = true;// 真偽値が切り替わる
+  } else if (keyCode == 37) { // 左
+      isPressLeft = true;
+  } else if (keyCode == 40) { // 下
+      isPressDown = true;
+  } else if (keyCode == 38) { // 上
+      isPressUp = true;
+  }
 }
 
 function handleKeyUp(event) {
-   // キーコード(どのキーが押されたか)を取得
-   var keyCode = event.keyCode;
-   if (keyCode == 39) { // 右
-       isPressRight = false;// 真偽値が切り替わる
-   } else if (keyCode == 37) { // 左
-       isPressLeft = false;
-   } else if (keyCode == 40) { // 下
-       isPressDown = false;
-   } else if (keyCode == 38) { // 上
-       isPressUp = false;
-   }
+  // キーコード(どのキーが押されたか)を取得
+  var keyCode = event.keyCode;
+  if (keyCode == 39) { // 右
+      isPressRight = false;// 真偽値が切り替わる
+  } else if (keyCode == 37) { // 左
+      isPressLeft = false;
+  } else if (keyCode == 40) { // 下
+      isPressDown = false;
+  } else if (keyCode == 38) { // 上
+      isPressUp = false;
+  }
 }
 
 // 時間経過
 createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
-   // 条件文で船の位置を変更する
-   if (isPressRight == true) { // 右
-       ship.x += 1; // 移動
-   } else if (isPressLeft == true) { // 左
-       ship.x -= 1;
-   }
-   if (isPressDown == true) { // 下
-       ship.y += 1;
-   } else if (isPressUp == true) { // 上
-       ship.y -= 1;
-   }
-
-   stage.update(); // 画面更新
+  // 条件文で船の位置を変更する
+  if (isPressRight == true) { // 右
+      ship.x += 1; // 移動
+  } else if (isPressLeft == true) { // 左
+      ship.x -= 1;
+  }
+  if (isPressDown == true) { // 下
+      ship.y += 1;
+  } else if (isPressUp == true) { // 上
+      ship.y -= 1;
+  }
+  stage.update(); // 画面更新
 }
 ```
 
@@ -134,20 +133,20 @@ var speed = 0; // 船の移動の速さ
 window.addEventListener("keydown", handleKeyDown);
 
 function handleKeyDown(event) {
-    // キーコード(どのキーが押されたか)を取得
-    var keyCode = event.keyCode;
-    // 条件文で船の位置を変更する
-    if (keyCode == 39) { // 右
-        angle += 5;
-    } else if (keyCode == 37) { // 左  
-        angle -= 5;
-    }
+  // キーコード(どのキーが押されたか)を取得
+  var keyCode = event.keyCode;
+  // 条件文で船の位置を変更する
+  if (keyCode == 39) { // 右
+      angle += 5;
+  } else if (keyCode == 37) { // 左
+      angle -= 5;
+  }
 
-    if (keyCode == 40) { // 下
-        speed -= 1;
-    } else if (keyCode == 38) { // 上
-        speed += 1;
-    }
+  if (keyCode == 40) { // 下
+      speed -= 1;
+  } else if (keyCode == 38) { // 上
+      speed += 1;
+  }
 }
 ```
 
@@ -157,9 +156,9 @@ function handleKeyDown(event) {
 // 時間経過
 createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
-    // angle と speed を ship に適用する
+  // angle と speed を ship に適用する
 
-    stage.update(); // 画面更新
+  stage.update(); // 画面更新
 }
 ```
 

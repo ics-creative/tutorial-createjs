@@ -95,29 +95,29 @@ for (var i = 0; i < 20; i++) {
 // 時間経過のイベント
 createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
-    // (省略)
+  // (省略)
 
-    // 複数の星とのアタリ判定をfor文でチェックする
-    for (var i = 0; i < polyList.length; i++) {
-        // 配列の要素を参照する (i番目の星)
-        var poly = polyList[i]; // i 番目の poly を取得
+  // 複数の星とのアタリ判定をfor文でチェックする
+  for (var i = 0; i < polyList.length; i++) {
+    // 配列の要素を参照する (i番目の星)
+    var poly = polyList[i]; // i 番目の poly を取得
 
-        // 小さな星とi番目の星の相対座標を求める
-        var point = miniStar.localToLocal(0, 0, poly);
-        // i番目の星と小さな星があたっているかを調べる
-        var isHit = poly.hitTest(point.x, point.y);
+    // 小さな星とi番目の星の相対座標を求める
+    var point = miniStar.localToLocal(0, 0, poly);
+    // i番目の星と小さな星があたっているかを調べる
+    var isHit = poly.hitTest(point.x, point.y);
 
-        // あたっていれば
-        if (isHit == true) {
-            // 星を赤色で塗る
-            // (省略)
-        } else {
-            // 星を緑色で塗る
-            // (省略)
-        }
+    // あたっていれば
+    if (isHit == true) {
+      // 星を赤色で塗る
+      // (省略)
+    } else {
+      // 星を緑色で塗る
+      // (省略)
     }
+  }
 
-    // (省略)
+  // (省略)
 }
 ```
 

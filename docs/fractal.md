@@ -153,16 +153,16 @@ var time = 0;
 
 createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
-    // シェイプをクリアする
-    shape.graphics.clear();
+  // シェイプをクリアする
+  shape.graphics.clear();
 
-    // フラクタルの木を描く
-    drawTree(0, 0, 200, 0, 12);
-    // 画面を更新
-    stage.update();
+  // フラクタルの木を描く
+  drawTree(0, 0, 200, 0, 12);
+  // 画面を更新
+  stage.update();
 
-    // 時間を更新
-    time += 1;
+  // 時間を更新
+  time += 1;
 }
 ```
 
@@ -176,21 +176,21 @@ function drawTree(x1, // 始点のX座標
                   angle, // 枝の伸びる方向(角度)
                   level) // 再帰レベル
 {
-    (省略)
+  (省略)
 
-    // 細分化
-    if (level > 0) {
-        // 細分化レベルを更新
-        level = level - 1;
+  // 細分化
+  if (level > 0) {
+      // 細分化レベルを更新
+      level = level - 1;
 
-        // 三角関数で変動する値を得る (-1.0〜+1.0の周期になる)
-        var timeValue = Math.sin(time * Math.PI / 180);
-        var rot = 40 * ( timeValue + 1.0 ) + 20; // +20〜+100の値を得る
+      // 三角関数で変動する値を得る (-1.0〜+1.0の周期になる)
+      var timeValue = Math.sin(time * Math.PI / 180);
+      var rot = 40 * ( timeValue + 1.0 ) + 20; // +20〜+100の値を得る
 
-        // 次の枝を描く
-        drawTree(x2, y2, leng * 0.6, angle + rot, level);
-        drawTree(x2, y2, leng * 0.6, angle - rot, level);
-    }
+      // 次の枝を描く
+      drawTree(x2, y2, leng * 0.6, angle + rot, level);
+      drawTree(x2, y2, leng * 0.6, angle - rot, level);
+  }
 }
 ```
 

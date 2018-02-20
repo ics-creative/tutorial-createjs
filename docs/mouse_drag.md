@@ -46,9 +46,9 @@ function handleUp(event) {
 
 // 表示オブジェクトを押した状態で動かしたときの処理です
 function handleMove(event) {
-	// 表示オブジェクトはマウス座標に追随する
-	表示オブジェクト.x = stage.mouseX;
-	表示オブジェクト.y = stage.mouseY;
+  // 表示オブジェクトはマウス座標に追随する
+  表示オブジェクト.x = stage.mouseX;
+  表示オブジェクト.y = stage.mouseY;
 }
 ```
 
@@ -69,17 +69,17 @@ var dragPointY;
 
 // 表示オブジェクトを押したときの処理です
 function handleDown(event) {
-	// ドラッグを開始した座標を覚えておく
-	dragPointX = stage.mouseX - 表示オブジェクト.x;
-	dragPointY = stage.mouseY - 表示オブジェクト.y;
+  // ドラッグを開始した座標を覚えておく
+  dragPointX = stage.mouseX - 表示オブジェクト.x;
+  dragPointY = stage.mouseY - 表示オブジェクト.y;
 }
 
 // 表示オブジェクトを押した状態で動かしたときの処理です
 function handleMove(event) {
-	// 表示オブジェクトはマウス座標に追随する
-	// ただしドラッグ開始地点との補正をいれておく
-	表示オブジェクト.x = stage.mouseX - dragPointX;
-	表示オブジェクト.y = stage.mouseY - dragPointY;
+  // 表示オブジェクトはマウス座標に追随する
+  // ただしドラッグ開始地点との補正をいれておく
+  表示オブジェクト.x = stage.mouseX - dragPointX;
+  表示オブジェクト.y = stage.mouseY - dragPointY;
 }
 ```
 

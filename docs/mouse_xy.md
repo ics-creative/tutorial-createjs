@@ -28,15 +28,15 @@ stage.addChild(shape);
 createjs.Ticker.addEventListener("tick", handleTick);
 
 function handleTick(event) {
-	// マウス座標を取得する
-	var mx = stage.mouseX;
-	var my = stage.mouseY;
-	// シェイプをマウスに追随させる
-	shape.x = mx;
-	shape.y = my;
+  // マウス座標を取得する
+  var mx = stage.mouseX;
+  var my = stage.mouseY;
+  // シェイプをマウスに追随させる
+  shape.x = mx;
+  shape.y = my;
 
-	// 画面を更新する
-	stage.update();
+  // 画面を更新する
+  stage.update();
 }
 ```
 

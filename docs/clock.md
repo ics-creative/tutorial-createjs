@@ -150,21 +150,21 @@ hShape.rotation = h * (360 / 12) + m * (360 / 12 / 60);
 var steps = 60; // 目盛りの個数
 // (1周=360度=2πはstepsの値で分割)
 for (var i = 0; i < steps; i++) {
-    var angle = i * (360 / steps) - 90; //角度を計算
-    var radian = angle * Math.PI / 180; // ラジアンに変換
-    // A点 (直交座標に変換)
-    var startX = 190 * Math.cos(radian);
-    var startY = 190 * Math.sin(radian);
-    // B点 (直交座標に変換)
-    var endX = 200 * Math.cos(radian);
-    var endY = 200 * Math.sin(radian);
+  var angle = i * (360 / steps) - 90; //角度を計算
+  var radian = angle * Math.PI / 180; // ラジアンに変換
+  // A点 (直交座標に変換)
+  var startX = 190 * Math.cos(radian);
+  var startY = 190 * Math.sin(radian);
+  // B点 (直交座標に変換)
+  var endX = 200 * Math.cos(radian);
+  var endY = 200 * Math.sin(radian);
 
-    // 目盛りを描く
-    bg.graphics
-            .setStrokeStyle(1) // 線幅
-            .beginStroke("gray")// 線の色
-            .moveTo(startX, startY)
-            .lineTo(endX, endY);
+  // 目盛りを描く
+  bg.graphics
+          .setStrokeStyle(1) // 線幅
+          .beginStroke("gray")// 線の色
+          .moveTo(startX, startY)
+          .lineTo(endX, endY);
 }
 ```
 
@@ -176,28 +176,28 @@ for (var i = 0; i < steps; i++) {
 // 数字を配置
 var steps = 12; // 目盛りの個数
 for (var i = 0; i < steps; i++) {
-    // 角度を計算
-    var angle = i * (360 / steps) - 90; // 開始座標を90度ずらす
-    var radian = angle * Math.PI / 180; // ラジアンに変換
-    // 配置座標 (直交座標に変換)
-    var xx = 160 * Math.cos(radian);
-    var yy = 160 * Math.sin(radian);
+  // 角度を計算
+  var angle = i * (360 / steps) - 90; // 開始座標を90度ずらす
+  var radian = angle * Math.PI / 180; // ラジアンに変換
+  // 配置座標 (直交座標に変換)
+  var xx = 160 * Math.cos(radian);
+  var yy = 160 * Math.sin(radian);
 
-    // 表示する文字
-    var moji = i;
-    // アナログ時計は「0」時と表示しないので、「12」時に設定する
-    if(i == 0){
-        moji = 12;
-    }
+  // 表示する文字
+  var moji = i;
+  // アナログ時計は「0」時と表示しないので、「12」時に設定する
+  if(i == 0){
+    moji = 12;
+  }
 
-    // テキスト表示
-    var t = new createjs.Text("", "32px sans-serif", "gray");
-    t.text = moji;
-    t.textAlign = "center"; // 水平中央に
-    t.textBaseline = "middle"; // 垂直中央に
-    t.x = xx; // 座標を設定
-    t.y = yy;
-    clock.addChild(t);
+  // テキスト表示
+  var t = new createjs.Text("", "32px sans-serif", "gray");
+  t.text = moji;
+  t.textAlign = "center"; // 水平中央に
+  t.textBaseline = "middle"; // 垂直中央に
+  t.x = xx; // 座標を設定
+  t.y = yy;
+  clock.addChild(t);
 }
 ```
 

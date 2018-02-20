@@ -10,7 +10,6 @@ CreateJSでは音声を再生する機能が含まれています。webで扱え
 - [サンプルのソースコードを確認する](../samples/sound_basic.html)
 
 ```html
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">

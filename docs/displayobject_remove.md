@@ -36,13 +36,13 @@ circleGreen.addEventListener("click", handleGreenClick);
 
 // クリックしたとき
 function handleRedClick(event) {
-    // 赤の円をコンテナーから削除
-    container.removeChild(circleRed);
+  // 赤の円をコンテナーから削除
+  container.removeChild(circleRed);
 }
 
 function handleGreenClick(event) {
-    // 緑の円をコンテナーから削除
-    container.removeChild(circleGreen);
+  // 緑の円をコンテナーから削除
+  container.removeChild(circleGreen);
 }
 ```
 

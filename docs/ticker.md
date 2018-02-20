@@ -108,8 +108,8 @@ createjs.Ticker.addEventListener("tick", stage);
 // tick イベントを監視します
 createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick(){
-	// アニメーション
-	shape.x += 2;
+  // アニメーション
+  shape.x += 2;
 }
 ```
 

@@ -26,11 +26,11 @@ var vy = 0;
 // 時間制御
 createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
-    // 重力計算
-    vy += 1;
+// 重力計算
+vy += 1;
 
-    // 時間制御
-    ball.y += vy;
+// 時間制御
+ball.y += vy;
 }
 ```
 
@@ -39,16 +39,16 @@ function handleTick() {
 ```js
 createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
-    // 重力計算
-    vy += 1;
+  // 重力計算
+  vy += 1;
 
-    // 時間制御
-    ball.y += vy;
+  // 時間制御
+  ball.y += vy;
 
-    if (ball.y + radius > stage.canvas.height) {
-        ball.y = stage.canvas.height - radius;
-        vy *= -0.7 ;
-    }
+  if (ball.y + radius > stage.canvas.height) {
+    ball.y = stage.canvas.height - radius;
+    vy *= -0.7;
+  }
 }
 ```
 
@@ -73,11 +73,11 @@ ball.x += vx;
 
 // 画面の端からはみ出さないようにする処理
 if (ball.x + radius > stage.canvas.width) {
-    ball.x = stage.canvas.width - radius;
-    vx *= -0.7;
+  ball.x = stage.canvas.width - radius;
+  vx *= -0.7;
 } else if (ball.x - radius < 0) {
-    ball.x = radius;
-    vx *= -0.7;
+  ball.x = radius;
+  vx *= -0.7;
 }
 ```
 
@@ -101,16 +101,16 @@ createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
   // ドラッグ中でないときだけ計算を行う  
   if(dragFlag == false) {
-      // 重力計算
-      vy += 1;
+    // 重力計算
+    vy += 1;
 
 ・・・（いろいろな処理）・・・
-      // 左側の壁
-      if(ball.x < ballsize){
-        vx *= -0.8;
-        ball.x = ballsize;
-      }
+    // 左側の壁
+    if(ball.x < ballsize){
+      vx *= -0.8;
+      ball.x = ballsize;
     }
+  }
 }
 ```
 

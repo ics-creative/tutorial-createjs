@@ -34,11 +34,11 @@ rect.addEventListener("click", handleRectClick);
 
 // クリックしたとき
 function handleCircleClick(event) {
-	alert("円がクリックされました");
+  alert("円がクリックされました");
 }
 
 function handleRectClick(event) {
-	alert("四角形がクリックされました");
+  alert("四角形がクリックされました");
 }
 ```
 

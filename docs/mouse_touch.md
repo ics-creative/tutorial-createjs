@@ -8,8 +8,8 @@ var stage = new createjs.Stage("myCanvas");
 
 // タッチ操作をサポートしているブラウザーならば
 if(createjs.Touch.isSupported() == true){
-	// タッチ操作を有効にします。
-	createjs.Touch.enable(stage)
+  // タッチ操作を有効にします。
+  createjs.Touch.enable(stage)
 }
 ```
 

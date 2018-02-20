@@ -22,17 +22,17 @@ stage.enableMouseOver();
 
 // マウスオーバーしたとき
 function handleMouseOver(event) {
-	// 処理
+  // 処理
 }
 
 // マウスアウトしたとき
 function handleMouseOut(event) {
-	// 処理
+  // 処理
 }
 
 // クリックしたとき
 function handleClick(event) {
-	// 処理
+  // 処理
 }
 ```
 
@@ -45,20 +45,20 @@ shape.addEventListener("mouseout", handleMouseOut);
 
 // マウスオーバーしたとき
 function handleMouseOver(event) {
-	// 緑で塗り直す
-	shape.graphics
-			.clear()
-			.beginFill("green")
-			.drawCircle(0, 0, 80);
+  // 緑で塗り直す
+  shape.graphics
+    .clear()
+    .beginFill("green")
+    .drawCircle(0, 0, 80);
 }
 
 // マウスアウトしたとき
 function handleMouseOut(event) {
-	// 赤で塗り直す
-	shape.graphics
-			.clear()
-			.beginFill("DarkRed")
-			.drawCircle(0, 0, 80);
+  // 赤で塗り直す
+  shape.graphics
+    .clear()
+    .beginFill("DarkRed")
+    .drawCircle(0, 0, 80);
 }
 ```
 
