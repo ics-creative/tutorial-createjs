@@ -56,6 +56,12 @@ module.exports = {
           'sass-loader',
         ],
       },
+      // 画像関係
+      {
+        test: /\.(png|jpeg|svg)$/,
+        use: 'url-loader'
+      },
+      // フォント関係
       {
         test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
         use: 'url-loader'

@@ -24,9 +24,9 @@ $colorTextLinkVisited: #795548;
 $colorTextLinkActive: #42A5F5;
 
 $colorBlack: #404040;
-$font-family-midashi: "游明朝 Light", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "a-otf-ryumin-pr6n", "ＭＳ 明朝", serif;
-$font-weight-midashi: 300;
-//$font-cursive: "a-otf-ryumin-pr6n", "リュウミン", serif;
+$font-family-midashi: "游明朝 Regular", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+$font-weight-midashi: bold;
+
 
 /* Medium Devices, Desktops */
 $mediaWidthLarge: 970px;
@@ -139,11 +139,11 @@ body.tutorial {
       }
 
       h1, h2, h3, h4, h5 {
-        //font-family : "遊明朝";
-        font-weight: normal;
         line-height: 1.5;
         font-family: $font-family-midashi;
         font-weight: $font-weight-midashi;
+        font-feature-settings: "palt";
+        letter-spacing: 2px;
         color: #444;
       }
 
@@ -189,7 +189,7 @@ body.tutorial {
       div.text-data {
         font-size: 0.75rem;
         line-height: 1.5;
-        font-style: italic;
+        font-style: normal;
         text-align: center;
       }
     }
@@ -236,12 +236,16 @@ body.tutorial {
       max-width: $contentWidth;
       margin: 0 auto;
       margin-bottom: 0.5em;
-      color: rgba(255, 255, 255, 0.8)
+      color: rgba(255, 255, 255, 0.8);
+      font-feature-settings: "palt";
+      letter-spacing: 2px;
     }
     h1 {
       max-width: $contentWidth;
       margin: 0 auto;
       font-size: 1.7rem;
+      font-feature-settings: "palt";
+      letter-spacing: 4px;
     }
   }
 }

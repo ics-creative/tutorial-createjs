@@ -31,6 +31,17 @@
       a {
         display: block;
         height: 26px;
+        margin-top: 8px;
+
+        .logoBlog {
+          background: url("../images/logo-blog.png") no-repeat;
+          background-size: cover;
+
+          width: 477px;
+          height: 26px;
+          display: inline-block;
+          text-indent: -9999px;
+        }
       }
 
       @media (max-width: $mediaWidthLarge) {
