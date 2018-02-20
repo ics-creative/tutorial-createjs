@@ -1,16 +1,16 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="../css/base.css">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../css/base.css" />
   <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <!-- Animate CCでスプライトシートとして書き出したJSファイルを読み込む -->
   <script src="Animal.js"></script>
   <script>
     window.addEventListener("load", init);
     function init() {
       var stage = new createjs.Stage("myCanvas");
 
-      // スプライトを作成
+      // スプライトシートはシンボル名をそのまま記述する。この場合は「Animal」の部分。
       var chara = new Animal();
       stage.addChild(chara);
 

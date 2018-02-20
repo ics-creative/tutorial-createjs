@@ -1,8 +1,9 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+
+  <!-- Animate CCで書き出したJSファイルを読み込む -->
   <script src="HeartAsset.js"></script>
   <script>
     window.addEventListener("load", init);
@@ -10,14 +11,18 @@
     function init() {
       images = images||{};
 
+      var comp=AdobeAn.getComposition("B8708A300BAB4752BD4CC5BE7AD9503E");
+      var lib=comp.getLibrary();
+
       var loader = new createjs.LoadQueue(false);
       loader.addEventListener("fileload", handleFileLoad);
       loader.addEventListener("complete", handleComplete);
       loader.loadManifest(lib.properties.manifest);
     }
 
-    function handleFileLoad(evt) {
-      if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+    function handleFileLoad(evt, comp) {
+      var images=comp.getImages();
+      if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }
     }
 
     function handleComplete(evt) {
