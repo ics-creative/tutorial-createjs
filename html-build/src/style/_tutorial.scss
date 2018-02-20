@@ -6,11 +6,11 @@
 // ======================================================
 $colorTheme: #6ebdfb;
 $colorThemeDark: #222222;
-$boldColor: #E91E63;
+$boldColor: #e91e63;
 $colorBaseGray: #424242;
 $colorBaseLightGray: #666666;
 $colorBodyBg: #f9f9f9;
-$colorGrayLight: #E0E0E0;
+$colorGrayLight: #e0e0e0;
 
 // SNS 系のカラー
 $colorShareTwitter: #55acee;
@@ -18,15 +18,15 @@ $colorShareFacebook: #3b5998;
 $colorShareHatena: #2c6ebd;
 $colorShareGoogle: #dd4b39;
 
-$colorTextLinkNormal: #2196F3;
+$colorTextLinkNormal: #2196f3;
 //#3498db
 $colorTextLinkVisited: #795548;
-$colorTextLinkActive: #42A5F5;
+$colorTextLinkActive: #42a5f5;
 
 $colorBlack: #404040;
-$font-family-midashi: "游明朝 Regular", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+$font-family-midashi: "游明朝 Regular", "YuMincho", "Hiragino Mincho ProN",
+  "Hiragino Mincho Pro", serif;
 $font-weight-midashi: bold;
-
 
 /* Medium Devices, Desktops */
 $mediaWidthLarge: 970px;
@@ -41,9 +41,8 @@ $contentWidth: 640px;
 $contentHorizontalPadding: 12px;
 
 body.tutorial {
-
   line-height: 175%;
-  font-size: 1.0rem;
+  font-size: 1rem;
 
   @media (min-width: $mediaWidthMedium) {
     .pageContentContainer {
@@ -63,7 +62,7 @@ body.tutorial {
     margin-bottom: 50px;
 
     line-height: 175%;
-    font-size: 1.0rem;
+    font-size: 1rem;
 
     @mixin createPageContentWidth($mediaW, $contentW) {
       @media (min-width: $mediaW) {
@@ -90,20 +89,18 @@ body.tutorial {
     }
 
     div.article {
-
-
-
       overflow: hidden;
       $colorArticle: #555;
 
       .syntaxhighlighter {
-        font-size: 0.80rem !important;
+        font-size: 0.8rem !important;
       }
 
-      b, strong {
+      b,
+      strong {
         font-weight: bold;
         color: $colorBlack;
-        background: #E6EE9C;
+        background: #e6ee9c;
       }
 
       .aritcleBody {
@@ -121,14 +118,14 @@ body.tutorial {
         }
       }
 
-
-
       img {
         max-width: 100%;
         height: auto;
       }
 
-      object, embed, video {
+      object,
+      embed,
+      video {
         max-width: 100%;
       }
 
@@ -138,7 +135,11 @@ body.tutorial {
         text-align: left;
       }
 
-      h1, h2, h3, h4, h5 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
         line-height: 1.5;
         font-family: $font-family-midashi;
         font-weight: $font-weight-midashi;
@@ -148,7 +149,7 @@ body.tutorial {
       }
 
       h2 {
-        border-bottom: 1px solid #DBDBDB;
+        border-bottom: 1px solid #dbdbdb;
         padding: 0.25em 0;
         font-size: 1.5rem;
       }
@@ -158,7 +159,7 @@ body.tutorial {
 
       code {
         color: inherit;
-        font-family: 'Source Code Pro', monospace;
+        font-family: "Source Code Pro", monospace;
       }
 
       .hljs {
@@ -167,13 +168,13 @@ body.tutorial {
         padding: 16px; // GitHub と同じ指定
       }
 
-      ul, ol {
+      ul,
+      ol {
         padding-left: 2em;
 
         li {
           color: $colorArticle;
         }
-
       }
       ul {
         li {
@@ -194,8 +195,6 @@ body.tutorial {
       }
     }
   }
-
-
 }
 
 #archive-image-wrap {

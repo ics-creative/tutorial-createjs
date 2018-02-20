@@ -5,11 +5,11 @@
 $footer-height: 26px;
 
 @mixin create-footer-a-tag {
-  color: #CCC;
+  color: #ccc;
   text-decoration: none;
   padding: 0 1rem;
 
-  transition: all 2.0s cubic-bezier(0, 1, .4, 1);
+  transition: all 2s cubic-bezier(0, 1, 0.4, 1);
 
   @media (min-width: $mediaWidthMedium) {
     line-height: $footer-height;
@@ -25,8 +25,8 @@ $footer-height: 26px;
 
   &:hover {
     background: $colorBaseGray;
-    color: #FFF;
-    transition : all 0.15s cubic-bezier(0, 1, .4, 1);
+    color: #fff;
+    transition: all 0.15s cubic-bezier(0, 1, 0.4, 1);
   }
 }
 
@@ -37,7 +37,6 @@ $footer-height: 26px;
 }
 
 #footer-menu-container {
-
   bottom: 0;
 
   color: #fff;
@@ -50,12 +49,11 @@ $footer-height: 26px;
   &.active {
     position: fixed;
     @media (min-width: $mediaWidthMedium) {
-
     }
     @media (max-width: $mediaWidthMedium) {
     }
 
-    background: rgba(0, 0, 0, 0.70);
+    background: rgba(0, 0, 0, 0.7);
   }
 
   div.footer-menu {
@@ -63,13 +61,12 @@ $footer-height: 26px;
     margin: 0 auto;
 
     #footer-menu-inside {
-
       @media (max-width: $mediaWidthLarge) {
         max-width: $contentWidth;
       }
 
       margin: 0 auto;
-      &:after{
+      &:after {
         content: "";
         display: block;
         clear: both;
@@ -99,7 +96,7 @@ $footer-height: 26px;
 
         @media (min-width: $mediaWidthMedium) {
           float: left;
-          &:after{
+          &:after {
             content: "";
             display: block;
             clear: both;
@@ -107,11 +104,9 @@ $footer-height: 26px;
         }
 
         @media (max-width: $mediaWidthMedium) {
-
         }
 
         li {
-
           border-left: dotted #333 1px;
 
           &:first-child {
@@ -126,10 +121,11 @@ $footer-height: 26px;
           }
 
           @media (max-width: $mediaWidthMedium) {
-
           }
 
-          a, a:visited, a:active {
+          a,
+          a:visited,
+          a:active {
             @include create-footer-a-tag;
 
             &.icon {
@@ -149,14 +145,11 @@ $footer-height: 26px;
               }
             }
           }
-
         }
-
       }
 
       div.post_info {
-
-        &:after{
+        &:after {
           content: "";
           display: block;
           clear: both;
@@ -171,11 +164,15 @@ $footer-height: 26px;
           text-align: center;
         }
 
-        a, a:visited, a:active {
+        a,
+        a:visited,
+        a:active {
           @include create-footer-a-tag;
         }
 
-        div.tweet, div.hatebu, div.facebook {
+        div.tweet,
+        div.hatebu,
+        div.facebook {
           list-style: none;
           float: left;
           @media (max-width: $mediaWidthMedium) {
@@ -207,13 +204,12 @@ $footer-height: 26px;
 
           &:hover {
             background: $colorBaseGray;
-            transition : background 0.15s cubic-bezier(0, 1, .4, 1);
+            transition: background 0.15s cubic-bezier(0, 1, 0.4, 1);
           }
         }
       }
     }
   }
-
 }
 
 #footer-bottom {
@@ -223,8 +219,8 @@ $footer-height: 26px;
   background-color: black;
 
   color: #fff;
-  .footer-sections, #copyright {
-
+  .footer-sections,
+  #copyright {
     max-width: $contentWidth;
 
     @media (max-width: $contentWidth) {
@@ -232,7 +228,7 @@ $footer-height: 26px;
     }
 
     margin: 0 auto;
-    &:after{
+    &:after {
       content: "";
       display: block;
       clear: both;
@@ -240,7 +236,6 @@ $footer-height: 26px;
   }
 
   .footer-section {
-
     @media (min-width: $mediaWidthMedium) {
       float: left;
 
@@ -262,10 +257,8 @@ $footer-height: 26px;
         max-width: 100%;
         height: auto;
       }
-
     }
     @media (max-width: $mediaWidthMedium) {
-
       // モバイルの時は表示しない (将来的に表示させるようにしたい)
       display: none;
 
@@ -278,13 +271,20 @@ $footer-height: 26px;
       }
     }
 
-    p, ul, a, a:hover, a:visited, a:active {
+    p,
+    ul,
+    a,
+    a:hover,
+    a:visited,
+    a:active {
       color: #bababa;
       font-size: 0.75rem;
       line-height: 200%;
       margin-bottom: 1em;
     }
-    a, a:visited, a:active {
+    a,
+    a:visited,
+    a:active {
       text-decoration: none;
     }
     a:hover {
@@ -292,7 +292,7 @@ $footer-height: 26px;
     }
 
     .widget_title {
-      font-size: 1.0rem;
+      font-size: 1rem;
       margin: 3em 0 1em;
       font-weight: bold;
       color: #fff;
@@ -315,7 +315,6 @@ $footer-height: 26px;
         color: #666;
       }
     }
-
   }
 
   #copyright {
@@ -330,4 +329,3 @@ $footer-height: 26px;
     }
   }
 }
-

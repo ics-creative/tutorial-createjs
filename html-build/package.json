@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "format": "prettier --write 'src/**/*.js' && prettier --write 'src/style/*.scss'"
   },
   "author": "",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "cssnano": "^3.10.0",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.1.0",
+    "prettier": "^1.10.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
     "url-loader": "^0.6.2",

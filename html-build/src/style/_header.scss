@@ -9,7 +9,6 @@
   z-index: 100;
 
   #header-wrap {
-
     max-width: $contentWidth;
     margin: 0 auto;
 
@@ -25,7 +24,7 @@
     h1 {
       float: left;
       //margin-top: 8px; // CreateJS入門サイトはOFFにする
-      font-size: 1.0rem !important;// CreateJS入門サイトはOFFにする
+      font-size: 1rem !important; // CreateJS入門サイトはOFFにする
       line-height: 34px;
 
       a {
@@ -78,28 +77,27 @@
           height: 42px;
           width: 42px;
           text-align: center;
-          font-size: 1.0rem;
+          font-size: 1rem;
           line-height: 42px;
-          color: #CCC;
+          color: #ccc;
           text-decoration: none;
           padding: 0 0.5rem;
 
           &:visited {
-            color: #CCC;
+            color: #ccc;
           }
 
           transition: all 0.6s;
 
-
           &:hover {
             transition: all 0.075s;
             background: $colorBaseGray;
-            color: #FFF;
+            color: #fff;
           }
           &:active {
             transition: all 0.075s;
             background: $colorBaseLightGray;
-            color: #FFF;
+            color: #fff;
           }
         }
       }
@@ -108,7 +106,6 @@
 
   transition: all 0.3s ease;
   &.active {
-
     #header-breadcrumb {
       top: 0px;
       position: fixed;
@@ -120,26 +117,25 @@
     $itemHeight: 36px;
     width: 100%;
     z-index: 101;
-    background: rgba(0, 0, 0, 0.70);
+    background: rgba(0, 0, 0, 0.7);
     color: #ccc;
     font-size: 0.8rem;
 
     height: $itemHeight;
 
-    transition : background 0.6s ease;
+    transition: background 0.6s ease;
 
     .wrap {
       max-width: $contentWidth;
       margin: 0 auto;
 
-      &:after{
+      &:after {
         content: "";
         display: block;
         clear: both;
       }
 
       ul.breadcrumb {
-
         float: left;
         width: calc(100% - 160px - 5px);
 
@@ -192,11 +188,12 @@
       }
     }
 
-    a, a:visited, a:hover, a:active {
+    a,
+    a:visited,
+    a:hover,
+    a:active {
       color: #999;
       text-decoration: none;
     }
   }
-
 }
-
