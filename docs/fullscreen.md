@@ -21,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script>
         // 読み込みが終わってから初期化
         window.addEventListener("load", init);
@@ -42,12 +42,10 @@
 </head>
 
 <body>
-    <canvas id="myCanvas"
-            >
+    <canvas id="myCanvas">
     </canvas>
 </body>
 </html>
-
 ```
 
 
@@ -96,4 +94,4 @@ if (createjs.Touch.isSupported() == true) {
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-12-03</article-date-published>
-<article-date-modified>2015-12-21</article-date-modified>
+<article-date-modified>2018-02-20</article-date-modified>

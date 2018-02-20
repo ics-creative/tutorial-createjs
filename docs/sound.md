@@ -15,7 +15,7 @@ CreateJSでは音声を再生する機能が含まれています。webで扱え
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/base.css">
-  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
   <script>
     window.addEventListener("load", init);
     function init() {
@@ -58,4 +58,4 @@ createjs.Sound.play("任意のID");
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2016-01-16</article-date-published>
-<article-date-modified>2016-01-16</article-date-modified>
+<article-date-modified>2018-02-20</article-date-modified>

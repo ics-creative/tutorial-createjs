@@ -7,7 +7,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
   <script>
     window.addEventListener("load", init);
 
@@ -54,7 +54,7 @@ CreateJSはHTML5の`canvas`要素を利用します。`canvas`要素はコンテ
 次にJavaScriptライブラリを読み込みます。CreateJSはJavaScriptのライブラリですが、これを読み込むことによってはじめてCreateJSが利用できるようになります。
 
 ```html
-<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 ```
 
 具体的な処理はページの読み込みが終わってから実行させます。`addEventListener()`関数を使って`load`イベントが発生するのを監視させ、ページが読み込み終わったときに実行させたい関数を指定します。この関数`init()`の中にCreateJSのコードを書いていきます。
@@ -111,4 +111,4 @@ stage.update();
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2015-12-24</article-date-modified>
+<article-date-modified>2018-02-20</article-date-modified>

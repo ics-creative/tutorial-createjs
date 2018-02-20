@@ -47,7 +47,7 @@ Adobe Animate CCで画像ファイルを含むコンテンツを作っていた�
 
 ```js
 <!-- CreateJSを読み込む-->
-<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 ```
 
 
@@ -115,4 +115,4 @@ function onTick(){
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-12-04</article-date-published>
-<article-date-modified>2016-02-12</article-date-modified>
+<article-date-modified>2018-02-20</article-date-modified>

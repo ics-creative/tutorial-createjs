@@ -13,6 +13,14 @@ webのリッチコンテンツを作るためのフレームワーク「CreateJS
 - [簡単なサンプルを試そう](quickstart.md)
 - [ブラウザの開発ツールの使い方を抑えよう](debug.md)
 
+## CDNのURL
+
+次のコードをHTMLファイルに記述することでCreateJSが利用可能になります。
+
+```js
+<script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+```
+
 ## CreateJS の基本的な使い方
 
 ![CreateJSの基本編](../imgs/title_shape.jpg)
