@@ -13,3 +13,4 @@ html-build/node_modules
 html-build/typescript/main.js.map
 /tool-generate-captures/package-lock.json
 /node_modules
+/tool-generate-htmls/package-lock.json

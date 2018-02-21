@@ -2,5 +2,5 @@
   font-family: 'Source Code Pro';
   font-style: normal;
   font-weight: 400;
-  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url("./source-code-pro.woff2") format('woff2');
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url("./source-code-pro.woff") format('woff');
 }

@@ -2,6 +2,7 @@ const fs = require('fs');
 const marked = require('marked');
 const mkdirp = require('mkdirp');
 const highlightJs = require('highlight.js');
+const htmlMinifier = require("html-minifier");
 
 let promises = [];
 let samplesUrl = 'https://ics-creative.github.io/tutorial-createjs/';
@@ -25,13 +26,12 @@ const template = (text, values) => {
   });
 };
 
-
 const renderer = new marked.Renderer();
 
 renderer.link = (href, title, text) => {
   //console.log("href:" + href);
-  let sampledIndex = href.indexOf('samples/');
-  let absolutePass = href.indexOf('http') == 0;
+  const sampledIndex = href.indexOf('samples/');
+  const absolutePass = href.indexOf('http') === 0;
   if (!absolutePass && sampledIndex >= 0) {
     href = samplesHtmlUrl + href.slice(sampledIndex);
   }
@@ -40,25 +40,24 @@ renderer.link = (href, title, text) => {
       href = href.replace('md', 'html');
     }
   }
-  let htmlHref = (href != null && href != '') ? ` href="${href}"` : '';
-  let htmlTitle = (title != null && title != '') ? ` title=${title}` : '';
+  const htmlHref = (href != null && href != '') ? ` href="${href}"` : '';
+  const htmlTitle = (title != null && title != '') ? ` title=${title}` : '';
   return `<a${htmlHref}${htmlTitle}>${text}</a>`;
 };
 renderer.image = (href, title, text) => {
   //console.log("imgs:" + href);
-  let absolutePass = href.indexOf('http') == 0;
-  let sampledIndex = href.indexOf('../imgs/');
+  const absolutePass = href.indexOf('http') === 0;
+  const sampledIndex = href.indexOf('../imgs/');
   if (!absolutePass && sampledIndex >= 0) {
     href = samplesUrl + href.slice(sampledIndex + ('../').length);
   }
-  let htmlHref = (href != null && href != '') ? ` src="${href}"` : '';
-  let htmlTitle = (title != null && title != '') ? ` title=${title}` : '';
+  const htmlHref = (href != null && href != '') ? ` src="${href}"` : '';
+  const htmlTitle = (title != null && title != '') ? ` title=${title}` : '';
   return `<img${htmlHref}${htmlTitle} />`;
 };
 renderer.heading = function (text, level) {
   return `<h${level}>${text}</h${level}>`;
 };
-
 
 marked.setOptions({
   highlight: function (code) {
@@ -66,7 +65,6 @@ marked.setOptions({
   },
   renderer: renderer
 });
-
 
 const generateHTML = (dirName, fileName, resolve) => {
   fs.readFile('../docs/' + dirName + fileName, 'utf8', (error, text) => {
@@ -147,9 +145,21 @@ const generateHTML = (dirName, fileName, resolve) => {
       return;
     }
 
-
     const textValue = template(templateHtml, values);
-    fs.writeFile('../html/' + dirName + fileName.replace('md', 'html'), textValue, (error) => {
+    
+    // HTMLのminifyを実行
+    const minifiedHtml = htmlMinifier.minify(textValue, {
+      sortAttributes: true,
+      sortClassName: true,
+      removeComments: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true,
+      keepClosingSlash : true,
+      collapseInlineTagWhitespace: true,
+      collapseWhitespace: true
+    });
+
+    fs.writeFile('../html/' + dirName + fileName.replace('md', 'html'), minifiedHtml, (error) => {
       //console.log(fileName + "- maked");
       if (error) {
         return;
@@ -158,7 +168,6 @@ const generateHTML = (dirName, fileName, resolve) => {
     });
   });
 };
-
 
 fs.readdir('../docs', (err, files) => {
   promises.push(new Promise((resolve) => {
@@ -178,8 +187,8 @@ fs.readdir('../docs', (err, files) => {
     });
   }));
   for (let i = 0; i < files.length; i++) {
-    let filename = files[i];
-    let childPromise = new Promise((resolve) => {
+    const filename = files[i];
+    const childPromise = new Promise((resolve) => {
       generateHTML('', filename, resolve);
     });
     promises.push(childPromise);

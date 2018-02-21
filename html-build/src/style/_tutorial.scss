@@ -40,6 +40,9 @@ $contentWidth: 640px;
 // メディアクエリー対応時の左右のパディング
 $contentHorizontalPadding: 12px;
 
+$themeLight: white;
+$themeLight: white;
+
 body.tutorial {
   line-height: 175%;
   font-size: 1rem;
@@ -144,7 +147,7 @@ body.tutorial {
         font-family: $font-family-midashi;
         font-weight: $font-weight-midashi;
         font-feature-settings: "palt";
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         color: #444;
       }
 
@@ -159,7 +162,8 @@ body.tutorial {
 
       code {
         color: inherit;
-        font-family: "Source Code Pro", monospace;
+        font-family: "Source Code Pro","メイリオ", monospace;
+        font-feature-settings: "palt" 0, "pkna" 0;
       }
 
       .hljs {
@@ -237,14 +241,14 @@ body.tutorial {
       margin-bottom: 0.5em;
       color: rgba(255, 255, 255, 0.8);
       font-feature-settings: "palt";
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
     h1 {
       max-width: $contentWidth;
       margin: 0 auto;
       font-size: 1.7rem;
       font-feature-settings: "palt";
-      letter-spacing: 4px;
+      letter-spacing: 2px;
     }
   }
 }
