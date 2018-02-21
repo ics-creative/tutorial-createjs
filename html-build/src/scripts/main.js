@@ -16,7 +16,12 @@ function init() {
     $("div.link-index").hide();
   }
 
-  $("body").addClass("theme-dark");
+  if(Math.random() > 0.5){
+    $("body").removeClass("theme-dark").addClass("theme-light");
+  }else{
+    $("body").removeClass("theme-light").addClass("theme-dark");
+  }
+
 
   // 共有ボタン
   $("a.share-twitter")

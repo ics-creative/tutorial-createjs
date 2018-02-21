@@ -129,7 +129,6 @@
       }
 
       ul.breadcrumb {
-        float: left;
         width: calc(100% - 160px - 5px);
 
         /* Bootstrap の打ち消し */
@@ -142,16 +141,24 @@
         }
 
         li {
-          /*
-          display: block;
-          float: left;
-          margin-right: 1rem;
-          */
-
           line-height: $itemHeight;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+
+          margin-left: 0.5em;
+          &:after {
+            margin-left: 0.5em;
+            content: "/";
+          }
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            &:after {
+              content: "";
+            }
+          }
 
           a {
             transition: all 0.3s;

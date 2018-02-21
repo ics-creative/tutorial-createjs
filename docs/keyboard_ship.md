@@ -13,7 +13,7 @@
 ```js
 // シェイプ(船)を作成
 var ship = new createjs.Shape();
-(省略)
+// (省略)
 stage.addChild(ship);
 
 // キーボードを押したタイミングを検知
@@ -73,13 +73,13 @@ function handleKeyDown(event) {
   // キーコード(どのキーが押されたか)を取得
   var keyCode = event.keyCode;
   if (keyCode == 39) { // 右
-      isPressRight = true;// 真偽値が切り替わる
+    isPressRight = true;// 真偽値が切り替わる
   } else if (keyCode == 37) { // 左
-      isPressLeft = true;
+    isPressLeft = true;
   } else if (keyCode == 40) { // 下
-      isPressDown = true;
+    isPressDown = true;
   } else if (keyCode == 38) { // 上
-      isPressUp = true;
+    isPressUp = true;
   }
 }
 
@@ -87,13 +87,13 @@ function handleKeyUp(event) {
   // キーコード(どのキーが押されたか)を取得
   var keyCode = event.keyCode;
   if (keyCode == 39) { // 右
-      isPressRight = false;// 真偽値が切り替わる
+    isPressRight = false;// 真偽値が切り替わる
   } else if (keyCode == 37) { // 左
-      isPressLeft = false;
+    isPressLeft = false;
   } else if (keyCode == 40) { // 下
-      isPressDown = false;
+    isPressDown = false;
   } else if (keyCode == 38) { // 上
-      isPressUp = false;
+    isPressUp = false;
   }
 }
 
@@ -102,14 +102,14 @@ createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
   // 条件文で船の位置を変更する
   if (isPressRight == true) { // 右
-      ship.x += 1; // 移動
+    ship.x += 1; // 移動
   } else if (isPressLeft == true) { // 左
-      ship.x -= 1;
+    ship.x -= 1;
   }
   if (isPressDown == true) { // 下
-      ship.y += 1;
+    ship.y += 1;
   } else if (isPressUp == true) { // 上
-      ship.y -= 1;
+    ship.y -= 1;
   }
   stage.update(); // 画面更新
 }
@@ -137,15 +137,15 @@ function handleKeyDown(event) {
   var keyCode = event.keyCode;
   // 条件文で船の位置を変更する
   if (keyCode == 39) { // 右
-      angle += 5;
+    angle += 5;
   } else if (keyCode == 37) { // 左
-      angle -= 5;
+    angle -= 5;
   }
 
   if (keyCode == 40) { // 下
-      speed -= 1;
+    speed -= 1;
   } else if (keyCode == 38) { // 上
-      speed += 1;
+    speed += 1;
   }
 }
 ```
@@ -211,4 +211,4 @@ if (ship.y > stage.canvas.height) { ship.y = stage.canvas.height; }
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-30</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2018-02-22</article-date-modified>

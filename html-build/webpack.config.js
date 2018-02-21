@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 
-const isProduction = false;
+const isProduction = true;
 const useOptimize = isProduction;
 const useSourceMap = !isProduction;
 
