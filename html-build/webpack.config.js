@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 
-const useSourceMap = false;
+const isProduction = false;
+const useOptimize = isProduction;
+const useSourceMap = !isProduction;
 
 module.exports = {
   entry: './src/main.js',
@@ -68,7 +70,7 @@ module.exports = {
       }
     ],
   },
-  plugins: [
+  plugins: useOptimize === true ? [
     // 【効果：中】Scope Hoistingをするためのプラグイン
     new webpack.optimize.ModuleConcatenationPlugin(),
 
@@ -81,5 +83,5 @@ module.exports = {
       // マルチプロセスで高速化
       parallel: true,
     }),
-  ]
+  ] : []
 };

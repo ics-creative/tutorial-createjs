@@ -16,6 +16,8 @@ function init() {
     $("div.link-index").hide();
   }
 
+  $("body").addClass("theme-dark");
+
   // 共有ボタン
   $("a.share-twitter")
     .attr(

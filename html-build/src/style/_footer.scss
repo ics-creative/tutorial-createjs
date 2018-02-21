@@ -42,7 +42,6 @@ $footer-height: 26px;
   color: #fff;
   position: relative;
   width: 100%;
-  border-top: 1px solid #888;
 
   transition: transform 0.6s ease;
 
@@ -107,8 +106,6 @@ $footer-height: 26px;
         }
 
         li {
-          border-left: dotted #333 1px;
-
           &:first-child {
             border-left: none;
           }

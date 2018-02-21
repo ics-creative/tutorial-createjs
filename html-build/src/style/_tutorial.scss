@@ -40,8 +40,95 @@ $contentWidth: 640px;
 // メディアクエリー対応時の左右のパディング
 $contentHorizontalPadding: 12px;
 
-$themeLight: white;
-$themeLight: white;
+@import "highlight.js/atom-one-dark";
+@import "highlight.js/atom-one-light";
+
+.theme-light {
+  background: white;
+  .aritcleBody {
+    color: #555;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #444;
+    }
+    h2 {
+      border-bottom-color: #ddd;
+    }
+
+    code {
+      background-color: #fafafa;
+      border-radius: 0.25rem;
+    }
+
+    a {
+      color: #0275d8;
+      text-decoration: none;
+      font-weight: normal; // CreateJSサイト専用
+
+      &:visited {
+        color: $colorTextLinkVisited;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+      &:active {
+      }
+    }
+  }
+}
+
+.theme-dark {
+  background: #1e1e1e;
+  .aritcleBody {
+    color: #d4d4d4;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: white;
+    }
+    h2 {
+      border-bottom-color: #555;
+    }
+    code {
+      background-color: #282c34; // highlight.jsと揃える
+      border-radius: 0.25rem;
+    }
+
+    a {
+      color: #3a9ddb;
+      text-decoration: none;
+      font-weight: normal; // CreateJSサイト専用
+
+      &:visited {
+        color: #d98e73;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+      &:active {
+      }
+    }
+  }
+  .btn-secondary {
+    color: #fff;
+    background-color: #373a3c;
+    border-color: #373a3c;
+
+    &:hover {
+      background-color: #515151;
+    }
+  }
+  .text-data {
+    color: #d4d4d4;
+  }
+}
 
 body.tutorial {
   line-height: 175%;
@@ -93,7 +180,6 @@ body.tutorial {
 
     div.article {
       overflow: hidden;
-      $colorArticle: #555;
 
       .syntaxhighlighter {
         font-size: 0.8rem !important;
@@ -102,23 +188,6 @@ body.tutorial {
       b,
       strong {
         font-weight: bold;
-        color: $colorBlack;
-        background: #e6ee9c;
-      }
-
-      .aritcleBody {
-        a {
-          text-decoration: none;
-          font-weight: normal; // CreateJSサイト専用
-        }
-        a:visited {
-          color: $colorTextLinkVisited;
-        }
-        a:hover {
-          text-decoration: underline;
-        }
-        a:active {
-        }
       }
 
       img {
@@ -134,7 +203,6 @@ body.tutorial {
 
       p {
         margin: 1.5em 0;
-        color: $colorArticle;
         text-align: left;
       }
 
@@ -148,11 +216,11 @@ body.tutorial {
         font-weight: $font-weight-midashi;
         font-feature-settings: "palt";
         letter-spacing: 1px;
-        color: #444;
       }
 
       h2 {
-        border-bottom: 1px solid #dbdbdb;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
         padding: 0.25em 0;
         font-size: 1.5rem;
       }
@@ -161,13 +229,11 @@ body.tutorial {
       }
 
       code {
-        color: inherit;
         font-family: "Source Code Pro", "メイリオ", monospace;
         font-feature-settings: "palt" 0, "pkna" 0;
       }
 
       .hljs {
-        background-color: #f7f7f7;
         border-radius: 3px;
         padding: 16px; // GitHub と同じ指定
       }
@@ -177,7 +243,6 @@ body.tutorial {
         padding-left: 2em;
 
         li {
-          color: $colorArticle;
         }
       }
       ul {
