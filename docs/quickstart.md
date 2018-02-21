@@ -46,7 +46,7 @@ CreateJSはHTML5の`canvas`要素を利用します。`canvas`要素はコンテ
 
 ```html
 <body>
-	<canvas id="myCanvas" width="960" height="540"></canvas>
+  <canvas id="myCanvas" width="960" height="540"></canvas>
 </body>
 ```
 
@@ -62,7 +62,7 @@ CreateJSはHTML5の`canvas`要素を利用します。`canvas`要素はコンテ
 <script>
 window.addEventListener("load", init);
 function init(){
-	// 処理
+  // 処理
 }
 </script>
 ```

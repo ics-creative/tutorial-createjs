@@ -19,8 +19,8 @@ var angle = 0;
 // 時間経過
 createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
- ball.y = 100 + Math.sin(angle) * 50;
- angle += 0.1;
+  ball.y = 100 + Math.sin(angle) * 50;
+  angle += 0.1;
 }
 ```
 
@@ -37,8 +37,8 @@ var speed = 0.1;
 // 時間経過
 createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
- ball.y = centerY + Math.sin(angle) * range;
- angle += speed;
+  ball.y = centerY + Math.sin(angle) * range;
+  angle += speed;
 }
 ```
 
@@ -66,7 +66,7 @@ createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick() {
   // スケールを変化
   ball.scaleX = ball.scaleY
-          = centerScale + Math.sin(angle) * range;
+              = centerScale + Math.sin(angle) * range;
   angle += speed;
 }
 ```
@@ -157,9 +157,9 @@ var speedY = 0.05;
 var px = 0;
 
 shape.graphics
-  .setStrokeStyle(1)
-  .beginStroke("DarkRed")
-  .moveTo(0, centerY);
+     .setStrokeStyle(1)
+     .beginStroke("DarkRed")
+     .moveTo(0, centerY);
 
 // 時間経過
 createjs.Ticker.addEventListener("tick", handleTick);

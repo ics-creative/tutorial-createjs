@@ -64,9 +64,9 @@ function handleTick() {
 
   // 二点間を線分でつなぐ
   shape.graphics.clear()
-         .setStrokeStyle(1).beginStroke("gray")
-         .moveTo(ball.x, ball.y)
-         .lineTo(stage.mouseX, stage.mouseY);
+                .setStrokeStyle(1).beginStroke("gray")
+                .moveTo(ball.x, ball.y)
+                .lineTo(stage.mouseX, stage.mouseY);
 
   stage.update(); // 画面更新
 }
