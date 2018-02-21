@@ -162,7 +162,7 @@ body.tutorial {
 
       code {
         color: inherit;
-        font-family: "Source Code Pro","メイリオ", monospace;
+        font-family: "Source Code Pro", "メイリオ", monospace;
         font-feature-settings: "palt" 0, "pkna" 0;
       }
 
@@ -255,4 +255,18 @@ body.tutorial {
 
 #archive-image-wrap {
   padding-bottom: 20%;
+}
+
+.btn {
+  .fa {
+    margin-right: 5px;
+  }
+}
+
+.link-index {
+  margin-bottom: 10px;
+}
+
+.share-twitter {
+  margin-right: 10px;
 }

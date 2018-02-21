@@ -4,7 +4,7 @@
 
 ## 導入編
 
-![CreateJSの導入編](../imgs/title_createjs.jpg)
+![CreateJSの導入編](../imgs/title_createjs.jpg "1280x400")
 
 webのリッチコンテンツを作るためのフレームワーク「CreateJS」。どのような場面で利用されるのか、どういった表現が可能なのかという点を中心に、概要と導入方法を説明します。
 
@@ -23,7 +23,7 @@ webのリッチコンテンツを作るためのフレームワーク「CreateJS
 
 ## CreateJS の基本的な使い方
 
-![CreateJSの基本編](../imgs/title_shape.jpg)
+![CreateJSの基本編](../imgs/title_shape.jpg "1280x400")
 
 ### 描画の基本
 
@@ -48,7 +48,7 @@ webのリッチコンテンツを作るためのフレームワーク「CreateJS
 
 ## 初級編
 
-![CreateJSのサンプル](../imgs/title_clock.jpg)
+![CreateJSのサンプル](../imgs/title_clock.jpg "1280x400")
 
 
 ### ユーザーインタラクションの実装
@@ -78,7 +78,7 @@ webのリッチコンテンツを作るためのフレームワーク「CreateJS
 
 ## 中級編
 
-![CreateJS入門の中級編](../imgs/title_trigonometry.jpg)
+![CreateJS入門の中級編](../imgs/title_trigonometry.jpg "1280x400")
 
 ### トゥイーンモーションの実装
 
@@ -111,7 +111,7 @@ webのリッチコンテンツを作るためのフレームワーク「CreateJS
 
 ## 応用編
 
-![CreateJS入門の応用編](../imgs/title_particle.jpg)
+![CreateJS入門の応用編](../imgs/title_particle.jpg "1280x400")
 
 ### サンプル(応用編)
 
@@ -124,7 +124,7 @@ webのリッチコンテンツを作るためのフレームワーク「CreateJS
 
 ## Adobe Animate CCを使おう
 
-![CreateJS入門 - Adobe Animate CCとの連携](../imgs/title_animatecc.jpg)
+![CreateJS入門 - Adobe Animate CCとの連携](../imgs/title_animatecc.jpg "1280x400")
 
 Adobe Animate CC(旧Flash Professional CC)というアプリケーションを使えば、CreateJS用のグラフィックやモーションをコードを書かなくても作ることができます。コードが書くのは苦手という方はAnimate CCでCreateJSコンテンツを作ってみるといいでしょう。
 

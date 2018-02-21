@@ -2,7 +2,7 @@ const fs = require('fs');
 const marked = require('marked');
 const mkdirp = require('mkdirp');
 const highlightJs = require('highlight.js');
-const htmlMinifier = require("html-minifier");
+const htmlMinifier = require('html-minifier');
 
 let promises = [];
 let samplesUrl = 'https://ics-creative.github.io/tutorial-createjs/';
@@ -21,9 +21,8 @@ const template = (text, values) => {
     console.log('template-error!');
     return '';
   }
-  return text.replace(/\$\{(.*?)\}/g, function (all, key) {
-    return Object.prototype.hasOwnProperty.call(values, key) ? values[key] : '';
-  });
+  return text.replace(/\$\{(.*?)\}/g, (all, key) =>
+    Object.prototype.hasOwnProperty.call(values, key) ? values[key] : '');
 };
 
 const renderer = new marked.Renderer();
@@ -40,10 +39,11 @@ renderer.link = (href, title, text) => {
       href = href.replace('md', 'html');
     }
   }
-  const htmlHref = (href != null && href != '') ? ` href="${href}"` : '';
-  const htmlTitle = (title != null && title != '') ? ` title=${title}` : '';
-  return `<a${htmlHref}${htmlTitle}>${text}</a>`;
+  const htmlHref = (href != null && href != '') ? `href="${href}"` : '';
+  const htmlTitle = (title != null && title != '') ? `title=${title}` : '';
+  return `<a ${htmlHref}${htmlTitle}>${text}</a>`;
 };
+
 renderer.image = (href, title, text) => {
   //console.log("imgs:" + href);
   const absolutePass = href.indexOf('http') === 0;
@@ -51,9 +51,21 @@ renderer.image = (href, title, text) => {
   if (!absolutePass && sampledIndex >= 0) {
     href = samplesUrl + href.slice(sampledIndex + ('../').length);
   }
-  const htmlHref = (href != null && href != '') ? ` src="${href}"` : '';
-  const htmlTitle = (title != null && title != '') ? ` title=${title}` : '';
-  return `<img${htmlHref}${htmlTitle} />`;
+  const htmlHref = (href != null && href != '') ? `src="${href}"` : '';
+
+  // Marked でサイズを指定する方法
+  // https://github.com/markedjs/marked/issues/339
+  let size = '';
+  if (title) {
+    sizes = title.split('x');
+    if (sizes.length === 2) {
+      size = 'width=' + sizes[0] + ' height=' + sizes[1];
+    } else {
+      size = 'width=' + sizes[0];
+    }
+  }
+
+  return `<img ${htmlHref} ${size} />`;
 };
 renderer.heading = function (text, level) {
   return `<h${level}>${text}</h${level}>`;
@@ -146,15 +158,15 @@ const generateHTML = (dirName, fileName, resolve) => {
     }
 
     const textValue = template(templateHtml, values);
-    
+
     // HTMLのminifyを実行
     const minifiedHtml = htmlMinifier.minify(textValue, {
-      sortAttributes: true,
+      sortAttributes: false,
       sortClassName: true,
       removeComments: true,
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true,
-      keepClosingSlash : true,
+      keepClosingSlash: true,
       collapseInlineTagWhitespace: true,
       collapseWhitespace: true
     });
