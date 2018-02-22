@@ -133,6 +133,7 @@ $contentHorizontalPadding: 12px;
 body.tutorial {
   line-height: 175%;
   font-size: 1rem;
+  transition: all 0.3s;
 
   @media (min-width: $mediaWidthMedium) {
     .pageContentContainer {
@@ -229,7 +230,8 @@ body.tutorial {
       }
 
       code {
-        font-family: "Source Code Pro", "メイリオ", monospace;
+        font-family: "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", "メイリオ", monospace;
         font-feature-settings: "palt" 0, "pkna" 0;
       }
 

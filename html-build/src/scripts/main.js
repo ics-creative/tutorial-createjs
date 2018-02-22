@@ -1,6 +1,6 @@
 import * as $ from "jquery";
 
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
   init();
 });
 
@@ -16,12 +16,39 @@ function init() {
     $("div.link-index").hide();
   }
 
-  if(Math.random() > 0.5){
-    $("body").removeClass("theme-dark").addClass("theme-light");
-  }else{
-    $("body").removeClass("theme-light").addClass("theme-dark");
-  }
+  const currentTheme = localStorage.getItem("theme");
+  changeTheme(currentTheme);
 
+  $("#btn-theme-light").click(() => {
+    changeTheme("theme-light");
+    localStorage.setItem("theme", "theme-light");
+  });
+  $("#btn-theme-dark").click(() => {
+    changeTheme("theme-dark");
+
+    localStorage.setItem("theme", "theme-dark");
+  });
+
+  function changeTheme(theme) {
+    switch (theme) {
+      case "theme-dark":
+        $("body")
+          .removeClass("theme-light")
+          .addClass("theme-dark");
+
+        $("#btn-theme-dark").attr("aria-checked", true);
+        $("#btn-theme-light").attr("aria-checked", false);
+        break;
+      case "theme-light":
+      default:
+        $("body")
+          .removeClass("theme-dark")
+          .addClass("theme-light");
+        $("#btn-theme-dark").attr("aria-checked", false);
+        $("#btn-theme-light").attr("aria-checked", true);
+        break;
+    }
+  }
 
   // 共有ボタン
   $("a.share-twitter")

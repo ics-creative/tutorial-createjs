@@ -96,12 +96,10 @@ $footer-height: 26px;
         }
       }
     }
-
   }
 }
 
 .footer-detail {
-
   background-color: black;
 
   color: #fff;
@@ -123,7 +121,6 @@ $footer-height: 26px;
   }
   &__section {
     @media (min-width: $mediaWidthMedium) {
-
       width: calc(33% + 20px);
       box-sizing: border-box;
       margin-right: 20px;
@@ -175,7 +172,6 @@ $footer-height: 26px;
       font-weight: bold;
       color: #fff;
     }
-
   }
 
   &__copyright {

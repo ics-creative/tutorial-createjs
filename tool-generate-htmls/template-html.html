@@ -29,7 +29,7 @@
   <meta name="date" content="${article-dateModified}T00:00:00+09:00"/>
 
   <link rel="icon" sizes="16x16 32x32 48x48 128x128 256x256" href="https://ics.media/wp-content/themes/icslab/img/favicon.ico"/>
-  <script src="js/bundle.js"></script>
+  <script src="js/bundle.js?v=2018-02-22-4"></script>
 </head>
 <body class="tutorial theme-light">
 
@@ -38,10 +38,6 @@
       <h1>
         <a href="https://ics.media/"><span class="logoBlog">ICS MEDIA - インタラクションデザイン×ウェブテクノロジー</span></a>
       </h1>
-      <nav>
-        <a target="_blank" href="https://www.facebook.com/icswebjp" title="Facebookページをフォローする"><i class="fa fa-facebook"></i></a>
-        <a target="_blank" href="https://twitter.com/icsweb" title="Twitterをフォローする"><i class="fa fa-twitter"></i></a>
-      </nav>
     </div>
   </div>
 
@@ -70,6 +66,12 @@
           <i class="fa fa-pencil-square-o"></i> <span itemprop="title">${article-title}</span>
         </li>
       </ul>
+
+      <nav>
+        <span class="header-breadcrumb__theme">配色を選択</span>
+        <button id="btn-theme-light" class="btn-theme" aria-checked="true" aria-label="明るい配色"></button>
+        <button id="btn-theme-dark" class="btn-theme" aria-checked="false" aria-label="暗めの配色"></button>
+      </nav>
     </div>
   </div>
 
