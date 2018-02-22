@@ -1,4 +1,14 @@
 import * as $ from "jquery";
+import platform from "platform";
+
+let isChangeTheme = false;
+
+// DOMContentLoadedに処理可能であれば処理してしまう
+if (document.body) {
+  const currentTheme = localStorage.getItem("theme");
+  changeTheme(currentTheme);
+  isChangeTheme = true;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   init();
@@ -16,8 +26,21 @@ function init() {
     $("div.link-index").hide();
   }
 
-  const currentTheme = localStorage.getItem("theme");
-  changeTheme(currentTheme);
+  if (isChangeTheme === false) {
+    const currentTheme = localStorage.getItem("theme");
+    changeTheme(currentTheme);
+    isChangeTheme = true;
+  }
+
+  setTimeout(() => {
+    switch (platform.name) {
+      case "Safari":
+      case "Chrome":
+      case "Firefox":
+        $("body").css("transition", "all 0.3s");
+        break;
+    }
+  }, 100);
 
   $("#btn-theme-light").click(() => {
     changeTheme("theme-light");
@@ -28,27 +51,6 @@ function init() {
 
     localStorage.setItem("theme", "theme-dark");
   });
-
-  function changeTheme(theme) {
-    switch (theme) {
-      case "theme-dark":
-        $("body")
-          .removeClass("theme-light")
-          .addClass("theme-dark");
-
-        $("#btn-theme-dark").attr("aria-checked", true);
-        $("#btn-theme-light").attr("aria-checked", false);
-        break;
-      case "theme-light":
-      default:
-        $("body")
-          .removeClass("theme-dark")
-          .addClass("theme-light");
-        $("#btn-theme-dark").attr("aria-checked", false);
-        $("#btn-theme-light").attr("aria-checked", true);
-        break;
-    }
-  }
 
   // 共有ボタン
   $("a.share-twitter")
@@ -84,3 +86,24 @@ _gaq.push(["_trackPageview"]);
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(ga, s);
 })();
+
+function changeTheme(theme) {
+  switch (theme) {
+    case "theme-dark":
+      $("body")
+        .removeClass("theme-light")
+        .addClass("theme-dark");
+
+      $("#btn-theme-dark").attr("aria-checked", true);
+      $("#btn-theme-light").attr("aria-checked", false);
+      break;
+    case "theme-light":
+    default:
+      $("body")
+        .removeClass("theme-dark")
+        .addClass("theme-light");
+      $("#btn-theme-dark").attr("aria-checked", false);
+      $("#btn-theme-light").attr("aria-checked", true);
+      break;
+  }
+}
