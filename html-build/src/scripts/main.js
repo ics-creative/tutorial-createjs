@@ -1,6 +1,6 @@
 import * as $ from "jquery";
 
-$(document).ready(() => {
+document.addEventListener("DOMContentLoaded", ()=>{
   init();
 });
 

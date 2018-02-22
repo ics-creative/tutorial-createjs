@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <title>${article-title} - ICS MEDIA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="referrer" content="unsafe-url"/>
-  <meta name="format-detection" content="telephone=no" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta property="article:author" content="https://www.facebook.com/icswebjp"/>
 
   <meta property="og:locale" content="ja_JP"/>
@@ -32,212 +32,234 @@
   <script src="js/bundle.js"></script>
 </head>
 <body class="tutorial theme-light">
-<div id="container">
-  <div id="header-always">
-    <div id="header-wrap">
+
+  <div class="header-title">
+    <div class="header-title__inner">
       <h1>
         <a href="https://ics.media/"><span class="logoBlog">ICS MEDIA - インタラクションデザイン×ウェブテクノロジー</span></a>
       </h1>
       <nav>
-        <ul>
-          <li><a href="https://ics.media/feed/atom" target="_blank"><i class="fa fa-rss"></i></a></li>
-          <li><a href="https://www.facebook.com/icswebjp" target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://twitter.com/icsweb" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        </ul>
+        <a target="_blank" href="https://www.facebook.com/icswebjp" title="Facebookページをフォローする"><i class="fa fa-facebook"></i></a>
+        <a target="_blank" href="https://twitter.com/icsweb" title="Twitterをフォローする"><i class="fa fa-twitter"></i></a>
       </nav>
     </div>
+  </div>
 
+  <div class="header-breadcrumb">
     <!-- ================================== -->
     <!-- パンくず -->
     <!-- ================================== -->
-    <div id="header-breadcrumb">
-      <div class="wrap">
-        <ul class="breadcrumb">
-          <!-- 第1階層 -->
-          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <a href="https://ics.media" itemprop="url">
-              <i class="fa fa-homze"></i> <span itemprop="title">ICS MEDIA</span>
-            </a>
-          </li>
+    <div class="header-breadcrumb__inner">
+      <ul>
+        <!-- 第1階層 -->
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+          <a href="https://ics.media" itemprop="url">
+            <i class="fa fa-homze"></i> <span itemprop="title">ICS MEDIA</span>
+          </a>
+        </li>
 
-          <!-- 第2階層 -->
-          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <a href="index.html" itemprop="url">
-              <i class="fa fa-folder-open"></i> <span itemprop="title">HTML5 と CreateJS で学ぶインタラクションデザイン</span>
-            </a>
-          </li>
+        <!-- 第2階層 -->
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+          <a href="index.html" itemprop="url">
+            <i class="fa fa-folder-open"></i> <span itemprop="title">HTML5 と CreateJS で学ぶインタラクションデザイン</span>
+          </a>
+        </li>
 
-          <!-- 第3階層 -->
-          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <i class="fa fa-pencil-square-o"></i> <span itemprop="title">${article-title}</span>
-          </li>
-        </ul>
+        <!-- 第3階層 -->
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+          <i class="fa fa-pencil-square-o"></i> <span itemprop="title">${article-title}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+
+    <!-- メインビジュアル -->
+    <div id="archive-image-wrap">
+      <iframe src="https://ics.media/wp-content/themes/icslab/special/151118_createjs_title/archives.html"></iframe>
+      <div class="title">
+        <header>
+          <p>HTML5 と CreateJS で学ぶインタラクションデザイン</p>
+          <h1 itemprop="name">${article-title}</h1>
+        </header>
       </div>
     </div>
-  </div>
-</div>
 
-<article itemscope itemtype="http://schema.org/Article">
+    <div id="wrap">
+      <div id="main">
+        <div class="content">
+          <div class="pageContentContainer">
+            <div class="article">
+              <div class="text-left link-index">
+                <a href="index.html" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="right" title="目次へ戻る">
+                  <i class="fa fa-list-ul"></i>
+                  目次
+                </a>
+              </div>
 
-  <!-- メインビジュアル -->
-  <div id="archive-image-wrap">
-    <iframe src="https://ics.media/wp-content/themes/icslab/special/151118_createjs_title/archives.html"></iframe>
-    <div class="title">
-      <header>
-        <p>HTML5 と CreateJS で学ぶインタラクションデザイン</p>
-        <h1 itemprop="name">${article-title}</h1>
-      </header>
-    </div>
-  </div>
-
-  <div id="wrap">
-    <div id="main">
-      <div class="content">
-        <div class="pageContentContainer">
-          <div class="article">
-            <div class="text-left link-index">
-              <a href="index.html" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="right" title="目次へ戻る">
-                <i class="fa fa-list-ul"></i>
-                目次
-              </a>
-            </div>
-
-            <!-- ============================================= -->
-            <!-- MarkDown から出力はここから -->
-            <section itemprop="articleBody" class="aritcleBody">
-              ${article-markdown}
-            </section>
-            <!-- MarkDown から出力はここまで -->
-            <!-- ============================================= -->
+              <!-- ============================================= -->
+              <!-- MarkDown から出力はここから -->
+              <section itemprop="articleBody" class="aritcleBody">
+                ${article-markdown}
+              </section>
+              <!-- MarkDown から出力はここまで -->
+              <!-- ============================================= -->
 
 
-            <div class="text-center link-index">
-              <a href="index.html" class="btn btn-primary">
-                <i class="fa fa-list-ul"></i>
-                目次に戻る
-              </a>
+              <div class="text-center link-index">
+                <a href="index.html" class="btn btn-primary">
+                  <i class="fa fa-list-ul"></i>
+                  目次に戻る
+                </a>
+                <hr/>
+              </div>
+
+              <div class="text-center">
+                <a class="share-twitter btn btn-secondary btn-sm">
+                  <i class="fa fa-twitter"></i>
+                  Twitterでツイートする
+                </a>
+                <a class="share-facebook btn btn-secondary btn-sm">
+                  <i class="fa fa-facebook"></i>
+                  Facebookでシェアする
+                </a>
+              </div>
+
               <hr/>
-            </div>
 
-            <div class="text-center">
-              <a class="share-twitter btn btn-secondary btn-sm">
-                <i class="fa fa-twitter"></i>
-                Twitterでツイートする
-              </a>
-              <a class="share-facebook btn btn-secondary btn-sm">
-                <i class="fa fa-facebook"></i>
-                Facebookでシェアする
-              </a>
-            </div>
+              <div class="text-center">
+                <a href="/" class="btn btn-secondary">
+                  <i class="fa fa-home"></i>
+                  サイトトップに戻る
+                </a>
+              </div>
 
-            <hr/>
+              <hr/>
 
-            <div class="text-center">
-              <a href="/" class="btn btn-secondary">
-                <i class="fa fa-home"></i>
-                サイトトップに戻る
-              </a>
-            </div>
-
-            <hr/>
-
-            <footer>
-              <div class="text-data">
-                <div>公開日 : <span itemprop="datePublished" content="${article-datePublished}">${article-datePublished-locale}</span>
-                  / 最終更新日 :
-                  <time itemprop="dateModified" datetime="${article-dateModified}">${article-dateModified-locale}</time>
-                  / 著者 :
+              <footer>
+                <div class="text-data">
+                  <div>公開日 : <span itemprop="datePublished" content="${article-datePublished}">${article-datePublished-locale}</span>
+                    / 最終更新日 :
+                    <time itemprop="dateModified" datetime="${article-dateModified}">${article-dateModified-locale}
+                    </time>
+                    / 著者 :
                     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                       <span itemprop="name"><a href="https://twitter.com/clockmaker">${article-author}</a>
                       </span>
                     </span></div>
-                <div>※この記事は CreateJS の2017年10月にリリースされたバージョン1.0.0を元に執筆しています。</div>
-              </div>
-            </footer>
+                  <div>※この記事は CreateJS の2017年10月にリリースされたバージョン1.0.0を元に執筆しています。</div>
+                </div>
+              </footer>
 
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-</article>
+  </article>
 
-<div id="footer-bottom">
-  <div id="footer-menu-container" class="default">
-    <div class="footer-menu">
-      <div id="footer-menu-inside">
-        <nav>
-          <ul id="footer-menu">
-            <li><a target="_blank" href="https://ics.media/feed/atom"><i class="fa fa-rss fa-3"></i> RSS</a> </li>
-            <li><a target="_blank" href="https://www.facebook.com/icswebjp"><i class="fa fa-facebook-square fa-3"></i> Facebook</a></li>
-            <li><a target="_blank" href="https://twitter.com/icsweb"><i class="fa fa-twitter-square fa-3"></i> Twitter</a></li>
-            <li><a target="_blank" href="http://ics-web.jp/blog/recruit" >採用情報</a></li>
-            <li><a target="_blank" href="http://ics-web.jp/blog/contact">お問い合わせ</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
 
-  <div class="footer-sections">
-
-    <div class="footer-section large">
-      <p class="widget_title">CreateJSのサンプル/事例</p>
-
-      <p>作例をみてCreateJSで実現可能な表現のインスピレーションを得ましょう。</p>
+  <div class="footer-message">
+    <div class="footer-message__inner">
+      <p>CreateJS 入門サイトは ICS MEDIA が運営しています</p>
       <ul>
-        <li><a href="http://lab.gskinner.com" target="_blank"><i class="fa fa-external-link"></i> gskinner lab</a></li>
-        <li><a href="https://codepen.io/search/pens/?q=CreateJS&order=popularity&depth=everything&show_forks=false" target="_blank"><i class="fa fa-external-link"></i> CodePen</a></li>
-        <li><a href="http://sandbox.createjs.com/PlanetaryGary/" target="_blank"><i class="fa fa-external-link"></i>
-          Planetary Gary</a></li>
-        <li><a href="http://ics-web.jp/projects/pollenmap/" target="_blank"><i class="fa fa-external-link"></i>
-          日本全国花粉飛散マップ</a></li>
-        <li><a href="http://ics-web.jp/projects/particle-develop/" target="_blank"><i class="fa fa-external-link"></i>
-          Particle Develop</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section large">
-      <p class="widget_title">CreateJSの公式リファレンス</p>
-
-      <p><a href="http://createjs.com/" target="_blank">CreateJS</a>は4つのライブラリからなるJavaScriptフレームワークです。</p>
-      <ul>
-        <li>
-          <a href="http://www.createjs.com/docs/easeljs/modules/EaselJS.html" target="_blank"><i class="fa fa-external-link"></i>
-            EaselJS (英語)</a></li>
-        <li>
-          <a href="http://www.createjs.com/docs/tweenjs/modules/TweenJS.html" target="_blank"><i class="fa fa-external-link"></i>
-            TweenJS (英語)</a></li>
-        <li>
-          <a href="http://www.createjs.com/docs/soundjs/modules/SoundJS.html" target="_blank"><i class="fa fa-external-link"></i>
-            SoundJS (英語)</a></li>
-        <li>
-          <a href="http://www.createjs.com/docs/preloadjs/modules/PreloadJS.html" target="_blank"><i class="fa fa-external-link"></i>
-            PreloadJS (英語)</a>
+        <li><a target="_blank" href="https://www.facebook.com/icswebjp"><i class="fa fa-facebook-square fa-3"></i>
+          Facebook</a></li>
+        <li><a target="_blank" href="https://twitter.com/icsweb"><i class="fa fa-twitter-square fa-3"></i>
+          Twitter</a>
         </li>
+        <li><a target="_blank" href="http://ics-web.jp/blog/recruit">採用情報</a></li>
+        <li><a target="_blank" href="http://ics-web.jp/blog/contact">お問い合わせ</a></li>
       </ul>
     </div>
-
-    <div class="footer-section large">
-      <p class="widget_title">CreateJS コミュニティー</p>
-      <p>わからないことがあれば、フォーラムで質問してみましょう。</p>
-      <a href="http://qiita.com/tags/CreateJS/items" target="_blank"><i class="fa fa-external-link"></i> Qiita 技術情報共有サービス</a><br/>
-      <a href="https://forums.adobe.com/community/international_forums/japanese/animate" target="_blank"><i class="fa fa-external-link"></i> Animate CC コミュニティフォーラム</a><br/>
-      <a href="https://techplay.jp/event/search?keyword=createjs&pref=&from=&to=&sort=started_desc" target="_blank"><i class="fa fa-external-link"></i> 勉強会・イベント一覧 (techplay)</a><br/>
-      <a href="https://www.facebook.com/CreateJS" target="_blank"><i class="fa fa-external-link"></i> CreateJS Facebookページ</a><br/>
-
-      <p class="widget_title">姉妹サイト</p>
-      <ul>
-        <li><a target="_blank" href="https://ics.media/tutorial-three/index.html"><i class="fa fa-external-link"></i> Three.js入門サイト</a></li>
-      </ul>
-
-
-    </div>
-
   </div>
 
-  <div id="copyright">Copyright &copy; 2018 ICS INC. All Rights Reserved.</div>
-</div>
+  <div class="footer-detail">
+    <div class="footer-detail__sections">
+
+      <div class="footer-detail__section">
+        <h2>CreateJSのサンプル/事例</h2>
+
+        <p>作例をみてCreateJSで実現可能な表現のインスピレーションを得ましょう。</p>
+        <ul>
+          <li><a href="http://lab.gskinner.com" target="_blank"> gskinner lab</a>
+          </li>
+          <li>
+            <a href="https://codepen.io/search/pens/?q=CreateJS&order=popularity&depth=everything&show_forks=false" target="_blank">
+              CodePen</a></li>
+          <li><a href="http://sandbox.createjs.com/PlanetaryGary/" target="_blank">
+            Planetary Gary</a></li>
+          <li><a href="http://ics-web.jp/projects/pollenmap/" target="_blank">
+            日本全国花粉飛散マップ</a></li>
+          <li><a href="http://ics-web.jp/projects/particle-develop/" target="_blank">
+            Particle Develop</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-detail__section">
+        <h2>CreateJSの公式リファレンス</h2>
+
+        <p><a href="http://createjs.com/" target="_blank">CreateJS</a>は4つのライブラリからなるJavaScriptフレームワークです。</p>
+        <ul>
+          <li>
+            <a href="http://www.createjs.com/docs/easeljs/modules/EaselJS.html" target="_blank">
+              EaselJS (英語)</a></li>
+          <li>
+            <a href="http://www.createjs.com/docs/tweenjs/modules/TweenJS.html" target="_blank">
+              TweenJS (英語)</a></li>
+          <li>
+            <a href="http://www.createjs.com/docs/soundjs/modules/SoundJS.html" target="_blank">
+              SoundJS (英語)</a></li>
+          <li>
+            <a href="http://www.createjs.com/docs/preloadjs/modules/PreloadJS.html" target="_blank">
+              PreloadJS (英語)</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-detail__section">
+        <h2>CreateJS コミュニティー</h2>
+        <p>わからないことがあれば、フォーラムで質問してみましょう。</p>
+        <ul>
+          <li>
+            <a target="_blank" rel="noopener" href="http://qiita.com/tags/CreateJS/items">
+              Qiita 技術情報共有サービス
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://forums.adobe.com/community/international_forums/japanese/animate">
+              Animate CC コミュニティフォーラム
+            </a></li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://www.facebook.com/CreateJS">
+              CreateJS Facebookページ
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://techplay.jp/event/search?keyword=createjs&pref=&from=&to=&sort=started_desc">
+              勉強会・イベント一覧 (techplay)
+            </a>
+          </li>
+        </ul>
+
+
+        <h2>姉妹サイト</h2>
+        <ul>
+          <li>
+            <a target="_blank" rel="noopener" href="https://ics.media/tutorial-three/index.html">
+
+              Three.js入門サイト
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <address class="footer-detail__copyright">Copyright &copy; 2018 ICS INC. All Rights Reserved.</address>
+  </div>
 </body>
 </html>
