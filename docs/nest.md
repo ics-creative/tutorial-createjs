@@ -20,7 +20,7 @@ stage.addChild(コンテナ);
 
 このクラスを使うことで表示リストを作れるのですが、上記のコードの場合、表示リストは次の構造になります。
 
-```
+```js
 □ stage
   └□ コンテナ
     └□ 表示オブジェクト
@@ -39,7 +39,7 @@ stage.addChild(コンテナ);
 
 このサンプルの場合、表示リストは次の構造になります。
 
-```
+```js
 □ stage
   └□ container
     ├□ shape1 (赤い円)
@@ -133,7 +133,7 @@ for (var i = 0; i < 10; i++) {
 
 この処理によって、表示リストは次の構造になります。
 
-```
+```js
 □ stage
   └□ container
     ├□ ball (0個目)
@@ -173,4 +173,4 @@ function handleTick() {
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2018-02-23</article-date-modified>

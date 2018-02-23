@@ -72,9 +72,7 @@ renderer.heading = function (text, level) {
 };
 
 marked.setOptions({
-  highlight: function (code) {
-    return highlightJs.highlightAuto(code).value;
-  },
+  highlight: (code) => highlightJs.highlightAuto(code).value,
   renderer: renderer
 });
 
