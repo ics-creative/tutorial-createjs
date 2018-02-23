@@ -76,6 +76,7 @@ function init() {
 var _gaq = _gaq || [];
 _gaq.push(["_setAccount", "UA-34243464-2"]);
 _gaq.push(["_trackPageview"]);
+window._gaq = _gaq; // Windowに保存しないと動作しなくなる
 (function() {
   var ga = document.createElement("script");
   ga.type = "text/javascript";
