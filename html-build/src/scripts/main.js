@@ -73,7 +73,7 @@ function init() {
 // Google Analytics の初期化コード
 // ---------------------------------
 
-var _gaq = _gaq || [];
+var _gaq = window._gaq || [];
 _gaq.push(["_setAccount", "UA-34243464-2"]);
 _gaq.push(["_trackPageview"]);
 window._gaq = _gaq; // Windowに保存しないと動作しなくなる
