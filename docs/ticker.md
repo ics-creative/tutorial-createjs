@@ -47,11 +47,11 @@ stage.addChild(shape); // 表示リストに追加
 // tick イベントを監視します
 createjs.Ticker.addEventListener("tick", handleTick);
 function handleTick(){
-	// アニメーション
-	shape.x += 2;
+  // アニメーション
+  shape.x += 2;
 
-	// Stageの描画を更新します
-	stage.update();
+  // Stageの描画を更新します
+  stage.update();
 }
 ```
 
@@ -62,10 +62,10 @@ function handleTick(){
 
 ## Ticker のインターバルを変更する
 
-デフォルトでは1秒間に24回発生する`tick`イベントですが、この頻度は`setFPS()`メソッドを使うことで変更できます。例えば、一秒間に60回発生させたければ次のように指定しましょう。
+デフォルトでは1秒間に24回発生する`tick`イベントですが、この頻度は`framerate`プロパティーを使うことで変更できます。例えば、一秒間に60回発生させたければ次のように指定しましょう。
 
 ```js
-createjs.Ticker.setFPS(60);
+createjs.Ticker.framerate = 60;
 ```
 
 FPSには利用する表示デバイスによって異なります。例えば映画だと24FPS、日本のテレビだと30FPS(正確には29.97i)、ウェブのバナー広告だと18PFSというのが一般的です。
@@ -121,4 +121,4 @@ function handleTick(){
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2018-02-28</article-date-modified>

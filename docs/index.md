@@ -101,12 +101,23 @@ webのリッチコンテンツを作るためのフレームワーク「CreateJS
 
 - [音声(サウンド)の再生](sound.md)
 
+
+
 ### サンプル (中級編)
 
 中級編までで学習した内容の理解を深めるべく、サンプル制作に挑戦してみましょう。
 
 - [物理演算](ball.md)
 - [カルーセル(スライドショー)](slideshow.md)
+
+## CreateJSとECMAScript 2015+
+
+JavaScriptの新しい仕様のECMAScript 2015（略称ES2015、別名ES6）以上では、クラスを利用できます。オブジェクト指向なプログラムで設計することで、規模の大きい開発に役立ちます。CreateJSでクラスを利用する方法を習得しましょう。
+
+![](../imgs/index-h2-es2015.png)
+
+- [ES2015のclassを利用する（継承）](class.md)
+- [ES2015のclassを利用する（メソッド）](class_method.md)
 
 
 ## 応用編
@@ -146,4 +157,4 @@ CreateJS入門サイトでAnimate CCを扱うのには理由があります。An
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2018-02-28</article-date-modified>
