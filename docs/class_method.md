@@ -1,4 +1,4 @@
-# Three.jsでES2015のclassを利用する(メソッド編)
+# CreateJSでES2015のclassを利用する(メソッド編)
 
 
 この解説は[CreateJSでES2015のclassを利用する（継承）](class.md)からの続きです。クラスのメソッドを呼び出すベスト・プラクティスな例を学んでいきましょう。
@@ -10,7 +10,7 @@
 
 ![](../imgs/class_container_update.html.png)
 
-- [サンプルを再生する](https://ics-creative.github.io/tutorial-three/samples/class_container_update.html)
+- [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/class_container_update.html)
 - [サンプルのソースコードを確認する](../samples/class_container_update.html)
 
 
