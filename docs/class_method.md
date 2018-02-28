@@ -8,7 +8,7 @@
 
 時間経過でグループのアニメーションをさせたい場合の方法を紹介します。
 
-![](../imgs/class_container_update.png)
+![](../imgs/class_container_update.html.png)
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-three/samples/class_container_update.html)
 - [サンプルのソースコードを確認する](../samples/class_container_update.html)

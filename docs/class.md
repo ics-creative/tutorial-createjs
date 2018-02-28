@@ -13,7 +13,7 @@ JavaScriptではオブジェクト指向としてのクラスが利用できま�
 
 クラスの手軽な使いみちとして、シェイプのサブクラスを作ってみましょう。次のサンプルでは適当なシェイプを表示したものです。
 
-![](../imgs/class_shape.png)
+![](../imgs/class_shape.html.png)
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/class_shape.html)
 - [サンプルのソースコードを確認する](../samples/class_shape.html)
@@ -85,7 +85,7 @@ function init() {
 
 クラスのよくある利用方法として、CreateJSのコンテナーにもクラスを使ってみましょう。次のサンプルは複数のシェイプを一つのコンテナーにまとめたものです。
 
-![](../imgs/class_container.png)
+![](../imgs/class_container.html.png)
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/class_container.html)
 - [サンプルのソースコードを確認する](../samples/class_container.html)
@@ -142,7 +142,7 @@ function init() {
   // クラスからインスタンス化する
   const myContainer = new MyContainer();
   // ステージに自作のコンテナーを追加する
-  scene.addChild(myContainer);
+  stage.addChild(myContainer);
   // 適当な座標に配置する
   myContainer.x = 320;
   myContainer.y = 160;
