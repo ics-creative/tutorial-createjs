@@ -1,0 +1,50 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script>
+    window.addEventListener('load', init);
+
+    function init() {
+      // Stageオブジェクトを作成。表示リストのルートになります。
+      var stage = new createjs.Stage('myCanvas');
+
+      // クラスからインスタンス化する
+      const myContainer = new MyContainer();
+      // ステージに自作のコンテナーを追加する
+      stage.addChild(myContainer);
+      // 適当な座標に配置する
+      myContainer.x = 320;
+      myContainer.y = 160;
+
+      // Stageの描画を更新
+      stage.update();
+    }
+
+    /** コンテナーを継承したサブクラスです。 */
+    class MyContainer extends createjs.Container {
+      constructor() {
+        super();
+
+        // 円を作成します
+        var circle = new createjs.Shape();
+        circle.graphics.beginStroke("DarkRed");// 線の色を指定
+        circle.graphics.setStrokeStyle(5);// 線の幅を指定
+        circle.graphics.drawCircle(0, 0, 150); // 50pxの星を記述
+        this.addChild(circle); // 表示リストに追加
+
+        // 多角形を作成します
+        var poly = new createjs.Shape();
+        poly.graphics.beginFill('DarkRed'); // 赤色で描画するように設定
+        poly.graphics.drawPolyStar(0, 0, 150, 5, 0.6, -90); // 150pxの星を記述
+        this.addChild(poly); // 表示リストに追加
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="640" height="320"></canvas>
+</body>
+</html>
