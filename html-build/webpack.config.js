@@ -71,18 +71,5 @@ module.exports = {
       }
     ],
   },
-  plugins: useOptimize === true ? [
-    // 【効果：中】Scope Hoistingをするためのプラグイン
-    new webpack.optimize.ModuleConcatenationPlugin(),
-
-    // 【効果：大】JSファイルのminifyを実行する
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: useSourceMap,
-      compress: {
-        warnings: false,
-      },
-      // マルチプロセスで高速化
-      parallel: true,
-    }),
-  ] : []
+  plugins: []
 };
