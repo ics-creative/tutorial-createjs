@@ -18,7 +18,7 @@ webのリッチコンテンツを作るためのフレームワーク「CreateJS
 次のコードをHTMLファイルに記述することでCreateJSが利用可能になります。
 
 ```js
-<script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 ```
 
 ## CreateJS の基本的な使い方
@@ -157,4 +157,4 @@ CreateJS入門サイトでAnimate CCを扱うのには理由があります。An
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2018-02-28</article-date-modified>
+<article-date-modified>2018-04-19</article-date-modified>
