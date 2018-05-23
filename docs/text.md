@@ -32,7 +32,7 @@ stage.addChild(t);
 テキストの水平方向の揃え方ですが、`textAlign`プロパティーを使うことで設定ができます。
 
 ```js
-var t = new Text("Hello World!", "24px serif", "DarkRed");
+var t = new createjs.Text("Hello World!", "24px serif", "DarkRed");
 t.textAlign = "center";
 stage.addChild(t);
 ```
@@ -114,4 +114,4 @@ stage.addChild(t);
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2018-05-24</article-date-modified>
