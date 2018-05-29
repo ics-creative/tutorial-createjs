@@ -150,10 +150,13 @@ shape.graphics.beginFill("#00ff00") // 緑色で描画するように設定
 stage.addChild(shape); // 表示リストに追加
 ```
 
+※`createjs.Shape`クラスは、WebGLを活用する`StageGL`クラスでは「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/StageGL.html)」に記載のとおり、レンダリングされないので注意ください。
+
+
 [次の記事へ](text.md)
 
 
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2018-05-29</article-date-modified>

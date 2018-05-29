@@ -32,7 +32,7 @@ stage.addChild(t);
 テキストの水平方向の揃え方ですが、`textAlign`プロパティーを使うことで設定ができます。
 
 ```js
-var t = new Text("Hello World!", "24px serif", "DarkRed");
+var t = new createjs.Text("Hello World!", "24px serif", "DarkRed");
 t.textAlign = "center";
 stage.addChild(t);
 ```
@@ -108,10 +108,10 @@ stage.addChild(t);
 
 
 ※`text`プロパティーの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Text.html#property_text)」を確認ください。
-
+※`createjs.Text`クラスは、WebGLを活用する`StageGL`クラスでは「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/StageGL.html)」に記載のとおり、レンダリングされないので注意ください。
 
 [次の記事へ](bitmap.md)
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2018-05-29</article-date-modified>
