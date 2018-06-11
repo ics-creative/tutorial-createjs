@@ -150,11 +150,39 @@ CreateJS入門サイトでAnimate CCを扱うのには理由があります。An
 
 
 
+
+
 ## その他
 
 - [スマホブラウザで全画面に表示する対応](fullscreen.md)
 
+## ソースが公開されている、実務レベルの記事
+
+CreateJSを使って実装した事例の記事を紹介します。本サイトでは基本的な使い方に焦点をあてているため、残念ながら現場のプロが使うテクニックまでは十分学べません。そこで、実際に作られた本格的なCreateJSの事例を紹介します。次の記事では、ソースコードも含めて公開されています。ソースコードには現場のテクニックが満載。余力があればぜひ勉強してみましょう。
+
+- 「日本全国花粉飛散マップ」
+    - [解説記事](https://ics.media/entry/132)
+    - [ウェブサイト](http://ics-web.jp/projects/pollenmap/)
+    - [ソースコード](https://github.com/ics-creative/project-pollen-map/)
+- 「色彩感覚ゲーム Color Create」
+    - [解説記事](https://ics.media/entry/223)
+    - [ウェブサイト](https://ics-creative.github.io/project-color-create/)
+    - [ソースコード](https://github.com/ics-creative/project-color-create/)
+- 「HTMLデザインツール Particle Develop」
+    - [解説記事](https://ics.media/entry/10748)
+    - [ウェブサイト](https://ics-creative.github.io/project-particle-develop/)
+    - [ソースコード](https://github.com/ics-creative/project-particle-develop/)
+
+
+## CreateJSの文献
+
+CreateJSを解説した有名な文献・チュートリアルとしては次があります。本サイトからのステップアップとして参照ください。
+
+- [CreateJS 基本講座（2017年）](https://www.linkedin.com/learning/createjs-essential-training-2)
+- [Flash for HTML5 ―HTML5開発環境としてのFlash Pro CC活用テクニック（2015年）](https://book.mynavi.jp/ec/products/detail/id=42081)
+- [WebクリエイターのためのCreateJSスタイルブック（2013年）](https://book.mynavi.jp/ec/products/detail/id=22959)
+
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2018-04-19</article-date-modified>
+<article-date-modified>2018-06-11</article-date-modified>
