@@ -137,6 +137,26 @@ function onTick(){
 }
 ```
 
+
+### 代替手段
+
+Animate CCで出力したHTML/JSファイルは構成が複雑なため、データを持ってくるのは大変です。
+代替手段としてAnimate CCで出力したHTMLファイルをそのまま使って、JSを書く方が簡単かもしれません。
+
+この場合、flaファイルと同名のHTMLには、次のコードが末尾に記載されています。`fnStartAnimation();`の次の行からJavaScriptを書き始めるといいでしょう。
+
+```js
+makeResponsive(false,'both',false,1);	
+AdobeAn.compositionLoaded(lib.properties.id);
+fnStartAnimation();
+```
+
+この方法で処理する場合は、Animate CC側で［パブリッシュ時にHTMLファイルを上書き］のチェックマークを外すことを忘れないようにしましょう。これのチェックボックスが付いていると、パブリッシュする度にHTMLファイルが上書きされてしまうためです。
+
+![](../imgs/adobe_animate_basic/publish_html.png)
+
+
+
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-12-04</article-date-published>
 <article-date-modified>2019-01-10</article-date-modified>
