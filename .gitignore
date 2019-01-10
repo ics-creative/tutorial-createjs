@@ -15,3 +15,5 @@ html-build/typescript/main.js.map
 /node_modules
 /tool-generate-htmls/package-lock.json
 Icon
+package-lock.json
+/html-build/package-lock.json
