@@ -10,7 +10,7 @@ Adobe Animate CCで画像ファイルを含むコンテンツを作っていた�
 - [サンプルのソースコードを確認する](../samples/createjs-toolkit-bitmaps/)
 
 
-※2018/02/20更新：Animate CC 18.0ではこの記事の内容がそのまま使えません。準備していますのでお待ち下さい。
+※この記事は、Animate CC 19.1 (CC 2019)での解説内容となります。Animateの以前のバージョンでは動作しない可能性が高いのでご了承ください。
 
 ## Adobe Animate CCを起動
 
@@ -47,7 +47,7 @@ Adobe Animate CCで画像ファイルを含むコンテンツを作っていた�
 
 まずはCreateJSフレームワークを`head`タグの中で読み込みましょう。
 
-```js
+```html
 <!-- CreateJSを読み込む-->
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 ```
@@ -57,49 +57,71 @@ Adobe Animate CCで画像ファイルを含むコンテンツを作っていた�
 
 `index.html`ファイルと同じ階層に、`HeartAsset.fla`ファイルから出力した`HeartAsset.js`ファイルが存在するはずです。このファイルを読み込むため`<script>`タグで取り込みましょう。
 
-```js
-<!-- Flash Professional CCのデータを読み込む -->
+```html
+<!-- Adobe Animate CCのデータを読み込む -->
 <script src="HeartAsset.js"></script>
 ```
 
 ## 7. CreateJS起動のためのコードを記載する
 
 
-CreateJSを起動するためのコードを記載しましょう。コードが長くなりますが、モーション中に利用する画像ファイルを先読み(プリロード)する仕組みが入っています。
+CreateJSを起動するためのコードを記載しましょう。コードが長くなりますが、モーション中に利用する画像ファイルを先読み（プリロード）する仕組みが入っています。コード中の`★★★`の箇所はFLAファイルごとにIDが異なりますので、パブリッシュしたファイル内からIDを調べて入力ください。
+
 
 ```js
 window.addEventListener("load", init);
 
+// コンポジションのIDは出力したJSファイルから調べる必要がある
+var comp = AdobeAn.getComposition("★★★");
+var lib = comp.getLibrary();
+
 function init() {
-  images = images||{};
+  images = window.images || {};
 
   var loader = new createjs.LoadQueue(false);
-  loader.addEventListener("fileload", handleFileLoad);
-  loader.addEventListener("complete", handleComplete);
+  loader.addEventListener("fileload", function(evt) {
+    handleFileLoad(evt, comp);
+  });
+  loader.addEventListener("complete", function(evt) {
+    handleComplete(evt, comp);
+  });
   loader.loadManifest(lib.properties.manifest);
 }
 
-function handleFileLoad(evt) {
-  if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+function handleFileLoad(evt, comp) {
+  // 読み込んだ画像を保存
+  var images = comp.getImages();
+  if (evt && evt.item.type == "image") {
+    images[evt.item.id] = evt.result;
+  }
 }
 
 function handleComplete(evt) {
-  var stage = new createjs.Stage("myCanvas");
+  // スプライトシートに展開
+  var ss = comp.getSpriteSheet();
+  var queue = evt.target;
+  var ssMetadata = lib.ssMetadata;
+  for (i = 0; i < ssMetadata.length; i++) {
+    ss[ssMetadata[i].name] = new createjs.SpriteSheet({
+      images: [queue.getResult(ssMetadata[i].name)],
+      frames: ssMetadata[i].frames
+    });
+  }
 
-  // ココに初期化コードをかく
+  // ここから初期化処理を書く
 }
 ```
 
 ## 8. Animate CCのコンテンツを呼び出す
 
-Animate CCのシンボル名の先頭に「lib.」をつけるとクラスとして利用できます。ルートのタイムラインは「lib.ファイル名」として呼び出せます。
+Animate CCのシンボル名の先頭に「lib.」をつけるとクラスとして利用できます。ルートのタイムラインは「`lib.ファイル名`」として呼び出せます。
 
 ```js
 var root = new lib.HeartAsset();
 stage.addChild(root);
 ```
 
-この「lib.HeartAsset」というのはFLAファイル名と一致します。
+この「`lib.HeartAsset`」というのはFLAファイル名と一致します。
 
 ## 9. 表示オブジェクトとしてStageに追加して制御しよう
 
@@ -117,4 +139,4 @@ function onTick(){
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-12-04</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2019-01-10</article-date-modified>

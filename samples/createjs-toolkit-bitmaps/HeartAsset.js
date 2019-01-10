@@ -2,23 +2,27 @@
 
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
-lib.ssMetadata = [];
+lib.ssMetadata = [
+		{name:"HeartAsset_atlas_", frames: [[0,0,240,234],[0,236,98,100]]}
+];
 
 
 // symbols:
 
 
 
-(lib.hoge = function() {
-	this.initialize(img.hoge);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,145,88);
+(lib.logo = function() {
+	this.initialize(ss["HeartAsset_atlas_"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.piyo = function() {
-	this.initialize(img.piyo);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,98,100);
+	this.initialize(ss["HeartAsset_atlas_"]);
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+
 
 
 // stage content:
@@ -28,30 +32,29 @@ p.nominalBounds = new cjs.Rectangle(0,0,98,100);
 	// piyo
 	this.instance = new lib.piyo();
 	this.instance.parent = this;
-	this.instance.setTransform(115.2,108.8);
+	this.instance.setTransform(115.2,108.75);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-	// hoge
-	this.instance_1 = new lib.hoge();
+	// logo
+	this.instance_1 = new lib.logo();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(221,137);
+	this.instance_1.setTransform(229.85,163.05,1,1,-14.9992);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(390.2,308.8,250.8,116.3);
+p.nominalBounds = new cjs.Rectangle(390.2,301,132.00000000000006,88.10000000000002);
 // library properties:
 lib.properties = {
-	id: 'B8708A300BAB4752BD4CC5BE7AD9503E',
+	id: '3E200BA4CA7449B99370B20FFC1B06D2',
 	width: 550,
 	height: 400,
 	fps: 24,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/hoge.png", id:"hoge"},
-		{src:"images/piyo.png", id:"piyo"}
+		{src:"images/HeartAsset_atlas_.png?1547087803359", id:"HeartAsset_atlas_"}
 	],
 	preloads: []
 };
@@ -89,7 +92,7 @@ an.bootstrapCallback=function(fnCallback) {
 };
 
 an.compositions = an.compositions || {};
-an.compositions['B8708A300BAB4752BD4CC5BE7AD9503E'] = {
+an.compositions['3E200BA4CA7449B99370B20FFC1B06D2'] = {
 	getStage: function() { return exportRoot.getStage(); },
 	getLibrary: function() { return lib; },
 	getSpriteSheet: function() { return ss; },
