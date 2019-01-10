@@ -52,7 +52,7 @@ createjs.Sound.registerSound("音声ファイルのパス", "任意のID");
 createjs.Sound.play("任意のID");
 ```
 
-いかがでしたか。音声再生といっても、あまりにも簡単であっけなかったのではないでしょうか。
+音声再生といっても、あまりにも簡単であっけなかったのではないでしょうか。
 
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
