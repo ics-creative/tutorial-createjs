@@ -29,7 +29,7 @@ shape.graphics.drawCircle(0, 0, 80);
 - [サンプルのソースコードを確認する](../samples/shape_begin_fill.html)
 
 
-※詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_beginFill)」を確認ください。
+※詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Graphics.html#method_beginFill)」を確認ください。
 
 
 
@@ -69,7 +69,7 @@ shape.graphics.drawCircle(0, 0, 80);
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_begin_stroke.html)
 - [サンプルのソースコードを確認する](../samples/shape_begin_stroke.html)
 
-※詳しい使い方は「 公式ドキュメント(英語)」の[beginStroke()](http://createjs.com/docs/easeljs/classes/Graphics.html#method_beginStroke)と[setStrokeStyle()](http://createjs.com/docs/easeljs/classes/Graphics.html#method_setStrokeStyle)を確認ください。
+※詳しい使い方は「 公式ドキュメント(英語)」の[beginStroke()](https://createjs.com/docs/easeljs/classes/Graphics.html#method_beginStroke)と[setStrokeStyle()](https://createjs.com/docs/easeljs/classes/Graphics.html#method_setStrokeStyle)を確認ください。
 
 
 ### コラム

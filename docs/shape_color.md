@@ -34,10 +34,10 @@ shape.graphics.drawCircle(300, 100, 50);
 
 使える色の名前はCSSの記法と同じです。次のURLを参考にするといいでしょう。
 
-- [HTML Color Names](http://www.w3schools.com/colors/colors_names.asp)
+- [HTML Color Names](https://www.w3schools.com/colors/colors_names.asp)
 
 
-※`beginFill()`メソッドの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_beginFill)」を確認ください。
+※`beginFill()`メソッドの詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Graphics.html#method_beginFill)」を確認ください。
 
 
 ## 16進数表記で指定
@@ -64,7 +64,7 @@ shape.graphics.drawCircle(300, 100, 50);
 
 16進数表記のカラーコードは次のカラーピッカーを参考にするといいでしょう。一般的にウェブで扱える色の種類は1650万色ありますが、コンテンツの雰囲気にあわせてカラーピッカーを用いて色を選びます。
 
-- [HTML Color Picker](http://www.w3schools.com/colors/colors_picker.asp)
+- [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp)
 
 
 ## HSLで指定
@@ -112,7 +112,7 @@ shape.graphics.drawCircle(300, 100, 50);
 - [サンプルのソースコードを確認する](../samples/color_hsl.html)
 
 
-※詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_getHSL)」を確認ください。
+※詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Graphics.html#method_getHSL)」を確認ください。
 
 
 [次の記事へ](shape_draw.md)

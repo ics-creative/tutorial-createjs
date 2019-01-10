@@ -23,7 +23,7 @@ stage.addChild(t);
 - [サンプルのソースコードを確認する](../samples/text.html)
 
 
-※`createjs.Text`クラスの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Text.html)」を確認ください。
+※`createjs.Text`クラスの詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Text.html)」を確認ください。
 
 
 
@@ -49,11 +49,11 @@ stage.addChild(t);
 `left`, `right`,
  `center` の結果となります。赤色線は基準点。
 
-テキストの整列については、[WHATWGのcanvasの仕様](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#text-0)と同じになっていますので、詳しい情報はこちらを参考ください。
+テキストの整列については、[WHATWGのcanvasの仕様](https://html.spec.whatwg.org/multipage/canvas.html#text-0)と同じになっていますので、詳しい情報はこちらを参考ください。
 
 
 
-※`textAlign`プロパティーの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Text.html#property_textAlign)」を確認ください。
+※`textAlign`プロパティーの詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Text.html#property_textAlign)」を確認ください。
 
 
 
@@ -78,7 +78,7 @@ stage.addChild(t);
 左上から順に、`top`, `hanging`, `middle`,
 `alphabetic`, `ideographic`, `bottom` の結果となります。赤色線は基準点。
 
-※`textBaseline`プロパティーの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Text.html#property_textBaseline)」を確認ください。
+※`textBaseline`プロパティーの詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Text.html#property_textBaseline)」を確認ください。
 
 
 
@@ -107,11 +107,11 @@ stage.addChild(t);
 ```
 
 
-※`text`プロパティーの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Text.html#property_text)」を確認ください。
+※`text`プロパティーの詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Text.html#property_text)」を確認ください。
 ※`createjs.Text`クラスは、WebGLを活用する`StageGL`クラスでは「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/StageGL.html)」に記載のとおり、レンダリングされないので注意ください。
 
 [次の記事へ](bitmap.md)
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2018-05-29</article-date-modified>
+<article-date-modified>2019-01-10</article-date-modified>

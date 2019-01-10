@@ -129,10 +129,10 @@ function onTick(){
 
 Animate CC内で画像を含めた場合は、初期化の手順が少し複雑になります。
 
-書籍[「Flash for HTML5 ―HTML5開発環境としてのFlash Professional CC活用テクニック」](http://www.amazon.co.jp/dp/B014VWO2BU)の
+書籍[「Flash for HTML5 ―HTML5開発環境としてのFlash Professional CC活用テクニック」](https://www.amazon.co.jp/dp/B014VWO2BU)の
 「外部から更新可能なスライドショーを作ってみよう」(044P)を参照ください。
 
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-12-17</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2019-01-10</article-date-modified>

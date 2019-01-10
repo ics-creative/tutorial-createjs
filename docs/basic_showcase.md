@@ -6,9 +6,9 @@ CreateJSが使って作られたウェブサイトや実験サイトをまとめ
 
 ![](../imgs/sample_gskinnercom.png)
 
-[gskinner lab](http://lab.gskinner.com)
+[gskinner lab](https://lab.gskinner.com)
 
-CreateJSを開発しているgskinner社の実験サイト。ビジュアル・アートのデモが多数公開されています。それぞれのデモは完成形に至るまでの開発バージョンを掲載しており、完成品にたどり着くまでどのような開発の過程があったかを確認することができます。
+CreateJSを開発しているgskinner社の実験サイト。ビジュアル・アートのデモが多数公開されています。それぞれのデモは完成形に至るまでの開発バージョンを掲載しており、完成品にたどり着くまでどのような開発の過程があったかを確認できます。
 
 ![](../imgs/sample_gary.png)
 
@@ -33,4 +33,4 @@ CreateJSを開発しているgskinner社の実験サイト。ビジュアル・�
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2016-01-18</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2019-01-10</article-date-modified>

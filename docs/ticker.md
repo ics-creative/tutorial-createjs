@@ -16,7 +16,7 @@ function handleTick(){
 
 ブラウザのコンソールパネルを開くと、時間経過によって現在時刻が次々と表示されているはずです。この`tick`イベントがアニメーション実装の基本になります。
 
-※`createjs.Ticker`クラスの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Ticker.html)」を確認ください。
+※`createjs.Ticker`クラスの詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Ticker.html)」を確認ください。
 
 ## tick イベントでステージの更新を行う
 
@@ -121,4 +121,4 @@ function handleTick(){
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2018-02-28</article-date-modified>
+<article-date-modified>2019-01-10</article-date-modified>

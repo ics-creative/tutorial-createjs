@@ -4,7 +4,7 @@
 
 ![CreateJSの導入編](../imgs/title_createjs.jpg "1280x400")
 
-[CreateJS](http://www.createjs.com)は、HTML5でリッチコンテンツを制作するためのJavaScriptライブラリのスイート（特定用途のソフトウェアを詰め合わせたパッケージ）です。Flashデベロッパーとして著名な[Grant Skinner](https://twitter.com/gskinner)氏が代表を務める[gskinner](http://gskinner.com/)社が開発を行っており、オープンソースソフトウェアとして個人・商用でも無償で利用できます。
+[CreateJS](https://createjs.com)は、HTML5でリッチコンテンツを制作するためのJavaScriptライブラリのスイート（特定用途のソフトウェアを詰め合わせたパッケージ）です。Flashデベロッパーとして著名な[Grant Skinner](https://twitter.com/gskinner)氏が代表を務める[gskinner](https://gskinner.com/)社が開発を行っており、オープンソースソフトウェアとして個人・商用でも無償で利用できます。
 
 ## CreateJS を構成する4つの JavaScript ライブラリ
 
@@ -37,4 +37,4 @@ HTML5 Canvasは2Dのインタラクションデザインという用途に適し
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-30</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2019-01-10</article-date-modified>

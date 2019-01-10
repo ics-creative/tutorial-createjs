@@ -7,7 +7,7 @@ createjs.Tween.get(対象)
      .to(パラメーター, ミリ秒);
 ```
 
-※`createjs.Tween`クラスの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.sub.jp/ja/TweenJS/reference/classes/Tween.html)」を確認ください。
+※`createjs.Tween`クラスの詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/tweenjs/classes/Tween.html)」を確認ください。
 ※トゥイーン機能を提供するJSライブラリはCreateJSに含まれる「TweenJS」となります。
 
 ## モーションを設定する
@@ -102,9 +102,9 @@ createjs.Tween.get(対象)
 - `ease.Ease.bounceOut` ボールが跳ね返るような動き
 - `ease.Ease.backOut` 目標を行き過ぎてから戻ってくる動き
 
-他にもイージングの種類が存在しますが、[TweenJSのサンプル](http://createjs.com/demos/tweenjs/tween_sparktable)を試すと違いがわかりやすいでしょう。
+他にもイージングの種類が存在しますが、[TweenJSのサンプル](https://createjs.com/demos/tweenjs/tween_sparktable)を試すと違いがわかりやすいでしょう。
 
-※`createjs.Ease`クラスの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/tweenjs/classes/Ease.html)」を確認ください。
+※`createjs.Ease`クラスの詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/tweenjs/classes/Ease.html)」を確認ください。
 
 サンプル
 
@@ -130,4 +130,4 @@ createjs.Tween.get(circle) // ターゲットを指定
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2019-01-10</article-date-modified>

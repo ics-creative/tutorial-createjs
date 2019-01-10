@@ -167,10 +167,10 @@ function handleTick() {
 - `addChild()`メソッドで後に追加されたものほど上に表示されます。子オブジェクトはインデックスで管理され、インデックス `0` が最背面のオブジェクトになります。
 - `createjs.Container`のインスタンスの中に、別の`createjs.Container`インスタンスを追加することもできるので、何重にもネストすることが可能です。
 - `createjs.Container`（およびそのサブクラス）が子の表示オブジェクトを管理する仕組みを表示リスト（ディスプレイ・リスト）と呼ばれます。
-- `createjs.Container`クラスの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Container.html)」を確認ください。
+- `createjs.Container`クラスの詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Container.html)」を確認ください。
 
 [次の記事へ](displayobject_remove.md)
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2018-02-23</article-date-modified>
+<article-date-modified>2019-01-10</article-date-modified>

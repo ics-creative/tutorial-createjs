@@ -24,7 +24,7 @@ stage.addChild(bmp);
 
 ※このサンプルでは、`createjs.Ticker`クラスを利用していますが、このクラスの使い方は後述します。
 
-※`createjs.Bitmap`クラスの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Bitmap.html)」を確認ください。
+※`createjs.Bitmap`クラスの詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Bitmap.html)」を確認ください。
 
 ## 基準点の設定方法
 
@@ -47,7 +47,7 @@ bmp.regY = 100;
 - [サンプルのソースコードを確認する](../samples/bitmap_reg.html)
 
 
-※`regX`プロパティーの詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Bitmap.html#property_regX)」を確認ください。
+※`regX`プロパティーの詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Bitmap.html#property_regX)」を確認ください。
 
 
 ## 画像の制限
@@ -61,4 +61,4 @@ webサーバーにアップすれば、その問題は解消され、Google Chro
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2019-01-10</article-date-modified>

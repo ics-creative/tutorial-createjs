@@ -66,7 +66,7 @@ function handleKeydown(event){
 
 キーコードの一覧表は次のページを参考にするといいでしょう。
 
-- [各ブラウザのキーコード表[JavaScript]](http://www.programming-magic.com/file/20080205232140/keycode_table.html)
+- [各ブラウザのキーコード表[JavaScript]](https://web-designer.cman.jp/javascript_ref/keyboard/keycode/)
 
 [次の記事へ](keyboard_ship.md)
 

@@ -155,11 +155,11 @@ LINEアニメスタンプの製作にもAnimate CCが役立ちます。Adobe Cre
 
 ![](../imgs/adobe_animate_basic/animtecc-complete.gif)
 
-- [1. 便利なアニメーション制作機能の紹介](https://blogs.adobe.com/creativestation/web-animate-cc-animation-stamp-1-overview)
-- [2. イラストの制作手順](https://blogs.adobe.com/creativestation/web-animate-cc-animation-stamp-2-illustration)
-- [3. コマアニメで動きを作る](https://blogs.adobe.com/creativestation/web-animate-cc-animation-stamp-3-animation)
-- [4. トゥイーンアニメで動きを作る](https://blogs.adobe.com/creativestation/web-animate-cc-animation-stamp-4-tween)
-- [5. APNGファイルの作成](https://blogs.adobe.com/creativestation/animate-cc-animation-stamp-5-apng)
+- [1. 便利なアニメーション制作機能の紹介](https://blogs.adobe.com/japan/web-animate-cc-animation-stamp-1-overview/)
+- [2. イラストの制作手順](https://blogs.adobe.com/japan/web-animate-cc-animation-stamp-2-illustration/)
+- [3. コマアニメで動きを作る](https://blogs.adobe.com/japan/web-animate-cc-animation-stamp-3-animation/)
+- [4. トゥイーンアニメで動きを作る](https://blogs.adobe.com/japan/web-animate-cc-animation-stamp-4-tween)
+- [5. APNGファイルの作成](https://blogs.adobe.com/japan/animate-cc-animation-stamp-5-apng)
 
 
 ### 体系的に安心して学ぶには
@@ -173,4 +173,4 @@ LINEアニメスタンプの製作にもAnimate CCが役立ちます。Adobe Cre
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2016-02-16</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
+<article-date-modified>2019-01-10</article-date-modified>

@@ -24,7 +24,7 @@ stage.addChild(shape); // 表示リストに追加
 - [サンプルのソースコードを確認する](../samples/shape_circle.html)
 
 
-※詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_drawCircle)」を確認ください。
+※詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Graphics.html#method_drawCircle)」を確認ください。
 
 
 ## 四角形を描く
@@ -50,7 +50,7 @@ stage.addChild(shape); // 表示リストに追加
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_rect.html)
 - [サンプルのソースコードを確認する](../samples/shape_rect.html)
 
-※詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_drawRect)」を確認ください。
+※詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Graphics.html#method_drawRect)」を確認ください。
 
 ## 角丸四角形を描く
 
@@ -77,7 +77,7 @@ stage.addChild(shape); // 表示リストに追加
 - [サンプルのソースコードを確認する](../samples/shape_roundrect.html)
 
 
-※詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_drawRoundRect)」を確認ください。
+※詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Graphics.html#method_drawRoundRect)」を確認ください。
 
 
 ## 多角形の描画
@@ -102,7 +102,7 @@ stage.addChild(poly); // 表示リストに追加
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/shape_polystar.html)
 - [サンプルのソースコードを確認する](../samples/shape_polystar.html)
 
-※詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_drawPolyStar)」を確認ください。
+※詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Graphics.html#method_drawPolyStar)」を確認ください。
 
 
 ## 任意の図形の描画
@@ -133,7 +133,7 @@ stage.addChild(obj); // 表示リストに追加
 - [サンプルのソースコードを確認する](../samples/shape_other.html)
 
 
-※詳しい使い方は「[公式ドキュメント(英語)](http://createjs.com/docs/easeljs/classes/Graphics.html#method_lineTo)」を確認ください。
+※詳しい使い方は「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/Graphics.html#method_lineTo)」を確認ください。
 
 
 
@@ -159,4 +159,4 @@ stage.addChild(shape); // 表示リストに追加
 
 <article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
 <article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2018-05-29</article-date-modified>
+<article-date-modified>2019-01-10</article-date-modified>
