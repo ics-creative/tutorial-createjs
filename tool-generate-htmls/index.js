@@ -7,7 +7,7 @@ const htmlMinifier = require('html-minifier');
 let promises = [];
 let samplesUrl = 'https://ics-creative.github.io/tutorial-createjs/';
 let samplesHtmlUrl = 'https://github.com/ics-creative/tutorial-createjs/blob/gh-pages/';
-let templateHtml;
+const templateHtml = fs.readFileSync('./template-html.html', 'utf8');
 
 /**
  * テンプレート文字列を展開
@@ -98,7 +98,7 @@ const generateHTML = (dirName, fileName, resolve) => {
     // --------------------------------
     // メタデータの選定
     // --------------------------------
-    const articleAuthorArr = articleMarkdown.match(/<p><article-author>(.*?)<\/article-author><\/p>/);
+    const articleAuthorArr = articleMarkdown.match(/<article-author>(.*?)<\/article-author>/);
     const articleAuthorStr = articleAuthorArr ? articleAuthorArr[1] : '';
     if (!articleAuthorArr) {
       console.error(`<article-author> Element is not written. : ${fileName}`);
@@ -190,12 +190,7 @@ fs.readdir('../docs', (err, files) => {
       }
     });
   }));
-  promises.push(new Promise((resolve) => {
-    fs.readFile('template-html.html', 'utf8', (error, text) => {
-      templateHtml = text;
-      resolve();
-    });
-  }));
+
   for (let i = 0; i < files.length; i++) {
     const filename = files[i];
     const childPromise = new Promise((resolve) => {
