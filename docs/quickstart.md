@@ -1,4 +1,9 @@
-# 簡単な CreateJS のサンプルを試そう
+---
+title: 簡単な CreateJS のサンプルを試そう
+author: 池田 泰延
+published_date: 2015-11-29
+modified_date: 2019-01-10
+---
 
 まずは簡単なサンプルを通してCreateJSがどのようなものなのか確認しましょう。次のコードをHTMLファイルにコピー&ペーストして、ブラウザで開くと画面に赤い円が表示されます。
 
@@ -105,9 +110,3 @@ stage.update();
 これがCreateJSの簡単なサンプルです。具体的に一つずつ順番に理解していきましょう。
 
 [次の記事へ](debug.md)
-
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2019-01-10</article-date-modified>

@@ -1,4 +1,9 @@
-# CreateJS でのキーボード制御
+---
+title: CreateJS でのキーボード制御
+author: 池田 泰延
+published_date: 2015-11-30
+modified_date: 2018-02-22
+---
 
 ## 船をキーボードで上下左右に移動する
 
@@ -208,7 +213,3 @@ if (ship.y > stage.canvas.height) { ship.y = stage.canvas.height; }
 
 [次の記事へ](hittest.md)
 
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-30</article-date-published>
-<article-date-modified>2018-02-22</article-date-modified>

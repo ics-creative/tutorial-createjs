@@ -1,4 +1,9 @@
-# CreateJS でデジタル時計の開発に挑戦しよう
+---
+title: CreateJS でデジタル時計の開発に挑戦しよう
+author: 池田 泰延
+published_date: 2016-10-24
+modified_date: 2018-02-20
+---
 
 デジタル時計の作成を通して、CreateJSの理解を深めましょう。
 
@@ -68,7 +73,3 @@ function handleTick() {
 
 
 [アナログ時計の記事へ](clock_digital.md)
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2016-10-24</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

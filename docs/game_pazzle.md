@@ -1,4 +1,9 @@
-# CreateJS でパズルゲーム開発に挑戦しよう
+---
+title: CreateJS でパズルゲーム開発に挑戦しよう
+author: 池田 泰延
+published_date: 2015-12-10
+modified_date: 2018-02-20
+---
 
 ![](../imgs/game_pazzle.html.png)
 
@@ -83,7 +88,3 @@ if (isHit == true) {
   piece.y = targetBase.y;
 }
 ```
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-10</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

@@ -1,4 +1,9 @@
-# Adobe Animate CC と CreateJS の連携 (基本編)
+---
+title: Adobe Animate CC と CreateJS の連携 (基本編)
+author: 池田 泰延
+published_date: 2015-12-17
+modified_date: 2019-01-10
+---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RK6Z-ExOwuw" frameborder="0" allowfullscreen></iframe>
 
@@ -131,8 +136,3 @@ Animate CC内で画像を含めた場合は、初期化の手順が少し複雑�
 
 書籍[「Flash for HTML5 ―HTML5開発環境としてのFlash Professional CC活用テクニック」](https://www.amazon.co.jp/dp/B014VWO2BU)の
 「外部から更新可能なスライドショーを作ってみよう」(044P)を参照ください。
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-17</article-date-published>
-<article-date-modified>2019-01-10</article-date-modified>

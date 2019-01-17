@@ -1,4 +1,9 @@
-# Adobe Animate CC のタイムラインの使い方
+---
+title: Adobe Animate CC のタイムラインの使い方
+author: 池田 泰延
+published_date: 2017-10-04
+modified_date: 2018-02-20
+---
 
 タイムラインとは時間軸にそってアニメーションを作っていくパネルのことです。アニメーションを作るAnimate CCの重要な機能の一つです。
 
@@ -153,7 +158,3 @@ Animate CCのレイヤーは基本的に他の動画ソフトと同じ仕組み�
 その時にこのボタンを押すと、アウトラインと同じ要領で複数のフレームをステージに表示し（この時オニオンスキンとは違い、キーフレームのみが表示されます） 範囲選択や、全て選択などと合わせて、複数のフレームにあるものをいっぺんに選択できます。
 
 これを知らないと1度作ったアニメーションをいちいち1フレームずつ移動させることになります。
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2017-10-04</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

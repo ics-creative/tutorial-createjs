@@ -1,4 +1,9 @@
-# CreateJS でテキストの表示方法
+---
+title: CreateJS でテキストの表示方法
+author: 池田 泰延
+published_date: 2015-11-29
+modified_date: 2019-01-10
+---
 
 文字を表示するには`createjs.Text`クラスを利用します。
 
@@ -111,7 +116,3 @@ stage.addChild(t);
 ※`createjs.Text`クラスは、WebGLを活用する`StageGL`クラスでは「[公式ドキュメント(英語)](https://createjs.com/docs/easeljs/classes/StageGL.html)」に記載のとおり、レンダリングされないので注意ください。
 
 [次の記事へ](bitmap.md)
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2019-01-10</article-date-modified>

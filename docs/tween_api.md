@@ -1,4 +1,9 @@
-# CreateJS でのトゥイーン実装方法まとめ
+---
+title: CreateJS でのトゥイーン実装方法まとめ
+author: 池田 泰延
+published_date: 2015-12-27
+modified_date: 2018-02-20
+---
 
 CreateJSのトゥイーンは便利で多くの機能を持っています。ここではリファレンスとしてトゥイーンの使い方をまとめました。必要に応じて参考ください。
 
@@ -61,13 +66,4 @@ createjs.Tween.get(circle, {loop: true}) // ターゲットを指定
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/tween_loop.html)
 - [サンプルのソースコードを確認する](../samples/tween_loop.html)
 
-
-
-
-
 [次の記事へ](mouse_xy.md)
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-27</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

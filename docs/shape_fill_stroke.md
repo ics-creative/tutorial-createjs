@@ -1,4 +1,9 @@
-# CreateJS でのシェイプの塗りと線の設定方法
+---
+title: CreateJS でのシェイプの塗りと線の設定方法
+author: 池田 泰延
+published_date: 2015-11-29
+modified_date: 2018-02-20
+---
 
 シェイプには塗りと枠線を設定できます。塗りだけを設定したり、線だけを描いて塗らないということも可能です。
 
@@ -79,6 +84,3 @@ shape.graphics.drawCircle(0, 0, 80);
 
 [次の記事へ](shape_color.md)
 
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

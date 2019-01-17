@@ -1,4 +1,9 @@
-# CreateJS で表示オブジェクトを削除するには
+---
+title: CreateJS で表示オブジェクトを削除するには
+author: 池田 泰延
+published_date: 2015-12-03
+modified_date: 2018-02-20
+---
 
 自身の表示リストから、「任意の表示オブジェクト」を除外するには、`removeChild()` メソッドを使用します。
 
@@ -47,7 +52,3 @@ function handleGreenClick(event) {
 ```
 
 [次の記事へ](ticker.md)
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-03</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

@@ -1,4 +1,9 @@
-# CreateJS でのサウンドの再生方法
+---
+title: CreateJS でのサウンドの再生方法
+author: 池田 泰延
+published_date: 2016-01-16
+modified_date: 2018-02-20
+---
 
 CreateJSでは音声を再生する機能が含まれています。webで扱える音声ファイル形式としては、MP3形式もしくはOGG形式が知られています。今回はMP3ファイルを使って、ボタンをクリックしたときに音声を再生してみましょう。
 
@@ -53,8 +58,3 @@ createjs.Sound.play("任意のID");
 ```
 
 音声再生といっても、あまりにも簡単であっけなかったのではないでしょうか。
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2016-01-16</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

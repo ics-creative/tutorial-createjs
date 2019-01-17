@@ -1,4 +1,9 @@
-# CreateJS で三角関数を利用したモーション
+---
+title: CreateJS で三角関数を利用したモーション
+author: 池田 泰延
+published_date: 2015-12-20
+modified_date: 2018-02-20
+---
 
 ここでは三角関数を使った周期的なモーションの実装方法を学んでいきましょう。
 
@@ -242,7 +247,3 @@ function handleTick() {
 X座標の計算には`radiusX`を、Y座標の計算には`radiusX`を使っています。X方向の半径と、Y方向の半径を異なる数値にするだけで、楕円円周が実現できます。
 
 [前の記事へ](math_basic.md)
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-20</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

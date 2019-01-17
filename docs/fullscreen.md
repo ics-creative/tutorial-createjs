@@ -1,4 +1,9 @@
-# CreateJS のマルチデバイス対応
+---
+title: CreateJS のマルチデバイス対応
+author: 池田 泰延
+published_date: 2015-12-03
+modified_date: 2018-02-20
+---
 
 ![](../imgs/fullscreen.html.png)
 
@@ -89,8 +94,3 @@ if (createjs.Touch.isSupported() == true) {
   createjs.Touch.enable(stage)
 }
 ```
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-03</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

@@ -1,4 +1,9 @@
-# CreateJS の Ticker の使い方
+---
+title: CreateJS の Ticker の使い方
+author: 池田 泰延
+published_date: 2015-11-22
+modified_date: 2019-01-10
+---
 
 CreateJSにはインタラクティブコンテンツを実装するためのアニメーション機構を備えています。`createjs.Ticker`クラスが**アニメーション**に必要な時間経過を管理する機能となります。
 
@@ -118,7 +123,3 @@ function handleTick(){
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/ticker_autoupdate.html)
 - [サンプルのソースコードを確認する](../samples/ticker_autoupdate.html)
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2019-01-10</article-date-modified>

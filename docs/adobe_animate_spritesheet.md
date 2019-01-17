@@ -1,4 +1,9 @@
-# Adobe Animate CC と CreateJS の連携 (スプライトシート編)
+---
+title: Adobe Animate CC と CreateJS の連携 (スプライトシート編)
+author: 池田 泰延
+published_date: 2015-12-18
+modified_date: 2018-02-20
+---
 
 Adobe Animate CCを使ってCreateJS用のスプライトシートを書き出し方を説明します。
 
@@ -70,9 +75,3 @@ chara.play();
 
 - [サンプルを再生する](https://ics-creative.github.io/tutorial-createjs/samples/animate_spritesheet/spritesheet_click.html)
 - [サンプルのソースコードを確認する](../samples/animate_spritesheet/spritesheet_click.html)
-
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-18</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

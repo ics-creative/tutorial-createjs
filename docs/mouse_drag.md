@@ -1,4 +1,9 @@
-# CreateJS のドラッグ＆ドロップの実装方法
+---
+title: CreateJS のドラッグ＆ドロップの実装方法
+author: 池田 泰延
+published_date: 2015-11-30
+modified_date: 2018-02-20
+---
 
 ドラッグ＆ドロップを実装する方法を紹介します。
 
@@ -85,9 +90,3 @@ function handleMove(event) {
 
 
 [次の記事へ](mouse_touch.md)
-
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-30</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

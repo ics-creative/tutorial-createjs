@@ -1,4 +1,9 @@
-# CreateJS でのボタンの作成方法
+---
+title: CreateJS でのボタンの作成方法
+author: 池田 泰延
+published_date: 2015-12-27
+modified_date: 2018-02-20
+---
 
 CreateJSでボタンを作成する方法を説明します。ただし、「ボタン」といってもCreateJSにボタンを作成するズバリな機能があるわけではありません。なぜならば、CreateJSではどんなシェイプであってもビットマップであっても何でもボタンにすることができるためです。[CreateJS のクリック処理の実装方法](mouse_click.md)で説明したとおり、クリックイベントさえ仕込めばなんであってもボタンとして挙動させることができます。
 
@@ -167,7 +172,3 @@ function handleClick(event) {
 
 また[Adobe Animate CC](adobe_animate.md)を使えば、さらに自由度が高くボタンのグラフィックを作成できます。直感的に作成できるので活用してみるといいでしょう。
 
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-27</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

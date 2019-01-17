@@ -1,4 +1,9 @@
-# CreateJSでES2015のclassを利用する（継承）
+---
+title: CreateJSでES2015のclassを利用する（継承）
+author: 池田 泰延
+published_date: 2018-02-28
+modified_date: 2018-02-28
+---
 
 JavaScriptではオブジェクト指向としてのクラスが利用できます。クラスを利用すると、CreateJSを構造的に設計しやすくなります。
 
@@ -153,7 +158,3 @@ function init() {
 ```
 
 この解説は[CreateJSでES2015のclassを利用する（メソッド）](class_method.md)に続きます。
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2018-02-28</article-date-published>
-<article-date-modified>2018-02-28</article-date-modified>

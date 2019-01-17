@@ -1,4 +1,9 @@
-# CreateJS でのトゥイーンの作成方法
+---
+title: CreateJS でのトゥイーンの作成方法
+author: 池田 泰延
+published_date: 2015-11-22
+modified_date: 2019-01-10
+---
 
 トゥイーンとは、始点と終点を設定してアニメーションさせるテクニックです。「間」を示すBetweenという単語から作られていれた用語です。CreateJSでは次の記述でトゥイーンを実装します。
 
@@ -128,6 +133,3 @@ createjs.Tween.get(circle) // ターゲットを指定
 [次の記事へ](tween_api.md)
 
 
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2019-01-10</article-date-modified>

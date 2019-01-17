@@ -1,4 +1,9 @@
-# CreateJS でマウス座標を調べる方法
+---
+title: CreateJS でマウス座標を調べる方法
+author: 池田 泰延
+published_date: 2015-11-30
+modified_date: 2018-02-20
+---
 
 CreateJSにはマウスイベントを管理する機能が備わっています。簡単なインタラクションの実装例を通して学習していきましょう。
 
@@ -46,9 +51,3 @@ function handleTick(event) {
 - [サンプルのソースコードを確認する](../samples/mouse_xy.html)
 
 [次の記事へ](mouse_click.md)
-
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-30</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

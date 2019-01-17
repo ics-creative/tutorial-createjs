@@ -1,4 +1,9 @@
-# CreateJS でシューティングゲーム開発に挑戦しよう
+---
+title: CreateJS でシューティングゲーム開発に挑戦しよう
+author: 池田 泰延
+published_date: 2015-12-17
+modified_date: 2018-02-20
+---
 
 シューティングゲームのサンプルを通して当たり判定の具体的な使い方の手順を紹介します。シューティングゲームは画面端から出現する敵に発射弾をぶつけてハイスコアを目指す内容になっています。自機はマウスに追随するようになっておりクリックすることで弾を発射することができます。
 
@@ -149,7 +154,3 @@ for (var j = 0; j < enemyList.length; j++) {
   }
 }
 ```
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-17</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

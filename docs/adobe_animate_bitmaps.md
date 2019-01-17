@@ -1,5 +1,9 @@
-# Adobe Animate CC と CreateJS の連携 (ビットマップ含む編)
-
+---
+title: Adobe Animate CC と CreateJS の連携 (ビットマップ含む編)
+author: 池田 泰延
+published_date: 2015-12-04
+modified_date: 2019-01-10
+---
 
 Adobe Animate CCからHTML5 Canvas素材として書き出し、CreateJSで利用する手順の解説、2弾目です。
 
@@ -154,9 +158,3 @@ fnStartAnimation();
 この方法で処理する場合は、Animate CC側で［パブリッシュ時にHTMLファイルを上書き］のチェックマークを外すことを忘れないようにしましょう。これのチェックボックスが付いていると、パブリッシュする度にHTMLファイルが上書きされてしまうためです。
 
 ![](../imgs/adobe_animate_basic/publish_html.png)
-
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-04</article-date-published>
-<article-date-modified>2019-01-10</article-date-modified>

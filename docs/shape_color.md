@@ -1,4 +1,9 @@
-# CreateJS での色の指定方法
+---
+title: CreateJS での色の指定方法
+author: 池田 泰延
+published_date: 2015-11-29
+modified_date: 2018-02-20
+---
 
 CreatJSでの色の指定方法を覚えましょう。CreateJSでは色を指定する方法がいくつかあります。
 
@@ -117,8 +122,3 @@ shape.graphics.drawCircle(300, 100, 50);
 
 [次の記事へ](shape_draw.md)
 
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

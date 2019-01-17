@@ -1,5 +1,9 @@
-# CreateJS でお絵描きツールを作ろう
-
+---
+title: CreateJS でお絵描きツールを作ろう
+author: 池田 泰延
+published_date: 2016-10-18
+modified_date: 2018-02-20
+---
 
 HTML5の`canvas`タグを使ってお絵描きツールを作ってみましょう。今回のサンプルは3段階で解説します。簡単な線を描くサンプル、お絵かきのための基本機能を説明したサンプル、そして本格的なお絵かき機能のサンプルです。
 
@@ -227,8 +231,3 @@ document.querySelector("#buttonSave").addEventListener("click", function(){
 ```
 
 以上でシンプルなお絵描きアプリが完成しました。本格的なお絵描きツールにするために、さらに作り込んでください。
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2016-10-18</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

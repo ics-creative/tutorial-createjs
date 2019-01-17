@@ -1,4 +1,9 @@
-# Adobe Animate CC の使い方
+---
+title: Adobe Animate CC の使い方
+author: 池田 泰延
+published_date: 2016-02-16
+modified_date: 2019-01-10
+---
 
 **Animate CCはwebアニメーションを制作するソフトウェア**。アドビシステムズというクリエイティブのツールを中心に開発している会社の製品です。このソフトでは、**グラフィックを描きタイムラインで動きをつけ、スクリプトでインタラクティブな操作を実装できます**。これはどういうことかというと、Animate CCを使えば、「動くwebコンテンツ」を自由に作れるということです。
 
@@ -170,7 +175,3 @@ LINEアニメスタンプの製作にもAnimate CCが役立ちます。Adobe Cre
 
 
 - [Animate CC 2017 入門](https://www.lynda.jp/courses/learning-animate-cc-2017)
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2016-02-16</article-date-published>
-<article-date-modified>2019-01-10</article-date-modified>

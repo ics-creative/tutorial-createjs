@@ -1,4 +1,9 @@
-# CreateJS で三角関数を活用しよう
+---
+title: CreateJS で三角関数を活用しよう
+author: 池田 泰延
+published_date: 2015-12-20
+modified_date: 2018-02-20
+---
 
 ここでは三角関数を使った様々な計算の手法を学んでいきましょう。三角関数はあらゆる実装の基本となるため、この解説をおさえて応用のための基礎知識をつけておきましょう。
 
@@ -79,7 +84,3 @@ function handleTick() {
 対象物からどれだけ距離が離れているかは、演出に役立てることもできます。対象物に近いほど過剰に演出して、対象物から離れていると静かに待機するといった使い分けにも役立てることができるでしょう。
 
 [次の記事へ](math_trigonometry.md)
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-20</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

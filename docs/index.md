@@ -1,4 +1,9 @@
-# CreateJS入門サイト
+---
+title: CreateJS入門サイト
+author: 池田 泰延
+published_date: 2015-11-22
+modified_date: 2019-01-10
+---
 
 このサイトはHTML5 Canvasのフレームワーク「[CreateJS](http://www.createjs.com/easeljs)」の入門サイトです。初学者から学べるように基本的な**CreateJSの使い方**から解説しつつ、発展的な内容までまとめています。このサイトを通して、webでのインタラクションデザインについて学んでいきましょう。
 
@@ -183,7 +188,3 @@ CreateJSを解説した有名な文献・チュートリアルとしては次が
 - [Flash for HTML5 ―HTML5開発環境としてのFlash Pro CC活用テクニック（2015年）](https://book.mynavi.jp/ec/products/detail/id=42081)
 - [WebクリエイターのためのCreateJSスタイルブック（2013年）](https://book.mynavi.jp/ec/products/detail/id=22959)
 
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2019-01-10</article-date-modified>

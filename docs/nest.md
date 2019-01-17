@@ -1,4 +1,9 @@
-# CreateJS の表示オブジェクトの親子構造
+---
+title: CreateJS の表示オブジェクトの親子構造
+author: 池田 泰延
+published_date: 2015-11-22
+modified_date: 2019-01-10
+---
 
 シェイプやテキスト、ビットマップなどの表示オブジェクトは、親子の入れ子関係をつくり、その**階層全体を「表示リスト」（ディスプレイ・リスト）としてまとめられます**。表示リストはアニメーションやインタラクションを扱うのに便利な仕組みで、多くのプログラム言語で採用されています。
 
@@ -171,6 +176,3 @@ function handleTick() {
 
 [次の記事へ](displayobject_remove.md)
 
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-22</article-date-published>
-<article-date-modified>2019-01-10</article-date-modified>

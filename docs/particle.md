@@ -1,4 +1,9 @@
-# CreateJS でパーティクルシステムの開発に挑戦しよう
+---
+title: CreateJS でパーティクルシステムの開発に挑戦しよう
+author: 池田 泰延
+published_date: 2015-12-05
+modified_date: 2018-02-20
+---
 
 パーティクル・システム（particle system）はコンピュータグラフィック技術のひとつで、ある種の曖昧さを持った事物をシミュレートするために使われます。一般にパーティクル・システムを使って模写される例としては、炎、爆発、煙、流水、火花、落葉、雲、霧、雪、埃、流星、毛髪、毛皮、草地、あるいは光跡や呪文の視覚効果などが挙げられます。
 
@@ -261,11 +266,3 @@ function updateParticles() {
 ## まとめ
 
 パーティクルは難しそうなものに見えますが、一つ一つ分解してみるとシンプルな実装の組み合わせに過ぎません。パーティクルの移動方向や、パーティクル自体の形状を変更すると様々な表現に転換できます。ぜひ、いろいろパラメーターを調整してみてください。
-
-
-
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-05</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

@@ -1,4 +1,9 @@
-# CreateJSで物理演算〜落下するボールの作成〜
+---
+title: CreateJSで物理演算〜落下するボールの作成〜
+author: 池田 泰延
+published_date: 2015-11-30
+modified_date: 2018-02-20
+---
 
 ![](../imgs/ball.html.png)
 
@@ -159,8 +164,3 @@ function handleUp(event) {
     flag = false;
 }
 ```
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-30</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

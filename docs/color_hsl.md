@@ -1,4 +1,9 @@
-# CreateJS で HSL カラーを使いこなそう
+---
+title: CreateJS で HSL カラーを使いこなそう
+author: 池田 泰延
+published_date: 2015-12-21
+modified_date: 2018-02-20
+---
 
 [カラー](color.md)の項目で説明したHSLカラー。HSLカラーは色のモーションを作る上でとても便利な色彩設定方法です。何の色であるかは色相、鮮やかであるか色あせているかは彩度、明るか暗いかは明度、というパラメーターで人間にとっても直感的です。
 
@@ -175,9 +180,3 @@ function handleTick() {
   stage.update(); // 画面更新
 }
 ```
-
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-21</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

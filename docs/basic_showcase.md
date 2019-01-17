@@ -1,4 +1,9 @@
-# CreateJS の事例
+---
+title: CreateJS の事例
+author: 池田 泰延
+published_date: 2016-01-18
+modified_date: 2019-01-10
+---
 
 CreateJSが使って作られたウェブサイトや実験サイトをまとめました。CreateJS を使うことでどのような表現が可能なのか、事例を通して可能性を探っていきましょう。
 
@@ -30,7 +35,3 @@ CreateJSを開発しているgskinner社の実験サイト。ビジュアル・�
 
 
 [次の記事へ](quickstart.md)
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2016-01-18</article-date-published>
-<article-date-modified>2019-01-10</article-date-modified>

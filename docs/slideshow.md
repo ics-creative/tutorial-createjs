@@ -1,4 +1,9 @@
-# CreateJS でカルーセルを作ろう
+---
+title: CreateJS でカルーセルを作ろう
+author: 池田 泰延
+published_date: 2015-12-17
+modified_date: 2018-02-20
+---
 
 カルーセルとはカルーセル[carousel]とは、メリーゴーランドや空港の回転コンベアーなど、くるくると回るものを指し、WEBデザインにおいては、横に自動でスクロールするスライドギャラリーの様なもののことを指します。このカルーセルを作ってみましょう。
 
@@ -47,7 +52,3 @@ function updatePage() {
 
 `{override: true}`のコードは、ボタンが連打されたときにアニメーションを正しく動作させるための指定です。トゥイーンアニメーションの再生中に、新しいトゥイーンの命令が入ったとき、再生中のトゥイーンアニメーションを中断させる効果があります。
 
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-17</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

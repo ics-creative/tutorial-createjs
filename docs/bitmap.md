@@ -1,4 +1,9 @@
-# CreateJS での画像の表示方法
+---
+title: CreateJS での画像の表示方法
+author: 池田 泰延
+published_date: 2015-11-29
+modified_date: 2019-01-10
+---
 
 CreateJSでは、画像ファイル形式のPNG画像/JPEG画像/GIF画像/SVG画像を画面に表示することができます。Adobe PhotoshopやIllustratorなどのソフトウェアでグラフィックや写真・イラストを作成することで、表現の幅が広がるでしょう。それらのソフトウェアで汎用フォーマットのPNG形式もしくはJPEG形式で保存しておきます。
 
@@ -58,7 +63,3 @@ webサーバーにアップすれば、その問題は解消され、Google Chro
 
 [次の記事へ](nest.md)
 
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-11-29</article-date-published>
-<article-date-modified>2019-01-10</article-date-modified>

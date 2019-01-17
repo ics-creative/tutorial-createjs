@@ -1,4 +1,9 @@
-# 制作の前にブラウザの開発ツールの使い方を抑えよう
+---
+title: 制作の前にブラウザの開発ツールの使い方を抑えよう
+author: 池田 泰延
+published_date: 2015-12-03
+modified_date: 2018-02-20
+---
 
 ## Google Chrome の開発ツール
 
@@ -26,8 +31,3 @@ Google Chromeメニュー(右上の横棒三個のアイコン)をクリック
 
 
 [次の記事へ](displayobject.md)
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2015-12-03</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>

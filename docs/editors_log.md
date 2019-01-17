@@ -1,4 +1,9 @@
-# 編集後記
+---
+title: 編集後記
+author: 池田 泰延
+published_date: 2016-02-04
+modified_date: 2018-02-20
+---
 
 ## CreateJS入門サイトを作った理由
 
@@ -74,8 +79,3 @@ JSライブラリ側のバージョンアップに伴って過去バージョン
 私は今までに8冊書籍を執筆してきましたが、その経験から言えばこの入門サイトの内容は書籍としてリリースできる分量・質にもなっていると自負します。前述のとおり生きる入門サイトにしたかったので書籍化するつもりはありませんが、書籍レベルのまとまった情報となっていることを意識しています。
 
 **CreateJSを学ぶことで、インタラクションデザインの本質を学習できる**、そんなサイトを目指してこれからも滞り無くアップデートしていくつもりです。今後とも本サイトをご活用ください。
-
-
-<article-author>[池田 泰延](https://twitter.com/clockmaker)</article-author>
-<article-date-published>2016-02-04</article-date-published>
-<article-date-modified>2018-02-20</article-date-modified>
