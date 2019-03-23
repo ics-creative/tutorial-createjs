@@ -5,3 +5,7 @@ HTML5 Canvasのフレームワーク「CreateJS」の入門サイトです。初
 ## 目次
 
 - [目次をご覧ください](https://ics.media/tutorial-createjs/)
+
+## ライセンス
+
+フォルダーによって、ライセンスが異なるのでご注意ください。`samples`フォルダーのみMIT LICENSEで、そのほかの資材はICSが著作権を所有しています。複製、複写、転載は禁止しています。
