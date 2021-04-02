@@ -133,7 +133,6 @@ Animate CCをインストールしたら起動します。起動したら[新規
 
 その状態でさっきの絵を適当に移動させます。[Enter]キーを押せばムービーがプレビューします。絵が移動すれば成功です。これが最も単純なアニメーションの基礎となります。
 
-![](../imgs/adobe_animate_basic/animate_cc_basic_090.gif)
 
 今回の解説は以上となります。
 
@@ -158,7 +157,6 @@ Animate CCの入門的な学習として、「[初心者のためのAdobe Animat
 
 LINEアニメスタンプの製作にもAnimate CCが役立ちます。Adobe Creative Stationというサイトに、筆者が連載を寄稿しました。特にコマアニメの作り方とトゥイーンアニメの作り方が参考になるでしょう。
 
-![](../imgs/adobe_animate_basic/animtecc-complete.gif)
 
 - [1. 便利なアニメーション制作機能の紹介](https://blogs.adobe.com/japan/web-animate-cc-animation-stamp-1-overview/)
 - [2. イラストの制作手順](https://blogs.adobe.com/japan/web-animate-cc-animation-stamp-2-illustration/)
