@@ -23,7 +23,7 @@ CreateJSを開発しているgskinner社の実験サイト。ビジュアル・�
 
 ![](../imgs/sample_pollenmap.png)
 
-[日本全国花粉飛散マップ](http://ics-web.jp/projects/pollenmap/)
+[日本全国花粉飛散マップ](https://ics-web.jp/projects/pollenmap/)
 
 花粉の飛散量をデータビジュアライゼーションしたスペシャルサイト。CreateJSの得意とするラインの描画やパーティクルの演出を駆使したリッチ表現のサイトとなっています。
 

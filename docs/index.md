@@ -168,7 +168,7 @@ CreateJSを使って実装した事例の記事を紹介します。本サイト
 
 - 「日本全国花粉飛散マップ」
     - [解説記事](https://ics.media/entry/132)
-    - [ウェブサイト](http://ics-web.jp/projects/pollenmap/)
+    - [ウェブサイト](https://ics-web.jp/projects/pollenmap/)
     - [ソースコード](https://github.com/ics-creative/project-pollen-map/)
 - 「色彩感覚ゲーム Color Create」
     - [解説記事](https://ics.media/entry/223)
