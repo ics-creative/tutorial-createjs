@@ -7,10 +7,10 @@
     window.addEventListener("load", init);
     function init() {
       // Stageオブジェクトを作成。表示リストのルートになります。
-      var stage = new createjs.Stage("myCanvas");
+      const stage = new createjs.Stage("myCanvas");
 
       // 四角形を作成します
-      var shape = new createjs.Shape();
+      const shape = new createjs.Shape();
       shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
       shape.graphics.drawRect(0, 0, 200, 100); // 長方形を描画
       stage.addChild(shape); // 表示リストに追加
