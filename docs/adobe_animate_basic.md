@@ -43,7 +43,7 @@ modified_date: 2019-01-10
 
 Adobe Animate CCをはじめるには、ソフトの導入が必要になります。Animate CCは有料ソフトですが、AdobeのCreative Cloudという月額課金(もしくは年契約)のサービスを契約して使います。**学生の場合は月1,980円(全CCアプリ利用可)、社会人の場合は月2,180円(単体アプリ)から利用できるので、お手軽です**。昔は10万円近い製品価格だったので、とても導入しやすくなりました。
 
-[HTML5ベクターアニメーションソフト | Animate CC（Flash Pro）](http://www.adobe.com/jp/products/animate.html)
+[HTML5ベクターアニメーションソフト | Animate CC（Flash Pro）](https://www.adobe.com/jp/products/animate.html)
 
 ちなみにはじめは体験版で無料で使うことができます。体験版でも機能制限はないので、購入に慎重な方は様子見で使ってみるのがいいと思います。
 
@@ -158,7 +158,7 @@ Animate CCの入門的な学習として、「[初心者のためのAdobe Animat
 LINEアニメスタンプの製作にもAnimate CCが役立ちます。Adobe Creative Stationというサイトに、筆者が連載を寄稿しました。特にコマアニメの作り方とトゥイーンアニメの作り方が参考になるでしょう。
 
 
-- [1. 便利なアニメーション制作機能の紹介](https://blogs.adobe.com/japan/web-animate-cc-animation-stamp-1-overview/)
+- [1. 便利なアニメーション制作機能の紹介](https://blog.adobe.com/jp/publish/2016/10/19/web-animate-cc-animation-stamp-1-overview)
 - [2. イラストの制作手順](https://blogs.adobe.com/japan/web-animate-cc-animation-stamp-2-illustration/)
 - [3. コマアニメで動きを作る](https://blogs.adobe.com/japan/web-animate-cc-animation-stamp-3-animation/)
 - [4. トゥイーンアニメで動きを作る](https://blogs.adobe.com/japan/web-animate-cc-animation-stamp-4-tween)
